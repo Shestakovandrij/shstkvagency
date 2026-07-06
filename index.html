@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title data-i18n="meta.title">Web Shestakov — сайти, Telegram-боти, інтернет-магазини, SEO та айдентика</title>
+  <meta name="description" data-i18n="meta.description" content="Створюємо сучасні сайти, Telegram-боти, інтернет-магазини, SEO-рішення та айдентику для бізнесу. Допомагаємо залучати клієнтів, продавати онлайн і автоматизувати процеси." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" data-i18n="meta.title" content="Web Shestakov" />
+  <meta property="og:description" data-i18n="meta.description" content="Сайти, Telegram-боти, інтернет-магазини, SEO та айдентика." />
+  <meta property="og:image" content="assets/logo.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#EEEEEE" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <script>
+    (function () {
+      try {
+        var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (!reduce) { document.documentElement.className += " anim-on"; }
+        window.setTimeout(function () {
+          if (!window.__wsReady) { document.documentElement.classList.remove("anim-on"); }
+        }, 2600);
+      } catch (e) { document.documentElement.classList.remove("anim-on"); }
+    })();
+
+    /* Preloader guards (run before first paint):
+       1) manual skip for debugging — index.html?pre-skip;
+       2) hard failsafe — never trap the site behind the overlay longer than 7s,
+          even if GSAP/preloader.js fail to load. */
+    (function () {
+      try {
+        if (/[?&]pre-skip/.test(window.location.search)) {
+          document.documentElement.classList.add("pre-skip");
+        }
+      } catch (e) {}
+      window.setTimeout(function () {
+        var p = document.getElementById("preloader");
+        if (p && !window.__preDone) {
+          p.style.transition = "opacity 0.4s ease";
+          p.style.opacity = "0";
+          window.setTimeout(function () {
+            p.style.display = "none";
+            document.body.classList.remove("is-preloading");
+            window.__preDone = true;
+          }, 450);
+        }
+      }, 7000);
+    })();
+  </script>
+
+  <!-- GSAP drives the preloader timeline; preloader.js falls back to a plain fade if it is unavailable -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="preloader.js" defer></script>
+</head>
+
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ============ PRELOADER — "Digital Signal Ignition" ============
+       Sequence: grid breathes in → coral scanline sweeps (dots blink on its path) →
+       fragments converge into the centre → monogram mask-reveals (bottom→top) →
+       STKV wordmark wipes (left→right) + micro-flicker → status roller
+       (DESIGN / CODE / MOTION / LAUNCH) → ignition pop + pulse rings →
+       exit: panel wipes up, the lockup flies onto the header logo.
+       Colors: :root --bg / --accent in styles.css. Timings: the T object in preloader.js. -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <!-- Clipped panel: background, texture, scan, particles (wiped on exit) -->
+    <div class="preloader__panel" data-pl-panel>
+      <div class="preloader__grid" data-pl-grid aria-hidden="true"></div>
+      <div class="preloader__noise" aria-hidden="true"></div>
+      <div class="preloader__scan" data-pl-scan aria-hidden="true"></div>
+      <div class="preloader__dots" data-pl-dots aria-hidden="true"></div>
+      <div class="preloader__frags" data-pl-frags aria-hidden="true"></div>
+    </div>
+
+    <!-- Coral edge that follows the exit wipe -->
+    <div class="preloader__edge" data-pl-edge aria-hidden="true"></div>
+
+    <!-- Unclipped stage: brand lockup (flies to the header on exit) -->
+    <div class="preloader__stage">
+      <div class="preloader__brand" data-pl-brand>
+        <span class="preloader__rings" aria-hidden="true">
+          <span class="preloader__ring" data-pl-ring></span>
+          <span class="preloader__ring" data-pl-ring></span>
+        </span>
+        <span class="pl-lockup" data-pl-lockup>
+          <span class="pl-mark-clip" data-pl-mark-clip>
+            <svg class="pl-mark" viewBox="0 0 411 597" aria-hidden="true" focusable="false">
+              <path d="M236 0 L236 206 L205 227 L166 201 L163 147 L71 214 L251 334 L342 271 L342 130 L411 81 L410 513 L342 559 L342 512 L341 358 L0 597 L0 389 L31 368 L67 392 L68 460 L181 380 L1 260 L1 173 Z" fill="currentColor" />
+            </svg>
+          </span>
+          <span class="pl-word-clip" data-pl-word-clip>
+            <svg class="pl-word" viewBox="25.79 7.47 58.77 17.95" aria-hidden="true" focusable="false">
+              <path d="M28.792 19.3018C28.792 19.9578 28.904 20.5178 29.128 20.9818C29.352 21.4458 29.664 21.8298 30.064 22.1338C30.464 22.4218 30.92 22.6378 31.432 22.7818C31.96 22.9098 32.528 22.9738 33.136 22.9738C33.792 22.9738 34.352 22.9018 34.816 22.7578C35.28 22.5978 35.656 22.3978 35.944 22.1578C36.232 21.9178 36.44 21.6458 36.568 21.3418C36.696 21.0218 36.76 20.7018 36.76 20.3818C36.76 19.7258 36.608 19.2458 36.304 18.9418C36.016 18.6218 35.696 18.3978 35.344 18.2698C34.736 18.0458 34.024 17.8378 33.208 17.6458C32.408 17.4378 31.416 17.1738 30.232 16.8538C29.496 16.6618 28.88 16.4138 28.384 16.1098C27.904 15.7898 27.52 15.4378 27.232 15.0538C26.944 14.6698 26.736 14.2618 26.608 13.8298C26.496 13.3978 26.44 12.9578 26.44 12.5098C26.44 11.6458 26.616 10.9018 26.968 10.2778C27.336 9.63784 27.816 9.10984 28.408 8.69384C29 8.27784 29.672 7.97384 30.424 7.78184C31.176 7.57384 31.936 7.46984 32.704 7.46984C33.6 7.46984 34.44 7.58984 35.224 7.82984C36.024 8.05384 36.72 8.39784 37.312 8.86184C37.92 9.32584 38.4 9.90184 38.752 10.5898C39.104 11.2618 39.28 12.0458 39.28 12.9418H36.28C36.2 11.8378 35.824 11.0618 35.152 10.6138C34.48 10.1498 33.624 9.91784 32.584 9.91784C32.232 9.91784 31.872 9.95784 31.504 10.0378C31.136 10.1018 30.8 10.2218 30.496 10.3978C30.192 10.5578 29.936 10.7818 29.728 11.0698C29.536 11.3578 29.44 11.7178 29.44 12.1498C29.44 12.7578 29.624 13.2378 29.992 13.5898C30.376 13.9258 30.872 14.1818 31.48 14.3578C31.544 14.3738 31.792 14.4458 32.224 14.5738C32.672 14.6858 33.168 14.8138 33.712 14.9578C34.256 15.1018 34.784 15.2458 35.296 15.3898C35.824 15.5178 36.2 15.6138 36.424 15.6778C36.984 15.8538 37.472 16.0938 37.888 16.3978C38.304 16.7018 38.648 17.0538 38.92 17.4538C39.208 17.8378 39.416 18.2538 39.544 18.7018C39.688 19.1498 39.76 19.5978 39.76 20.0458C39.76 21.0058 39.56 21.8298 39.16 22.5178C38.776 23.1898 38.264 23.7418 37.624 24.1738C36.984 24.6058 36.256 24.9178 35.44 25.1098C34.624 25.3178 33.792 25.4218 32.944 25.4218C31.968 25.4218 31.048 25.3018 30.184 25.0618C29.32 24.8218 28.568 24.4538 27.928 23.9578C27.288 23.4618 26.776 22.8298 26.392 22.0618C26.008 21.2778 25.808 20.3578 25.792 19.3018H28.792ZM40.2745 7.87784H54.1465V10.4698H48.6985V25.0138H45.6985V10.4698H40.2745V7.87784ZM55.6531 7.87784H58.6531V15.6778L66.2851 7.87784H69.9811L63.1411 14.7178L70.4611 25.0138H66.7171L61.1011 16.8298L58.6531 19.2538V25.0138H55.6531V7.87784ZM69.6588 7.87784H72.7788L77.0748 21.4378H77.1228L81.5148 7.87784H84.5628L78.7068 25.0138H75.3708L69.6588 7.87784Z" fill="currentColor" />
+            </svg>
+          </span>
+        </span>
+      </div>
+
+      <div class="preloader__status" data-pl-status aria-hidden="true">
+        <span class="preloader__status-inner" data-pl-status-inner>
+          <span class="preloader__status-word">DESIGN</span>
+          <span class="preloader__status-word">CODE</span>
+          <span class="preloader__status-word">MOTION</span>
+          <span class="preloader__status-word">LAUNCH</span>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ HEADER (logo + menu button, as template) ============ -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#home" class="header__logo" aria-label="Web Shestakov">
+        <img src="assets/logo.svg" alt="Web Shestakov" />
+      </a>
+
+      <div class="header__right">
+        <div class="lang" role="group" aria-label="Language switcher">
+          <button type="button" class="lang__btn is-active" data-lang="uk" aria-pressed="true">UA</button>
+          <span class="lang__sep" aria-hidden="true">/</span>
+          <button type="button" class="lang__btn" data-lang="pl" aria-pressed="false">PL</button>
+        </div>
+        <button type="button" class="menu-btn" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="menu-btn__label" data-i18n="nav.menu">Меню</span>
+          <span class="menu-btn__icon" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ MENU (dropdown panel, as template) ============ -->
+  <div class="menu" id="mobile-menu" aria-hidden="true">
+    <div class="menu__overlay" data-close-menu></div>
+    <div class="container menu__container">
+      <div class="menu__panel">
+        <button type="button" class="menu__close" id="menu-close" aria-label="Close">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+
+        <div class="menu__grid">
+          <nav class="menu__nav" aria-label="Menu">
+            <a href="#about" class="menu__link" data-close-menu><span data-i18n="nav.about">Про нас</span><span class="menu__num">(01)</span></a>
+            <a href="#why" class="menu__link" data-close-menu><span data-i18n="nav.why">Переваги</span><span class="menu__num">(02)</span></a>
+            <a href="#services" class="menu__link" data-close-menu><span data-i18n="nav.services">Послуги</span><span class="menu__num">(03)</span></a>
+            <a href="#cases" class="menu__link" data-close-menu><span data-i18n="nav.cases">Кейси</span><span class="menu__num">(04)</span></a>
+            <a href="#budget" class="menu__link" data-close-menu><span data-i18n="nav.budget">Швидкий старт</span><span class="menu__num">(05)</span></a>
+            <a href="#tariffs" class="menu__link" data-close-menu><span data-i18n="nav.tariffs">Тарифи</span><span class="menu__num">(06)</span></a>
+            <a href="#faq" class="menu__link" data-close-menu><span data-i18n="nav.faq">FAQ</span><span class="menu__num">(07)</span></a>
+            <a href="#partners" class="menu__link" data-close-menu><span data-i18n="nav.partners">Партнерам</span><span class="menu__num">(08)</span></a>
+            <a href="#contact" class="menu__link" data-close-menu><span data-i18n="nav.contacts">Контакти</span><span class="menu__num">(09)</span></a>
+          </nav>
+
+          <aside class="menu__side">
+            <a href="https://t.me/Andrii_DEV9" target="_blank" rel="noopener" class="contact-card menu__person" data-close-menu>
+              <span class="contact-card__photo"><img src="assets/photo.jpg" alt="Andrii Shestakov" /></span>
+              <span class="contact-card__body">
+                <span class="contact-card__name">Andrii Shestakov</span>
+                <span class="contact-card__role">Founder &amp; CEO</span>
+              </span>
+              <span class="contact-card__cta">
+                <span data-i18n="hero.aside.cta">Написати</span>
+                <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </span>
+            </a>
+
+            <div class="menu__block">
+              <span class="menu__label" data-i18n="menu.follow">Соцмережі</span>
+              <div class="menu__socials">
+                <a href="https://www.instagram.com/web.shestakov" class="menu__social" target="_blank" rel="noopener" aria-label="Instagram">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+                </a>
+                <a href="https://t.me/Andrii_DEV9" class="menu__social" target="_blank" rel="noopener" aria-label="Telegram">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M21.9 4.3l-3 14.1c-.2 1-.8 1.2-1.7.8l-4.6-3.4-2.2 2.1c-.2.2-.4.4-.9.4l.3-4.7 8.5-7.7c.4-.3-.1-.5-.6-.2L7.3 13 2.8 11.6c-1-.3-1-1 .2-1.4l17-6.6c.8-.3 1.5.2 1.9 1z"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <div class="menu__block">
+              <span class="menu__label" data-i18n="menu.contact">Контакти</span>
+              <a href="tel:+48577503534" class="menu__contact">+48 577 503 534</a>
+              <a href="https://t.me/Andrii_DEV9" class="menu__contact" target="_blank" rel="noopener">@Andrii_DEV9</a>
+            </div>
+
+            <button type="button" class="btn btn--accent btn--block" data-open-popup data-close-menu>
+              <span data-i18n="cta.header">Отримати консультацію</span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </button>
+          </aside>
+        </div>
+
+        <div class="menu__meta">
+          <span class="menu__meta-item"><span class="menu__meta-dot"></span>Web Shestakov — <span data-i18n="hero.aside.role">digital-агенція</span></span>
+          <span class="menu__meta-item">© 2026</span>
+          <span class="menu__meta-item menu__meta-item--status" data-i18n="menu.status">Приймаємо проєкти</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+      <div class="container">
+        <!-- Top row: wordmark + founder card on the same level (as template) -->
+        <div class="hero__top reveal">
+          <h1 class="hero__wordmark">Web&nbsp;Shestakov<span class="hero__reg">&reg;</span></h1>
+          <a href="https://t.me/Andrii_DEV9" target="_blank" rel="noopener" class="contact-card">
+            <span class="contact-card__photo"><img src="assets/photo.jpg" alt="Andrii Shestakov" /></span>
+            <span class="contact-card__body">
+              <span class="contact-card__name">Andrii Shestakov</span>
+              <span class="contact-card__role">Founder &amp; CEO</span>
+            </span>
+            <span class="contact-card__cta">
+              <span data-i18n="hero.aside.cta">Написати</span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </span>
+          </a>
+        </div>
+
+        <!-- Big media panel -->
+        <div class="hero__panel reveal">
+          <div class="hero__panel-bg" aria-hidden="true"></div>
+
+          <div class="hero__socials" aria-label="Social">
+            <a href="https://www.instagram.com/web.shestakov" class="hero__social" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="https://t.me/Andrii_DEV9" class="hero__social" target="_blank" rel="noopener" aria-label="Telegram">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M21.9 4.3l-3 14.1c-.2 1-.8 1.2-1.7.8l-4.6-3.4-2.2 2.1c-.2.2-.4.4-.9.4l.3-4.7 8.5-7.7c.4-.3-.1-.5-.6-.2L7.3 13 2.8 11.6c-1-.3-1-1 .2-1.4l17-6.6c.8-.3 1.5.2 1.9 1z"/></svg>
+            </a>
+            <a href="tel:+48577503534" class="hero__social" aria-label="Phone">
+              <svg viewBox="0 0 32 32" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.27" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19.9272 5C21.6224 5.45592 23.1681 6.34928 24.4094 7.59059C25.6507 8.8319 26.5441 10.3776 27 12.0728"/>
+                <path d="M18.8916 8.86426C19.9088 9.13781 20.8362 9.67382 21.581 10.4186C22.3258 11.1634 22.8618 12.0908 23.1353 13.108"/>
+                <path d="M11.5595 15.6015C12.5968 17.7222 14.3158 19.4334 16.4412 20.461C16.5967 20.5347 16.7687 20.5666 16.9403 20.5537C17.1119 20.5407 17.2771 20.4832 17.4198 20.387L20.5492 18.3002C20.6877 18.2079 20.8469 18.1516 21.0126 18.1364C21.1782 18.1212 21.3451 18.1475 21.498 18.213L27.3526 20.7222C27.5515 20.8067 27.7175 20.9535 27.8257 21.1405C27.9339 21.3276 27.9783 21.5447 27.9524 21.7593C27.7673 23.2073 27.0608 24.5382 25.9652 25.5028C24.8695 26.4674 23.4598 26.9996 22 26.9996C17.4913 26.9996 13.1673 25.2086 9.97919 22.0204C6.79107 18.8323 5 14.5083 5 9.99963C5.00008 8.53985 5.53224 7.13015 6.49685 6.03448C7.46146 4.93881 8.79237 4.23231 10.2404 4.04726C10.4549 4.0213 10.672 4.06576 10.8591 4.17394C11.0461 4.28212 11.193 4.44816 11.2775 4.64704L13.7888 10.5068C13.8537 10.6583 13.8802 10.8236 13.8658 10.9879C13.8514 11.1522 13.7967 11.3103 13.7064 11.4483L11.6268 14.6258C11.5322 14.7687 11.4762 14.9338 11.4644 15.1048C11.4526 15.2758 11.4854 15.447 11.5595 15.6015Z"/>
+              </svg>
+            </a>
+          </div>
+
+          <div class="hero__overlay">
+            <h2 class="hero__headline">
+              <span data-i18n="hero.kicker">Створюємо</span>
+              <span class="hero__rotate" data-rotate aria-live="polite"><span class="hero__rotate-word">сайти</span><span class="hero__caret" aria-hidden="true"></span></span>
+            </h2>
+            <p class="hero__headline-sub" data-i18n="hero.title">Створюємо сайти, Telegram-боти та digital-рішення, які приводять клієнтів</p>
+          </div>
+
+          <!-- Bottom service shelf (marquee track on mobile, grid on desktop) -->
+          <div class="shelf">
+            <div class="shelf__track">
+              <a href="#services" class="shelf__card">
+                <span class="shelf__thumb shelf__thumb--1" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num">(01)</span><span class="shelf__name" data-i18n="badge.sites">Сайти під ключ</span></span>
+              </a>
+              <a href="#services" class="shelf__card">
+                <span class="shelf__thumb shelf__thumb--2" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num">(02)</span><span class="shelf__name" data-i18n="badge.shops">Інтернет-магазини</span></span>
+              </a>
+              <a href="#services" class="shelf__card">
+                <span class="shelf__thumb shelf__thumb--3" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num">(03)</span><span class="shelf__name" data-i18n="badge.bots">Telegram-боти</span></span>
+              </a>
+              <a href="#services" class="shelf__card">
+                <span class="shelf__thumb shelf__thumb--4" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num">(04)</span><span class="shelf__name" data-i18n="badge.seo">SEO</span></span>
+              </a>
+              <a href="#services" class="shelf__card">
+                <span class="shelf__thumb shelf__thumb--5" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num">(05)</span><span class="shelf__name" data-i18n="badge.identity">Айдентика</span></span>
+              </a>
+              <a href="#services" class="shelf__card shelf__card--dup" aria-hidden="true" tabindex="-1">
+                <span class="shelf__thumb shelf__thumb--1" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num">(01)</span><span class="shelf__name" data-i18n="badge.sites">Сайти під ключ</span></span>
+              </a>
+              <a href="#services" class="shelf__card shelf__card--dup" aria-hidden="true" tabindex="-1">
+                <span class="shelf__thumb shelf__thumb--2" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num">(02)</span><span class="shelf__name" data-i18n="badge.shops">Інтернет-магазини</span></span>
+              </a>
+              <a href="#services" class="shelf__card shelf__card--dup" aria-hidden="true" tabindex="-1">
+                <span class="shelf__thumb shelf__thumb--3" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num">(03)</span><span class="shelf__name" data-i18n="badge.bots">Telegram-боти</span></span>
+              </a>
+              <a href="#services" class="shelf__card shelf__card--dup" aria-hidden="true" tabindex="-1">
+                <span class="shelf__thumb shelf__thumb--4" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num">(04)</span><span class="shelf__name" data-i18n="badge.seo">SEO</span></span>
+              </a>
+              <a href="#services" class="shelf__card shelf__card--dup" aria-hidden="true" tabindex="-1">
+                <span class="shelf__thumb shelf__thumb--5" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num">(05)</span><span class="shelf__name" data-i18n="badge.identity">Айдентика</span></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile-only: desktop-style founder contact card below the banner -->
+        <div class="hero__below reveal">
+          <a href="https://t.me/Andrii_DEV9" target="_blank" rel="noopener" class="contact-card">
+            <span class="contact-card__photo"><img src="assets/photo.jpg" alt="Andrii Shestakov" /></span>
+            <span class="contact-card__body">
+              <span class="contact-card__name">Andrii Shestakov</span>
+              <span class="contact-card__role">Founder &amp; CEO</span>
+            </span>
+            <span class="contact-card__cta">
+              <span data-i18n="hero.aside.cta">Написати</span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHY (About-style: statement + numbered advantages) ============ -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="wa-head reveal" id="why">
+          <h2 class="wa-head__title" data-i18n="why.title">Чому бізнеси обирають нас</h2>
+          <span class="wa-head__divider" aria-hidden="true"></span>
+          <span class="wa-head__tag"><span class="wa-head__dot" aria-hidden="true"></span><span data-i18n="why.tag">Переваги</span></span>
+        </div>
+
+        <div class="why-acc reveal">
+          <article class="wa-card wa-card--open">
+            <div class="wa-num"><span class="wa-num__label" data-i18n="why.tag">Переваги</span><span class="wa-num__line"></span><span class="wa-num__idx">(01)</span></div>
+            <div class="wa-content">
+              <div class="wa-image"><img src="assets/why-1.png" alt="Комплексний підхід" loading="lazy" /></div>
+              <h3 class="wa-content__title" data-i18n="why.1.t">Комплексний підхід</h3>
+              <p class="wa-content__text" data-i18n="why.1.d">Беремо на себе весь процес: від ідеї, структури та дизайну до запуску, SEO та підтримки.</p>
+              <div class="wa-tags"><span class="wa-tag" data-i18n="why.1.k1"></span><span class="wa-tag" data-i18n="why.1.k2"></span></div>
+            </div>
+            <div class="wa-vert"><h3 data-i18n="why.1.t">Комплексний підхід</h3></div>
+          </article>
+
+          <article class="wa-card">
+            <div class="wa-num"><span class="wa-num__label" data-i18n="why.tag">Переваги</span><span class="wa-num__line"></span><span class="wa-num__idx">(02)</span></div>
+            <div class="wa-content">
+              <div class="wa-image"><img src="assets/why-2.png" alt="Рішення під бізнес-задачі" loading="lazy" /></div>
+              <h3 class="wa-content__title" data-i18n="why.2.t">Рішення під бізнес-задачі</h3>
+              <p class="wa-content__text" data-i18n="why.2.d">Аналізуємо нішу, аудиторію та цілі проєкту, щоб створити не шаблонний продукт, а ефективний інструмент.</p>
+              <div class="wa-tags"><span class="wa-tag" data-i18n="why.2.k1"></span><span class="wa-tag" data-i18n="why.2.k2"></span></div>
+            </div>
+            <div class="wa-vert"><h3 data-i18n="why.2.t">Рішення під бізнес-задачі</h3></div>
+          </article>
+
+          <article class="wa-card">
+            <div class="wa-num"><span class="wa-num__label" data-i18n="why.tag">Переваги</span><span class="wa-num__line"></span><span class="wa-num__idx">(03)</span></div>
+            <div class="wa-content">
+              <div class="wa-image"><img src="assets/why-3.png" alt="Сучасний дизайн" loading="lazy" /></div>
+              <h3 class="wa-content__title" data-i18n="why.3.t">Сучасний дизайн</h3>
+              <p class="wa-content__text" data-i18n="why.3.d">Створюємо візуал, який виглядає професійно, викликає довіру та підкреслює цінність бренду.</p>
+              <div class="wa-tags"><span class="wa-tag" data-i18n="why.3.k1"></span><span class="wa-tag" data-i18n="why.3.k2"></span></div>
+            </div>
+            <div class="wa-vert"><h3 data-i18n="why.3.t">Сучасний дизайн</h3></div>
+          </article>
+
+          <article class="wa-card">
+            <div class="wa-num"><span class="wa-num__label" data-i18n="why.tag">Переваги</span><span class="wa-num__line"></span><span class="wa-num__idx">(04)</span></div>
+            <div class="wa-content">
+              <div class="wa-image"><img src="assets/why-4.png" alt="Зручність для клієнтів" loading="lazy" /></div>
+              <h3 class="wa-content__title" data-i18n="why.4.t">Зручність для клієнтів</h3>
+              <p class="wa-content__text" data-i18n="why.4.d">Проєктуємо логіку так, щоб користувачам було легко знайти інформацію, залишити заявку або зробити покупку.</p>
+              <div class="wa-tags"><span class="wa-tag" data-i18n="why.4.k1"></span><span class="wa-tag" data-i18n="why.4.k2"></span></div>
+            </div>
+            <div class="wa-vert"><h3 data-i18n="why.4.t">Зручність для клієнтів</h3></div>
+          </article>
+
+          <article class="wa-card">
+            <div class="wa-num"><span class="wa-num__label" data-i18n="why.tag">Переваги</span><span class="wa-num__line"></span><span class="wa-num__idx">(05)</span></div>
+            <div class="wa-content">
+              <div class="wa-image"><img src="assets/why-5.png" alt="Автоматизація процесів" loading="lazy" /></div>
+              <h3 class="wa-content__title" data-i18n="why.5.t">Автоматизація процесів</h3>
+              <p class="wa-content__text" data-i18n="why.5.d">Telegram-боти допомагають скоротити ручну роботу, швидше відповідати клієнтам і обробляти заявки.</p>
+              <div class="wa-tags"><span class="wa-tag" data-i18n="why.5.k1"></span><span class="wa-tag" data-i18n="why.5.k2"></span></div>
+            </div>
+            <div class="wa-vert"><h3 data-i18n="why.5.t">Автоматизація процесів</h3></div>
+          </article>
+
+          <article class="wa-card">
+            <div class="wa-num"><span class="wa-num__label" data-i18n="why.tag">Переваги</span><span class="wa-num__line"></span><span class="wa-num__idx">(06)</span></div>
+            <div class="wa-content">
+              <div class="wa-image"><img src="assets/why-6.png" alt="Підтримка після запуску" loading="lazy" /></div>
+              <h3 class="wa-content__title" data-i18n="why.6.t">Підтримка після запуску</h3>
+              <p class="wa-content__text" data-i18n="why.6.d">Допомагаємо з оновленнями, правками, консультаціями та подальшим розвитком проєкту.</p>
+              <div class="wa-tags"><span class="wa-tag" data-i18n="why.6.k1"></span><span class="wa-tag" data-i18n="why.6.k2"></span></div>
+            </div>
+            <div class="wa-vert"><h3 data-i18n="why.6.t">Підтримка після запуску</h3></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES (light panel) ============ -->
+    <section class="section section--services" id="services">
+      <div class="container">
+        <div class="section__head section__head--split reveal">
+          <h2 class="section__title" data-i18n="services.title">Наші послуги</h2>
+          <span class="section__rule" aria-hidden="true"></span>
+          <span class="eyebrow"><span class="eyebrow__dot eyebrow__dot--square"></span><span data-i18n="services.tag">Послуги</span></span>
+        </div>
+
+        <div class="services reveal-group">
+          <span class="service-preview" aria-hidden="true"></span>
+          <article class="service" data-img="assets/service-1.png">
+            <span class="service__num">(01)</span>
+            <img class="service__img" src="assets/service-1.png" alt="" loading="lazy" />
+            <div class="service__body">
+              <h3 class="service__title" data-i18n="service.1.t">Розробка сайтів</h3>
+              <p class="service__text" data-i18n="service.1.d">Створюємо лендинги, корпоративні сайти та багатосторінкові сайти під ключ. Продумуємо структуру, дизайн, адаптацію під мобільні пристрої та зручність для користувачів.</p>
+            </div>
+            <button type="button" class="service__cta" data-open-popup aria-label="CTA">
+              <span data-i18n="service.1.cta">Замовити сайт</span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </button>
+          </article>
+
+          <article class="service" data-img="assets/service-2.png">
+            <span class="service__num">(02)</span>
+            <img class="service__img" src="assets/service-2.png" alt="" loading="lazy" />
+            <div class="service__body">
+              <h3 class="service__title" data-i18n="service.2.t">Інтернет-магазини</h3>
+              <p class="service__text" data-i18n="service.2.d">Розробляємо онлайн-магазини для продажу товарів і послуг. Налаштовуємо каталог, картки товарів, кошик, форми замовлення та базові інтеграції.</p>
+            </div>
+            <button type="button" class="service__cta" data-open-popup aria-label="CTA">
+              <span data-i18n="service.2.cta">Створити магазин</span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </button>
+          </article>
+
+          <article class="service" data-img="assets/service-3.png">
+            <span class="service__num">(03)</span>
+            <img class="service__img" src="assets/service-3.png" alt="" loading="lazy" />
+            <div class="service__body">
+              <h3 class="service__title" data-i18n="service.3.t">Telegram-боти</h3>
+              <p class="service__text" data-i18n="service.3.d">Створюємо Telegram-боти для автоматизації заявок, консультацій, продажів, бронювань, внутрішніх процесів і підтримки клієнтів.</p>
+            </div>
+            <button type="button" class="service__cta" data-open-popup aria-label="CTA">
+              <span data-i18n="service.3.cta">Замовити бота</span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </button>
+          </article>
+
+          <article class="service" data-img="assets/service-4.png">
+            <span class="service__num">(04)</span>
+            <img class="service__img" src="assets/service-4.png" alt="" loading="lazy" />
+            <div class="service__body">
+              <h3 class="service__title" data-i18n="service.4.t">SEO-просування</h3>
+              <p class="service__text" data-i18n="service.4.d">Допомагаємо сайту краще індексуватися, залучати органічний трафік і отримувати більше потенційних клієнтів із пошуку.</p>
+            </div>
+            <button type="button" class="service__cta" data-open-popup aria-label="CTA">
+              <span data-i18n="service.4.cta">Покращити SEO</span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </button>
+          </article>
+
+          <article class="service" data-img="assets/service-5.png">
+            <span class="service__num">(05)</span>
+            <img class="service__img" src="assets/service-5.png" alt="" loading="lazy" />
+            <div class="service__body">
+              <h3 class="service__title" data-i18n="service.5.t">Айдентика</h3>
+              <p class="service__text" data-i18n="service.5.d">Розробляємо візуальний стиль бренду, який допомагає бізнесу виглядати впізнавано, професійно та цілісно.</p>
+            </div>
+            <button type="button" class="service__cta" data-open-popup aria-label="CTA">
+              <span data-i18n="service.5.cta">Створити айдентику</span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CASES ============ -->
+    <section class="section" id="cases">
+      <div class="container">
+        <div class="section__head section__head--split reveal">
+          <h2 class="section__title" data-i18n="cases.title">Наші кейси</h2>
+          <span class="section__rule" aria-hidden="true"></span>
+          <span class="eyebrow"><span class="eyebrow__dot eyebrow__dot--square"></span><span data-i18n="cases.tag">Кейси</span></span>
+        </div>
+
+        <div class="cases-tabs reveal" role="tablist" aria-label="Категорії кейсів">
+          <button type="button" class="cases-tab is-active" role="tab" aria-selected="true" data-filter="all" data-i18n="cases.tab.all">Всі</button>
+          <button type="button" class="cases-tab" role="tab" aria-selected="false" data-filter="ecom" data-i18n="cases.tab.ecom">Інтернет-магазини</button>
+          <button type="button" class="cases-tab" role="tab" aria-selected="false" data-filter="multi" data-i18n="cases.tab.multi">Багатосторінкові</button>
+          <button type="button" class="cases-tab" role="tab" aria-selected="false" data-filter="landing" data-i18n="cases.tab.landing">Лендинги</button>
+        </div>
+
+        <div class="cases reveal-group" id="cases-grid">
+
+          <a class="case" href="https://adfocus-store.com/" target="_blank" rel="noopener noreferrer" aria-label="AdFocus Store" data-cat="ecom">
+            <div class="case__media">
+              <img src="assets/cases/case1.png" alt="AdFocus Store" loading="lazy" width="1200" height="840" />
+            </div>
+            <div class="case__bar">
+              <div class="case__id">
+                <span class="case__num">(01)</span>
+                <h3 class="case__name">AdFocus Store</h3>
+              </div>
+              <span class="case__cat" data-i18n="case.1.meta">Інтернет-магазин • Акаунти</span>
+              <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </div>
+          </a>
+
+          <a class="case" href="https://fpvelement.com/" target="_blank" rel="noopener noreferrer" aria-label="FPV Element" data-cat="ecom">
+            <div class="case__media">
+              <img src="assets/cases/case2.png" alt="FPV Element" loading="lazy" width="1200" height="840" />
+            </div>
+            <div class="case__bar">
+              <div class="case__id">
+                <span class="case__num">(02)</span>
+                <h3 class="case__name">FPV Element</h3>
+              </div>
+              <span class="case__cat" data-i18n="case.2.meta">Інтернет-магазин • Дрони</span>
+              <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </div>
+          </a>
+
+          <a class="case" href="https://thebeastbeauty.com/" target="_blank" rel="noopener noreferrer" aria-label="The Beast Beauty" data-cat="ecom">
+            <div class="case__media">
+              <img src="assets/cases/case3.png" alt="The Beast Beauty" loading="lazy" width="1200" height="840" />
+            </div>
+            <div class="case__bar">
+              <div class="case__id">
+                <span class="case__num">(03)</span>
+                <h3 class="case__name">The Beast Beauty</h3>
+              </div>
+              <span class="case__cat" data-i18n="case.3.meta">Інтернет-магазин • Парфуми</span>
+              <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </div>
+          </a>
+
+          <a class="case" href="https://kickrave.com/" target="_blank" rel="noopener noreferrer" aria-label="KickRave" data-cat="ecom">
+            <div class="case__media">
+              <img src="assets/cases/case4.png" alt="KickRave" loading="lazy" width="1200" height="840" />
+            </div>
+            <div class="case__bar">
+              <div class="case__id">
+                <span class="case__num">(04)</span>
+                <h3 class="case__name">KickRave</h3>
+              </div>
+              <span class="case__cat" data-i18n="case.4.meta">Інтернет-магазин • Взуття</span>
+              <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </div>
+          </a>
+
+          <a class="case" href="https://lokalizacja.net/" target="_blank" rel="noopener noreferrer" aria-label="Lokalizacja" data-cat="multi">
+            <div class="case__media">
+              <img src="assets/cases/case5.png" alt="Lokalizacja" loading="lazy" width="1200" height="840" />
+            </div>
+            <div class="case__bar">
+              <div class="case__id">
+                <span class="case__num">(05)</span>
+                <h3 class="case__name">Lokalizacja</h3>
+              </div>
+              <span class="case__cat" data-i18n="case.5.meta">Багатосторінковий • Нерухомість</span>
+              <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </div>
+          </a>
+
+          <a class="case" href="https://nagachkysushi.com" target="_blank" rel="noopener noreferrer" aria-label="Nagachky Sushi" data-cat="multi">
+            <div class="case__media">
+              <img src="assets/cases/case6.png" alt="Nagachky Sushi" loading="lazy" width="1200" height="840" />
+            </div>
+            <div class="case__bar">
+              <div class="case__id">
+                <span class="case__num">(06)</span>
+                <h3 class="case__name">Nagachky Sushi</h3>
+              </div>
+              <span class="case__cat" data-i18n="case.6.meta">Багатосторінковий • Суші</span>
+              <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </div>
+          </a>
+
+          <a class="case" href="https://toriiua.com" target="_blank" rel="noopener noreferrer" aria-label="Torii" data-cat="multi">
+            <div class="case__media">
+              <img src="assets/cases/case7.png" alt="Torii" loading="lazy" width="1200" height="840" />
+            </div>
+            <div class="case__bar">
+              <div class="case__id">
+                <span class="case__num">(07)</span>
+                <h3 class="case__name">Torii</h3>
+              </div>
+              <span class="case__cat" data-i18n="case.7.meta">Багатосторінковий • Суші</span>
+              <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </div>
+          </a>
+
+          <a class="case" href="https://snekpl.com/" target="_blank" rel="noopener noreferrer" aria-label="Snek" data-cat="multi">
+            <div class="case__media">
+              <img src="assets/cases/case8.png" alt="Snek" loading="lazy" width="1200" height="840" />
+            </div>
+            <div class="case__bar">
+              <div class="case__id">
+                <span class="case__num">(08)</span>
+                <h3 class="case__name">Snek</h3>
+              </div>
+              <span class="case__cat" data-i18n="case.8.meta">Багатосторінковий • Снеки</span>
+              <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </div>
+          </a>
+
+          <a class="case" href="https://tdsolarenergy.com/" target="_blank" rel="noopener noreferrer" aria-label="TD Solar Energy" data-cat="multi">
+            <div class="case__media">
+              <img src="assets/cases/case10.png" alt="TD Solar Energy" loading="lazy" width="1200" height="840" />
+            </div>
+            <div class="case__bar">
+              <div class="case__id">
+                <span class="case__num">(09)</span>
+                <h3 class="case__name">TD Solar Energy</h3>
+              </div>
+              <span class="case__cat" data-i18n="case.10.meta">Багатосторінковий • Сонячні панелі</span>
+              <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </div>
+          </a>
+
+          <a class="case" href="https://epoxmax.pl/" target="_blank" rel="noopener noreferrer" aria-label="Epoxmax" data-cat="multi">
+            <div class="case__media">
+              <img src="assets/cases/case11.png" alt="Epoxmax" loading="lazy" width="1200" height="840" />
+            </div>
+            <div class="case__bar">
+              <div class="case__id">
+                <span class="case__num">(10)</span>
+                <h3 class="case__name">Epoxmax</h3>
+              </div>
+              <span class="case__cat" data-i18n="case.11.meta">Багатосторінковий • Декоративні панелі</span>
+              <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </div>
+          </a>
+
+          <a class="case" href="https://cut2earn.webflow.io" target="_blank" rel="noopener noreferrer" aria-label="Cut2Earn" data-cat="landing">
+            <div class="case__media">
+              <img src="assets/cases/case12.png" alt="Cut2Earn" loading="lazy" width="1200" height="840" />
+            </div>
+            <div class="case__bar">
+              <div class="case__id">
+                <span class="case__num">(11)</span>
+                <h3 class="case__name">Cut2Earn</h3>
+              </div>
+              <span class="case__cat" data-i18n="case.12.meta">Лендинг • Курси відеомонтажу</span>
+              <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </div>
+          </a>
+
+          <a class="case" href="https://core-accounting.net/" target="_blank" rel="noopener noreferrer" aria-label="Core Accounting" data-cat="landing">
+            <div class="case__media">
+              <img src="assets/cases/case13.png" alt="Core Accounting" loading="lazy" width="1200" height="840" />
+            </div>
+            <div class="case__bar">
+              <div class="case__id">
+                <span class="case__num">(12)</span>
+                <h3 class="case__name">Core Accounting</h3>
+              </div>
+              <span class="case__cat" data-i18n="case.13.meta">Лендинг • Бухгалтерія</span>
+              <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </div>
+          </a>
+
+        </div>
+
+        <div class="cases-pager" id="cases-pager" role="navigation" aria-label="Сторінки кейсів"></div>
+      </div>
+    </section>
+
+    <!-- ============ BUDGET (fast, low-cost launch) ============ -->
+    <section class="section" id="budget">
+      <div class="container">
+        <div class="section__head section__head--split reveal">
+          <h2 class="section__title" data-i18n="budget.title">Бюджетний запуск сайту</h2>
+          <span class="section__rule" aria-hidden="true"></span>
+          <span class="eyebrow"><span class="eyebrow__dot eyebrow__dot--square"></span><span data-i18n="budget.tag">Швидкий старт</span></span>
+        </div>
+
+        <div class="budget-grid">
+        <div class="budget-intro reveal">
+          <p class="budget-lead"><span class="budget-lead__line" data-i18n="budget.desc.l1">Бюджетні сайти під ключ — коли треба швидко запустити бізнес,</span> <span class="budget-lead__line" data-i18n="budget.desc.l2">рекламу чи візитку без великих вкладень</span></p>
+          <p class="budget-sub" data-i18n="budget.desc.more">Це не шаблон, а сайт з індивідуальним дизайном, продуманою структурою, адаптацією під ваш бізнес і зрозумілою подачею послуг. Ми запускаємо такі сайти за 3–5 днів, щоб ви могли швидко стартувати з рекламою, презентувати компанію та отримувати заявки</p>
+          <div class="budget-pills" role="list" aria-label="Для чого підходить">
+            <div class="budget-pills__track">
+              <span class="budget-pill" role="listitem" data-i18n="budget.pill.1">Для реклами</span>
+              <span class="budget-pill" role="listitem" data-i18n="budget.pill.2">Для старту бізнесу</span>
+              <span class="budget-pill" role="listitem" data-i18n="budget.pill.3">Візитка</span>
+              <span class="budget-pill" role="listitem" data-i18n="budget.pill.4">Швидкий запуск</span>
+              <span class="budget-pill" role="listitem" data-i18n="budget.pill.5">Без великих вкладень</span>
+              <span class="budget-pill" aria-hidden="true" data-i18n="budget.pill.1">Для реклами</span>
+              <span class="budget-pill" aria-hidden="true" data-i18n="budget.pill.2">Для старту бізнесу</span>
+              <span class="budget-pill" aria-hidden="true" data-i18n="budget.pill.3">Візитка</span>
+              <span class="budget-pill" aria-hidden="true" data-i18n="budget.pill.4">Швидкий запуск</span>
+              <span class="budget-pill" aria-hidden="true" data-i18n="budget.pill.5">Без великих вкладень</span>
+            </div>
+          </div>
+          <a href="#tariffs" class="btn btn--dark btn--lg budget-intro__btn">
+            <span data-i18n="budget.seeTariffs">Дивитися тарифи</span>
+            <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </a>
+        </div>
+
+        <div class="budget-examples reveal">
+          <div class="case-switch" data-active="1">
+            <div class="case-switch__stage">
+              <article class="case-slide is-active" data-slide="1">
+                <a class="bx-card" href="https://tdsolarenergy.com/" target="_blank" rel="noopener" aria-label="Відкрити сайт TD-SOLAR">
+                  <div class="bx-card__media"><img src="assets/case-solar.jpg" alt="Сайт TD-SOLAR — сонячна енергетика" loading="lazy" /></div>
+                  <div class="bx-card__bar">
+                    <span class="bx-card__cat" data-i18n="budget.case1.m">Сонячна енергетика · Німеччина</span>
+                    <span class="bx-card__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                  </div>
+                </a>
+              </article>
+
+              <article class="case-slide" data-slide="2">
+                <a class="bx-card" href="https://homebellissimowroclaw.com/" target="_blank" rel="noopener" aria-label="Відкрити сайт Bellissimo Home">
+                  <div class="bx-card__media"><img src="assets/case-bellissimo.jpg" alt="Сайт Bellissimo Home — меблі та інтер'єри" loading="lazy" /></div>
+                  <div class="bx-card__bar">
+                    <span class="bx-card__cat" data-i18n="budget.case2.m">Меблі та інтер'єри · Польща</span>
+                    <span class="bx-card__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                  </div>
+                </a>
+              </article>
+
+              <article class="case-slide" data-slide="3">
+                <a class="bx-card" href="https://tarikinvest.cz/" target="_blank" rel="noopener" aria-label="Відкрити сайт TARIK Invest">
+                  <div class="bx-card__media"><img src="assets/case-tarik.jpg" alt="Сайт TARIK Invest — електромонтаж" loading="lazy" /></div>
+                  <div class="bx-card__bar">
+                    <span class="bx-card__cat" data-i18n="budget.case3.m">Електромонтаж · Чехія</span>
+                    <span class="bx-card__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                  </div>
+                </a>
+              </article>
+            </div>
+
+            <div class="case-dots" role="tablist" aria-label="Приклади наших сайтів">
+              <button type="button" class="case-dots__arrow" data-dir="-1" aria-label="Попередній кейс">
+                <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <button type="button" class="case-dots__dot is-active" data-go="1" role="tab" aria-selected="true" aria-label="TD-SOLAR"></button>
+              <button type="button" class="case-dots__dot" data-go="2" role="tab" aria-selected="false" aria-label="Bellissimo Home"></button>
+              <button type="button" class="case-dots__dot" data-go="3" role="tab" aria-selected="false" aria-label="TARIK Invest"></button>
+              <button type="button" class="case-dots__arrow" data-dir="1" aria-label="Наступний кейс">
+                <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Mobile-only: tariffs button at the end of the block -->
+        <a href="#tariffs" class="btn btn--dark btn--lg btn--block budget-btn--mobile">
+          <span data-i18n="budget.seeTariffs">Дивитися тарифи</span>
+          <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TARIFFS (pricing) ============ -->
+    <section class="section" id="tariffs">
+      <div class="container">
+        <div class="section__head section__head--split reveal">
+          <h2 class="section__title" data-i18n="tariff.title">Прозорі тарифи</h2>
+          <span class="section__rule" aria-hidden="true"></span>
+          <span class="eyebrow"><span class="eyebrow__dot eyebrow__dot--square"></span><span data-i18n="tariff.tag">Ціни</span></span>
+        </div>
+
+        <p class="tariff-lead reveal" data-i18n="tariff.lead">Фіксована вартість під ключ — без прихованих доплат. Оберіть формат, який найкраще підходить під вашу задачу</p>
+
+        <div class="tariffs">
+          <article class="tariff reveal">
+            <div class="tariff__meta">
+              <span class="tariff__tag" data-i18n="tariff.1.tag">Запуск за 3 дні</span>
+            </div>
+            <div class="tariff__top">
+              <span class="tariff__price"><span class="plan-card__cur">€</span>200</span>
+              <span class="tariff__unit" data-i18n="tariff.unit.project">/ проєкт</span>
+            </div>
+            <h3 class="tariff__name" data-i18n="tariff.1.name">Старт</h3>
+            <p class="tariff__sub" data-i18n="tariff.1.desc">Базовий формат для швидкого запуску сайту, перевірки ідеї або старту реклами без зайвих ускладнень.</p>
+            <ul class="plan-card__list">
+              <li><span class="plan-check" aria-hidden="true"></span><span data-i18n="tariff.1.f1">Індивідуальний дизайн</span></li>
+              <li><span class="plan-check" aria-hidden="true"></span><span data-i18n="tariff.1.f2">Адаптація під мобільні пристрої</span></li>
+              <li><span class="plan-check" aria-hidden="true"></span><span data-i18n="tariff.1.f3">Базова SEO-оптимізація</span></li>
+              <li><span class="plan-check" aria-hidden="true"></span><span data-i18n="tariff.1.f4">Форма заявки з відправкою в Telegram</span></li>
+              <li><span class="plan-check" aria-hidden="true"></span><span data-i18n="tariff.1.f5">Допомога з текстами</span></li>
+              <li><span class="plan-check" aria-hidden="true"></span><span data-i18n="tariff.1.f6">30 днів підтримки після запуску</span></li>
+            </ul>
+            <button type="button" class="tariff__cta tariff__cta--dark" data-open-popup>
+              <span data-i18n="tariff.1.cta">Замовити сайт</span>
+              <span class="tariff__cta-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </button>
+          </article>
+
+          <article class="tariff tariff--rec reveal">
+            <div class="tariff__stone" aria-hidden="true"></div>
+            <div class="tariff__meta">
+              <span class="tariff__badge" data-i18n="tariff.2.badge">Оптимальний вибір</span>
+              <span class="tariff__tag" data-i18n="tariff.2.tag">Запуск за 4–5 днів</span>
+            </div>
+            <div class="tariff__top">
+              <span class="tariff__price"><span class="plan-card__cur">€</span>350</span>
+              <span class="tariff__unit" data-i18n="tariff.unit.project">/ проєкт</span>
+            </div>
+            <h3 class="tariff__name" data-i18n="tariff.2.name">Про</h3>
+            <p class="tariff__sub" data-i18n="tariff.2.desc">Розширений формат для бізнесу, якому потрібен сильніший дизайн, більше функціоналу та зручне керування сайтом після запуску.</p>
+            <ul class="plan-card__list">
+              <li><span class="plan-check" aria-hidden="true"></span><span data-i18n="tariff.2.f1">Усе з тарифу «Старт»</span></li>
+              <li><span class="plan-check" aria-hidden="true"></span><span data-i18n="tariff.2.f2">Більш деталізований дизайн</span></li>
+              <li><span class="plan-check" aria-hidden="true"></span><span data-i18n="tariff.2.f3">Анімації та мікровзаємодії</span></li>
+              <li><span class="plan-check" aria-hidden="true"></span><span data-i18n="tariff.2.f4">Розширена робота з текстами</span></li>
+              <li><span class="plan-check" aria-hidden="true"></span><span data-i18n="tariff.2.f5">Підключення систем аналітики</span></li>
+              <li><span class="plan-check" aria-hidden="true"></span><span data-i18n="tariff.2.f6">Адмін-панель для редагування контенту</span></li>
+              <li><span class="plan-check" aria-hidden="true"></span><span data-i18n="tariff.2.f7">30 днів підтримки після запуску</span></li>
+            </ul>
+            <button type="button" class="tariff__cta tariff__cta--accent" data-open-popup>
+              <span data-i18n="tariff.2.cta">Обрати тариф</span>
+              <span class="tariff__cta-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </button>
+          </article>
+        </div>
+
+        <article class="tariff-addon reveal">
+          <div class="tariff-addon__price">
+            <span class="tariff__price tariff__price--sm"><span class="plan-card__cur">€</span>20</span>
+            <span class="tariff__unit" data-i18n="tariff.unit.month">/ місяць</span>
+          </div>
+          <div class="tariff-addon__body">
+            <h3 class="tariff-addon__name">
+              <span class="tariff-addon__dot" aria-hidden="true"></span>
+              <span data-i18n="tariff.3.name">Підтримка</span>
+              <span class="tariff__tag tariff__tag--sm" data-i18n="tariff.3.tag">Щомісяця</span>
+            </h3>
+            <p class="tariff-addon__desc" data-i18n="tariff.3.desc">Технічний супровід після запуску сайту: оновлення контенту, невеликі правки, консультації та допомога з обслуговуванням.</p>
+          </div>
+          <button type="button" class="btn btn--dark" data-open-popup>
+            <span data-i18n="tariff.3.cta">Додати підтримку</span>
+            <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </button>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section section--soft" id="faq">
+      <div class="container faq-layout">
+        <div class="faq-layout__head reveal">
+          <div class="head-kicker">
+            <span class="eyebrow"><span class="eyebrow__dot eyebrow__dot--square"></span><span data-i18n="faq.tag">FAQ</span></span>
+          </div>
+          <h2 class="section__title" data-i18n="faq.title">Питання та відповіді</h2>
+          <p class="section__lead" data-i18n="faq.desc">Не знайшли відповідь?<br>Напишіть нам у Telegram — відповімо швидко.</p>
+          <a href="https://t.me/Andrii_DEV9" target="_blank" rel="noopener" class="contact-card">
+            <span class="contact-card__photo"><img src="assets/photo.jpg" alt="Andrii Shestakov" /></span>
+            <span class="contact-card__body">
+              <span class="contact-card__name">Andrii Shestakov</span>
+              <span class="contact-card__role">Founder &amp; CEO</span>
+            </span>
+            <span class="contact-card__cta">
+              <span data-i18n="hero.aside.cta">Написати</span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </span>
+          </a>
+        </div>
+
+        <div class="faq reveal-group">
+          <div class="faq__item">
+            <button type="button" class="faq__q" aria-expanded="false"><span class="faq__qn">(01)</span><span data-i18n="faq.1.q">Скільки часу займає створення сайту?</span><span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><p data-i18n="faq.1.a">Термін залежить від складності проєкту. Простий лендинг можна реалізувати швидше, а інтернет-магазин або складний сайт потребує більше часу через структуру, дизайн, функціонал та інтеграції.</p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q" aria-expanded="false"><span class="faq__qn">(02)</span><span data-i18n="faq.2.q">Чи можна замовити сайт під ключ?</span><span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><p data-i18n="faq.2.a">Так. Ми можемо взяти на себе структуру, дизайн, розробку, адаптивність, форми заявок, базову SEO-оптимізацію та запуск.</p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q" aria-expanded="false"><span class="faq__qn">(03)</span><span data-i18n="faq.3.q">Ви створюєте Telegram-боти для бізнесу?</span><span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><p data-i18n="faq.3.a">Так. Ми розробляємо ботів для заявок, консультацій, продажів, бронювань, підтримки клієнтів та автоматизації внутрішніх процесів.</p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q" aria-expanded="false"><span class="faq__qn">(04)</span><span data-i18n="faq.4.q">Чи можна зробити інтернет-магазин?</span><span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><p data-i18n="faq.4.a">Так. Ми створюємо інтернет-магазини з каталогом товарів, картками, кошиком, оформленням замовлення та адаптацією під мобільні пристрої.</p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q" aria-expanded="false"><span class="faq__qn">(05)</span><span data-i18n="faq.5.q">Чи займаєтесь SEO?</span><span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><p data-i18n="faq.5.a">Так. Ми можемо провести базову SEO-оптимізацію сайту, підготувати структуру, мета-теги, рекомендації та покращити технічну основу для пошукового просування.</p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q" aria-expanded="false"><span class="faq__qn">(06)</span><span data-i18n="faq.6.q">Чи можна замовити тільки дизайн або айдентику?</span><span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><p data-i18n="faq.6.a">Так. Ви можете замовити окремо логотип, візуальний стиль, оформлення соцмереж або повну айдентику бренду.</p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q" aria-expanded="false"><span class="faq__qn">(07)</span><span data-i18n="faq.7.q">Як почати співпрацю?</span><span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><p data-i18n="faq.7.a">Напишіть нам у Telegram або Instagram, коротко опишіть задачу, і ми запропонуємо оптимальне рішення для вашого бізнесу.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA FORM ============ -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="cta-form reveal">
+          <div class="cta-form__head">
+            <div class="head-kicker">
+              <span class="eyebrow"><span class="eyebrow__dot eyebrow__dot--square"></span><span data-i18n="contact.tag">Контакти</span></span>
+            </div>
+            <h2 class="section__title" data-i18n="form.title">Готові запустити сайт, магазин або Telegram-бот?</h2>
+            <p class="section__lead" data-i18n="form.desc">Залиште заявку, і ми зв’яжемося з вами, щоб обговорити задачу, формат проєкту, терміни та можливе рішення</p>
+            <ul class="cta-form__contacts">
+              <li><a href="https://t.me/Andrii_DEV9" target="_blank" rel="noopener">
+                <span class="cta-form__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3l-3 14.1c-.2 1-.8 1.2-1.7.8l-4.6-3.4-2.2 2.1c-.2.2-.4.4-.9.4l.3-4.7 8.5-7.7c.4-.3-.1-.5-.6-.2L7.3 13 2.8 11.6c-1-.3-1-1 .2-1.4l17-6.6c.8-.3 1.5.2 1.9 1z"/></svg></span>
+                <span>@Andrii_DEV9</span>
+              </a></li>
+              <li><a href="https://www.instagram.com/web.shestakov" target="_blank" rel="noopener">
+                <span class="cta-form__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span>
+                <span>@web.shestakov</span>
+              </a></li>
+              <li><a href="tel:+48577503534">
+                <span class="cta-form__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3h3l1.5 5-2 1.5a12 12 0 0 0 5 5l1.5-2 5 1.5v3a2 2 0 0 1-2 2A16 16 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg></span>
+                <span>+48 577 503 534</span>
+              </a></li>
+            </ul>
+          </div>
+
+          <form class="form" id="main-form" novalidate>
+            <div class="form__row">
+              <div class="field">
+                <label class="field__label" for="name" data-i18n="form.name">Ім’я</label>
+                <input class="field__input" type="text" id="name" name="name" required data-i18n-attr="placeholder:form.ph.name" placeholder="Ваше ім’я" />
+                <span class="field__error" data-i18n="form.err.required">Це поле обов’язкове</span>
+              </div>
+              <div class="field">
+                <label class="field__label" for="contact-value" data-i18n="form.contact">Телефон або Telegram</label>
+                <input class="field__input" type="text" id="contact-value" name="contact" required data-i18n-attr="placeholder:form.ph.contact" placeholder="+48 ... або @username" />
+                <span class="field__error" data-i18n="form.err.required">Це поле обов’язкове</span>
+              </div>
+            </div>
+            <div class="field">
+              <label class="field__label" for="need" data-i18n="form.need">Що потрібно розробити?</label>
+              <div class="field__select">
+                <select class="field__input" id="need" name="need" required>
+                  <option value="" data-i18n="form.opt.choose">Оберіть варіант</option>
+                  <option value="site" data-i18n="form.opt.site">Сайт</option>
+                  <option value="shop" data-i18n="form.opt.shop">Інтернет-магазин</option>
+                  <option value="bot" data-i18n="form.opt.bot">Telegram-бот</option>
+                  <option value="seo" data-i18n="form.opt.seo">SEO</option>
+                  <option value="identity" data-i18n="form.opt.identity">Айдентика</option>
+                  <option value="other" data-i18n="form.opt.other">Інше</option>
+                </select>
+                <span class="field__chevron" aria-hidden="true"></span>
+              </div>
+              <span class="field__error" data-i18n="form.err.required">Це поле обов’язкове</span>
+            </div>
+            <div class="field">
+              <label class="field__label" for="comment" data-i18n="form.comment">Коментар до проєкту</label>
+              <textarea class="field__input field__textarea" id="comment" name="comment" rows="4" data-i18n-attr="placeholder:form.ph.comment" placeholder="Коротко опишіть задачу"></textarea>
+            </div>
+            <label class="checkbox">
+              <input type="checkbox" id="agree" name="agree" required />
+              <span class="checkbox__box" aria-hidden="true"></span>
+              <span class="checkbox__label" data-i18n="form.agree">Я даю згоду на обробку персональних даних відповідно до Політики конфіденційності</span>
+            </label>
+            <span class="field__error field__error--checkbox" data-i18n="form.err.agree">Потрібно підтвердити згоду</span>
+            <button type="submit" class="btn btn--accent btn--lg btn--block btn--between">
+              <span data-i18n="form.submit">Надіслати заявку</span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </button>
+            <p class="form__status form__status--success" role="status" data-i18n="form.success">Дякуємо! Ваша заявка надіслана. Ми скоро зв’яжемося з вами.</p>
+            <p class="form__status form__status--error" role="alert" data-i18n="form.error">Будь ласка, заповніть обов’язкові поля.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PARTNERS ============ -->
+    <section class="section" id="partners">
+      <div class="container">
+        <div class="section__head section__head--split reveal">
+          <h2 class="section__title" data-i18n="partners.title">Партнерська пропозиція</h2>
+          <span class="section__rule" aria-hidden="true"></span>
+          <span class="eyebrow"><span class="eyebrow__dot eyebrow__dot--square"></span><span data-i18n="partners.tag">Партнерам</span></span>
+        </div>
+        <div class="partners-layout">
+          <div class="partners-intro reveal">
+            <p class="section__lead section__lead--partners" data-i18n="partners.desc">Ми відкриті до партнерства з маркетологами, таргетологами, SMM-спеціалістами, дизайнерами, продюсерами, бізнес-консультантами та агенціями. Якщо ваші клієнти потребують сайт, інтернет-магазин, Telegram-бот, SEO або айдентику — ви можете передати їх нам і отримати партнерську винагороду.</p>
+
+            <div class="partners-marquee" role="list" aria-label="Для кого партнерство">
+              <div class="partners-marquee__track">
+                <span class="partners-chip" role="listitem" data-i18n="partners.who.1">Маркетологи</span>
+                <span class="partners-chip" role="listitem" data-i18n="partners.who.2">SMM-спеціалісти</span>
+                <span class="partners-chip" role="listitem" data-i18n="partners.who.3">Таргетологи</span>
+                <span class="partners-chip" role="listitem" data-i18n="partners.who.4">Дизайнери</span>
+                <span class="partners-chip" role="listitem" data-i18n="partners.who.5">Фрилансери</span>
+                <span class="partners-chip" role="listitem" data-i18n="partners.who.6">Агенції</span>
+                <span class="partners-chip" role="listitem" data-i18n="partners.who.7">Бізнес-консультанти</span>
+                <span class="partners-chip" aria-hidden="true" data-i18n="partners.who.1">Маркетологи</span>
+                <span class="partners-chip" aria-hidden="true" data-i18n="partners.who.2">SMM-спеціалісти</span>
+                <span class="partners-chip" aria-hidden="true" data-i18n="partners.who.3">Таргетологи</span>
+                <span class="partners-chip" aria-hidden="true" data-i18n="partners.who.4">Дизайнери</span>
+                <span class="partners-chip" aria-hidden="true" data-i18n="partners.who.5">Фрилансери</span>
+                <span class="partners-chip" aria-hidden="true" data-i18n="partners.who.6">Агенції</span>
+                <span class="partners-chip" aria-hidden="true" data-i18n="partners.who.7">Бізнес-консультанти</span>
+              </div>
+            </div>
+
+            <button type="button" class="btn btn--dark btn--lg" data-open-popup>
+              <span data-i18n="partners.cta">Стати партнером</span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </button>
+          </div>
+
+          <div class="partners-cards reveal-group">
+            <article class="partner-card">
+              <span class="partner-card__num">(01)</span>
+              <div class="partner-card__body">
+                <p class="partner-card__text" data-i18n="partners.adv.1">Прозорі умови співпраці</p>
+                <p class="partner-card__desc" data-i18n="partners.advdesc.1">Фіксуємо ставки й відсоток винагороди на старті — без прихованих правок і несподіванок під час роботи.</p>
+              </div>
+            </article>
+            <article class="partner-card">
+              <span class="partner-card__num">(02)</span>
+              <div class="partner-card__body">
+                <p class="partner-card__text" data-i18n="partners.adv.2">Якісна реалізація проєктів</p>
+                <p class="partner-card__desc" data-i18n="partners.advdesc.2">Ваш клієнт отримує сайт, магазин чи бот того ж рівня, що й наші власні проєкти — акуратний код, дизайн і терміни.</p>
+              </div>
+            </article>
+            <article class="partner-card">
+              <span class="partner-card__num">(03)</span>
+              <div class="partner-card__body">
+                <p class="partner-card__text" data-i18n="partners.adv.3">Постійний контакт по статусу роботи</p>
+                <p class="partner-card__desc" data-i18n="partners.advdesc.3">Тримаємо вас у курсі кожного етапу: узгодження, проміжні версії, запуск — ви завжди знаєте стадію проєкту.</p>
+              </div>
+            </article>
+            <article class="partner-card">
+              <span class="partner-card__num">(04)</span>
+              <div class="partner-card__body">
+                <p class="partner-card__text" data-i18n="partners.adv.4">Можливість довгострокової співпраці</p>
+                <p class="partner-card__desc" data-i18n="partners.advdesc.4">Працюємо не на одну угоду: передавайте клієнтів регулярно й отримуйте винагороду з кожного нового проєкту.</p>
+              </div>
+            </article>
+            <article class="partner-card">
+              <span class="partner-card__num">(05)</span>
+              <div class="partner-card__body">
+                <p class="partner-card__text" data-i18n="partners.adv.5">Винагорода за переданого клієнта</p>
+                <p class="partner-card__desc" data-i18n="partners.advdesc.5">Виплачуємо відсоток за кожного клієнта, який дійшов до оплати — прозоро і вчасно, одразу після старту проєкту.</p>
+              </div>
+            </article>
+          </div>
+
+          <!-- Mobile-only: partner CTA at the end of the block -->
+          <button type="button" class="btn btn--dark btn--lg btn--block partners-btn--mobile" data-open-popup>
+            <span data-i18n="partners.cta">Стати партнером</span>
+            <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__cta reveal">
+        <h2 class="footer__big" data-i18n="footer.big">Обговоримо ваш проєкт?</h2>
+        <button type="button" class="btn btn--accent btn--lg" data-open-popup>
+          <span data-i18n="cta.header">Отримати консультацію</span>
+          <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </button>
+      </div>
+
+      <div class="footer__top">
+        <nav class="footer__nav" aria-label="Footer">
+          <div class="footer__navcol">
+            <a href="#about" data-i18n="nav.about">Про нас</a>
+            <a href="#why" data-i18n="nav.why">Переваги</a>
+          </div>
+          <div class="footer__navcol">
+            <a href="#services" data-i18n="nav.services">Послуги</a>
+            <a href="#cases" data-i18n="nav.cases">Кейси</a>
+          </div>
+          <div class="footer__navcol">
+            <a href="#faq" data-i18n="nav.faq">FAQ</a>
+            <a href="#partners" data-i18n="nav.partners">Партнерам</a>
+          </div>
+          <div class="footer__navcol">
+            <a href="#contact" data-i18n="nav.contacts">Контакти</a>
+          </div>
+        </nav>
+
+        <div class="footer__contacts">
+          <a href="tel:+48577503534" class="footer__mail">+48 577 503 534</a>
+          <a href="https://t.me/Andrii_DEV9" target="_blank" rel="noopener">Telegram</a>
+          <a href="https://www.instagram.com/web.shestakov" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+
+      <div class="footer__wordmark">
+        <img src="assets/footer-logo.svg" alt="Web Shestakov agency" />
+      </div>
+
+      <div class="footer__legal">
+        <a href="#" data-i18n="footer.privacy">політика конфіденційності</a>
+        <div class="lang" role="group" aria-label="Language switcher">
+          <button type="button" class="lang__btn is-active" data-lang="uk">UA</button>
+          <span class="lang__sep" aria-hidden="true">/</span>
+          <button type="button" class="lang__btn" data-lang="pl">PL</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ FLOATING WIDGET ============ -->
+  <button type="button" class="floating-widget" data-open-popup aria-label="Web Shestakov">
+    <span class="floating-widget__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M21 4L3 11l6 2 2 6 3-5 5 3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+    <span class="floating-widget__text" data-i18n="widget.text">Заявка</span>
+  </button>
+
+  <!-- ============ MOBILE STICKY CTA ============ -->
+  <div class="sticky-cta">
+    <button type="button" class="btn btn--accent btn--block" data-open-popup>
+      <span data-i18n="cta.header">Отримати консультацію</span>
+    </button>
+  </div>
+
+  <!-- ============ POPUP FORM ============ -->
+  <div class="popup" id="popup" aria-hidden="true">
+    <div class="popup__overlay" data-close-popup></div>
+    <div class="popup__dialog" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+      <button type="button" class="popup__close" data-close-popup aria-label="Close">
+        <svg viewBox="0 0 24 24" width="22" height="22"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+      <span class="eyebrow"><span class="eyebrow__dot"></span><span data-i18n="contact.tag">Контакти</span></span>
+      <h3 class="popup__title" id="popup-title" data-i18n="form.title">Готові запустити сайт, магазин або Telegram-бот?</h3>
+
+      <form class="form" id="popup-form" novalidate>
+        <div class="field">
+          <label class="field__label" for="p-name" data-i18n="form.name">Ім’я</label>
+          <input class="field__input" type="text" id="p-name" name="name" required data-i18n-attr="placeholder:form.ph.name" placeholder="Ваше ім’я" />
+          <span class="field__error" data-i18n="form.err.required">Це поле обов’язкове</span>
+        </div>
+        <div class="field">
+          <label class="field__label" for="p-contact" data-i18n="form.contact">Телефон або Telegram</label>
+          <input class="field__input" type="text" id="p-contact" name="contact" required data-i18n-attr="placeholder:form.ph.contact" placeholder="+48 ... або @username" />
+          <span class="field__error" data-i18n="form.err.required">Це поле обов’язкове</span>
+        </div>
+        <div class="field">
+          <label class="field__label" for="p-need" data-i18n="form.need">Що потрібно розробити?</label>
+          <div class="field__select">
+            <select class="field__input" id="p-need" name="need" required>
+              <option value="" data-i18n="form.opt.choose">Оберіть варіант</option>
+              <option value="site" data-i18n="form.opt.site">Сайт</option>
+              <option value="shop" data-i18n="form.opt.shop">Інтернет-магазин</option>
+              <option value="bot" data-i18n="form.opt.bot">Telegram-бот</option>
+              <option value="seo" data-i18n="form.opt.seo">SEO</option>
+              <option value="identity" data-i18n="form.opt.identity">Айдентика</option>
+              <option value="other" data-i18n="form.opt.other">Інше</option>
+            </select>
+            <span class="field__chevron" aria-hidden="true"></span>
+          </div>
+          <span class="field__error" data-i18n="form.err.required">Це поле обов’язкове</span>
+        </div>
+        <div class="field">
+          <label class="field__label" for="p-comment" data-i18n="form.comment">Коментар</label>
+          <textarea class="field__input field__textarea" id="p-comment" name="comment" rows="3" data-i18n-attr="placeholder:form.ph.comment" placeholder="Коротко опишіть задачу"></textarea>
+        </div>
+        <label class="checkbox">
+          <input type="checkbox" id="p-agree" name="agree" required />
+          <span class="checkbox__box" aria-hidden="true"></span>
+          <span class="checkbox__label" data-i18n="form.agree">Я даю згоду на обробку персональних даних відповідно до Політики конфіденційності</span>
+        </label>
+        <span class="field__error field__error--checkbox" data-i18n="form.err.agree">Потрібно підтвердити згоду</span>
+        <button type="submit" class="btn btn--accent btn--lg btn--block">
+          <span data-i18n="form.submit">Надіслати заявку</span>
+        </button>
+        <p class="form__status form__status--success" role="status" data-i18n="form.success">Дякуємо! Ваша заявка надіслана. Ми скоро зв’яжемося з вами.</p>
+        <p class="form__status form__status--error" role="alert" data-i18n="form.error">Будь ласка, заповніть обов’язкові поля.</p>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
