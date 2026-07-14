@@ -601,7 +601,7 @@ body.is-preloading { overflow: hidden; }
 @media (hover: none) { .service-preview { display: none; } }
 .service__title { font-size: clamp(1.5rem, 3vw, 2.6rem); color: var(--ink); transition: transform var(--t-med); }
 .service:hover .service__title { transform: translateX(6px); }
-.service__text { color: var(--ink-60); margin-top: 0.55rem; max-width: none; font-size: 0.98rem; line-height: 1.55; }
+.service__text { color: var(--ink-60); margin-top: 0.55rem; max-width: 60ch; font-size: 0.98rem; line-height: 1.55; }
 .service__cta {
   display: inline-flex; align-items: center; gap: 0.55rem; white-space: nowrap;
   border: 1px solid var(--line-2); border-radius: var(--r-full); padding: 0.6rem 0.6rem 0.6rem 1.1rem;
