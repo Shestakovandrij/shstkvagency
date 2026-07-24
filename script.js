@@ -166,9 +166,9 @@
       "cases.tag": "Кейси",
       "cases.title": "Наші кейси",
       "cases.tab.all": "Всі",
+      "cases.tab.sites": "Сайти",
       "cases.tab.ecom": "Інтернет-магазини",
-      "cases.tab.multi": "Багатосторінкові",
-      "cases.tab.landing": "Лендинги",
+      "cases.tab.budget": "Сайти за 200€",
       "cases.desc": "Кожен проєкт ми створюємо з урахуванням задач бізнесу, аудиторії та кінцевої цілі: заявки, продажі, автоматизація або впізнаваність бренду.",
       "case.label.task": "Задача",
       "case.label.did": "Що зробили",
@@ -445,9 +445,9 @@
       "cases.tag": "Case studies",
       "cases.title": "Nasze realizacje",
       "cases.tab.all": "Wszystkie",
+      "cases.tab.sites": "Strony",
       "cases.tab.ecom": "Sklepy internetowe",
-      "cases.tab.multi": "Wielostronicowe",
-      "cases.tab.landing": "Landing page",
+      "cases.tab.budget": "Strony za 200€",
       "cases.desc": "Każdy projekt tworzymy z uwzględnieniem celów biznesowych, odbiorców i końcowego rezultatu: zapytań, sprzedaży, automatyzacji lub rozpoznawalności marki.",
       "case.label.task": "Cel",
       "case.label.did": "Co zrobiliśmy",
@@ -1176,7 +1176,11 @@
 
     function filtered() {
       return cards.filter(function (c) {
-        return filter === "all" || c.getAttribute("data-cat") === filter;
+        var cat = c.getAttribute("data-cat");
+        if (filter === "all") return true;
+        // "Сайти" gathers every non-shop project: landings, multipage and budget builds
+        if (filter === "sites") return cat !== "ecom";
+        return cat === filter;
       });
     }
 
