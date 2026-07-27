@@ -28,9 +28,16 @@
 
       "cta.header": "Отримати консультацію",
       "widget.text": "Заявка",
-      "cookie.text": "Ми використовуємо cookie, щоб сайт працював коректно та був зручнішим. Деталі — у політиці конфіденційності.",
+      "cookie.text": "Ми використовуємо cookie, щоб сайт працював коректно та був зручнішим.",
+      "cookie.link": "Політика конфіденційності",
       "cookie.accept": "Прийняти",
       "cookie.decline": "Лише необхідні",
+      "footer.cookies": "налаштування cookies",
+      "privacy.meta.title": "Політика конфіденційності — Web Shestakov",
+      "privacy.meta.description": "Політика конфіденційності та файлів cookies сайту shstkv-digital.com: цілі обробки даних, правові підстави, права користувача та керування згодою.",
+      "privacy.back": "На головну",
+      "privacy.title": "Політика конфіденційності та файлів cookies",
+      "privacy.updated": "Дата оновлення: 27 липня 2026 року",
 
       "hero.eyebrow": "Web Shestakov — digital-агенція",
       "hero.title": "Створюємо сайти, Telegram-боти та digital-рішення, які приводять клієнтів",
@@ -320,9 +327,16 @@
 
       "cta.header": "Uzyskać konsultację",
       "widget.text": "Zgłoszenie",
-      "cookie.text": "Używamy plików cookie, aby strona działała poprawnie i była wygodniejsza. Szczegóły w polityce prywatności.",
+      "cookie.text": "Używamy plików cookie, aby strona działała poprawnie i była wygodniejsza.",
+      "cookie.link": "Polityka prywatności",
       "cookie.accept": "Akceptuję",
       "cookie.decline": "Tylko niezbędne",
+      "footer.cookies": "ustawienia cookies",
+      "privacy.meta.title": "Polityka prywatności — Web Shestakov",
+      "privacy.meta.description": "Polityka prywatności i plików cookies strony shstkv-digital.com: cele przetwarzania danych, podstawy prawne, prawa użytkownika i zarządzanie zgodą.",
+      "privacy.back": "Strona główna",
+      "privacy.title": "Polityka prywatności i plików cookies",
+      "privacy.updated": "Data aktualizacji: 27 lipca 2026",
 
       "hero.eyebrow": "Web Shestakov — agencja digital",
       "hero.title": "Tworzymy strony internetowe, boty Telegram i rozwiązania digital, które pozyskują klientów",
@@ -636,6 +650,11 @@
       });
     });
 
+    // Довгі блоки (юридичні документи) тримаємо в розмітці обома мовами
+    document.querySelectorAll("[data-lang-block]").forEach(function (el) {
+      el.hidden = el.getAttribute("data-lang-block") !== lang;
+    });
+
     // Active state on all lang switchers
     document.querySelectorAll(".lang__btn").forEach(function (btn) {
       var isActive = btn.getAttribute("data-lang") === lang;
@@ -944,14 +963,11 @@
     var banner = document.getElementById("cookie-banner");
     if (!banner) return;
 
-    var saved = null;
-    try { saved = localStorage.getItem(COOKIE_KEY); } catch (e) {}
-    if (saved) return; // вибір уже зроблено — більше не показуємо
-
-    banner.hidden = false;
-    document.body.classList.add("is-cookie-open");
-    // Даємо сторінці проявитися, і лише потім піднімаємо банер
-    window.setTimeout(function () { banner.classList.add("is-visible"); }, 900);
+    function show(delay) {
+      banner.hidden = false;
+      document.body.classList.add("is-cookie-open");
+      window.setTimeout(function () { banner.classList.add("is-visible"); }, delay);
+    }
 
     banner.querySelectorAll("[data-cookie]").forEach(function (btn) {
       btn.addEventListener("click", function () {
@@ -961,6 +977,22 @@
         window.setTimeout(function () { banner.hidden = true; }, 600);
       });
     });
+
+    // "Налаштування cookies" — скидає збережений вибір і показує банер знову
+    document.querySelectorAll("[data-cookie-settings]").forEach(function (link) {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        try { localStorage.removeItem(COOKIE_KEY); } catch (err) {}
+        show(60);
+      });
+    });
+
+    var saved = null;
+    try { saved = localStorage.getItem(COOKIE_KEY); } catch (e) {}
+    if (saved) return; // вибір уже зроблено — самі не показуємо
+
+    // Даємо сторінці проявитися, і лише потім піднімаємо банер
+    show(900);
   }
 
   /* ------------------------------ Floating widget + sticky CTA ------------------------------ */

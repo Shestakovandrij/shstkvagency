@@ -1144,6 +1144,8 @@ html.anim-on .tariff--rec.reveal { transition-delay: 0.14s !important; }
 .cookie[hidden] { display: none; }
 .cookie.is-visible { transform: translateY(0); opacity: 1; }
 .cookie__text { font-size: 0.83rem; line-height: 1.55; color: var(--ink-60); }
+.cookie__link { color: var(--ink); text-decoration: underline; text-underline-offset: 2px; text-decoration-color: var(--line-2); transition: color var(--t-fast), text-decoration-color var(--t-fast); }
+.cookie__link:hover { color: var(--accent); text-decoration-color: var(--accent); }
 .cookie__actions { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 .cookie__btn {
   font-family: var(--font-head); font-size: 0.8rem; font-weight: 600; line-height: 1;
@@ -1158,6 +1160,40 @@ html.anim-on .tariff--rec.reveal { transition-delay: 0.14s !important; }
 
 /* Поки банер відкритий, мобільний sticky-CTA не виїжджає — вони ділять один край екрана */
 body.is-cookie-open .sticky-cta { transform: translateY(120%); }
+
+/* ------------------------------ Document page (privacy policy) ------------------------------ */
+.doc { padding: calc(var(--header-h) + clamp(2.2rem, 5vw, 4.5rem)) 0 clamp(3rem, 6vw, 6rem); }
+.doc__back { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.88rem; color: var(--ink-40); transition: color var(--t-fast); }
+.doc__back:hover { color: var(--ink); }
+.doc__back svg { flex: none; }
+.doc__title { font-family: var(--font-head); font-weight: 800; font-size: clamp(2rem, 5vw, 4rem); line-height: 1.03; letter-spacing: -0.04em; margin-top: clamp(1.4rem, 3vw, 2.4rem); max-width: 16ch; }
+.doc__updated { margin-top: 1.1rem; font-size: 0.86rem; color: var(--ink-40); }
+.doc__body { max-width: 68ch; margin-top: clamp(2.2rem, 5vw, 4rem); }
+.doc__body[hidden] { display: none; }
+/* Мова стоїть на <html> ще до запуску script.js — інакше польський читач
+   встиг би побачити спалах українського тексту */
+html[lang="pl"] [data-lang-block="uk"], html[lang="uk"] [data-lang-block="pl"] { display: none; }
+
+.doc__body h2 {
+  font-family: var(--font-head); font-weight: 700; font-size: clamp(1.15rem, 2vw, 1.55rem);
+  letter-spacing: -0.025em; line-height: 1.2; color: var(--ink);
+  margin-top: clamp(2.6rem, 5vw, 4rem); padding-top: clamp(1.4rem, 2.5vw, 2rem); border-top: 1px solid var(--line);
+}
+.doc__body h2:first-child { margin-top: 0; padding-top: 0; border-top: 0; }
+.doc__num { display: block; font-family: var(--font-head); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.02em; color: var(--accent); margin-bottom: 0.6rem; }
+.doc__body h3 { font-family: var(--font-head); font-weight: 600; font-size: 1rem; letter-spacing: -0.01em; color: var(--ink); margin-top: 1.9rem; }
+.doc__body p { font-size: 0.97rem; line-height: 1.75; color: var(--ink-60); margin-top: 0.85rem; }
+.doc__body ul { list-style: none; margin-top: 0.85rem; display: flex; flex-direction: column; gap: 0.45rem; }
+.doc__body li { position: relative; padding-left: 1.35rem; font-size: 0.97rem; line-height: 1.65; color: var(--ink-60); }
+.doc__body li::before { content: ""; position: absolute; left: 0; top: 0.72em; width: 8px; height: 1px; background: var(--ink-40); }
+.doc__body a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--line-2); transition: color var(--t-fast), text-decoration-color var(--t-fast); }
+.doc__body a:hover { color: var(--accent); text-decoration-color: var(--accent); }
+.doc__body strong { color: var(--ink); font-weight: 600; }
+
+.doc__card { margin-top: 1.4rem; padding: clamp(1.2rem, 2.5vw, 1.7rem); background: var(--white); border: 1px solid var(--line); border-radius: var(--r-card); }
+.doc__card p { margin-top: 0.3rem; }
+.doc__card p:first-child { margin-top: 0; }
+.doc__card .doc__name { font-family: var(--font-head); font-weight: 700; color: var(--ink); font-size: 1.05rem; letter-spacing: -0.02em; }
 
 /* ------------------------------ Popup ------------------------------ */
 .popup { position: fixed; inset: 0; z-index: 200; display: grid; place-items: center; padding: 1rem; visibility: hidden; }
