@@ -28,6 +28,9 @@
 
       "cta.header": "Отримати консультацію",
       "widget.text": "Заявка",
+      "cookie.text": "Ми використовуємо cookie, щоб сайт працював коректно та був зручнішим. Деталі — у політиці конфіденційності.",
+      "cookie.accept": "Прийняти",
+      "cookie.decline": "Лише необхідні",
 
       "hero.eyebrow": "Web Shestakov — digital-агенція",
       "hero.title": "Створюємо сайти, Telegram-боти та digital-рішення, які приводять клієнтів",
@@ -317,6 +320,9 @@
 
       "cta.header": "Uzyskać konsultację",
       "widget.text": "Zgłoszenie",
+      "cookie.text": "Używamy plików cookie, aby strona działała poprawnie i była wygodniejsza. Szczegóły w polityce prywatności.",
+      "cookie.accept": "Akceptuję",
+      "cookie.decline": "Tylko niezbędne",
 
       "hero.eyebrow": "Web Shestakov — agencja digital",
       "hero.title": "Tworzymy strony internetowe, boty Telegram i rozwiązania digital, które pozyskują klientów",
@@ -931,6 +937,32 @@
     });
   }
 
+  /* ------------------------------ Cookie banner ------------------------------ */
+  var COOKIE_KEY = "ws-cookie";
+
+  function initCookie() {
+    var banner = document.getElementById("cookie-banner");
+    if (!banner) return;
+
+    var saved = null;
+    try { saved = localStorage.getItem(COOKIE_KEY); } catch (e) {}
+    if (saved) return; // вибір уже зроблено — більше не показуємо
+
+    banner.hidden = false;
+    document.body.classList.add("is-cookie-open");
+    // Даємо сторінці проявитися, і лише потім піднімаємо банер
+    window.setTimeout(function () { banner.classList.add("is-visible"); }, 900);
+
+    banner.querySelectorAll("[data-cookie]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        try { localStorage.setItem(COOKIE_KEY, btn.getAttribute("data-cookie")); } catch (e) {}
+        banner.classList.remove("is-visible");
+        document.body.classList.remove("is-cookie-open");
+        window.setTimeout(function () { banner.hidden = true; }, 600);
+      });
+    });
+  }
+
   /* ------------------------------ Floating widget + sticky CTA ------------------------------ */
   function initFloating() {
     var widget = document.querySelector(".floating-widget");
@@ -1382,7 +1414,7 @@
   function init() {
     // Independent try/catch per module so one failure never blanks the page.
     var steps = [initLangSwitch, initHeader, initMobileMenu,
-      initFaq, initPopup, initForms, initFloating, initActiveNav, initAnchors, initTypewriter, initReveal, initWhyAccordion, initServiceReveal, initCasesFilter, initCaseSwitch, initCaseMedia];
+      initFaq, initPopup, initForms, initCookie, initFloating, initActiveNav, initAnchors, initTypewriter, initReveal, initWhyAccordion, initServiceReveal, initCasesFilter, initCaseSwitch, initCaseMedia];
     for (var i = 0; i < steps.length; i++) {
       try { steps[i](); } catch (e) { if (window.console) console.error("[ws] init step failed:", e); }
     }
