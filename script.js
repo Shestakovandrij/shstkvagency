@@ -257,6 +257,8 @@
       "form.opt.other": "Інше",
       "form.success": "Дякуємо! Ваша заявка надіслана. Ми скоро зв’яжемося з вами.",
       "form.error": "Будь ласка, заповніть обов’язкові поля.",
+      "form.sending": "Надсилаємо…",
+      "form.err.send": "Не вдалося надіслати заявку. Спробуйте ще раз або напишіть нам у Telegram.",
       "form.err.required": "Це поле обов’язкове",
       "form.err.agree": "Потрібно підтвердити згоду",
 
@@ -544,6 +546,8 @@
       "form.opt.other": "Inne",
       "form.success": "Dziękujemy! Twoje zgłoszenie zostało wysłane. Wkrótce się z Tobą skontaktujemy.",
       "form.error": "Proszę wypełnić wymagane pola.",
+      "form.sending": "Wysyłanie…",
+      "form.err.send": "Nie udało się wysłać zgłoszenia. Spróbuj ponownie lub napisz do nas na Telegramie.",
       "form.err.required": "To pole jest wymagane",
       "form.err.agree": "Wymagana jest akceptacja zgody",
 
@@ -813,11 +817,51 @@
   }
 
   /* ------------------------------ Forms + validation ------------------------------ */
+  var LEAD_ENDPOINT = "/api/lead";
+
+  // Надсилає заявку в Telegram через серверлес-функцію.
+  // Повертає Promise<boolean>: true — доставлено, false — помилка мережі/сервера.
+  function sendLead(form) {
+    var payload = {
+      name: (form.querySelector('[name="name"]') || {}).value || "",
+      contact: (form.querySelector('[name="contact"]') || {}).value || "",
+      need: (form.querySelector('[name="need"]') || {}).value || "",
+      comment: (form.querySelector('[name="comment"]') || {}).value || "",
+      company: (form.querySelector('[name="company"]') || {}).value || "",
+      source: form.id || "",
+      lang: currentLang
+    };
+
+    if (!window.fetch) return Promise.resolve(false);
+
+    return window.fetch(LEAD_ENDPOINT, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    }).then(function (res) {
+      if (!res.ok) return false;
+      return res.json().then(function (data) { return !!(data && data.ok); }, function () { return false; });
+    }, function () {
+      return false;
+    });
+  }
+
   function initForms() {
     var forms = document.querySelectorAll(".form");
     forms.forEach(function (form) {
+      var errStatus = form.querySelector(".form__status--error");
+      var submitBtn = form.querySelector('button[type="submit"]');
+      var submitLabel = submitBtn ? submitBtn.querySelector("span:not(.btn__play)") : null;
+
+      function setErrorText(key) {
+        if (!errStatus) return;
+        errStatus.setAttribute("data-i18n", key);
+        errStatus.textContent = t(key);
+      }
+
       form.addEventListener("submit", function (e) {
         e.preventDefault();
+        if (form.classList.contains("is-sending")) return;
         var valid = true;
 
         // Required text/select fields
@@ -840,16 +884,32 @@
         });
 
         form.classList.remove("is-success", "is-error");
-        if (valid) {
+        if (!valid) {
+          setErrorText("form.error");
+          form.classList.add("is-error");
+          return;
+        }
+
+        form.classList.add("is-sending");
+        if (submitLabel) submitLabel.textContent = t("form.sending");
+
+        sendLead(form).then(function (delivered) {
+          form.classList.remove("is-sending");
+          if (submitLabel) submitLabel.textContent = t("form.submit");
+
+          if (!delivered) {
+            setErrorText("form.err.send");
+            form.classList.add("is-error");
+            return;
+          }
+
           form.classList.add("is-success");
           form.reset();
           form.querySelectorAll(".field.is-invalid").forEach(function (f) { f.classList.remove("is-invalid"); });
           var errChk = form.querySelector(".field__error--checkbox");
           if (errChk) errChk.classList.remove("is-shown");
           window.setTimeout(function () { form.classList.remove("is-success"); }, 6000);
-        } else {
-          form.classList.add("is-error");
-        }
+        });
       });
 
       // Clear error on input

@@ -749,6 +749,12 @@ body.is-preloading { overflow: hidden; }
 .form.is-success .form__status--success { display: block; }
 .form.is-error .form__status--error { display: block; }
 
+/* Honeypot: приманка для ботів, для людей невидима */
+.form__hp { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+
+/* Стан надсилання */
+.form.is-sending .btn[type="submit"] { opacity: 0.6; pointer-events: none; }
+
 /* ------------------------------ Partners ------------------------------ */
 /* minmax(0,...) so the marquee's max-content width can't balloon the left column and shove the cards off-screen */
 .partners-layout { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); gap: clamp(1.4rem, 3vw, 2.6rem); align-items: start; }
