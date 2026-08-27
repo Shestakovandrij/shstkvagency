@@ -514,7 +514,7 @@
       "case.27.meta": "Landing page • Sprzedaż samochodów",
       "case.28.meta": "Landing page • Części do hybryd",
       "case.29.meta": "Sklep internetowy • Kwiaty",
-      "case.30.meta": "Landing page • Konsulting restauracyjny",
+      "case.30.meta": "Landing page • Konsulting HoReCa",
       "case.31.meta": "Landing page • Sieć barbershopów",
       "case.32.meta": "Landing page • Obsługa nieruchomości",
       "case.1.tag": "Landing page",

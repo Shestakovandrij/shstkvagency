@@ -620,7 +620,7 @@ body.is-preloading { overflow: hidden; }
 .cases-tab:hover { color: var(--ink); border-color: var(--ink-40); }
 .cases-tab.is-active { background: var(--ink); color: #fff; border-color: var(--ink); }
 
-.cases { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1rem, 1.6vw, 1.5rem); }
+.cases { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(1rem, 1.6vw, 1.5rem); }
 .case.is-hidden { display: none !important; }
 @keyframes caseIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
 .case.is-enter { animation: caseIn 0.5s var(--ease) both; }
@@ -670,8 +670,9 @@ body.is-preloading { overflow: hidden; }
 .case__num { flex: none; font-family: var(--font-head); font-weight: 600; font-size: 1rem; color: var(--ink-40); }
 .case__name { font-family: var(--font-head); font-weight: 800; letter-spacing: -0.015em;
   font-size: clamp(1.15rem, 1.7vw, 1.55rem); line-height: 1.1; color: var(--ink);
+  min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.case__cat { flex: 0 1 auto; min-width: 0; font-family: var(--font-head); font-weight: 500; font-size: 0.9rem; color: var(--ink-60);
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.case__cat { flex: none; font-family: var(--font-head); font-weight: 500; font-size: 0.9rem; color: var(--ink-60); white-space: nowrap; }
 .case__cta { margin-left: auto; flex: none; align-self: center; width: 48px; height: 48px; display: grid; place-items: center;
   border-radius: var(--r-full); color: #fff; background: var(--ink);
   position: relative; overflow: hidden; padding-left: 2px;
@@ -1255,7 +1256,7 @@ html.anim-on .about2__statement.is-in .word { opacity: 1; transform: none; trans
 @media (max-width: 1100px) {
   .shelf { grid-template-columns: repeat(3, 1fr); }
   .about2__stats { grid-template-columns: repeat(2, 1fr); }
-  .cases { grid-template-columns: 1fr; }
+  .cases { grid-template-columns: minmax(0, 1fr); }
   .faq-layout { grid-template-columns: 1fr; }
   .faq-layout__head { position: static; }
   .cta-form { grid-template-columns: 1fr; }
@@ -1323,7 +1324,7 @@ html.anim-on .about2__statement.is-in .word { opacity: 1; transform: none; trans
   :root { --header-h: 72px; }
   .case__bar { flex-wrap: wrap; row-gap: 0.35rem; }
   .case__id { flex: 1 1 auto; }
-  .case__cat { flex-basis: 100%; order: 3; }
+  .case__cat { flex: 0 0 100%; order: 3; }
   .case__cta { width: 44px; height: 44px; }
   .menu-btn__label { display: none; }
   .menu__meta { gap: 0.4rem 1rem; }
