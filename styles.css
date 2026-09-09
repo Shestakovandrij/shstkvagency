@@ -333,6 +333,11 @@ body.is-preloading { overflow: hidden; }
 .menu__contact:hover { color: var(--accent); }
 .menu__side .btn { margin-top: auto; }
 
+/* Юридичне посилання в меню — тримається під CTA, а не в meta-рядку,
+   бо meta ховається на низьких екранах */
+.menu__legal { display: inline-flex; align-self: flex-start; margin-top: 0.85rem; font-size: 0.8rem; color: var(--ink-60); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(10, 10, 10, 0.28); transition: color 0.3s var(--ease), text-decoration-color 0.3s var(--ease); }
+.menu__legal:hover { color: var(--ink); text-decoration-color: currentColor; }
+
 .menu__meta { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-top: clamp(0.9rem, 1.8vh, 1.6rem); padding-top: clamp(0.7rem, 1.4vh, 1rem); border-top: 1px solid var(--line); }
 .menu__meta-item { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: var(--ink-60); }
 .menu__meta-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }

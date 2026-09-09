@@ -976,7 +976,7 @@ body.menu-open .nav-menu__link { transform: translateY(0); }
 .contact__social:hover::after { transform: scaleX(1); }
 
 .contact__place { grid-row: 3; grid-column: 1; align-self: end; }
-.contact__copy { grid-row: 3; grid-column: 3; align-self: end; justify-self: end; }
+.contact__copy { grid-row: 3; grid-column: 3; align-self: end; justify-self: end; flex-direction: column; align-items: flex-end; gap: 0.35rem; text-align: right; }
 .contact__note-1 { grid-row: 1; grid-column: 1; }
 .contact__note-2 { grid-row: 1; grid-column: 3; }
 
