@@ -16,6 +16,7 @@
       "nav.why": "Переваги",
       "nav.services": "Послуги",
       "nav.cases": "Кейси",
+      "nav.portfolio": "Портфоліо",
       "nav.budget": "Швидкий старт",
       "nav.tariffs": "Тарифи",
       "nav.faq": "FAQ",
@@ -319,6 +320,7 @@
       "nav.why": "Korzyści",
       "nav.services": "Usługi",
       "nav.cases": "Case studies",
+      "nav.portfolio": "Portfolio",
       "nav.budget": "Szybki start",
       "nav.tariffs": "Cennik",
       "nav.faq": "FAQ",
@@ -873,7 +875,14 @@
       body: JSON.stringify(payload)
     }).then(function (res) {
       if (!res.ok) return false;
-      return res.json().then(function (data) { return !!(data && data.ok); }, function () { return false; });
+      return res.json().then(function (data) {
+        var ok = !!(data && data.ok);
+        // Lead стріляємо лише коли сервер підтвердив доставку, а не на сабміті
+        if (ok && window.wsTrack) {
+          window.wsTrack("Lead", { form_id: payload.source, need: payload.need || "", lang: payload.lang });
+        }
+        return ok;
+      }, function () { return false; });
     }, function () {
       return false;
     });

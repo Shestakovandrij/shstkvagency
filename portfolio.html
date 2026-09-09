@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Портфоліо — Web Shestakov</title>
+  <meta name="description" content="Вибрані проєкти Web Shestakov: сайти, інтернет-магазини та digital-рішення для бізнесу в Польщі, Україні та ЄС." />
+
+  <link rel="canonical" href="https://www.shstkv-digital.com/portfolio.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Web Shestakov" />
+  <meta property="og:url" content="https://www.shstkv-digital.com/portfolio.html" />
+  <meta property="og:locale" content="uk_UA" />
+  <meta property="og:title" content="Портфоліо — Web Shestakov" />
+  <meta property="og:description" content="Вибрані проєкти Web Shestakov: сайти, інтернет-магазини та digital-рішення для бізнесу." />
+  <meta property="og:image" content="https://www.shstkv-digital.com/assets/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://www.shstkv-digital.com/assets/og-image.jpg" />
+  <meta name="theme-color" content="#EEEEEE" />
+
+  <link rel="icon" href="/favicon.ico" sizes="32x32" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@1&family=Inter+Tight:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="portfolio.css" />
+
+  <script>
+    /* Гарди прелоадера — до першого малювання:
+       1) ручний пропуск для налагодження: portfolio.html?pre-skip
+       2) prefers-reduced-motion пропускає всю послідовність
+       3) жорсткий запобіжник: сторінка ніколи не лишається під оверлеєм */
+    (function () {
+      try {
+        var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (/[?&]pre-skip/.test(window.location.search) || reduce) {
+          document.documentElement.className += " pre-skip";
+        }
+      } catch (e) {}
+      window.setTimeout(function () {
+        var p = document.getElementById("preloader");
+        if (p && !window.__preDone) {
+          p.style.transition = "opacity 0.4s ease";
+          p.style.opacity = "0";
+          window.setTimeout(function () {
+            p.classList.add("is-done");
+            document.body.classList.remove("is-preloading");
+            document.body.classList.remove("at-intro");
+            window.__preDone = true;
+          }, 450);
+        }
+      }, 7000);
+    })();
+  </script>
+
+  <noscript>
+    <style>
+      /* Без JS оверлей нічим прибрати — отже, він не має з'являтися взагалі. */
+      .preloader { display: none !important; }
+      body.is-preloading { overflow: auto !important; }
+    </style>
+  </noscript>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+</head>
+
+<body class="is-preloading at-intro">
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ============ ПРЕЛОАДЕР ============ -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__scene" data-pl-scene>
+      <div class="preloader__top">
+        <span class="preloader__logo" data-pl-logo>
+          <img src="assets/logo.svg" alt="Web Shestakov" width="97" height="34" />
+        </span>
+        <span class="preloader__meta" data-pl-fade>Портфоліо<br />32 проєкти</span>
+      </div>
+
+      <div class="preloader__bottom">
+        <span class="preloader__word" data-pl-fade>Обрані</span>
+        <span class="preloader__count" data-pl-count>000</span>
+      </div>
+    </div>
+
+    <div class="preloader__cover" data-pl-cover>
+      <span class="preloader__track"><span class="preloader__line" data-pl-line></span></span>
+    </div>
+  </div>
+
+  <!-- ============ НАВБАР ============ -->
+  <header class="navbar">
+    <div class="navbar__grid">
+      <a href="index.html" class="navbar__brand" aria-label="Web Shestakov — на головну">
+        <img class="brand--light" src="assets/logo-light.svg" alt="Web Shestakov" width="97" height="34" />
+        <img class="brand--dark" src="assets/logo.svg" alt="" aria-hidden="true" width="97" height="34" />
+      </a>
+
+      <button type="button" class="navbar__menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav-menu">
+        <span>Меню</span>
+        <span aria-hidden="true">Закрити</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Словесний знак: у першому екрані — велетень на 8%, на скролі
+       стискається у центральний слот навбара -->
+  <span class="intro-word" data-intro-word aria-hidden="true">
+    <svg class="wordmark" viewBox="25.79 7.4 201.18 18.1" fill="none" aria-hidden="true" focusable="false">
+      <path d="M28.792 19.3018C28.792 19.9578 28.904 20.5178 29.128 20.9818C29.352 21.4458 29.664 21.8298 30.064 22.1338C30.464 22.4218 30.92 22.6378 31.432 22.7818C31.96 22.9098 32.528 22.9738 33.136 22.9738C33.792 22.9738 34.352 22.9018 34.816 22.7578C35.28 22.5978 35.656 22.3978 35.944 22.1578C36.232 21.9178 36.44 21.6458 36.568 21.3418C36.696 21.0218 36.76 20.7018 36.76 20.3818C36.76 19.7258 36.608 19.2458 36.304 18.9418C36.016 18.6218 35.696 18.3978 35.344 18.2698C34.736 18.0458 34.024 17.8378 33.208 17.6458C32.408 17.4378 31.416 17.1738 30.232 16.8538C29.496 16.6618 28.88 16.4138 28.384 16.1098C27.904 15.7898 27.52 15.4378 27.232 15.0538C26.944 14.6698 26.736 14.2618 26.608 13.8298C26.496 13.3978 26.44 12.9578 26.44 12.5098C26.44 11.6458 26.616 10.9018 26.968 10.2778C27.336 9.63784 27.816 9.10984 28.408 8.69384C29 8.27784 29.672 7.97384 30.424 7.78184C31.176 7.57384 31.936 7.46984 32.704 7.46984C33.6 7.46984 34.44 7.58984 35.224 7.82984C36.024 8.05384 36.72 8.39784 37.312 8.86184C37.92 9.32584 38.4 9.90184 38.752 10.5898C39.104 11.2618 39.28 12.0458 39.28 12.9418H36.28C36.2 11.8378 35.824 11.0618 35.152 10.6138C34.48 10.1498 33.624 9.91784 32.584 9.91784C32.232 9.91784 31.872 9.95784 31.504 10.0378C31.136 10.1018 30.8 10.2218 30.496 10.3978C30.192 10.5578 29.936 10.7818 29.728 11.0698C29.536 11.3578 29.44 11.7178 29.44 12.1498C29.44 12.7578 29.624 13.2378 29.992 13.5898C30.376 13.9258 30.872 14.1818 31.48 14.3578C31.544 14.3738 31.792 14.4458 32.224 14.5738C32.672 14.6858 33.168 14.8138 33.712 14.9578C34.256 15.1018 34.784 15.2458 35.296 15.3898C35.824 15.5178 36.2 15.6138 36.424 15.6778C36.984 15.8538 37.472 16.0938 37.888 16.3978C38.304 16.7018 38.648 17.0538 38.92 17.4538C39.208 17.8378 39.416 18.2538 39.544 18.7018C39.688 19.1498 39.76 19.5978 39.76 20.0458C39.76 21.0058 39.56 21.8298 39.16 22.5178C38.776 23.1898 38.264 23.7418 37.624 24.1738C36.984 24.6058 36.256 24.9178 35.44 25.1098C34.624 25.3178 33.792 25.4218 32.944 25.4218C31.968 25.4218 31.048 25.3018 30.184 25.0618C29.32 24.8218 28.568 24.4538 27.928 23.9578C27.288 23.4618 26.776 22.8298 26.392 22.0618C26.008 21.2778 25.808 20.3578 25.792 19.3018H28.792ZM41.819 7.878H44.819V14.694H52.619V7.878H55.619V25.014H52.619V17.286H44.819V25.014H41.819ZM60.702 19.3018C60.702 19.9578 60.814 20.5178 61.038 20.9818C61.262 21.4458 61.574 21.8298 61.974 22.1338C62.374 22.4218 62.83 22.6378 63.342 22.7818C63.87 22.9098 64.438 22.9738 65.046 22.9738C65.702 22.9738 66.262 22.9018 66.726 22.7578C67.19 22.5978 67.566 22.3978 67.854 22.1578C68.142 21.9178 68.35 21.6458 68.478 21.3418C68.606 21.0218 68.67 20.7018 68.67 20.3818C68.67 19.7258 68.518 19.2458 68.214 18.9418C67.926 18.6218 67.606 18.3978 67.254 18.2698C66.646 18.0458 65.934 17.8378 65.118 17.6458C64.318 17.4378 63.326 17.1738 62.142 16.8538C61.406 16.6618 60.79 16.4138 60.294 16.1098C59.814 15.7898 59.43 15.4378 59.142 15.0538C58.854 14.6698 58.646 14.2618 58.518 13.8298C58.406 13.3978 58.35 12.9578 58.35 12.5098C58.35 11.6458 58.526 10.9018 58.878 10.2778C59.246 9.6378 59.726 9.1098 60.318 8.6938C60.91 8.2778 61.582 7.9738 62.334 7.7818C63.086 7.5738 63.846 7.4698 64.614 7.4698C65.51 7.4698 66.35 7.5898 67.134 7.8298C67.934 8.0538 68.63 8.3978 69.222 8.8618C69.83 9.3258 70.31 9.9018 70.662 10.5898C71.014 11.2618 71.19 12.0458 71.19 12.9418H68.19C68.11 11.8378 67.734 11.0618 67.062 10.6138C66.39 10.1498 65.534 9.9178 64.494 9.9178C64.142 9.9178 63.782 9.9578 63.414 10.0378C63.046 10.1018 62.71 10.2218 62.406 10.3978C62.102 10.5578 61.846 10.7818 61.638 11.0698C61.446 11.3578 61.35 11.7178 61.35 12.1498C61.35 12.7578 61.534 13.2378 61.902 13.5898C62.286 13.9258 62.782 14.1818 63.39 14.3578C63.454 14.3738 63.702 14.4458 64.134 14.5738C64.582 14.6858 65.078 14.8138 65.622 14.9578C66.166 15.1018 66.694 15.2458 67.206 15.3898C67.734 15.5178 68.11 15.6138 68.334 15.6778C68.894 15.8538 69.382 16.0938 69.798 16.3978C70.214 16.7018 70.558 17.0538 70.83 17.4538C71.118 17.8378 71.326 18.2538 71.454 18.7018C71.598 19.1498 71.67 19.5978 71.67 20.0458C71.67 21.0058 71.47 21.8298 71.07 22.5178C70.686 23.1898 70.174 23.7418 69.534 24.1738C68.894 24.6058 68.166 24.9178 67.35 25.1098C66.534 25.3178 65.702 25.4218 64.854 25.4218C63.878 25.4218 62.958 25.3018 62.094 25.0618C61.23 24.8218 60.478 24.4538 59.838 23.9578C59.198 23.4618 58.686 22.8298 58.302 22.0618C57.918 21.2778 57.718 20.3578 57.702 19.3018H60.702ZM72.1845 7.8778H86.0565V10.4698H80.6085V25.0138H77.6085V10.4698H72.1845V7.8778ZM87.5631 7.8778H90.5631V15.6778L98.1951 7.8778H101.891L95.0511 14.7178L102.371 25.0138H98.6271L93.0111 16.8298L90.5631 19.2538V25.0138H87.5631V7.8778ZM101.569 7.8778H104.689L108.985 21.4378H109.033L113.425 7.8778H116.473L110.617 25.0138H107.281L101.569 7.8778Z" fill="currentColor"/>
+      <path opacity="0.7" d="M122.51 7.7798C123.238 7.7798 123.919 7.9198 124.554 8.1998C125.189 8.4705 125.739 8.8438 126.206 9.3198C126.682 9.7865 127.055 10.3372 127.326 10.9718C127.606 11.6065 127.746 12.2878 127.746 13.0158C127.746 13.7438 127.606 14.4252 127.326 15.0598C127.055 15.6945 126.682 16.2498 126.206 16.7258C125.739 17.1925 125.189 17.5658 124.554 17.8458C123.919 18.1165 123.238 18.2518 122.51 18.2518C121.782 18.2518 121.101 18.1165 120.466 17.8458C119.831 17.5658 119.276 17.1925 118.8 16.7258C118.333 16.2498 117.96 15.6945 117.68 15.0598C117.409 14.4252 117.274 13.7438 117.274 13.0158C117.274 12.2878 117.409 11.6065 117.68 10.9718C117.96 10.3372 118.333 9.7865 118.8 9.3198C119.276 8.8438 119.831 8.4705 120.466 8.1998C121.101 7.9198 121.782 7.7798 122.51 7.7798ZM122.524 8.2418C121.852 8.2418 121.227 8.3632 120.648 8.6058C120.069 8.8485 119.57 9.1845 119.15 9.6138C118.73 10.0432 118.399 10.5518 118.156 11.1398C117.923 11.7185 117.806 12.3438 117.806 13.0158C117.806 13.6785 117.927 14.2992 118.17 14.8778C118.413 15.4565 118.744 15.9652 119.164 16.4038C119.584 16.8332 120.079 17.1738 120.648 17.4258C121.227 17.6685 121.852 17.7898 122.524 17.7898C123.196 17.7898 123.817 17.6638 124.386 17.4118C124.955 17.1598 125.45 16.8192 125.87 16.3898C126.29 15.9512 126.617 15.4425 126.85 14.8638C127.093 14.2852 127.214 13.6645 127.214 13.0018C127.214 12.3298 127.093 11.7045 126.85 11.1258C126.617 10.5472 126.29 10.0478 125.87 9.6278C125.459 9.1985 124.965 8.8625 124.386 8.6198C123.817 8.3678 123.196 8.2418 122.524 8.2418ZM120.606 9.9218H122.93C123.63 9.9218 124.139 10.0665 124.456 10.3558C124.783 10.6452 124.946 11.0698 124.946 11.6298C124.946 11.8818 124.904 12.1058 124.82 12.3018C124.736 12.4885 124.619 12.6472 124.47 12.7778C124.33 12.9085 124.162 13.0158 123.966 13.0998C123.779 13.1838 123.574 13.2398 123.35 13.2678L125.198 16.1098H124.61L122.748 13.2538H121.138V16.1098H120.606V9.9218ZM121.138 12.7918H122.454C122.687 12.7918 122.921 12.7825 123.154 12.7638C123.387 12.7358 123.597 12.6845 123.784 12.6098C123.971 12.5258 124.12 12.4092 124.232 12.2598C124.353 12.1012 124.414 11.8865 124.414 11.6158C124.414 11.3825 124.367 11.1865 124.274 11.0278C124.181 10.8692 124.059 10.7432 123.91 10.6498C123.761 10.5472 123.593 10.4772 123.406 10.4398C123.219 10.4025 123.033 10.3838 122.846 10.3838H121.138V12.7918Z" fill="currentColor"/>
+      <path d="M135.318 7.8778H138.51L145.11 25.0138H141.894L140.286 20.4778H133.446L131.838 25.0138H128.742L135.318 7.8778ZM134.262 18.1978H139.494L136.926 10.8298H136.854L134.262 18.1978ZM161.214 25.0138H159.294L158.838 22.9978C158.038 23.9098 157.238 24.5418 156.438 24.8938C155.638 25.2458 154.718 25.4218 153.678 25.4218C152.398 25.4218 151.246 25.1898 150.222 24.7258C149.214 24.2458 148.358 23.5978 147.654 22.7818C146.95 21.9658 146.406 21.0138 146.022 19.9258C145.654 18.8378 145.47 17.6778 145.47 16.4458C145.47 15.2298 145.654 14.0778 146.022 12.9898C146.406 11.9018 146.95 10.9498 147.654 10.1338C148.358 9.3178 149.214 8.6698 150.222 8.1898C151.246 7.7098 152.398 7.4698 153.678 7.4698C154.606 7.4698 155.486 7.5978 156.318 7.8538C157.166 8.0938 157.918 8.4618 158.574 8.9578C159.23 9.4378 159.774 10.0458 160.206 10.7818C160.638 11.5178 160.91 12.3658 161.022 13.3258H158.094C158.014 12.7658 157.838 12.2778 157.566 11.8618C157.31 11.4298 156.982 11.0698 156.582 10.7818C156.182 10.4938 155.734 10.2778 155.238 10.1338C154.742 9.9898 154.222 9.9178 153.678 9.9178C152.766 9.9178 151.974 10.1018 151.302 10.4698C150.646 10.8378 150.11 11.3338 149.694 11.9578C149.278 12.5658 148.966 13.2618 148.758 14.0458C148.566 14.8298 148.47 15.6298 148.47 16.4458C148.47 17.2618 148.566 18.0618 148.758 18.8458C148.966 19.6298 149.278 20.3338 149.694 20.9578C150.11 21.5658 150.646 22.0538 151.302 22.4218C151.974 22.7898 152.766 22.9738 153.678 22.9738C154.446 22.9898 155.126 22.8938 155.718 22.6858C156.31 22.4618 156.806 22.1498 157.206 21.7498C157.622 21.3338 157.934 20.8298 158.142 20.2378C158.35 19.6458 158.462 18.9898 158.478 18.2698H153.918V15.9898H161.214V25.0138ZM163.993 7.8778H176.329V10.4698H166.993V14.9578H175.633V17.4058H166.993V22.4218H176.497V25.0138H163.993V7.8778ZM178.51 7.8778H181.678L189.502 20.5018H189.55V7.8778H192.406V25.0138H189.238L181.438 12.4138H181.366V25.0138H178.51V7.8778ZM207.038 13.3258C206.91 12.8298 206.734 12.3738 206.51 11.9578C206.286 11.5418 205.998 11.1818 205.646 10.8778C205.294 10.5738 204.878 10.3418 204.398 10.1818C203.934 10.0058 203.39 9.9178 202.766 9.9178C201.854 9.9178 201.062 10.1018 200.39 10.4698C199.734 10.8378 199.198 11.3338 198.782 11.9578C198.366 12.5658 198.054 13.2618 197.846 14.0458C197.654 14.8298 197.558 15.6298 197.558 16.4458C197.558 17.2618 197.654 18.0618 197.846 18.8458C198.054 19.6298 198.366 20.3338 198.782 20.9578C199.198 21.5658 199.734 22.0538 200.39 22.4218C201.062 22.7898 201.854 22.9738 202.766 22.9738C203.438 22.9738 204.03 22.8618 204.542 22.6378C205.054 22.3978 205.494 22.0778 205.862 21.6778C206.23 21.2618 206.518 20.7818 206.726 20.2378C206.934 19.6938 207.07 19.1098 207.134 18.4858H210.062C209.998 19.5098 209.774 20.4458 209.39 21.2938C209.022 22.1418 208.518 22.8778 207.878 23.5018C207.238 24.1098 206.486 24.5818 205.622 24.9178C204.758 25.2538 203.806 25.4218 202.766 25.4218C201.486 25.4218 200.334 25.1898 199.31 24.7258C198.302 24.2458 197.446 23.5978 196.742 22.7818C196.038 21.9658 195.494 21.0138 195.11 19.9258C194.742 18.8378 194.558 17.6778 194.558 16.4458C194.558 15.2298 194.742 14.0778 195.11 12.9898C195.494 11.9018 196.038 10.9498 196.742 10.1338C197.446 9.3178 198.302 8.6698 199.31 8.1898C200.334 7.7098 201.486 7.4698 202.766 7.4698C203.726 7.4698 204.63 7.6058 205.478 7.8778C206.326 8.1338 207.07 8.5178 207.71 9.0298C208.366 9.5258 208.894 10.1338 209.294 10.8538C209.694 11.5738 209.942 12.3978 210.038 13.3258H207.038ZM216.775 18.2938 210.343 7.8778H213.823L218.359 15.5578L222.823 7.8778H226.183L219.775 18.2938V25.0138H216.775V18.2938Z" fill="currentColor"/>
+    </svg>
+  </span>
+
+  <!-- ============ ФУЛСКРІН-МЕНЮ ============ -->
+  <div class="nav-menu" id="nav-menu" role="dialog" aria-modal="true" aria-label="Навігація">
+    <div class="nav-menu__panel">
+      <nav class="nav-menu__list">
+        <span class="nav-menu__divider" aria-hidden="true"></span>
+        <span class="nav-menu__row"><a href="index.html" class="nav-menu__link">Головна</a></span>
+        <span class="nav-menu__divider" aria-hidden="true"></span>
+        <span class="nav-menu__row"><a href="portfolio.html" class="nav-menu__link" aria-current="page">Портфоліо</a></span>
+        <span class="nav-menu__divider" aria-hidden="true"></span>
+        <span class="nav-menu__row"><a href="index.html#services" class="nav-menu__link">Послуги</a></span>
+        <span class="nav-menu__divider" aria-hidden="true"></span>
+        <span class="nav-menu__row"><a href="index.html#tariffs" class="nav-menu__link">Тарифи</a></span>
+        <span class="nav-menu__divider" aria-hidden="true"></span>
+        <span class="nav-menu__row"><a href="index.html#contact" class="nav-menu__link">Контакти</a></span>
+        <span class="nav-menu__divider" aria-hidden="true"></span>
+      </nav>
+
+      <div class="nav-menu__foot">
+        <a href="tel:+48577503534">+48 577 503 534</a>
+        <span class="nav-menu__socials">
+          <a href="https://t.me/Andrii_DEV9" target="_blank" rel="noopener">Telegram</a>
+          <a href="https://www.instagram.com/web.shestakov" target="_blank" rel="noopener">Instagram</a>
+        </span>
+        <span>Польща · Європа</span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ============ ІНТРО ============
+       Перший екран: знак, локація, колаж із шести кейсів і велетенський
+       словесний знак. Розкладка повторює шаблон, палітра — чорна. -->
+  <div class="intro" id="intro">
+    <section class="intro-hero">
+      <a href="index.html" class="intro-hero__mark" aria-label="Web Shestakov — на головну">
+        <img src="assets/mark.svg" alt="" aria-hidden="true" width="44" height="44" />
+      </a>
+
+      <div class="intro-hero__loc">
+        <span>Польща · Європа</span>
+        <span class="intro-hero__globe" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.333"
+               stroke-linecap="round" data-globe focusable="false">
+            <circle cx="12" cy="12" r="9.732" />
+            <path d="M2.268 12h19.464M3.801 6.976h16.454M3.858 17.132h16.454" />
+            <path d="M12 2.268C12 2.268 3.2 1.911 2.267 12.044 2.711 21.511 12 21.732 12 21.732">
+              <animate attributeName="d" dur="1.5s" begin="0s" repeatCount="indefinite"
+                calcMode="spline" keyTimes="0;1" keySplines="0.167 0.167 0.833 0.833"
+                values="M12 2.268C12 2.268 3.2 1.911 2.267 12.044 2.711 21.511 12 21.732 12 21.732;M12 2.268C12 2.268 21.688 2.799 21.733 12 21.778 21.022 12 21.732 12 21.732" />
+            </path>
+            <path d="M12 2.268C12 2.268 3.2 1.911 2.267 12.044 2.711 21.511 12 21.732 12 21.732">
+              <animate attributeName="d" dur="1.5s" begin="-0.5s" repeatCount="indefinite"
+                calcMode="spline" keyTimes="0;1" keySplines="0.167 0.167 0.833 0.833"
+                values="M12 2.268C12 2.268 3.2 1.911 2.267 12.044 2.711 21.511 12 21.732 12 21.732;M12 2.268C12 2.268 21.688 2.799 21.733 12 21.778 21.022 12 21.732 12 21.732" />
+            </path>
+            <path d="M12 2.268C12 2.268 3.2 1.911 2.267 12.044 2.711 21.511 12 21.732 12 21.732">
+              <animate attributeName="d" dur="1.5s" begin="-1s" repeatCount="indefinite"
+                calcMode="spline" keyTimes="0;1" keySplines="0.167 0.167 0.833 0.833"
+                values="M12 2.268C12 2.268 3.2 1.911 2.267 12.044 2.711 21.511 12 21.732 12 21.732;M12 2.268C12 2.268 21.688 2.799 21.733 12 21.778 21.022 12 21.732 12 21.732" />
+            </path>
+          </svg>
+        </span>
+      </div>
+
+      <div class="hero-media" data-hero-media aria-hidden="true">
+        <img class="hero-media__item _1" src="assets/hero/hero-1.webp" alt="" decoding="async" fetchpriority="high" width="1100" height="688" />
+        <img class="hero-media__item _2" src="assets/hero/hero-2.webp" alt="" decoding="async" width="1100" height="688" />
+        <img class="hero-media__item _3" src="assets/hero/hero-3.webp" alt="" decoding="async" width="1100" height="619" />
+        <img class="hero-media__item _4" src="assets/hero/hero-4.webp" alt="" decoding="async" width="1100" height="825" />
+        <img class="hero-media__item _5" src="assets/hero/hero-5.webp" alt="" decoding="async" width="1100" height="825" />
+        <img class="hero-media__item _6" src="assets/hero/hero-6.webp" alt="" decoding="async" width="1100" height="688" />
+      </div>
+
+    </section>
+
+  </div>
+
+  <main>
+    <!-- ============ РОБОТИ ============ -->
+    <section class="work" id="work">
+      <div class="work__panel">
+        <h2 class="u-sr">Портфоліо Web Shestakov — вибрані проєкти</h2>
+
+        <div class="cms-work">
+          <div class="cms-work__bar" data-reveal>
+            <div class="tabs" role="tablist" aria-label="Категорії проєктів">
+              <button type="button" class="tab is-active" role="tab" aria-selected="true" aria-controls="work-list" data-filter="all">Всі сайти</button>
+              <button type="button" class="tab" role="tab" aria-selected="false" aria-controls="work-list" data-filter="ecom">Інтернет-магазини</button>
+              <button type="button" class="tab" role="tab" aria-selected="false" aria-controls="work-list" data-filter="budget">Сайти від 300$</button>
+            </div>
+            <span class="cms-work__count"><span data-shown>6</span> / <span data-total>32</span></span>
+          </div>
+
+          <div class="work-layout">
+            <div class="work-list" id="work-list" role="tabpanel" aria-live="polite">
+              <a class="case" href="https://lokalizacja.net/" target="_blank" rel="noopener noreferrer" data-cat="multi" aria-label="Lokalizacja" data-reveal>
+                <span class="case__media">
+                  <img src="assets/cases/case5.png" alt="Lokalizacja — скриншот сайту" loading="lazy" decoding="async" width="1200" height="840" sizes="(max-width: 767px) 92vw, (max-width: 1023px) 46vw, 32vw" />
+                </span>
+                <span class="case__bar">
+                  <span class="case__id">
+                    <span class="case__num">(01)</span>
+                    <h3 class="case__name">Lokalizacja</h3>
+                  </span>
+                  <span class="case__cat">Багатосторінковий • Нерухомість</span>
+                  <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </span>
+              </a>
+
+              <a class="case" href="https://voltarisua.com/" target="_blank" rel="noopener noreferrer" data-cat="landing" aria-label="Voltaris Energy" data-reveal>
+                <span class="case__media">
+                  <img src="assets/cases/case22.png" alt="Voltaris Energy — скриншот сайту" loading="lazy" decoding="async" width="1200" height="840" sizes="(max-width: 767px) 92vw, (max-width: 1023px) 46vw, 32vw" />
+                </span>
+                <span class="case__bar">
+                  <span class="case__id">
+                    <span class="case__num">(02)</span>
+                    <h3 class="case__name">Voltaris Energy</h3>
+                  </span>
+                  <span class="case__cat">Лендинг • Сонячні електростанції</span>
+                  <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </span>
+              </a>
+
+              <a class="case" href="https://rozmarin.shop/" target="_blank" rel="noopener noreferrer" data-cat="ecom" aria-label="Rozmarin" data-reveal>
+                <span class="case__media">
+                  <img src="assets/cases/case29.png" alt="Rozmarin — скриншот сайту" loading="lazy" decoding="async" width="1200" height="840" sizes="(max-width: 767px) 92vw, (max-width: 1023px) 46vw, 32vw" />
+                </span>
+                <span class="case__bar">
+                  <span class="case__id">
+                    <span class="case__num">(03)</span>
+                    <h3 class="case__name">Rozmarin</h3>
+                  </span>
+                  <span class="case__cat">Інтернет-магазин • Квіти</span>
+                  <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </span>
+              </a>
+
+              <a class="case" href="https://adfocus-store.com/" target="_blank" rel="noopener noreferrer" data-cat="ecom" aria-label="AdFocus Store" data-reveal>
+                <span class="case__media">
+                  <img src="assets/cases/case1.png" alt="AdFocus Store — скриншот сайту" loading="lazy" decoding="async" width="1200" height="840" sizes="(max-width: 767px) 92vw, (max-width: 1023px) 46vw, 32vw" />
+                </span>
+                <span class="case__bar">
+                  <span class="case__id">
+                    <span class="case__num">(04)</span>
+                    <h3 class="case__name">AdFocus Store</h3>
+                  </span>
+                  <span class="case__cat">Інтернет-магазин • Акаунти</span>
+                  <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </span>
+              </a>
+
+              <a class="case" href="https://thebeastbeauty.com/" target="_blank" rel="noopener noreferrer" data-cat="ecom" aria-label="The Beast Beauty" data-reveal>
+                <span class="case__media">
+                  <img src="assets/cases/case3.png" alt="The Beast Beauty — скриншот сайту" loading="lazy" decoding="async" width="1200" height="840" sizes="(max-width: 767px) 92vw, (max-width: 1023px) 46vw, 32vw" />
+                </span>
+                <span class="case__bar">
+                  <span class="case__id">
+                    <span class="case__num">(05)</span>
+                    <h3 class="case__name">The Beast Beauty</h3>
+                  </span>
+                  <span class="case__cat">Інтернет-магазин • Парфуми</span>
+                  <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </span>
+              </a>
+
+              <a class="case" href="https://cut2earn.webflow.io" target="_blank" rel="noopener noreferrer" data-cat="landing" aria-label="Cut2Earn" data-reveal>
+                <span class="case__media">
+                  <img src="assets/cases/case12.png" alt="Cut2Earn — скриншот сайту" loading="lazy" decoding="async" width="1200" height="840" sizes="(max-width: 767px) 92vw, (max-width: 1023px) 46vw, 32vw" />
+                </span>
+                <span class="case__bar">
+                  <span class="case__id">
+                    <span class="case__num">(06)</span>
+                    <h3 class="case__name">Cut2Earn</h3>
+                  </span>
+                  <span class="case__cat">Лендинг • Курси відеомонтажу</span>
+                  <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </span>
+              </a>
+
+              <a class="case" href="https://commongroup.es/en/" target="_blank" rel="noopener noreferrer" data-cat="budget" aria-label="Common Group" data-reveal>
+                <span class="case__media">
+                  <img src="assets/cases/case30.png" alt="Common Group — скриншот сайту" loading="lazy" decoding="async" width="1200" height="840" sizes="(max-width: 767px) 92vw, (max-width: 1023px) 46vw, 32vw" />
+                </span>
+                <span class="case__bar">
+                  <span class="case__id">
+                    <span class="case__num">(07)</span>
+                    <h3 class="case__name">Common Group</h3>
+                  </span>
+                  <span class="case__cat">Багатосторінковий • Консалтинг</span>
+                  <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </span>
+              </a>
+
+              <a class="case" href="https://dictatorbarbershop.com/" target="_blank" rel="noopener noreferrer" data-cat="budget" aria-label="DICTATOR" data-reveal>
+                <span class="case__media">
+                  <img src="assets/cases/case31.png" alt="DICTATOR — скриншот сайту" loading="lazy" decoding="async" width="1200" height="840" sizes="(max-width: 767px) 92vw, (max-width: 1023px) 46vw, 32vw" />
+                </span>
+                <span class="case__bar">
+                  <span class="case__id">
+                    <span class="case__num">(08)</span>
+                    <h3 class="case__name">DICTATOR</h3>
+                  </span>
+                  <span class="case__cat">Багатосторінковий • Барбершопи</span>
+                  <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </span>
+              </a>
+
+              <a class="case" href="https://novaluxhomeservices.com/" target="_blank" rel="noopener noreferrer" data-cat="budget" aria-label="Novalux" data-reveal>
+                <span class="case__media">
+                  <img src="assets/cases/case32.png" alt="Novalux — скриншот сайту" loading="lazy" decoding="async" width="1200" height="840" sizes="(max-width: 767px) 92vw, (max-width: 1023px) 46vw, 32vw" />
+                </span>
+                <span class="case__bar">
+                  <span class="case__id">
+                    <span class="case__num">(09)</span>
+                    <h3 class="case__name">Novalux</h3>
+                  </span>
+                  <span class="case__cat">Лендинг • Обслуговування нерухомості</span>
+                  <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </span>
+              </a>
+
+              <a class="case" href="https://oglab.store/" target="_blank" rel="noopener noreferrer" data-cat="budget" aria-label="OGlab" data-reveal>
+                <span class="case__media">
+                  <img src="assets/cases/case33.png" alt="OGlab — скриншот сайту" loading="lazy" decoding="async" width="1200" height="840" sizes="(max-width: 767px) 92vw, (max-width: 1023px) 46vw, 32vw" />
+                </span>
+                <span class="case__bar">
+                  <span class="case__id">
+                    <span class="case__num">(10)</span>
+                    <h3 class="case__name">OGlab</h3>
+                  </span>
+                  <span class="case__cat">Лендинг • Автокосметика</span>
+                  <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </span>
+              </a>
+
+              <a class="case" href="https://big-supplychain.com/" target="_blank" rel="noopener noreferrer" data-cat="budget" aria-label="BIG Supply Chain" data-reveal>
+                <span class="case__media">
+                  <img src="assets/cases/case23.png" alt="BIG Supply Chain — скриншот сайту" loading="lazy" decoding="async" width="1200" height="840" sizes="(max-width: 767px) 92vw, (max-width: 1023px) 46vw, 32vw" />
+                </span>
+                <span class="case__bar">
+                  <span class="case__id">
+                    <span class="case__num">(11)</span>
+                    <h3 class="case__name">BIG Supply Chain</h3>
+                  </span>
+                  <span class="case__cat">Лендинг • Логістика</span>
+                  <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </span>
+              </a>
+
+              <a class="case" href="https://remico.com.ua/" target="_blank" rel="noopener noreferrer" data-cat="budget" aria-label="Remico" data-reveal>
+                <span class="case__media">
+                  <img src="assets/cases/case24.png" alt="Remico — скриншот сайту" loading="lazy" decoding="async" width="1200" height="840" sizes="(max-width: 767px) 92vw, (max-width: 1023px) 46vw, 32vw" />
+                </span>
+                <span class="case__bar">
+                  <span class="case__id">
+                    <span class="case__num">(12)</span>
+                    <h3 class="case__name">Remico</h3>
+                  </span>
+                  <span class="case__cat">Лендинг • Побутова хімія</span>
+                  <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </span>
+              </a>
+
+              <a class="case" href="https://andreis-service.de/" target="_blank" rel="noopener noreferrer" data-cat="budget" aria-label="Andreis Service" data-reveal>
+                <span class="case__media">
+                  <img src="assets/cases/case25.png" alt="Andreis Service — скриншот сайту" loading="lazy" decoding="async" width="1200" height="840" sizes="(max-width: 767px) 92vw, (max-width: 1023px) 46vw, 32vw" />
+                </span>
+                <span class="case__bar">
+                  <span class="case__id">
+                    <span class="case__num">(13)</span>
+                    <h3 class="case__name">Andreis Service</h3>
+                  </span>
+                  <span class="case__cat">Лендинг • Монтаж меблів і кухонь</span>
+                  <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </span>
+              </a>
+
+              <a class="case" href="https://axiomeu.com/" target="_blank" rel="noopener noreferrer" data-cat="budget" aria-label="Axiom Technology" data-reveal>
+                <span class="case__media">
+                  <img src="assets/cases/case26.png" alt="Axiom Technology — скриншот сайту" loading="lazy" decoding="async" width="1200" height="840" sizes="(max-width: 767px) 92vw, (max-width: 1023px) 46vw, 32vw" />
+                </span>
+                <span class="case__bar">
+                  <span class="case__id">
+                    <span class="case__num">(14)</span>
+                    <h3 class="case__name">Axiom Technology</h3>
+                  </span>
+                  <span class="case__cat">Лендинг • Діодні лазери</span>
+                  <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </span>
+              </a>
+
+              <a class="case" href="https://turboeagleauto.com/" target="_blank" rel="noopener noreferrer" data-cat="budget" aria-label="TurboEagle" data-reveal>
+                <span class="case__media">
+                  <img src="assets/cases/case27.png" alt="TurboEagle — скриншот сайту" loading="lazy" decoding="async" width="1200" height="840" sizes="(max-width: 767px) 92vw, (max-width: 1023px) 46vw, 32vw" />
+                </span>
+                <span class="case__bar">
+                  <span class="case__id">
+                    <span class="case__num">(15)</span>
+                    <h3 class="case__name">TurboEagle</h3>
+                  </span>
+                  <span class="case__cat">Лендинг • Продаж авто</span>
+                  <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </span>
+              </a>
+
+              <a class="case" href="https://darkgreen-raven-118031.hostingersite.com/" target="_blank" rel="noopener noreferrer" data-cat="budget" aria-label="Hybrid Doctor" data-reveal>
+                <span class="case__media">
+                  <img src="assets/cases/case28.png" alt="Hybrid Doctor — скриншот сайту" loading="lazy" decoding="async" width="1200" height="840" sizes="(max-width: 767px) 92vw, (max-width: 1023px) 46vw, 32vw" />
+                </span>
+                <span class="case__bar">
+                  <span class="case__id">
+                    <span class="case__num">(16)</span>
+                    <h3 class="case__name">Hybrid Doctor</h3>
+                  </span>
+                  <span class="case__cat">Лендинг • Запчастини для гібридів</span>
+                  <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </span>
+              </a>
+
+              <a class="case" href="https://koracandle.com" target="_blank" rel="noopener noreferrer" data-cat="ecom" aria-label="Kora Candle" data-reveal>
+                <span class="case__media">
+                  <img src="assets/cases/case14.png" alt="Kora Candle — скриншот сайту" loading="lazy" decoding="async" width="1200" height="840" sizes="(max-width: 767px) 92vw, (max-width: 1023px) 46vw, 32vw" />
+                </span>
+                <span class="case__bar">
+                  <span class="case__id">
+                    <span class="case__num">(17)</span>
+                    <h3 class="case__name">Kora Candle</h3>
+                  </span>
+                  <span class="case__cat">Інтернет-магазин • Свічки</span>
+                  <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </span>
+              </a>
+
+              <a class="case" href="https://tdsolarenergy.com/" target="_blank" rel="noopener noreferrer" data-cat="budget" aria-label="TD Solar Energy" data-reveal>
+                <span class="case__media">
+                  <img src="assets/cases/case10.png" alt="TD Solar Energy — скриншот сайту" loading="lazy" decoding="async" width="1200" height="840" sizes="(max-width: 767px) 92vw, (max-width: 1023px) 46vw, 32vw" />
+                </span>
+                <span class="case__bar">
+                  <span class="case__id">
+                    <span class="case__num">(18)</span>
+                    <h3 class="case__name">TD Solar Energy</h3>
+                  </span>
+                  <span class="case__cat">Лендинг • Сонячні панелі</span>
+                  <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </span>
+              </a>
+
+              <a class="case" href="https://fpvelement.com/" target="_blank" rel="noopener noreferrer" data-cat="ecom" aria-label="FPV Element" data-reveal>
+                <span class="case__media">
+                  <img src="assets/cases/case2.png" alt="FPV Element — скриншот сайту" loading="lazy" decoding="async" width="1200" height="840" sizes="(max-width: 767px) 92vw, (max-width: 1023px) 46vw, 32vw" />
+                </span>
+                <span class="case__bar">
+                  <span class="case__id">
+                    <span class="case__num">(19)</span>
+                    <h3 class="case__name">FPV Element</h3>
+                  </span>
+                  <span class="case__cat">Інтернет-магазин • Дрони</span>
+                  <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </span>
+              </a>
+
+              <a class="case" href="https://kickrave.com/" target="_blank" rel="noopener noreferrer" data-cat="ecom" aria-label="KickRave" data-reveal>
+                <span class="case__media">
+                  <img src="assets/cases/case4.png" alt="KickRave — скриншот сайту" loading="lazy" decoding="async" width="1200" height="840" sizes="(max-width: 767px) 92vw, (max-width: 1023px) 46vw, 32vw" />
+                </span>
+                <span class="case__bar">
+                  <span class="case__id">
+                    <span class="case__num">(20)</span>
+                    <h3 class="case__name">KickRave</h3>
+                  </span>
+                  <span class="case__cat">Інтернет-магазин • Взуття</span>
+                  <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </span>
+              </a>
+
+              <a class="case" href="https://nagachkysushi.com" target="_blank" rel="noopener noreferrer" data-cat="multi" aria-label="Nagachky Sushi" data-reveal>
+                <span class="case__media">
+                  <img src="assets/cases/case6.png" alt="Nagachky Sushi — скриншот сайту" loading="lazy" decoding="async" width="1200" height="840" sizes="(max-width: 767px) 92vw, (max-width: 1023px) 46vw, 32vw" />
+                </span>
+                <span class="case__bar">
+                  <span class="case__id">
+                    <span class="case__num">(21)</span>
+                    <h3 class="case__name">Nagachky Sushi</h3>
+                  </span>
+                  <span class="case__cat">Багатосторінковий • Суші</span>
+                  <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </span>
+              </a>
+
+              <a class="case" href="https://toriiua.com" target="_blank" rel="noopener noreferrer" data-cat="multi" aria-label="Torii" data-reveal>
+                <span class="case__media">
+                  <img src="assets/cases/case7.png" alt="Torii — скриншот сайту" loading="lazy" decoding="async" width="1200" height="840" sizes="(max-width: 767px) 92vw, (max-width: 1023px) 46vw, 32vw" />
+                </span>
+                <span class="case__bar">
+                  <span class="case__id">
+                    <span class="case__num">(22)</span>
+                    <h3 class="case__name">Torii</h3>
+                  </span>
+                  <span class="case__cat">Багатосторінковий • Суші</span>
+                  <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </span>
+              </a>
+
+              <a class="case" href="https://snekpl.com/" target="_blank" rel="noopener noreferrer" data-cat="multi" aria-label="Snek" data-reveal>
+                <span class="case__media">
+                  <img src="assets/cases/case8.png" alt="Snek — скриншот сайту" loading="lazy" decoding="async" width="1200" height="840" sizes="(max-width: 767px) 92vw, (max-width: 1023px) 46vw, 32vw" />
+                </span>
+                <span class="case__bar">
+                  <span class="case__id">
+                    <span class="case__num">(23)</span>
+                    <h3 class="case__name">Snek</h3>
+                  </span>
+                  <span class="case__cat">Багатосторінковий • Снеки</span>
+                  <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </span>
+              </a>
+
+              <a class="case" href="https://epoxmax.pl/" target="_blank" rel="noopener noreferrer" data-cat="landing" aria-label="Epoxmax" data-reveal>
+                <span class="case__media">
+                  <img src="assets/cases/case11.png" alt="Epoxmax — скриншот сайту" loading="lazy" decoding="async" width="1200" height="840" sizes="(max-width: 767px) 92vw, (max-width: 1023px) 46vw, 32vw" />
+                </span>
+                <span class="case__bar">
+                  <span class="case__id">
+                    <span class="case__num">(24)</span>
+                    <h3 class="case__name">Epoxmax</h3>
+                  </span>
+                  <span class="case__cat">Лендинг • Декоративні панелі</span>
+                  <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </span>
+              </a>
+
+              <a class="case" href="https://core-accounting.net/" target="_blank" rel="noopener noreferrer" data-cat="multi" aria-label="Core Accounting" data-reveal>
+                <span class="case__media">
+                  <img src="assets/cases/case13.png" alt="Core Accounting — скриншот сайту" loading="lazy" decoding="async" width="1200" height="840" sizes="(max-width: 767px) 92vw, (max-width: 1023px) 46vw, 32vw" />
+                </span>
+                <span class="case__bar">
+                  <span class="case__id">
+                    <span class="case__num">(25)</span>
+                    <h3 class="case__name">Core Accounting</h3>
+                  </span>
+                  <span class="case__cat">Багатосторінковий • Бухгалтерія</span>
+                  <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </span>
+              </a>
+
+              <a class="case" href="https://bigmarkremonty.com/" target="_blank" rel="noopener noreferrer" data-cat="landing" aria-label="BIG-MARK" data-reveal>
+                <span class="case__media">
+                  <img src="assets/cases/case15.png" alt="BIG-MARK — скриншот сайту" loading="lazy" decoding="async" width="1200" height="840" sizes="(max-width: 767px) 92vw, (max-width: 1023px) 46vw, 32vw" />
+                </span>
+                <span class="case__bar">
+                  <span class="case__id">
+                    <span class="case__num">(26)</span>
+                    <h3 class="case__name">BIG-MARK</h3>
+                  </span>
+                  <span class="case__cat">Лендинг • Ремонти</span>
+                  <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </span>
+              </a>
+
+              <a class="case" href="https://cleaningelart.pl/" target="_blank" rel="noopener noreferrer" data-cat="landing" aria-label="Elart Cleaning" data-reveal>
+                <span class="case__media">
+                  <img src="assets/cases/case16.png" alt="Elart Cleaning — скриншот сайту" loading="lazy" decoding="async" width="1200" height="840" sizes="(max-width: 767px) 92vw, (max-width: 1023px) 46vw, 32vw" />
+                </span>
+                <span class="case__bar">
+                  <span class="case__id">
+                    <span class="case__num">(27)</span>
+                    <h3 class="case__name">Elart Cleaning</h3>
+                  </span>
+                  <span class="case__cat">Лендинг • Клінінг</span>
+                  <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </span>
+              </a>
+
+              <a class="case" href="https://homebellissimowroclaw.com/" target="_blank" rel="noopener noreferrer" data-cat="budget" aria-label="Bellissimo Home" data-reveal>
+                <span class="case__media">
+                  <img src="assets/cases/case17.png" alt="Bellissimo Home — скриншот сайту" loading="lazy" decoding="async" width="1200" height="840" sizes="(max-width: 767px) 92vw, (max-width: 1023px) 46vw, 32vw" />
+                </span>
+                <span class="case__bar">
+                  <span class="case__id">
+                    <span class="case__num">(28)</span>
+                    <h3 class="case__name">Bellissimo Home</h3>
+                  </span>
+                  <span class="case__cat">Лендинг • Меблі та інтер'єри</span>
+                  <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </span>
+              </a>
+
+              <a class="case" href="https://tarikinvest.cz/" target="_blank" rel="noopener noreferrer" data-cat="budget" aria-label="TARIK Invest" data-reveal>
+                <span class="case__media">
+                  <img src="assets/cases/case18.png" alt="TARIK Invest — скриншот сайту" loading="lazy" decoding="async" width="1200" height="840" sizes="(max-width: 767px) 92vw, (max-width: 1023px) 46vw, 32vw" />
+                </span>
+                <span class="case__bar">
+                  <span class="case__id">
+                    <span class="case__num">(29)</span>
+                    <h3 class="case__name">TARIK Invest</h3>
+                  </span>
+                  <span class="case__cat">Лендинг • Електромонтаж</span>
+                  <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </span>
+              </a>
+
+              <a class="case" href="https://totemconsulting.org/" target="_blank" rel="noopener noreferrer" data-cat="landing" aria-label="Totem Consulting" data-reveal>
+                <span class="case__media">
+                  <img src="assets/cases/case19.png" alt="Totem Consulting — скриншот сайту" loading="lazy" decoding="async" width="1200" height="840" sizes="(max-width: 767px) 92vw, (max-width: 1023px) 46vw, 32vw" />
+                </span>
+                <span class="case__bar">
+                  <span class="case__id">
+                    <span class="case__num">(30)</span>
+                    <h3 class="case__name">Totem Consulting</h3>
+                  </span>
+                  <span class="case__cat">Лендинг • Консалтинг</span>
+                  <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </span>
+              </a>
+
+              <a class="case" href="https://primebud.in.ua/" target="_blank" rel="noopener noreferrer" data-cat="landing" aria-label="PrimeBud" data-reveal>
+                <span class="case__media">
+                  <img src="assets/cases/case20.png" alt="PrimeBud — скриншот сайту" loading="lazy" decoding="async" width="1200" height="840" sizes="(max-width: 767px) 92vw, (max-width: 1023px) 46vw, 32vw" />
+                </span>
+                <span class="case__bar">
+                  <span class="case__id">
+                    <span class="case__num">(31)</span>
+                    <h3 class="case__name">PrimeBud</h3>
+                  </span>
+                  <span class="case__cat">Лендинг • Ремонти</span>
+                  <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </span>
+              </a>
+
+              <a class="case" href="https://clionebeauty.com/" target="_blank" rel="noopener noreferrer" data-cat="ecom" aria-label="Clione Beauty" data-reveal>
+                <span class="case__media">
+                  <img src="assets/cases/case21.png" alt="Clione Beauty — скриншот сайту" loading="lazy" decoding="async" width="1200" height="840" sizes="(max-width: 767px) 92vw, (max-width: 1023px) 46vw, 32vw" />
+                </span>
+                <span class="case__bar">
+                  <span class="case__id">
+                    <span class="case__num">(32)</span>
+                    <h3 class="case__name">Clione Beauty</h3>
+                  </span>
+                  <span class="case__cat">Інтернет-магазин • Б'юті-техніка</span>
+                  <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </span>
+              </a>
+
+              <p class="work-empty" id="work-empty" hidden>У цій категорії поки немає проєктів.</p>
+            </div>
+
+            <!-- Перша сторінка — шість кейсів, решта за номерами -->
+            <nav class="pager" id="work-pager" aria-label="Сторінки проєктів" hidden>
+              <button type="button" class="pager__step" data-page-prev aria-label="Попередня сторінка">
+                <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" focusable="false"><path d="M14 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <span class="pager__pages" data-page-list></span>
+              <span class="pager__status" data-page-status></span>
+              <button type="button" class="pager__step" data-page-next aria-label="Наступна сторінка">
+                <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" focusable="false"><path d="M10 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </nav>
+
+            <aside class="side" aria-labelledby="side-name">
+              <div class="side__photo">
+                <img src="assets/photo.jpg" alt="Andrii Shestakov" loading="lazy" decoding="async" width="900" height="1200" sizes="(max-width: 1023px) 260px, 340px" />
+              </div>
+
+              <div class="side__body">
+                <div>
+                  <p class="side__name" id="side-name">Andrii Shestakov</p>
+                  <p class="side__role">Founder &amp; CEO · Web Shestakov</p>
+                </div>
+
+                <p class="side__text">Створюю сайти та інтернет-магазини для бізнесу і брендів: від дизайну до розробки й запуску. Фокус — швидкість, конверсія та охайний преміальний вигляд. Складні проєкти веду разом з командою Web Shestakov.</p>
+
+                <div class="side__cta">
+                  <a class="btn btn--accent" href="#contact">
+                    <span>Обговорити проєкт</span>
+                    <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="11" height="11" focusable="false"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                  </a>
+                  <a class="btn" href="https://t.me/Andrii_DEV9" target="_blank" rel="noopener">
+                    <span>Telegram</span>
+                    <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor" focusable="false"><path d="M21.9 4.3l-3 14.1c-.2 1-.8 1.2-1.7.8l-4.6-3.4-2.2 2.1c-.2.2-.4.4-.9.4l.3-4.7 8.5-7.7c.4-.3-.1-.5-.6-.2L7.3 13 2.8 11.6c-1-.3-1-1 .2-1.4l17-6.6c.8-.3 1.5.2 1.9 1z"/></svg></span>
+                  </a>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ КОНТАКТ ============ -->
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="contact__bg" aria-hidden="true"></div>
+      <div class="contact__container">
+        <div class="contact__grid">
+          <span class="contact__info contact__note-1">Приймаємо проєкти</span>
+          <span class="contact__info contact__info--end contact__note-2">Телефон&nbsp;<a href="tel:+48577503534">+48 577 503 534</a></span>
+
+          <div class="contact__wrapper">
+            <h2 class="contact__title" id="contact-title">Маєте проєкт?</h2>
+            <p class="contact__title">Зробимо разом</p>
+
+            <a class="contact__figure" href="https://t.me/Andrii_DEV9" target="_blank" rel="noopener"
+               aria-label="Написати Andrii Shestakov у Telegram" data-cursor="Контакт">
+              <span class="contact__image">
+                <span class="contact__ratio">
+                  <span class="contact__frame">
+                    <img src="assets/photo.jpg" alt="Andrii Shestakov" loading="lazy" decoding="async" width="800" height="1120" sizes="(max-width: 767px) 160px, 300px" />
+                    <span class="contact__outline" aria-hidden="true"></span>
+                    <span class="contact__glow-wrap" aria-hidden="true"><span class="contact__glow"></span></span>
+                  </span>
+                </span>
+              </span>
+            </a>
+          </div>
+
+          <span class="contact__info contact__place">Польща · Європа</span>
+          <span class="contact__socials">
+            <a class="contact__social" href="https://t.me/Andrii_DEV9" target="_blank" rel="noopener"><span class="magnetic">Telegram</span></a>
+            <a class="contact__social" href="https://www.instagram.com/web.shestakov" target="_blank" rel="noopener"><span class="magnetic">Instagram</span></a>
+            <a class="contact__social" href="index.html"><span class="magnetic">На головну</span></a>
+          </span>
+          <span class="contact__info contact__copy">© 2026 Web Shestakov</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="cursor" id="cursor" aria-hidden="true">Перейти</div>
+
+  <script src="portfolio.js"></script>
+</body>
+</html>
