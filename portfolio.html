@@ -33,69 +33,12 @@
 
   <link rel="stylesheet" href="portfolio.css" />
 
-  <script>
-    /* Гарди прелоадера — до першого малювання:
-       1) ручний пропуск для налагодження: portfolio.html?pre-skip
-       2) prefers-reduced-motion пропускає всю послідовність
-       3) жорсткий запобіжник: сторінка ніколи не лишається під оверлеєм */
-    (function () {
-      try {
-        var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-        if (/[?&]pre-skip/.test(window.location.search) || reduce) {
-          document.documentElement.className += " pre-skip";
-        }
-      } catch (e) {}
-      window.setTimeout(function () {
-        var p = document.getElementById("preloader");
-        if (p && !window.__preDone) {
-          p.style.transition = "opacity 0.4s ease";
-          p.style.opacity = "0";
-          window.setTimeout(function () {
-            p.classList.add("is-done");
-            document.body.classList.remove("is-preloading");
-            document.body.classList.remove("at-intro");
-            window.__preDone = true;
-          }, 450);
-        }
-      }, 7000);
-    })();
-  </script>
-
-  <noscript>
-    <style>
-      /* Без JS оверлей нічим прибрати — отже, він не має з'являтися взагалі. */
-      .preloader { display: none !important; }
-      body.is-preloading { overflow: auto !important; }
-    </style>
-  </noscript>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
 </head>
 
-<body class="is-preloading at-intro">
+<body class="at-intro">
   <div class="grain" aria-hidden="true"></div>
-
-  <!-- ============ ПРЕЛОАДЕР ============ -->
-  <div class="preloader" id="preloader" aria-hidden="true">
-    <div class="preloader__scene" data-pl-scene>
-      <div class="preloader__top">
-        <span class="preloader__logo" data-pl-logo>
-          <img src="assets/logo.svg" alt="Web Shestakov" width="97" height="34" />
-        </span>
-        <span class="preloader__meta" data-pl-fade>Портфоліо<br />32 проєкти</span>
-      </div>
-
-      <div class="preloader__bottom">
-        <span class="preloader__word" data-pl-fade>Обрані</span>
-        <span class="preloader__count" data-pl-count>000</span>
-      </div>
-    </div>
-
-    <div class="preloader__cover" data-pl-cover>
-      <span class="preloader__track"><span class="preloader__line" data-pl-line></span></span>
-    </div>
-  </div>
 
   <!-- ============ НАВБАР ============ -->
   <header class="navbar">

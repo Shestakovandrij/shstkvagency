@@ -2,13 +2,12 @@
    Портфоліо — самостійний скрипт сторінки.
    Нічого не імпортує з script.js головного сайту.
 
-     1. Прелоадер   — лінія прогресу → світла сцена з лічильником → зсув угору
-     2. Інтро       — колаж медіа і словесний знак першого екрана
-     3. Меню        — фулскрін-панель
-     4. Таби        — фільтр категорій і пагінація по шість кейсів
-     5. Розкриття   — GSAP + ScrollTrigger, із запасним IntersectionObserver
-     6. Курсор      — кружечок "Перейти" над картками (тільки миша)
-     7. Глобус      — SMIL-порт lottie-іконки шаблону
+     1. Інтро       — колаж медіа і словесний знак першого екрана
+     2. Меню        — фулскрін-панель
+     3. Таби        — фільтр категорій і пагінація по шість кейсів
+     4. Розкриття   — GSAP + ScrollTrigger, із запасним IntersectionObserver
+     5. Курсор      — кружечок "Перейти" над картками (тільки миша)
+     6. Глобус      — SMIL-порт lottie-іконки шаблону
 
    Анімуються виключно transform та opacity.
    ========================================================================== */
@@ -16,7 +15,6 @@
 (function () {
   "use strict";
 
-  var root = document.documentElement;
   var body = document.body;
 
   var REDUCE = false;
@@ -24,141 +22,11 @@
     REDUCE = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   } catch (e) {}
 
-  var SKIP = root.classList.contains("pre-skip");
   var EASE = "cubic-bezier(0.16,1,0.3,1)";
 
   /* ------------------------------------------------------------------ *
-   * 1. ПРЕЛОАДЕР
-   * ------------------------------------------------------------------ */
-
-  var MIN_MS = 1100;   // не коротше — навіть із кешу
-  var MAX_MS = 2400;   // не довше — навіть на повільному з'єднанні
-
-  function preloaderDone(pre) {
-    if (window.__preDone) return;
-    window.__preDone = true;
-    pre.classList.add("is-done");
-    body.classList.remove("is-preloading");
-    if (typeof window.__introStart === "function") window.__introStart();
-    if (window.ScrollTrigger && window.ScrollTrigger.refresh) window.ScrollTrigger.refresh();
-  }
-
-  /* Реальний прогрес: скільки власних скриншотів прелоадера вже декодовано. */
-  function trackAssets(images, onProgress) {
-    var total = images.length || 1;
-    var done = 0;
-    function tick() {
-      done++;
-      onProgress(Math.min(1, done / total));
-    }
-    images.forEach(function (img) {
-      if (img.complete && img.naturalWidth > 0) { tick(); return; }
-      img.addEventListener("load", tick, { once: true });
-      img.addEventListener("error", tick, { once: true });
-    });
-    onProgress(Math.min(1, done / total));
-  }
-
-  function initPreloader() {
-    var pre = document.getElementById("preloader");
-    if (!pre) return;
-
-    if (SKIP || REDUCE) { preloaderDone(pre); return; }
-
-    var scene = pre.querySelector("[data-pl-scene]");
-    var cover = pre.querySelector("[data-pl-cover]");
-    var line = pre.querySelector("[data-pl-line]");
-    var logo = pre.querySelector("[data-pl-logo]");
-    var fades = pre.querySelectorAll("[data-pl-fade]");
-    var count = pre.querySelector("[data-pl-count]");
-
-    var started = Date.now();
-    var assetRatio = 0;
-    var shown = 0;
-    var raf = 0;
-    var uncovered = false;
-
-    /* Смуга рахує саме ті кадри, які потрібні першому екрану. */
-    trackAssets(
-      Array.prototype.slice.call(document.querySelectorAll(".hero-media__item")),
-      function (r) { assetRatio = r; }
-    );
-
-    var gsap = window.gsap;
-
-    if (gsap) {
-      gsap.set(logo, { yPercent: 120, opacity: 0 });
-      gsap.set(fades, { opacity: 0, y: 10 });
-    }
-
-    /* Етап B: чорне полотно піднімається, сцена оживає. */
-    function uncover() {
-      if (uncovered) return;
-      uncovered = true;
-
-      if (!gsap) {
-        cover.style.transition = "transform 0.8s " + EASE;
-        cover.style.transform = "translateY(-100%)";
-        return;
-      }
-
-      gsap.timeline()
-        .to(cover, { yPercent: -100, duration: 0.9, ease: "expo.inOut" }, 0)
-        .to(logo, { yPercent: 0, opacity: 1, duration: 0.7, ease: "power3.out" }, 0.25)
-        .to(fades, { opacity: 1, y: 0, duration: 0.6, ease: "power2.out", stagger: 0.06 }, 0.3);
-    }
-
-    /* Етап C: вся сцена їде вгору, відкриваючи сторінку. */
-    function exit() {
-      if (window.__preExiting) return;
-      window.__preExiting = true;
-
-      /* Перший екран стартує вже під сценою, що їде вгору — так шаблонна
-         послідовність починається без паузи після прелоадера. */
-      if (typeof window.__introStart === "function") window.__introStart();
-
-      if (!gsap) {
-        pre.style.transition = "opacity 0.5s " + EASE;
-        pre.style.opacity = "0";
-        window.setTimeout(function () { preloaderDone(pre); }, 520);
-        return;
-      }
-
-      gsap.timeline({ onComplete: function () { preloaderDone(pre); } })
-        .to(scene, { yPercent: -100, duration: 1.0, ease: "expo.inOut" }, 0);
-    }
-
-    function paint() {
-      var elapsed = Date.now() - started;
-      // Час тримає смугу живою, завантаження задає стелю.
-      var byTime = Math.min(1, elapsed / (MIN_MS * 0.55));
-      var target = Math.min(byTime, 0.15 + assetRatio * 0.85);
-      if (elapsed >= MAX_MS) target = 1;
-
-      shown += (target - shown) * 0.14;
-      var pct = Math.round(Math.min(1, shown) * 100);
-      if (line) line.style.transform = "scaleX(" + Math.min(1, shown).toFixed(4) + ")";
-      if (count) count.textContent = pct < 100 ? ("00" + pct).slice(-3) : "100";
-
-      if (!uncovered && (pct >= 99 || elapsed >= MAX_MS * 0.5)) {
-        if (line) line.style.transform = "scaleX(1)";
-        if (count) count.textContent = "100";
-        uncover();
-      }
-
-      if (uncovered && (elapsed >= MIN_MS + 900 || elapsed >= MAX_MS)) {
-        window.cancelAnimationFrame(raf);
-        exit();
-        return;
-      }
-      raf = window.requestAnimationFrame(paint);
-    }
-
-    raf = window.requestAnimationFrame(paint);
-  }
-
-  /* ------------------------------------------------------------------ *
-   * 2. ІНТРО — послідовність шаблону, крок у крок
+   * 1. ІНТРО — послідовність шаблону, крок у крок; стартує одразу
+   *    на DOMContentLoaded, бо прелоадера в підсторінки більше немає.
    *
    *    A. Шість кадрів колажу по черзі виринають із нуля: 0.70 / 1.10 /
    *       1.50 / 1.90 / 2.30 / 2.70 с, по секунді кожен, із перельотом.
@@ -249,9 +117,7 @@
       if (word) tl.to(word, { opacity: 1, duration: 0.5, ease: "power1.inOut" }, 4.55);
     }
 
-    if (window.__preDone) show(); else window.__introStart = show;
-    // Навіть якщо прелоадер обірветься нештатно — перший екран не лишиться порожнім.
-    window.setTimeout(show, MAX_MS + 1400);
+    show();
 
     if (!gsap || REDUCE) return;
 
@@ -322,7 +188,7 @@
   }
 
   /* ------------------------------------------------------------------ *
-   * 3. ФУЛСКРІН-МЕНЮ
+   * 2. ФУЛСКРІН-МЕНЮ
    * ------------------------------------------------------------------ */
 
   function initMenu() {
@@ -358,7 +224,7 @@
   }
 
   /* ------------------------------------------------------------------ *
-   * 3b. НАВБАР НАД ПЕРШИМ ЕКРАНОМ
+   * 2b. НАВБАР НАД ПЕРШИМ ЕКРАНОМ
    *     Поки видно інтро, шапку несе сам екран: знак ліворуч, локація
    *     праворуч. Навбар проявляється, щойно екран пішов угору.
    * ------------------------------------------------------------------ */
@@ -391,7 +257,7 @@
   }
 
   /* ------------------------------------------------------------------ *
-   * 4. ФІЛЬТР КАТЕГОРІЙ І ПАГІНАЦІЯ
+   * 3. ФІЛЬТР КАТЕГОРІЙ І ПАГІНАЦІЯ
    *    На сторінці — шість кейсів; решта ховається за номерами внизу
    *    списку. Зміна табу завжди повертає на першу сторінку.
    * ------------------------------------------------------------------ */
@@ -541,7 +407,7 @@
   }
 
   /* ------------------------------------------------------------------ *
-   * 5. РОЗКРИТТЯ ПРИ СКРОЛІ
+   * 4. РОЗКРИТТЯ ПРИ СКРОЛІ
    * ------------------------------------------------------------------ */
 
   function revealAllNow() {
@@ -604,7 +470,7 @@
   }
 
   /* ------------------------------------------------------------------ *
-   * 6. КОНТАКТНА КАРТКА
+   * 5. КОНТАКТНА КАРТКА
    *    Повтор поведінки шаблону: тло панелі входить у кадр із 120% до 100%,
    *    портрет нахиляється за мишею в перспективі (rotateY ±30, rotateZ ±10,
    *    rotateX ±10), сама картка й відблиск усередині неї їдуть паралаксом,
@@ -770,7 +636,7 @@
   }
 
   /* ------------------------------------------------------------------ *
-   * 8b. ГЛОБУС
+   * 7b. ГЛОБУС
    *     Меридіани крутить SMIL — CSS його не вимикає, тож режим
    *     зменшеного руху зупиняємо вручну, на першому кадрі.
    * ------------------------------------------------------------------ */
@@ -786,7 +652,7 @@
   }
 
   /* ------------------------------------------------------------------ *
-   * 9. Запасний варіант для розбитого скриншота
+   * 8. Запасний варіант для розбитого скриншота
    * ------------------------------------------------------------------ */
 
   function initMediaFallback() {
@@ -810,18 +676,13 @@
    * ------------------------------------------------------------------ */
 
   function boot() {
-    var steps = [initPreloader, initIntro, initMenu, initNavReveal, initFilter, initReveal,
+    var steps = [initIntro, initMenu, initNavReveal, initFilter, initReveal,
                  initContactCard, initMagnetic, initCursor, initGlobe, initMediaFallback];
     for (var i = 0; i < steps.length; i++) {
       try { steps[i](); } catch (e) {
         if (window.console) console.error("[pf] крок не виконано:", e);
       }
     }
-    // Що б не сталося вище — сторінка не має лишитись прихованою.
-    window.setTimeout(function () {
-      var pre = document.getElementById("preloader");
-      if (pre && !window.__preDone) preloaderDone(pre);
-    }, MAX_MS + 1200);
   }
 
   if (document.readyState === "loading") {

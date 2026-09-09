@@ -109,106 +109,7 @@ ul, ol { list-style: none; }
 }
 
 /* ==========================================================================
-   1. ПРЕЛОАДЕР
-      A. чорне полотно + лінія прогресу 0→100%
-      B. полотно піднімається, відкриваючи чорну сцену: логотип, метадані,
-         колаж скриншотів кейсів, що по черзі вистрілюють із нуля
-      C. вся сцена їде вгору, відкриваючи сторінку
-   ========================================================================== */
-
-.preloader {
-  position: fixed;
-  inset: 0;
-  z-index: 200;
-  pointer-events: none;
-}
-html.pre-skip .preloader,
-.preloader.is-done { display: none; }
-body.is-preloading { overflow: hidden; }
-
-/* Сцена (stage B) */
-.preloader__scene {
-  position: absolute;
-  inset: 0;
-  background: var(--bg);
-  overflow: hidden;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  padding: 1.5rem;
-  will-change: transform;
-}
-
-/* Полотно (stage A) */
-.preloader__cover {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  background: #060606;
-  display: grid;
-  place-items: center;
-  will-change: transform;
-}
-.preloader__track {
-  display: block;
-  width: 10rem;
-  height: 4px;
-  background: var(--track);
-  overflow: hidden;
-}
-.preloader__line {
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: var(--on-dark);
-  transform: scaleX(0);
-  transform-origin: left center;
-  will-change: transform;
-}
-
-.preloader__top,
-.preloader__bottom {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 1rem;
-}
-.preloader__bottom { align-items: flex-end; }
-
-.preloader__logo { display: block; overflow: hidden; }
-.preloader__logo img { height: clamp(26px, 2.4vw, 32px); width: auto; }
-
-.preloader__meta {
-  font-size: 0.8125rem;
-  letter-spacing: 0.02em;
-  color: var(--ink-40);
-  text-align: right;
-}
-.preloader__count {
-  font-family: var(--font-display);
-  font-weight: 500;
-  font-size: clamp(3rem, 8vw, 7rem);
-  line-height: 0.8;
-  letter-spacing: -0.01em;
-  color: var(--ink);
-  font-variant-numeric: tabular-nums;
-}
-.preloader__word {
-  font-family: var(--font-display);
-  font-weight: 500;
-  text-transform: uppercase;
-  font-size: clamp(3rem, 8vw, 7rem);
-  line-height: 0.8;
-  letter-spacing: -0.01em;
-  color: var(--ink);
-}
-
-@media (max-width: 767px) {
-  .preloader__scene { padding: 1rem; }
-  .preloader__meta { font-size: 0.72rem; }
-}
-
-/* ==========================================================================
-   2. НАВБАР + ФУЛСКРІН-МЕНЮ
+   1. НАВБАР + ФУЛСКРІН-МЕНЮ
    ========================================================================== */
 
 .navbar {
@@ -370,7 +271,7 @@ body.menu-open .nav-menu__link { transform: translateY(0); }
 .nav-menu__socials { display: flex; gap: 1.5rem; }
 
 /* ==========================================================================
-   3. ІНТРО — два перші екрани за шаблоном, у чорному ключі
+   2. ІНТРО — два перші екрани за шаблоном, у чорному ключі
       A. знак, локація, колаж кейсів і велетенський словесний знак
       B. портрет, твердження змішаним набором, кнопка з підкресленням
    ========================================================================== */
@@ -443,7 +344,7 @@ body.menu-open .nav-menu__link { transform: translateY(0); }
 .hero-media__item._6 { position: absolute; z-index: 10; width: 60%; aspect-ratio: 16 / 10; inset: auto -22% -28% auto; }
 
 /* ==========================================================================
-   4. WORK — світла панель робіт.
+   3. WORK — світла панель робіт.
       Картка кейса, таби й кнопки повторюють мову головної сторінки:
       біла картка з 1px обведенням, медіа 16:11 з верхнім кропом,
       нижня смуга #F4F3F0 з номером, назвою, категорією та круглою CTA.
@@ -807,7 +708,7 @@ body.menu-open .nav-menu__link { transform: translateY(0); }
 .btn--accent::after { background: var(--ink); }
 
 /* ==========================================================================
-   5. КОНТАКТ — фінальна панель
+   4. КОНТАКТ — фінальна панель
    ========================================================================== */
 
 .contact {
@@ -981,7 +882,7 @@ body.menu-open .nav-menu__link { transform: translateY(0); }
 .contact__note-2 { grid-row: 1; grid-column: 3; }
 
 /* ==========================================================================
-   6. КУРСОР "ПЕРЕЙТИ" — лише на пристроях з мишею
+   5. КУРСОР "ПЕРЕЙТИ" — лише на пристроях з мишею
    ========================================================================== */
 
 .cursor {
@@ -1011,14 +912,14 @@ body.menu-open .nav-menu__link { transform: translateY(0); }
 @media (hover: none), (pointer: coarse) { .cursor { display: none; } }
 
 /* ==========================================================================
-   7. РОЗКРИТТЯ ПРИ СКРОЛІ
+   6. РОЗКРИТТЯ ПРИ СКРОЛІ
    ========================================================================== */
 
 body.anim [data-reveal] { opacity: 0; transform: translateY(46px); }
 body.anim [data-mask] > img { transform: scale(1.09); }
 
 /* ==========================================================================
-   8. АДАПТИВ
+   7. АДАПТИВ
    ========================================================================== */
 
 /* Ноутбук */
@@ -1144,7 +1045,7 @@ body.anim [data-mask] > img { transform: scale(1.09); }
 }
 
 /* ==========================================================================
-   9. ЗМЕНШЕНИЙ РУХ
+   8. ЗМЕНШЕНИЙ РУХ
    ========================================================================== */
 
 @media (prefers-reduced-motion: reduce) {
