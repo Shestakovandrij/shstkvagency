@@ -3,24 +3,73 @@
   "framework": "astro",
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "trailingSlash": true,
   "redirects": [
-    { "source": "/:path*", "has": [{ "type": "host", "value": "shstkv-digital.com" }], "destination": "https://www.shstkv-digital.com/:path*", "permanent": true },
-    { "source": "/index.html", "destination": "/", "permanent": true },
-    { "source": "/portfolio.html", "destination": "/portfolio/", "permanent": true },
-    { "source": "/privacy.html", "destination": "/privacy/", "permanent": true },
-    { "source": "/uk", "destination": "/", "permanent": true },
-    { "source": "/uk/", "destination": "/", "permanent": true }
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "shstkv-digital.com"
+        }
+      ],
+      "destination": "https://www.shstkv-digital.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio.html",
+      "destination": "/portfolio/",
+      "permanent": true
+    },
+    {
+      "source": "/privacy.html",
+      "destination": "/privacy/",
+      "permanent": true
+    },
+    {
+      "source": "/uk",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/uk/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/:path((?!api(?:/|$))[^.]*[^/.])",
+      "destination": "/:path/",
+      "permanent": true
+    }
   ],
   "headers": [
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "(?<sub>.*)\\.vercel\\.app" }],
-      "headers": [{ "key": "X-Robots-Tag", "value": "noindex" }]
+      "has": [
+        {
+          "type": "host",
+          "value": "(?<sub>.*)\\.vercel\\.app"
+        }
+      ],
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        }
+      ]
     },
     {
       "source": "/assets/:path*",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800, stale-while-revalidate=86400" }]
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800, stale-while-revalidate=86400"
+        }
+      ]
     }
   ]
 }
