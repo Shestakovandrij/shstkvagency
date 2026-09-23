@@ -85,9 +85,10 @@ function jsonLd(page, document) {
     areaServed: [
       { "@type": "Country", name: "Poland" },
       { "@type": "Country", name: "Ukraine" },
-      { "@type": "Place", name: "European Union" }
+      { "@type": "Place", name: "European Union" },
+      { "@type": "Country", name: "United States" }
     ],
-    knowsLanguage: ["uk", "pl", "en"],
+    knowsLanguage: ["uk", "pl"],
     founder: { "@type": "Person", "@id": SITE + "/#founder", name: BUSINESS.founder, jobTitle: "Founder & CEO" },
     sameAs: BUSINESS.sameAs
   };
