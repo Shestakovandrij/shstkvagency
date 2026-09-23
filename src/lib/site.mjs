@@ -56,6 +56,28 @@ export const PAGES = [
     priority: 0.8
   },
   {
+    group: "about",
+    lang: "uk",
+    path: "/pro-nas/",
+    template: "about",
+    title: "Про нас — Web Shestakov, веб-студія під Вроцлавом для бізнесу в Польщі та Україні",
+    description:
+      "Web Shestakov — студія Андрія Шестакова: сайти, інтернет-магазини й Telegram-боти від $300. 30+ проєктів у Польщі, Україні та ЄС, запуск лендінгу за 3–5 днів.",
+    ogType: "website",
+    priority: 0.7
+  },
+  {
+    group: "about",
+    lang: "pl",
+    path: "/pl/o-nas/",
+    template: "about",
+    title: "O nas — Web Shestakov, studio stron internetowych spod Wrocławia",
+    description:
+      "Web Shestakov to studio Andrija Szestakowa: strony internetowe, sklepy online i boty Telegram od $300. Ponad 30 projektów w Polsce, Ukrainie i UE, landing page w 3–5 dni.",
+    ogType: "website",
+    priority: 0.7
+  },
+  {
     group: "privacy",
     lang: "uk",
     path: "/privacy/",

@@ -130,7 +130,7 @@ function jsonLd(page, document) {
   }
 
   graph.push({
-    "@type": "WebPage",
+    "@type": page.group === "about" ? "AboutPage" : "WebPage",
     "@id": SITE + page.path + "#webpage",
     url: SITE + page.path,
     name: page.title,

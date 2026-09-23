@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title data-i18n="privacy.meta.title">Політика конфіденційності — Web Shestakov</title>
+  <meta name="description" data-i18n="privacy.meta.description" content="Політика конфіденційності та файлів cookies сайту shstkv-digital.com: цілі обробки даних, правові підстави, права користувача та керування згодою." />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="canonical" href="https://www.shstkv-digital.com/privacy.html" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Web Shestakov" />
+  <meta property="og:url" content="https://www.shstkv-digital.com/privacy.html" />
+  <meta property="og:locale" content="uk_UA" />
+  <meta property="og:locale:alternate" content="pl_PL" />
+  <meta property="og:title" data-i18n="privacy.meta.title" content="Політика конфіденційності — Web Shestakov" />
+  <meta property="og:description" data-i18n="privacy.meta.description" content="Політика конфіденційності та файлів cookies сайту shstkv-digital.com." />
+  <meta property="og:image" content="https://www.shstkv-digital.com/assets/og-image.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Web Shestakov — сайти, Telegram-боти, інтернет-магазини, SEO та айдентика" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://www.shstkv-digital.com/assets/og-image.jpg" />
+  <meta name="theme-color" content="#EEEEEE" />
+
+  <link rel="icon" href="/favicon.ico" sizes="32x32" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Сторінка «Про нас» — на токенах styles.css */
+    .about__lead { margin-top: 1.4rem; max-width: 58ch; font-size: clamp(1.05rem, 1.5vw, 1.3rem); line-height: 1.55; color: var(--ink-60); }
+    .about__hero { display: grid; grid-template-columns: minmax(0, 320px) 1fr; gap: clamp(1rem, 2.5vw, 1.8rem); margin-top: clamp(2rem, 4.5vw, 3.6rem); align-items: stretch; }
+    .about__founder { position: relative; margin: 0; border-radius: var(--r-panel); overflow: hidden; background: var(--white); border: 1px solid var(--line); aspect-ratio: 2 / 3; max-height: 460px; }
+    .about__founder img { width: 100%; height: 100%; object-fit: cover; }
+    .about__founder figcaption { position: absolute; left: 0.7rem; right: 0.7rem; bottom: 0.7rem; display: flex; flex-direction: column; gap: 0.15rem; padding: 0.75rem 0.95rem; background: var(--white); border-radius: 16px; font-size: 0.8rem; color: var(--ink-60); }
+    .about__founder figcaption strong { font-family: var(--font-head); font-size: 1rem; color: var(--ink); letter-spacing: -0.02em; }
+    .about__stats { list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(0.7rem, 1.6vw, 1.1rem); }
+    .about__stats li { display: flex; flex-direction: column; justify-content: space-between; gap: 1.2rem; padding: clamp(1.1rem, 2.4vw, 1.7rem); background: var(--white); border: 1px solid var(--line); border-radius: var(--r-panel); }
+    .about__stats b { font-family: var(--font-head); font-weight: 800; font-size: clamp(2.4rem, 5.4vw, 4.4rem); line-height: 0.9; letter-spacing: -0.05em; color: var(--ink); }
+    .about__stats li:first-child b { color: var(--accent); }
+    .about__stats span { font-size: 0.9rem; line-height: 1.45; color: var(--ink-60); max-width: 26ch; }
+    .about__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.9rem; }
+    .about__grid .doc__card { margin-top: 0; }
+    .about__cta { margin-top: clamp(2.5rem, 5vw, 4rem); padding: clamp(1.6rem, 3.6vw, 2.8rem); background: var(--white); border: 1px solid var(--line); border-radius: var(--r-panel); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.2rem 2rem; }
+    .about__cta-title { font-family: var(--font-head); font-weight: 700; font-size: clamp(1.3rem, 2.4vw, 2rem); line-height: 1.12; letter-spacing: -0.03em; max-width: 26ch; }
+    .about__cta-actions { display: flex; flex-wrap: wrap; gap: 0.7rem; }
+    @media (max-width: 760px) {
+      .about__hero { grid-template-columns: 1fr; }
+      .about__founder { max-height: 380px; aspect-ratio: 4 / 5; }
+      .about__grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 420px) { .about__stats { grid-template-columns: 1fr; } }
+  </style>
+
+  <script src="tracking.js" defer></script>
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo" aria-label="Web Shestakov">
+        <img src="assets/logo.svg" alt="Web Shestakov" />
+      </a>
+
+      <div class="header__right">
+        <div class="lang" role="group" aria-label="Language switcher">
+          <button type="button" class="lang__btn is-active" data-lang="uk" aria-pressed="true">UA</button>
+          <span class="lang__sep" aria-hidden="true">/</span>
+          <button type="button" class="lang__btn" data-lang="pl" aria-pressed="false">PL</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ ABOUT ============ -->
+  <main class="doc about">
+    <div class="container">
+      <a href="index.html" class="doc__back">
+        <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span data-i18n="privacy.back">На головну</span>
+      </a>
+
+      <!-- ---------- Українська версія ---------- -->
+      <div data-lang-block="uk">
+        <h1 class="doc__title">Про нас: Web Shestakov — веб-студія для бізнесу в Польщі та Україні</h1>
+        <p class="about__lead">Ми робимо сайти, інтернет-магазини й Telegram-боти для бізнесу, якому потрібні не «гарні картинки», а заявки. Працюємо з Польщі, під Вроцлавом, для клієнтів у Польщі, Україні та по всьому ЄС.</p>
+
+        <div class="about__hero">
+          <figure class="about__founder">
+            <img src="assets/photo.webp" alt="Andrii Shestakov, засновник Web Shestakov" width="480" height="720" loading="lazy" />
+            <figcaption><strong>Andrii Shestakov</strong><span>Founder &amp; CEO</span></figcaption>
+          </figure>
+          <ul class="about__stats" aria-label="Web Shestakov у цифрах">
+            <li><b>30+</b><span>запущених проєктів</span></li>
+            <li><b>5</b><span>країн: Польща, Україна, Німеччина, Чехія, Нідерланди</span></li>
+            <li><b>3–5</b><span>днів на запуск лендінгу</span></li>
+            <li><b>$300</b><span>стартова ціна сайту під ключ</span></li>
+          </ul>
+        </div>
+
+        <div class="doc__body">
+          <section class="doc__sec">
+            <h2><span class="doc__num">01</span>Хто ми</h2>
+            <p>Web Shestakov — це студія Андрія Шестакова. За кожним проєктом стоїть конкретна людина, а не безіменний менеджер: ви пишете напряму тому, хто відповідає за результат.</p>
+            <p>Під задачу ми збираємо команду: дизайн, розробка, тексти, SEO. Невеликий лендінг і великий магазин ведуться за тим самим принципом — одна відповідальна людина і зрозумілий план.</p>
+          </section>
+
+          <section class="doc__sec">
+            <h2><span class="doc__num">02</span>Що ми робимо</h2>
+            <ul>
+              <li><strong>Сайти під ключ</strong> — лендінги, сайти-візитки, корпоративні й багатосторінкові сайти.</li>
+              <li><strong>Інтернет-магазини</strong> — від невеликого каталогу до магазину з оплатою, доставкою та CRM.</li>
+              <li><strong>Telegram-боти</strong> — заявки, консультації, бронювання й продажі, які працюють 24/7.</li>
+              <li><strong>SEO-просування</strong> — щоб сайт знаходили в Google без постійної оплати реклами.</li>
+              <li><strong>Айдентика</strong> — логотип і візуальний стиль, з якими бренд впізнають.</li>
+            </ul>
+          </section>
+
+          <section class="doc__sec">
+            <h2><span class="doc__num">03</span>Як ми працюємо</h2>
+            <div class="about__grid">
+              <div class="doc__card"><p class="doc__name">Швидко</p><p>Лендінг запускаємо за 3–5 днів. Можна стартувати з рекламою вже цього тижня.</p></div>
+              <div class="doc__card"><p class="doc__name">Прозора ціна</p><p>Фіксована вартість під ключ від $300, без прихованих доплат. Складніші проєкти оцінюємо індивідуально.</p></div>
+              <div class="doc__card"><p class="doc__name">Не шаблон</p><p>Індивідуальний дизайн і структура під вашу нішу, аудиторію та мету — заявки, продажі чи довіру.</p></div>
+              <div class="doc__card"><p class="doc__name">Поруч після запуску</p><p>30 днів підтримки входять у ціну. Далі — супровід від $28 на місяць: правки, оновлення, консультації.</p></div>
+            </div>
+          </section>
+
+          <section class="doc__sec">
+            <h2><span class="doc__num">04</span>Для кого</h2>
+            <p>Для малого й середнього бізнесу, якому треба швидко й без зайвих витрат з'явитися в інтернеті та почати отримувати клієнтів. Серед наших клієнтів — сонячна енергетика, ремонт і будівництво, клінінг, бухгалтерія, барбершопи, доставка суші, квіти, меблі, магазини косметики та дронів.</p>
+            <p>Окремо працюємо з українськими підприємцями в Польщі: говоримо українською, робимо сайт польською й українською та знаємо, чого очікує польський клієнт.</p>
+          </section>
+
+          <section class="doc__sec">
+            <h2><span class="doc__num">05</span>Реквізити</h2>
+            <div class="doc__card">
+              <p class="doc__name">Web Shestakov — Andrii Shestakov</p>
+              <p>Akacjowa 96j lok. 1, 55-093 Kiełczów, Польща</p>
+              <p>NIP: 8961659922 · REGON: 543289997</p>
+              <p><a href="tel:+48577503534">+48 577 503 534</a> · <a href="mailto:webdeveloperandrii@gmail.com">webdeveloperandrii@gmail.com</a></p>
+            </div>
+          </section>
+        </div>
+
+        <div class="about__cta">
+          <p class="about__cta-title">Розкажіть про свій проєкт — відповімо протягом 24 годин.</p>
+          <div class="about__cta-actions">
+            <a href="index.html#contact" class="btn btn--dark btn--lg"><span>Залишити заявку</span></a>
+            <a href="https://t.me/Andrii_DEV9" class="btn btn--lg" target="_blank" rel="noopener"><span>Написати в Telegram</span></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---------- Wersja polska ---------- -->
+      <div data-lang-block="pl" hidden>
+        <h1 class="doc__title">O nas: Web Shestakov — studio stron internetowych dla firm w Polsce i Ukrainie</h1>
+        <p class="about__lead">Tworzymy strony internetowe, sklepy online i boty Telegram dla firm, którym zależy nie na „ładnych obrazkach”, tylko na zapytaniach od klientów. Działamy z Polski, spod Wrocławia — dla klientów w Polsce, Ukrainie i całej UE.</p>
+
+        <div class="about__hero">
+          <figure class="about__founder">
+            <img src="assets/photo.webp" alt="Andrii Shestakov, założyciel Web Shestakov" width="480" height="720" loading="lazy" />
+            <figcaption><strong>Andrii Shestakov</strong><span>Founder &amp; CEO</span></figcaption>
+          </figure>
+          <ul class="about__stats" aria-label="Web Shestakov w liczbach">
+            <li><b>30+</b><span>uruchomionych projektów</span></li>
+            <li><b>5</b><span>krajów: Polska, Ukraina, Niemcy, Czechy, Holandia</span></li>
+            <li><b>3–5</b><span>dni na uruchomienie landing page</span></li>
+            <li><b>$300</b><span>cena startowa strony pod klucz</span></li>
+          </ul>
+        </div>
+
+        <div class="doc__body">
+          <section class="doc__sec">
+            <h2><span class="doc__num">01</span>Kim jesteśmy</h2>
+            <p>Web Shestakov to studio Andrija Szestakowa. Za każdym projektem stoi konkretna osoba, a nie anonimowy opiekun klienta: piszesz bezpośrednio do tego, kto odpowiada za efekt.</p>
+            <p>Do każdego zadania dobieramy zespół: projekt graficzny, programowanie, teksty, SEO. Mały landing i duży sklep prowadzimy tak samo — jedna odpowiedzialna osoba i jasny plan.</p>
+          </section>
+
+          <section class="doc__sec">
+            <h2><span class="doc__num">02</span>Co robimy</h2>
+            <ul>
+              <li><strong>Strony pod klucz</strong> — landing page, strony wizytówki, strony firmowe i wielostronicowe.</li>
+              <li><strong>Sklepy internetowe</strong> — od małego katalogu po sklep z płatnościami, dostawą i CRM.</li>
+              <li><strong>Boty Telegram</strong> — zapytania, konsultacje, rezerwacje i sprzedaż 24/7.</li>
+              <li><strong>Pozycjonowanie SEO</strong> — żeby klienci znajdowali Cię w Google bez stałego płacenia za reklamy.</li>
+              <li><strong>Identyfikacja wizualna</strong> — logo i styl, po których marka jest rozpoznawalna.</li>
+            </ul>
+          </section>
+
+          <section class="doc__sec">
+            <h2><span class="doc__num">03</span>Jak pracujemy</h2>
+            <div class="about__grid">
+              <div class="doc__card"><p class="doc__name">Szybko</p><p>Landing page uruchamiamy w 3–5 dni. Kampanię reklamową możesz zacząć jeszcze w tym tygodniu.</p></div>
+              <div class="doc__card"><p class="doc__name">Jasna cena</p><p>Stała cena pod klucz od $300, bez ukrytych dopłat. Większe projekty wyceniamy indywidualnie.</p></div>
+              <div class="doc__card"><p class="doc__name">Bez szablonów</p><p>Indywidualny projekt i struktura pod Twoją branżę, klientów i cel — zapytania, sprzedaż albo zaufanie.</p></div>
+              <div class="doc__card"><p class="doc__name">Jesteśmy po starcie</p><p>30 dni wsparcia w cenie. Potem opieka od $28 miesięcznie: poprawki, aktualizacje, konsultacje.</p></div>
+            </div>
+          </section>
+
+          <section class="doc__sec">
+            <h2><span class="doc__num">04</span>Dla kogo</h2>
+            <p>Dla małych i średnich firm, które chcą szybko i bez zbędnych kosztów pojawić się w internecie i zacząć zdobywać klientów. Pracowaliśmy m.in. dla branży fotowoltaicznej, remontowo-budowlanej, sprzątającej, biur rachunkowych, barber shopów, dostaw sushi, kwiaciarni, salonów meblowych oraz sklepów z kosmetykami i dronami.</p>
+            <p>Osobno wspieramy ukraińskich przedsiębiorców w Polsce: rozmawiamy po ukraińsku, robimy stronę po polsku i ukraińsku i wiemy, czego oczekuje polski klient.</p>
+          </section>
+
+          <section class="doc__sec">
+            <h2><span class="doc__num">05</span>Dane firmy</h2>
+            <div class="doc__card">
+              <p class="doc__name">Web Shestakov — Andrii Shestakov</p>
+              <p>Akacjowa 96j lok. 1, 55-093 Kiełczów, Polska</p>
+              <p>NIP: 8961659922 · REGON: 543289997</p>
+              <p><a href="tel:+48577503534">+48 577 503 534</a> · <a href="mailto:webdeveloperandrii@gmail.com">webdeveloperandrii@gmail.com</a></p>
+            </div>
+          </section>
+        </div>
+
+        <div class="about__cta">
+          <p class="about__cta-title">Opowiedz nam o swoim projekcie — odpowiemy w ciągu 24 godzin.</p>
+          <div class="about__cta-actions">
+            <a href="index.html#contact" class="btn btn--dark btn--lg"><span>Wyślij zapytanie</span></a>
+            <a href="https://t.me/Andrii_DEV9" class="btn btn--lg" target="_blank" rel="noopener"><span>Napisz na Telegramie</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <nav class="footer__nav" aria-label="Footer">
+          <div class="footer__navcol">
+            <a href="index.html#about" data-i18n="nav.about">Про нас</a>
+            <a href="index.html#why" data-i18n="nav.why">Переваги</a>
+          </div>
+          <div class="footer__navcol">
+            <a href="index.html#services" data-i18n="nav.services">Послуги</a>
+            <a href="index.html#cases" data-i18n="nav.cases">Кейси</a>
+          </div>
+          <div class="footer__navcol">
+            <a href="index.html#faq" data-i18n="nav.faq">FAQ</a>
+            <a href="index.html#partners" data-i18n="nav.partners">Партнерам</a>
+          </div>
+          <div class="footer__navcol">
+            <a href="index.html#contact" data-i18n="nav.contacts">Контакти</a>
+          </div>
+        </nav>
+
+        <div class="footer__contacts">
+          <a href="tel:+48577503534" class="footer__mail">+48 577 503 534</a>
+          <a href="https://t.me/Andrii_DEV9" target="_blank" rel="noopener">Telegram</a>
+          <a href="https://wa.me/48577503534" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://www.instagram.com/web.shestakov" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+
+      <div class="footer__wordmark">
+        <img src="assets/footer-logo.svg" alt="Web Shestakov agency" />
+      </div>
+
+      <div class="footer__legal">
+        <a href="privacy.html" data-i18n="footer.privacy">політика конфіденційності</a>
+        <a href="#" data-cookie-settings data-i18n="footer.cookies">налаштування cookies</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ COOKIE BANNER ============ -->
+  <aside class="cookie" id="cookie-banner" role="region" aria-label="Cookie" hidden>
+    <p class="cookie__text">
+      <span data-i18n="cookie.text">Ми використовуємо cookie, щоб сайт працював коректно та був зручнішим.</span>
+      <a class="cookie__link" href="privacy.html" data-i18n="cookie.link">Політика конфіденційності</a>
+    </p>
+    <div class="cookie__actions">
+      <button type="button" class="cookie__btn cookie__btn--accept" data-cookie="accepted" data-i18n="cookie.accept">Прийняти</button>
+      <button type="button" class="cookie__btn cookie__btn--ghost" data-cookie="essential" data-i18n="cookie.decline">Лише необхідні</button>
+    </div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
