@@ -1,0 +1,22 @@
+# Web Shestakov — shstkv-digital.com
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# Пошукові та AI-асистенти: явно дозволяємо, щоб сайт могли знаходити й цитувати
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: GPTBot
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: Google-Extended
+User-agent: Applebot
+Allow: /
+Disallow: /api/
+
+Sitemap: https://www.shstkv-digital.com/sitemap.xml

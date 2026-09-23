@@ -1,0 +1,15 @@
+---
+/* Усі сторінки з карти src/lib/site.mjs: HTML збирається з шаблонів src/templates. */
+import { PAGES } from "../lib/site.mjs";
+import { renderPage } from "../lib/render.mjs";
+
+export function getStaticPaths() {
+  return PAGES.map((page) => ({
+    params: { slug: page.path === "/" ? undefined : page.path.replace(/^\/|\/$/g, "") },
+    props: { page }
+  }));
+}
+
+const html = renderPage(Astro.props.page);
+---
+<Fragment set:html={html} />

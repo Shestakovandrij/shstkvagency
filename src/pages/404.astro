@@ -1,0 +1,40 @@
+---
+/* Сторінка 404 у стилі сайту — обома мовами, з виходом на головні сторінки. */
+---
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Сторінку не знайдено — Web Shestakov</title>
+  <meta name="robots" content="noindex, follow" />
+  <link rel="icon" href="/favicon.ico" sizes="32x32" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+  <style>
+    .nf { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; gap: 2rem; padding-block: 4rem; }
+    .nf__code { font-family: var(--font-head); font-weight: 800; font-size: clamp(6rem, 22vw, 18rem); line-height: 0.86; letter-spacing: -0.05em; color: var(--ink); }
+    .nf__code span { color: var(--accent); }
+    .nf__text { display: grid; gap: 0.4rem; max-width: 46ch; font-size: clamp(1rem, 1.4vw, 1.2rem); line-height: 1.45; color: var(--ink-60); }
+    .nf__actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+  </style>
+</head>
+<body>
+  <main class="container nf">
+    <a href="/" aria-label="Web Shestakov"><img src="/assets/logo.svg" alt="Web Shestakov" width="120" height="32" /></a>
+    <p class="nf__code">4<span>0</span>4</p>
+    <div class="nf__text">
+      <p>Такої сторінки немає — можливо, адреса змінилась.</p>
+      <p lang="pl">Nie ma takiej strony — adres mógł się zmienić.</p>
+    </div>
+    <div class="nf__actions">
+      <a href="/" class="btn btn--dark btn--lg"><span>На головну</span></a>
+      <a href="/pl/" class="btn btn--dark btn--lg"><span>Strona główna</span></a>
+      <a href="/portfolio/" class="btn btn--lg"><span>Портфоліо</span></a>
+    </div>
+  </main>
+</body>
+</html>
