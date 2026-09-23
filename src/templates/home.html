@@ -48,13 +48,19 @@
     })();
 
     /* Preloader guards (run before first paint):
-       1) manual skip for debugging — index.html?pre-skip;
+       1) manual skip for debugging — index.html?pre-skip, and repeat visits in the same session;
        2) hard failsafe — never trap the site behind the overlay longer than 7s,
           even if GSAP/preloader.js fail to load. */
     (function () {
       try {
         if (/[?&]pre-skip/.test(window.location.search)) {
           document.documentElement.classList.add("pre-skip");
+        }
+        /* повторний візит у тій самій сесії — без прелоадера */
+        if (sessionStorage.getItem("ws-pre-seen")) {
+          document.documentElement.classList.add("pre-skip");
+        } else {
+          sessionStorage.setItem("ws-pre-seen", "1");
         }
       } catch (e) {}
       window.setTimeout(function () {

@@ -14,7 +14,7 @@
   "use strict";
 
   var META_ID     = "1374423121079785";
-  var GA_ID       = "G-XXXXXXXXXX";      // ← підставити свій Measurement ID
+  var GA_ID       = "G-0K2H0G1H97";      // GA4: акаунт "Web Shestakov", ресурс shstkv-digital.com
   var CONSENT_KEY = "ws-cookie";          // "accepted" | "essential"
   var SOURCE_KEY  = "ws-src";
 
@@ -93,6 +93,13 @@
     document.head.appendChild(s);
     window.dataLayer = window.dataLayer || [];
     window.gtag = function () { window.dataLayer.push(arguments); };
+    // Consent Mode v2: GA вантажиться лише після "Прийняти", тож згода надана
+    window.gtag("consent", "default", {
+      ad_storage: "granted",
+      analytics_storage: "granted",
+      ad_user_data: "granted",
+      ad_personalization: "granted"
+    });
     window.gtag("js", new Date());
     window.gtag("config", GA_ID, {
       campaign_source: SRC.source,
@@ -116,6 +123,10 @@
   // Стандартні події Meta. Усе інше піде як trackCustom.
   var META_STANDARD = ["PageView", "ViewContent", "Lead", "Contact", "CompleteRegistration"];
 
+  // Рекомендовані назви подій GA4 (generate_lead — ключова подія-конверсія)
+  var GA_EVENTS = { Lead: "generate_lead" };
+  var GA_SKIP = { PageView: true };   // page_view GA4 шле сам через config
+
   function fire(name, params) {
     params = params || {};
     params.src = SRC.source;
@@ -130,9 +141,9 @@
     } catch (e) {}
 
     try {
-      if (window.gtag) {
+      if (window.gtag && !GA_SKIP[name]) {
         // GA4 любить snake_case: ViewContent -> view_content
-        var gaName = name.replace(/([a-z0-9])([A-Z])/g, "$1_$2").toLowerCase();
+        var gaName = GA_EVENTS[name] || name.replace(/([a-z0-9])([A-Z])/g, "$1_$2").toLowerCase();
         window.gtag("event", gaName, params);
       }
     } catch (e) {}
