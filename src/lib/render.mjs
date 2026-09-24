@@ -54,7 +54,7 @@ function rewriteUrls(document, lang) {
     return "/" + value.replace(/^\.\//, "");
   };
 
-  for (const attr of ["src", "href", "poster", "data-src"]) {
+  for (const attr of ["src", "href", "poster", "data-src", "data-img"]) {
     document.querySelectorAll(`[${attr}]`).forEach((el) => {
       if (el.tagName === "LINK" && el.getAttribute("rel") === "alternate") return;
       el.setAttribute(attr, fix(el.getAttribute(attr)));
