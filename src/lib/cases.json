@@ -1,0 +1,82 @@
+[
+ {
+  "slug": "rozmarin",
+  "name": "Rozmarin",
+  "title_uk": "Інтернет-магазин квітів у Вроцлаві — кейс Rozmarin | Web Shestakov",
+  "title_pl": "Sklep internetowy z kwiatami we Wrocławiu — realizacja Rozmarin | Web Shestakov",
+  "desc_uk": "Як ми зробили інтернет-магазин квіткового бутика Rozmarin у Вроцлаві: WooCommerce, три мови, каталог композицій і преміум-колекція.",
+  "desc_pl": "Jak stworzyliśmy sklep internetowy kwiaciarni Rozmarin we Wrocławiu: WooCommerce, trzy języki, katalog kompozycji i kolekcja premium."
+ },
+ {
+  "slug": "bellissimo-home",
+  "name": "Bellissimo Home",
+  "title_uk": "Лендінг для салону італійських меблів у Вроцлаві — кейс Bellissimo Home",
+  "title_pl": "Landing page dla salonu włoskich mebli we Wrocławiu — realizacja Bellissimo Home",
+  "desc_uk": "Лендінг для шоуруму італійських меблів і кухонь на замовлення у Вроцлаві: калькулятор вартості, запис на зустріч, розділ для архітекторів.",
+  "desc_pl": "Landing page dla showroomu włoskich mebli i kuchni na wymiar we Wrocławiu: kalkulator kosztów, rezerwacja spotkania, sekcja dla architektów."
+ },
+ {
+  "slug": "td-solar",
+  "name": "TD-SOLAR",
+  "title_uk": "Лендінг для монтажу сонячних панелей у Німеччині — кейс TD-SOLAR",
+  "title_pl": "Landing page dla montażu fotowoltaiki w Niemczech — realizacja TD-SOLAR",
+  "desc_uk": "Лендінг німецькою для бригади DC-монтажу фотоелектричних станцій: послуги, процес співпраці, обладнання, приклади робіт і форма запиту.",
+  "desc_pl": "Landing page po niemiecku dla ekipy montażu DC instalacji fotowoltaicznych: usługi, proces współpracy, sprzęt, realizacje i formularz zapytania."
+ },
+ {
+  "slug": "tarik-invest",
+  "name": "TARIK Invest",
+  "title_uk": "Сайт для електромонтажної компанії в Чехії — кейс TARIK Invest",
+  "title_pl": "Strona dla firmy elektroinstalacyjnej w Czechach — realizacja TARIK Invest",
+  "desc_uk": "Сайт на Next.js для електромонтажної компанії в Чехії: чеська й українська версії, процес без хаосу, відгуки, вакансії та FAQ.",
+  "desc_pl": "Strona na Next.js dla firmy elektroinstalacyjnej w Czechach: wersja czeska i ukraińska, uporządkowany proces, opinie, rekrutacja i FAQ."
+ },
+ {
+  "slug": "dictator-barbershop",
+  "name": "DICTATOR",
+  "title_uk": "Сайт для мережі барбершопів — кейс DICTATOR, Дніпро | Web Shestakov",
+  "title_pl": "Strona dla sieci barber shopów — realizacja DICTATOR | Web Shestakov",
+  "desc_uk": "Багатосторінковий сайт для преміальної мережі барбершопів DICTATOR у Дніпрі: вибір філії, онлайн-запис, майстри, акції, Barber Academy і франшиза.",
+  "desc_pl": "Strona wielostronicowa dla sieci barber shopów premium DICTATOR w Dnieprze: wybór salonu, rezerwacja online, barberzy, promocje, akademia i franczyza."
+ },
+ {
+  "slug": "elart-cleaning",
+  "name": "Elart Cleaning",
+  "title_uk": "Лендінг для клінінгової компанії в Познані — кейс Elart Cleaning",
+  "title_pl": "Landing page dla firmy sprzątającej w Poznaniu — realizacja Elart Cleaning",
+  "desc_uk": "Лендінг на Next.js для клінінгової компанії в Познані: прайс і пакети, 7 кроків співпраці, фото до/після, відгуки 4.9/5 і онлайн-бронювання.",
+  "desc_pl": "Landing page na Next.js dla firmy sprzątającej w Poznaniu: cennik i pakiety, 7 kroków współpracy, zdjęcia przed i po, opinie 4.9/5 i rezerwacja online."
+ },
+ {
+  "slug": "core-accounting",
+  "name": "Core Accounting",
+  "title_uk": "Сайт для бухгалтерської компанії на Webflow — кейс Core Accounting",
+  "title_pl": "Strona dla biura rachunkowego na Webflow — realizacja Core Accounting",
+  "desc_uk": "Багатосторінковий сайт на Webflow для бухгалтерської компанії Core Accounting: позиціонування, цільова аудиторія, відгуки та форма заявки.",
+  "desc_pl": "Strona wielostronicowa na Webflow dla biura rachunkowego Core Accounting: pozycjonowanie, grupa docelowa, opinie i formularz kontaktowy."
+ },
+ {
+  "slug": "nagachky-sushi",
+  "name": "Nagachky Sushi",
+  "title_uk": "Сайт доставки суші з онлайн-замовленням — кейс Nagachky Sushi",
+  "title_pl": "Strona z dostawą sushi i zamówieniami online — realizacja Nagachky Sushi",
+  "desc_uk": "Сайт доставки суші на WordPress + WooCommerce: меню з кошиком, авторські пропозиції, адреса закладу та FAQ.",
+  "desc_pl": "Strona z dostawą sushi na WordPress + WooCommerce: menu z koszykiem, autorskie propozycje, lokalizacja i FAQ."
+ },
+ {
+  "slug": "herstel-bouw",
+  "name": "Herstel & Bouw",
+  "title_uk": "Сайт для ремонтно-будівельної компанії в Нідерландах — кейс Herstel & Bouw",
+  "title_pl": "Strona dla firmy remontowo-budowlanej w Holandii — realizacja Herstel & Bouw",
+  "desc_uk": "Сайт для компанії з ремонту та будівництва в Амстердамі, Алмере й Утрехті: калькулятор вартості ремонту, портфоліо, відгуки, FAQ, нідерландська й англійська.",
+  "desc_pl": "Strona dla firmy remontowo-budowlanej z Amsterdamu, Almere i Utrechtu: kalkulator kosztów remontu, realizacje, opinie, FAQ, wersja niderlandzka i angielska."
+ },
+ {
+  "slug": "kora-candle",
+  "name": "Kora Candle",
+  "title_uk": "Інтернет-магазин свічок ручної роботи — кейс Kora Candle | Web Shestakov",
+  "title_pl": "Sklep internetowy ze świecami ręcznie robionymi — realizacja Kora Candle",
+  "desc_uk": "Інтернет-магазин на WooCommerce для бренду свічок ручної роботи Kora Candle: каталог, подарункові набори, декор і запис на майстер-класи.",
+  "desc_pl": "Sklep na WooCommerce dla marki ręcznie robionych świec Kora Candle: katalog, zestawy prezentowe, dekoracje i zapisy na warsztaty."
+ }
+]

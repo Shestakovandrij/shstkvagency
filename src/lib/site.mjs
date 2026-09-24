@@ -1,3 +1,6 @@
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
+
 /* Карта сторінок сайту: URL кожної мовної версії + SEO-теги.
    hreflang, canonical, sitemap і перемикач мов будуються звідси. */
 
@@ -100,6 +103,15 @@ export const PAGES = [
     priority: 0.3
   }
 ];
+
+/* Сторінки кейсів: генерує scripts/build_cases.py (src/lib/cases.json). */
+const CASES = JSON.parse(readFileSync(join(process.cwd(), "src", "lib", "cases.json"), "utf8"));
+for (const c of CASES) {
+  PAGES.push(
+    { group: "case-" + c.slug, lang: "uk", path: "/keisy/" + c.slug + "/", template: "case-" + c.slug, title: c.title_uk, description: c.desc_uk, ogType: "article", priority: 0.6 },
+    { group: "case-" + c.slug, lang: "pl", path: "/pl/realizacje/" + c.slug + "/", template: "case-" + c.slug, title: c.title_pl, description: c.desc_pl, ogType: "article", priority: 0.6 }
+  );
+}
 
 export function page(group, lang) {
   return PAGES.find((p) => p.group === group && p.lang === lang);

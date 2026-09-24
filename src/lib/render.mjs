@@ -50,6 +50,7 @@ function rewriteUrls(document, lang) {
     if (!value || isExternal(value)) return value;
     const [file, hash] = value.split("#");
     if (LEGACY_LINKS[file] != null) return href(LEGACY_LINKS[file], lang) + (hash ? "#" + hash : "");
+    if (/^(case-[a-z0-9-]+|about)$/.test(file)) return href(file, lang) + (hash ? "#" + hash : "");
     return "/" + value.replace(/^\.\//, "");
   };
 
