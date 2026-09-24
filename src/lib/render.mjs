@@ -74,6 +74,7 @@ function jsonLd(page, document) {
     "@type": "ProfessionalService",
     "@id": SITE + "/#organization",
     name: BUSINESS.name,
+    alternateName: ["SHSTKV Digital", "SHSTKV"],
     legalName: BUSINESS.legalName,
     url: SITE + "/",
     logo: SITE + "/assets/apple-touch-icon.png",

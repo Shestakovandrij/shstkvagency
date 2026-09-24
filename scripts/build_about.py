@@ -30,7 +30,7 @@ hero=hero.replace('<div class="hero__wordmark">Web&nbsp;Shestakov<span class="he
   '<div class="hero__wordmark">'+L('Про&nbsp;нас','O&nbsp;nas')+'<span class="hero__reg">&reg;</span></div>')
 o1=hero.index('<div class="hero__overlay">'); o2=hero.index('<!-- Bottom service shelf')
 hero=hero[:o1]+'''<div class="hero__overlay">
-            <h1 class="hero__headline">'''+L('Web Shestakov — веб-студія у Вроцлаві','Web Shestakov — studio stron internetowych we Wrocławiu')+'''</h1>
+            <h1 class="hero__headline">'''+L('SHSTKV Digital — веб-студія у Вроцлаві','SHSTKV Digital — studio stron internetowych we Wrocławiu')+'''</h1>
             <p class="hero__headline-sub">'''+L('Сайти, інтернет-магазини й Telegram-боти для бізнесу в Польщі, Україні та ЄС. 12+ років досвіду.','Strony, sklepy internetowe i boty Telegram dla firm w Polsce, Ukrainie i UE. Ponad 12 lat doświadczenia.')+'''</p>
           </div>
 
@@ -91,7 +91,7 @@ who='''    <section class="section" id="who">
 '''+head(L('Хто ми','Kim jesteśmy'),L('Про нас','O nas'))+'''
         <div class="budget-grid">
         <div class="budget-intro reveal">
-          <p class="budget-lead">'''+L('Я роблю сайти понад 12 років. У 2018 році переїхав до Польщі й вирішив розвивати студію саме тут — так з\'явився Web Shestakov, який працює вже понад 6 років.','Tworzę strony internetowe od ponad 12 lat. W 2018 roku przeprowadziłem się do Polski i postanowiłem rozwijać studio właśnie tutaj — tak powstał Web Shestakov, który działa już ponad 6 lat.')+'''</p>
+          <p class="budget-lead">'''+L('Я роблю сайти понад 12 років. У 2018 році переїхав до Польщі й вирішив розвивати студію саме тут — так з\'явився SHSTKV Digital, який працює вже понад 6 років.','Tworzę strony internetowe od ponad 12 lat. W 2018 roku przeprowadziłem się do Polski i postanowiłem rozwijać studio właśnie tutaj — tak powstał SHSTKV Digital, który działa już ponad 6 lat.')+'''</p>
           <p class="budget-sub">'''+L('Під кожен проєкт збираємо команду: дизайнер, графічний дизайнер, розробник і SEO-спеціаліст. Ви говорите напряму з тим, хто робить ваш сайт — без менеджерів і зіпсованого телефону. Ціна відома наперед, запуск — у погоджений строк, а після здачі сайт повністю ваш.','Do każdego projektu dobieramy zespół: projektant, grafik, programista i specjalista SEO. Rozmawiasz bezpośrednio z osobą, która robi Twoją stronę — bez pośredników i głuchego telefonu. Cenę znasz z góry, start jest w ustalonym terminie, a po oddaniu projektu strona w całości należy do Ciebie.')+'''</p>
           <div class="budget-pills" role="list">
             <div class="budget-pills__track">'''+pl_html+'''</div>
@@ -103,7 +103,7 @@ who='''    <section class="section" id="who">
         </div>
         <div class="reveal">
           <a class="bx-card" href="https://t.me/Andrii_DEV9" target="_blank" rel="noopener" aria-label="Telegram Andrii Shestakov">
-            <div class="bx-card__media"><img src="assets/photo.webp" alt="Andrii Shestakov — Founder &amp; CEO Web Shestakov" loading="lazy" style="object-position: center 38%" /></div>
+            <div class="bx-card__media"><img src="assets/photo.webp" alt="Andrii Shestakov — Founder &amp; CEO SHSTKV Digital" loading="lazy" style="object-position: center 38%" /></div>
             <div class="bx-card__bar">
               <span class="bx-card__cat">Andrii Shestakov · Founder &amp; CEO</span>
               <span class="bx-card__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
@@ -172,6 +172,7 @@ a5=s.index('    <section class="section" id="contact">'); contact=s[a5:s.index('
 start=s.index('    <section class="hero" id="home">'); pe=s.index('    <section class="section" id="partners">'); end=s.index('</section>',pe)+len('</section>')
 body='\n\n'.join([hero,who,services,how,tariffs,faq,contact])
 s=s[:start]+body+s[end:]
+s=s.replace('<span class="menu__meta-item"><span class="menu__meta-dot"></span>Web Shestakov — ','<span class="menu__meta-item"><span class="menu__meta-dot"></span>SHSTKV Digital — ')
 # nav hashes -> home (except #contact and local shelf #how)
 s=re.sub(r'href="#(about|why|services|cases|budget|tariffs|faq|partners|home)"',r'href="index.html#\1"',s)
 open(ROOT+'about.html','w').write(s)

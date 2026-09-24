@@ -63,9 +63,9 @@ export const PAGES = [
     lang: "uk",
     path: "/pro-nas/",
     template: "about",
-    title: "Про нас — Web Shestakov, веб-студія у Вроцлаві: 12+ років досвіду, 35+ проєктів",
+    title: "Про нас — SHSTKV Digital, веб-студія у Вроцлаві: 12+ років досвіду, 35+ проєктів",
     description:
-      "Web Shestakov — студія Андрія Шестакова у Вроцлаві: сайти від $300, магазини від $800, Telegram-боти. 12+ років досвіду, 35+ проєктів у 6 країнах, договір і faktura.",
+      "SHSTKV Digital — студія Андрія Шестакова у Вроцлаві: сайти від $300, магазини від $800, Telegram-боти. 12+ років досвіду, 35+ проєктів у 6 країнах, договір і faktura.",
     ogType: "website",
     priority: 0.7
   },
@@ -74,9 +74,9 @@ export const PAGES = [
     lang: "pl",
     path: "/pl/o-nas/",
     template: "about",
-    title: "O nas — Web Shestakov, studio stron internetowych we Wrocławiu: 12+ lat doświadczenia",
+    title: "O nas — SHSTKV Digital, studio stron internetowych we Wrocławiu: 12+ lat doświadczenia",
     description:
-      "Web Shestakov to studio Andrija Szestakowa we Wrocławiu: strony od $300, sklepy od $800, boty Telegram. 12+ lat doświadczenia, 35+ projektów w 6 krajach, umowa i faktura.",
+      "SHSTKV Digital to studio Andrija Szestakowa we Wrocławiu: strony od $300, sklepy od $800, boty Telegram. 12+ lat doświadczenia, 35+ projektów w 6 krajach, umowa i faktura.",
     ogType: "website",
     priority: 0.7
   },
