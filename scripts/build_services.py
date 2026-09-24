@@ -350,10 +350,17 @@ who = '''    <section class="section" id="about">
         </div>
       </div>
     </section>'''
+CITY_ITEMS = [dict(key=x['key'], img=f"assets/service-{i % 5 + 1}.webp", name_uk=x['name_uk'], name_pl=x['name_pl'], sub_uk=x['sub_uk'], sub_pl=x['sub_pl'])
+              for i, x in enumerate(c for c in CITIES if c['key'] != 'polshcha')]
+cities_nav = services_block(CITY_ITEMS, L('Працюємо по всій Польщі', 'Pracujemy w całej Polsce'), L('Міста', 'Miasta'), 'city-')
+# хаб /polshcha/ існує лише українською — посилання на нього тільки в UA-версії
+cities_nav = cities_nav.replace('<div class="services reveal-group">',
+    '<p class="section__lead reveal" data-lang-block="uk">Український бізнес у Польщі? Ось <a href="city-polshcha" style="text-decoration: underline; text-underline-offset: 3px">як ми робимо сайти під польський ринок</a>.</p>\n        <div class="services reveal-group">', 1)
 write('contacts', [
     hero(wm('Контакти', 'Kontakt'), L(C['h1_uk'], C['h1_pl']), L(C['sub_uk'], C['sub_pl']), C['facts'], 'contact'),
     CONTACT,
     who,
+    cities_nav,
     faq_block(C['faq'], L('Перед тим як написати', 'Zanim napiszesz')),
 ])
 
