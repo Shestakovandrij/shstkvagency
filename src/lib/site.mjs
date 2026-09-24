@@ -121,6 +121,20 @@ export const PAGES = [
 ];
 
 /* Сторінки кейсів: генерує scripts/build_cases.py (src/lib/cases.json). */
+const SVC = JSON.parse(readFileSync(join(process.cwd(), "src", "lib", "services.json"), "utf8"));
+for (const v of SVC.services) {
+  PAGES.push(
+    { group: "svc-" + v.key, lang: "uk", path: v.path_uk, template: "svc-" + v.key, crumb: v.name_uk, service: v, title: v.title_uk, description: v.desc_uk, priority: 0.9 },
+    { group: "svc-" + v.key, lang: "pl", path: v.path_pl, template: "svc-" + v.key, crumb: v.name_pl, service: v, title: v.title_pl, description: v.desc_pl, priority: 0.9 }
+  );
+}
+PAGES.push(
+  { group: "prices", lang: "uk", path: "/tsiny/", template: "prices", crumb: "Ціни", title: SVC.prices.title_uk, description: SVC.prices.desc_uk, priority: 0.9 },
+  { group: "prices", lang: "pl", path: "/pl/cennik/", template: "prices", crumb: "Cennik", title: SVC.prices.title_pl, description: SVC.prices.desc_pl, priority: 0.9 },
+  { group: "contacts", lang: "uk", path: "/kontakty/", template: "contacts", crumb: "Контакти", title: SVC.contacts.title_uk, description: SVC.contacts.desc_uk, priority: 0.6 },
+  { group: "contacts", lang: "pl", path: "/pl/kontakt/", template: "contacts", crumb: "Kontakt", title: SVC.contacts.title_pl, description: SVC.contacts.desc_pl, priority: 0.6 }
+);
+
 const CASES = JSON.parse(readFileSync(join(process.cwd(), "src", "lib", "cases.json"), "utf8"));
 for (const c of CASES) {
   PAGES.push(

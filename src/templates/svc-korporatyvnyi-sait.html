@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title data-i18n="meta.title">Web Shestakov — сайти, Telegram-боти, інтернет-магазини, SEO та айдентика</title>
+  <meta name="description" data-i18n="meta.description" content="Створюємо сучасні сайти, Telegram-боти, інтернет-магазини, SEO-рішення та айдентику для бізнесу. Допомагаємо залучати клієнтів, продавати онлайн і автоматизувати процеси." />
+
+  <link rel="canonical" href="https://www.shstkv-digital.com/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Web Shestakov" />
+  <meta property="og:url" content="https://www.shstkv-digital.com/" />
+  <meta property="og:locale" content="uk_UA" />
+  <meta property="og:locale:alternate" content="pl_PL" />
+  <meta property="og:title" data-i18n="meta.title" content="Web Shestakov — сайти, Telegram-боти, інтернет-магазини, SEO та айдентика" />
+  <meta property="og:description" data-i18n="meta.description" content="Сайти, Telegram-боти, інтернет-магазини, SEO та айдентика." />
+  <meta property="og:image" content="https://www.shstkv-digital.com/assets/og-image.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Web Shestakov — сайти, Telegram-боти, інтернет-магазини, SEO та айдентика" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://www.shstkv-digital.com/assets/og-image.jpg" />
+  <meta name="theme-color" content="#EEEEEE" />
+
+  <link rel="icon" href="/favicon.ico" sizes="32x32" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <script>
+    (function () {
+      try {
+        var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (!reduce) { document.documentElement.className += " anim-on"; }
+        window.setTimeout(function () {
+          if (!window.__wsReady) { document.documentElement.classList.remove("anim-on"); }
+        }, 2600);
+      } catch (e) { document.documentElement.classList.remove("anim-on"); }
+    })();
+
+  </script>
+
+
+  <!-- Meta Pixel + GA4. Скрипти вантажаться всередині tracking.js і лише
+       після згоди на куки — окремо код пікселя в <head> вставляти не треба. -->
+  <script src="tracking.js" defer></script>
+</head>
+
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ============ PRELOADER — "Digital Signal Ignition" ============
+       Sequence: grid breathes in → coral scanline sweeps (dots blink on its path) →
+       fragments converge into the centre → monogram mask-reveals (bottom→top) →
+       STKV wordmark wipes (left→right) + micro-flicker → status roller
+       (DESIGN / CODE / MOTION / LAUNCH) → ignition pop + pulse rings →
+       exit: panel wipes up, the lockup flies onto the header logo.
+       Colors: :root --bg / --accent in styles.css. Timings: the T object in preloader.js. -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html#home" class="header__logo" aria-label="Web Shestakov">
+        <img src="assets/logo.svg" alt="Web Shestakov" />
+      </a>
+
+      <div class="header__right">
+        <div class="lang" role="group" aria-label="Language switcher">
+          <button type="button" class="lang__btn is-active" data-lang="uk" aria-pressed="true">UA</button>
+          <span class="lang__sep" aria-hidden="true">/</span>
+          <button type="button" class="lang__btn" data-lang="pl" aria-pressed="false">PL</button>
+        </div>
+        <button type="button" class="menu-btn" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="menu-btn__label" data-i18n="nav.menu">Меню</span>
+          <span class="menu-btn__icon" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ MENU (dropdown panel, as template) ============ -->
+  <div class="menu" id="mobile-menu" aria-hidden="true">
+    <div class="menu__overlay" data-close-menu></div>
+    <div class="container menu__container">
+      <div class="menu__panel">
+        <button type="button" class="menu__close" id="menu-close" aria-label="Close">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+
+        <div class="menu__grid">
+          <nav class="menu__nav" aria-label="Menu">
+            <a href="about" class="menu__link" data-close-menu><span data-i18n="nav.about">Про нас</span><span class="menu__num">(01)</span></a>
+            <a href="index.html#why" class="menu__link" data-close-menu><span data-i18n="nav.why">Переваги</span><span class="menu__num">(02)</span></a>
+            <a href="index.html#services" class="menu__link" data-close-menu><span data-i18n="nav.services">Послуги</span><span class="menu__num">(03)</span></a>
+            <a href="index.html#cases" class="menu__link" data-close-menu><span data-i18n="nav.cases">Кейси</span><span class="menu__num">(04)</span></a>
+            <a href="portfolio.html" class="menu__link" data-close-menu><span data-i18n="nav.portfolio">Портфоліо</span><span class="menu__num">(05)</span></a>
+            <a href="index.html#budget" class="menu__link" data-close-menu><span data-i18n="nav.budget">Швидкий старт</span><span class="menu__num">(06)</span></a>
+            <a href="index.html#tariffs" class="menu__link" data-close-menu><span data-i18n="nav.tariffs">Тарифи</span><span class="menu__num">(07)</span></a>
+            <a href="index.html#faq" class="menu__link" data-close-menu><span data-i18n="nav.faq">FAQ</span><span class="menu__num">(08)</span></a>
+            <a href="index.html#partners" class="menu__link" data-close-menu><span data-i18n="nav.partners">Партнерам</span><span class="menu__num">(09)</span></a>
+            <a href="#contact" class="menu__link" data-close-menu><span data-i18n="nav.contacts">Контакти</span><span class="menu__num">(10)</span></a>
+          </nav>
+
+          <aside class="menu__side">
+            <a href="https://t.me/Andrii_DEV9" target="_blank" rel="noopener" class="contact-card menu__person" data-close-menu>
+              <span class="contact-card__photo"><img src="assets/photo.webp" alt="Andrii Shestakov" /></span>
+              <span class="contact-card__body">
+                <span class="contact-card__name">Andrii Shestakov</span>
+                <span class="contact-card__role">Founder &amp; CEO</span>
+              </span>
+              <span class="contact-card__cta">
+                <span data-i18n="hero.aside.cta">Написати</span>
+                <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </span>
+            </a>
+
+            <div class="menu__block">
+              <span class="menu__label" data-i18n="menu.follow">Соцмережі</span>
+              <div class="menu__socials">
+                <a href="https://www.instagram.com/web.shestakov" class="menu__social" target="_blank" rel="noopener" aria-label="Instagram">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+                </a>
+                <a href="https://t.me/Andrii_DEV9" class="menu__social" target="_blank" rel="noopener" aria-label="Telegram">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M21.9 4.3l-3 14.1c-.2 1-.8 1.2-1.7.8l-4.6-3.4-2.2 2.1c-.2.2-.4.4-.9.4l.3-4.7 8.5-7.7c.4-.3-.1-.5-.6-.2L7.3 13 2.8 11.6c-1-.3-1-1 .2-1.4l17-6.6c.8-.3 1.5.2 1.9 1z"/></svg>
+                </a>
+                <a href="https://wa.me/48577503534" class="menu__social" target="_blank" rel="noopener" aria-label="WhatsApp">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <div class="menu__block">
+              <span class="menu__label" data-i18n="menu.contact">Контакти</span>
+              <a href="tel:+48577503534" class="menu__contact">+48 577 503 534</a>
+              <a href="https://t.me/Andrii_DEV9" class="menu__contact" target="_blank" rel="noopener">@Andrii_DEV9</a>
+            </div>
+
+            <button type="button" class="btn btn--accent btn--block" data-open-popup data-close-menu>
+              <span data-i18n="cta.header">Отримати консультацію</span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </button>
+
+            <a class="menu__legal" href="privacy.html" data-close-menu data-i18n="footer.privacy">політика конфіденційності</a>
+          </aside>
+        </div>
+
+        <div class="menu__meta">
+          <span class="menu__meta-item"><span class="menu__meta-dot"></span>SHSTKV Digital — <span data-i18n="hero.aside.role">digital-агенція</span></span>
+          <span class="menu__meta-item">© 2026</span>
+          <span class="menu__meta-item menu__meta-item--status" data-i18n="menu.status">Приймаємо проєкти</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+      <div class="container">
+        <!-- Top row: wordmark + founder card on the same level (as template) -->
+        <div class="hero__top reveal">
+          <div class="hero__wordmark"><span data-lang-block="uk">Сайт&nbsp;компанії</span><span data-lang-block="pl" hidden>Strona&nbsp;firmowa</span></div>
+          <a href="https://t.me/Andrii_DEV9" target="_blank" rel="noopener" class="contact-card">
+            <span class="contact-card__photo"><img src="assets/photo.webp" alt="Andrii Shestakov" /></span>
+            <span class="contact-card__body">
+              <span class="contact-card__name">Andrii Shestakov</span>
+              <span class="contact-card__role">Founder &amp; CEO</span>
+            </span>
+            <span class="contact-card__cta">
+              <span data-i18n="hero.aside.cta">Написати</span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </span>
+          </a>
+        </div>
+
+        <!-- Big media panel -->
+        <div class="hero__panel reveal">
+          <div class="hero__panel-bg" aria-hidden="true"></div>
+
+          <div class="hero__socials" aria-label="Social">
+            <a href="https://www.instagram.com/web.shestakov" class="hero__social" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="https://t.me/Andrii_DEV9" class="hero__social" target="_blank" rel="noopener" aria-label="Telegram">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M21.9 4.3l-3 14.1c-.2 1-.8 1.2-1.7.8l-4.6-3.4-2.2 2.1c-.2.2-.4.4-.9.4l.3-4.7 8.5-7.7c.4-.3-.1-.5-.6-.2L7.3 13 2.8 11.6c-1-.3-1-1 .2-1.4l17-6.6c.8-.3 1.5.2 1.9 1z"/></svg>
+            </a>
+            <a href="https://wa.me/48577503534" class="hero__social" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+            </a>
+            <a href="tel:+48577503534" class="hero__social" aria-label="Phone">
+              <svg viewBox="0 0 32 32" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.27" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19.9272 5C21.6224 5.45592 23.1681 6.34928 24.4094 7.59059C25.6507 8.8319 26.5441 10.3776 27 12.0728"/>
+                <path d="M18.8916 8.86426C19.9088 9.13781 20.8362 9.67382 21.581 10.4186C22.3258 11.1634 22.8618 12.0908 23.1353 13.108"/>
+                <path d="M11.5595 15.6015C12.5968 17.7222 14.3158 19.4334 16.4412 20.461C16.5967 20.5347 16.7687 20.5666 16.9403 20.5537C17.1119 20.5407 17.2771 20.4832 17.4198 20.387L20.5492 18.3002C20.6877 18.2079 20.8469 18.1516 21.0126 18.1364C21.1782 18.1212 21.3451 18.1475 21.498 18.213L27.3526 20.7222C27.5515 20.8067 27.7175 20.9535 27.8257 21.1405C27.9339 21.3276 27.9783 21.5447 27.9524 21.7593C27.7673 23.2073 27.0608 24.5382 25.9652 25.5028C24.8695 26.4674 23.4598 26.9996 22 26.9996C17.4913 26.9996 13.1673 25.2086 9.97919 22.0204C6.79107 18.8323 5 14.5083 5 9.99963C5.00008 8.53985 5.53224 7.13015 6.49685 6.03448C7.46146 4.93881 8.79237 4.23231 10.2404 4.04726C10.4549 4.0213 10.672 4.06576 10.8591 4.17394C11.0461 4.28212 11.193 4.44816 11.2775 4.64704L13.7888 10.5068C13.8537 10.6583 13.8802 10.8236 13.8658 10.9879C13.8514 11.1522 13.7967 11.3103 13.7064 11.4483L11.6268 14.6258C11.5322 14.7687 11.4762 14.9338 11.4644 15.1048C11.4526 15.2758 11.4854 15.447 11.5595 15.6015Z"/>
+              </svg>
+            </a>
+          </div>
+
+          <div class="hero__overlay">
+            <h1 class="hero__headline"><span data-lang-block="uk">Розробка корпоративного сайту</span><span data-lang-block="pl" hidden>Tworzenie strony firmowej</span></h1>
+            <p class="hero__headline-sub hero__headline-sub--wide"><span data-lang-block="uk">Багатосторінковий сайт з окремою сторінкою під кожну послугу, мову й запит.</span><span data-lang-block="pl" hidden>Rozbudowana strona z osobną podstroną dla każdej usługi, języka i frazy.</span></p>
+          </div>
+
+          <!-- Bottom service shelf (marquee track on mobile, grid on desktop) -->
+          <div class="shelf">
+            <div class="shelf__track">
+              <a href="index.html#about" class="shelf__card">
+                <span class="shelf__thumb shelf__thumb--1" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num"><span data-lang-block="uk">Ціна</span><span data-lang-block="pl" hidden>Cena</span></span><span class="shelf__name"><span data-lang-block="uk">від €450</span><span data-lang-block="pl" hidden>od 450 €</span></span></span>
+              </a>
+              <a href="index.html#about" class="shelf__card">
+                <span class="shelf__thumb shelf__thumb--2" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num"><span data-lang-block="uk">Термін</span><span data-lang-block="pl" hidden>Termin</span></span><span class="shelf__name"><span data-lang-block="uk">15–25 роб. днів</span><span data-lang-block="pl" hidden>15–25 dni rob.</span></span></span>
+              </a>
+              <a href="index.html#about" class="shelf__card">
+                <span class="shelf__thumb shelf__thumb--3" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num"><span data-lang-block="uk">Платформа</span><span data-lang-block="pl" hidden>Platforma</span></span><span class="shelf__name"><span data-lang-block="uk">WordPress, Next.js</span><span data-lang-block="pl" hidden>WordPress, Next.js</span></span></span>
+              </a>
+              <a href="index.html#about" class="shelf__card">
+                <span class="shelf__thumb shelf__thumb--4" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num"><span data-lang-block="uk">Мови</span><span data-lang-block="pl" hidden>Języki</span></span><span class="shelf__name"><span data-lang-block="uk">PL, UA, EN</span><span data-lang-block="pl" hidden>PL, UA, EN</span></span></span>
+              </a>
+              <a href="index.html#about" class="shelf__card">
+                <span class="shelf__thumb shelf__thumb--5" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num"><span data-lang-block="uk">Доступи</span><span data-lang-block="pl" hidden>Dostępy</span></span><span class="shelf__name"><span data-lang-block="uk">усі у вас</span><span data-lang-block="pl" hidden>wszystkie u Ciebie</span></span></span>
+              </a>
+              <a href="index.html#about" class="shelf__card shelf__card--dup" aria-hidden="true" tabindex="-1">
+                <span class="shelf__thumb shelf__thumb--1" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num"><span data-lang-block="uk">Ціна</span><span data-lang-block="pl" hidden>Cena</span></span><span class="shelf__name"><span data-lang-block="uk">від €450</span><span data-lang-block="pl" hidden>od 450 €</span></span></span>
+              </a>
+              <a href="index.html#about" class="shelf__card shelf__card--dup" aria-hidden="true" tabindex="-1">
+                <span class="shelf__thumb shelf__thumb--2" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num"><span data-lang-block="uk">Термін</span><span data-lang-block="pl" hidden>Termin</span></span><span class="shelf__name"><span data-lang-block="uk">15–25 роб. днів</span><span data-lang-block="pl" hidden>15–25 dni rob.</span></span></span>
+              </a>
+              <a href="index.html#about" class="shelf__card shelf__card--dup" aria-hidden="true" tabindex="-1">
+                <span class="shelf__thumb shelf__thumb--3" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num"><span data-lang-block="uk">Платформа</span><span data-lang-block="pl" hidden>Platforma</span></span><span class="shelf__name"><span data-lang-block="uk">WordPress, Next.js</span><span data-lang-block="pl" hidden>WordPress, Next.js</span></span></span>
+              </a>
+              <a href="index.html#about" class="shelf__card shelf__card--dup" aria-hidden="true" tabindex="-1">
+                <span class="shelf__thumb shelf__thumb--4" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num"><span data-lang-block="uk">Мови</span><span data-lang-block="pl" hidden>Języki</span></span><span class="shelf__name"><span data-lang-block="uk">PL, UA, EN</span><span data-lang-block="pl" hidden>PL, UA, EN</span></span></span>
+              </a>
+              <a href="index.html#about" class="shelf__card shelf__card--dup" aria-hidden="true" tabindex="-1">
+                <span class="shelf__thumb shelf__thumb--5" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num"><span data-lang-block="uk">Доступи</span><span data-lang-block="pl" hidden>Dostępy</span></span><span class="shelf__name"><span data-lang-block="uk">усі у вас</span><span data-lang-block="pl" hidden>wszystkie u Ciebie</span></span></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile-only: desktop-style founder contact card below the banner -->
+        <div class="hero__below reveal">
+          <a href="https://t.me/Andrii_DEV9" target="_blank" rel="noopener" class="contact-card">
+            <span class="contact-card__photo"><img src="assets/photo.webp" alt="Andrii Shestakov" /></span>
+            <span class="contact-card__body">
+              <span class="contact-card__name">Andrii Shestakov</span>
+              <span class="contact-card__role">Founder &amp; CEO</span>
+            </span>
+            <span class="contact-card__cta">
+              <span data-i18n="hero.aside.cta">Написати</span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section__head section__head--split reveal">
+          <h2 class="section__title"><span data-lang-block="uk">Коли потрібен сайт компанії</span><span data-lang-block="pl" hidden>Kiedy strona firmowa</span></h2>
+          <span class="section__rule" aria-hidden="true"></span>
+          <span class="eyebrow"><span class="eyebrow__dot eyebrow__dot--square"></span><span><span data-lang-block="uk">Що входить у розробку</span><span data-lang-block="pl" hidden>Co obejmuje wdrożenie</span></span></span>
+        </div>
+        <div class="partners-layout">
+          <div class="partners-intro reveal">
+            <p class="section__lead section__lead--partners"><span data-lang-block="uk">Розробка корпоративного сайту потрібна, коли однієї сторінки вже замало: у вас кілька напрямків, послуги для різних клієнтів, команда, кейси й новини. Багатосторінковий сайт дає кожній послузі окрему сторінку, а отже — шанс з'явитися в Google за власним запитом. Він також працює на довіру партнерів і тендерних комісій: показує масштаб, процеси й досвід компанії. Наша сильна сторона — багатомовні сайти для Польщі, України та ЄС: версії PL, UA, EN з коректним hreflang, щоб кожна мова показувалась у пошуку своєї країни.</span><span data-lang-block="pl" hidden>Strona firmowa jest potrzebna, gdy jedna strona to już za mało: masz kilka obszarów działalności, usługi dla różnych klientów, zespół, realizacje i aktualności. Rozbudowana witryna daje każdej usłudze osobną podstronę, a więc szansę na pozycję w Google na własną frazę. Buduje też zaufanie kontrahentów i komisji przetargowych, bo pokazuje skalę, procesy i doświadczenie firmy. Naszą mocną stroną są strony wielojęzyczne dla Polski, Ukrainy i UE: wersje PL, UA i EN z poprawnym hreflang, dzięki któremu każdy język trafia do wyników w swoim kraju.</span></p>
+
+            <div class="partners-marquee" role="list">
+              <div class="partners-marquee__track"><span class="partners-chip" role="listitem"><span data-lang-block="uk">Консалтинг і фінанси</span><span data-lang-block="pl" hidden>Doradztwo i finanse</span></span><span class="partners-chip" role="listitem"><span data-lang-block="uk">Будівництво</span><span data-lang-block="pl" hidden>Budownictwo</span></span><span class="partners-chip" role="listitem"><span data-lang-block="uk">Нерухомість</span><span data-lang-block="pl" hidden>Nieruchomości</span></span><span class="partners-chip" role="listitem"><span data-lang-block="uk">B2B-виробництво</span><span data-lang-block="pl" hidden>Produkcja B2B</span></span><span class="partners-chip" role="listitem"><span data-lang-block="uk">Логістика</span><span data-lang-block="pl" hidden>Logistyka</span></span><span class="partners-chip" role="listitem"><span data-lang-block="uk">Компанії в кількох країнах</span><span data-lang-block="pl" hidden>Firmy z kilku krajów</span></span><span class="partners-chip" aria-hidden="true"><span data-lang-block="uk">Консалтинг і фінанси</span><span data-lang-block="pl" hidden>Doradztwo i finanse</span></span><span class="partners-chip" aria-hidden="true"><span data-lang-block="uk">Будівництво</span><span data-lang-block="pl" hidden>Budownictwo</span></span><span class="partners-chip" aria-hidden="true"><span data-lang-block="uk">Нерухомість</span><span data-lang-block="pl" hidden>Nieruchomości</span></span><span class="partners-chip" aria-hidden="true"><span data-lang-block="uk">B2B-виробництво</span><span data-lang-block="pl" hidden>Produkcja B2B</span></span><span class="partners-chip" aria-hidden="true"><span data-lang-block="uk">Логістика</span><span data-lang-block="pl" hidden>Logistyka</span></span><span class="partners-chip" aria-hidden="true"><span data-lang-block="uk">Компанії в кількох країнах</span><span data-lang-block="pl" hidden>Firmy z kilku krajów</span></span></div>
+            </div>
+
+            <button type="button" class="btn btn--dark btn--lg" data-open-popup>
+              <span><span data-lang-block="uk">Обговорити проєкт</span><span data-lang-block="pl" hidden>Porozmawiajmy o projekcie</span></span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </button>
+          </div>
+
+          <div class="partners-cards reveal-group">
+            <article class="partner-card">
+              <span class="partner-card__num">(01)</span>
+              <div class="partner-card__body">
+                <h3 class="partner-card__text"><span data-lang-block="uk">Архітектура під пошук</span><span data-lang-block="pl" hidden>Architektura pod SEO</span></h3>
+                <p class="partner-card__desc"><span data-lang-block="uk">Складаємо карту сторінок під реальні пошукові запити: окремі сторінки послуг, галузей, міст. Продумуємо адреси сторінок, меню й внутрішні посилання ще до дизайну.</span><span data-lang-block="pl" hidden>Tworzymy mapę podstron pod realne frazy z wyszukiwarki: osobne strony usług, branż i miast. Adresy URL, menu i linkowanie wewnętrzne planujemy jeszcze przed projektem graficznym.</span></p>
+              </div>
+            </article>
+            <article class="partner-card">
+              <span class="partner-card__num">(02)</span>
+              <div class="partner-card__body">
+                <h3 class="partner-card__text"><span data-lang-block="uk">Система блоків і шаблонів</span><span data-lang-block="pl" hidden>System sekcji i szablonów</span></h3>
+                <p class="partner-card__desc"><span data-lang-block="uk">Проєктуємо набір блоків і шаблонів сторінок у стилі вашої айдентики. Нові сторінки згодом збираються з цих блоків — без нового дизайну й без розробника.</span><span data-lang-block="pl" hidden>Projektujemy zestaw sekcji i szablonów podstron zgodny z Twoją identyfikacją. Nowe podstrony składa się potem z tych klocków — bez nowego projektu i bez programisty.</span></p>
+              </div>
+            </article>
+            <article class="partner-card">
+              <span class="partner-card__num">(03)</span>
+              <div class="partner-card__body">
+                <h3 class="partner-card__text"><span data-lang-block="uk">Багатомовність і hreflang</span><span data-lang-block="pl" hidden>Wielojęzyczność i hreflang</span></h3>
+                <p class="partner-card__desc"><span data-lang-block="uk">Робимо версії польською, українською й англійською з окремими адресами та розміткою hreflang, щоб Google показував потрібну мову в кожній країні.</span><span data-lang-block="pl" hidden>Przygotowujemy wersje polską, ukraińską i angielską z osobnymi adresami i znacznikami hreflang, żeby Google pokazywał właściwy język w każdym kraju.</span></p>
+              </div>
+            </article>
+            <article class="partner-card">
+              <span class="partner-card__num">(04)</span>
+              <div class="partner-card__body">
+                <h3 class="partner-card__text"><span data-lang-block="uk">CMS для вашої команди</span><span data-lang-block="pl" hidden>CMS dla Twojego zespołu</span></h3>
+                <p class="partner-card__desc"><span data-lang-block="uk">WordPress (Bricks) або Webflow CMS: співробітники самі додають новини, кейси, вакансії та сторінки послуг. За потреби робимо блог із категоріями.</span><span data-lang-block="pl" hidden>WordPress (Bricks) albo Webflow CMS: pracownicy sami dodają aktualności, realizacje, oferty pracy i podstrony usług. W razie potrzeby dokładamy bloga z kategoriami.</span></p>
+              </div>
+            </article>
+            <article class="partner-card">
+              <span class="partner-card__num">(05)</span>
+              <div class="partner-card__body">
+                <h3 class="partner-card__text"><span data-lang-block="uk">Аналітика й передача</span><span data-lang-block="pl" hidden>Analityka i przekazanie</span></h3>
+                <p class="partner-card__desc"><span data-lang-block="uk">Підключаємо GA4 та рекламні пікселі, за потреби налаштовуємо переадресації зі старого сайту й передаємо всі доступи: домен, хостинг, CMS, сервіси.</span><span data-lang-block="pl" hidden>Podpinamy GA4 i piksele reklamowe, w razie potrzeby ustawiamy przekierowania ze starej strony i przekazujemy wszystkie dostępy: domenę, hosting, CMS i usługi.</span></p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="how">
+      <div class="container">
+        <div class="wa-head reveal">
+          <h2 class="wa-head__title"><span data-lang-block="uk">Етапи роботи</span><span data-lang-block="pl" hidden>Etapy pracy</span></h2>
+          <span class="wa-head__divider" aria-hidden="true"></span>
+          <span class="wa-head__tag"><span class="wa-head__dot" aria-hidden="true"></span><span><span data-lang-block="uk">Процес</span><span data-lang-block="pl" hidden>Proces</span></span></span>
+        </div>
+
+        <div class="why-acc reveal">
+          <article class="wa-card wa-card--open">
+            <div class="wa-num"><span class="wa-num__label"><span data-lang-block="uk">Етап</span><span data-lang-block="pl" hidden>Etap</span></span><span class="wa-num__line"></span><span class="wa-num__idx">(01)</span></div>
+            <div class="wa-content">
+              <div class="wa-image"><img src="assets/why-1.webp" alt="" loading="lazy" /></div>
+              <h3 class="wa-content__title"><span data-lang-block="uk">Бриф і ТЗ</span><span data-lang-block="pl" hidden>Brief i specyfikacja</span></h3>
+              <p class="wa-content__text"><span data-lang-block="uk">Розбираємо послуги, аудиторію, конкурентів і старий сайт, якщо він є. Фіксуємо в ТЗ сторінки, мови й функції, щоб бюджет і терміни були зрозумілі наперед.</span><span data-lang-block="pl" hidden>Analizujemy usługi, odbiorców, konkurencję i obecną stronę, jeśli istnieje. Spisujemy w specyfikacji podstrony, języki i funkcje, żeby budżet i termin były jasne od początku.</span></p>
+              <div class="wa-tags"><span class="wa-tag"><span data-lang-block="uk">ТЗ</span><span data-lang-block="pl" hidden>Specyfikacja</span></span><span class="wa-tag"><span data-lang-block="uk">Аудит</span><span data-lang-block="pl" hidden>Audyt</span></span></div>
+            </div>
+            <div class="wa-vert"><h3><span data-lang-block="uk">Бриф і ТЗ</span><span data-lang-block="pl" hidden>Brief i specyfikacja</span></h3></div>
+          </article>
+
+          <article class="wa-card">
+            <div class="wa-num"><span class="wa-num__label"><span data-lang-block="uk">Етап</span><span data-lang-block="pl" hidden>Etap</span></span><span class="wa-num__line"></span><span class="wa-num__idx">(02)</span></div>
+            <div class="wa-content">
+              <div class="wa-image"><img src="assets/why-2.webp" alt="" loading="lazy" /></div>
+              <h3 class="wa-content__title"><span data-lang-block="uk">Карта сайту</span><span data-lang-block="pl" hidden>Mapa strony</span></h3>
+              <p class="wa-content__text"><span data-lang-block="uk">Будуємо структуру: які сторінки, під які запити, як вони пов'язані між собою. Погоджуємо її до дизайну, бо змінювати структуру пізніше значно дорожче.</span><span data-lang-block="pl" hidden>Budujemy strukturę: jakie podstrony, pod jakie frazy i jak się ze sobą łączą. Akceptujemy ją przed projektem graficznym, bo późniejsza zmiana struktury kosztuje znacznie więcej.</span></p>
+              <div class="wa-tags"><span class="wa-tag"><span data-lang-block="uk">Структура</span><span data-lang-block="pl" hidden>Struktura</span></span><span class="wa-tag"><span data-lang-block="uk">SEO</span><span data-lang-block="pl" hidden>SEO</span></span></div>
+            </div>
+            <div class="wa-vert"><h3><span data-lang-block="uk">Карта сайту</span><span data-lang-block="pl" hidden>Mapa strony</span></h3></div>
+          </article>
+
+          <article class="wa-card">
+            <div class="wa-num"><span class="wa-num__label"><span data-lang-block="uk">Етап</span><span data-lang-block="pl" hidden>Etap</span></span><span class="wa-num__line"></span><span class="wa-num__idx">(03)</span></div>
+            <div class="wa-content">
+              <div class="wa-image"><img src="assets/why-3.webp" alt="" loading="lazy" /></div>
+              <h3 class="wa-content__title"><span data-lang-block="uk">Дизайн шаблонів</span><span data-lang-block="pl" hidden>Projekt szablonów</span></h3>
+              <p class="wa-content__text"><span data-lang-block="uk">Спершу погоджуємо 1–2 блоки головної, потім малюємо ключові шаблони: головну, послугу, кейс, контакти. Решту сторінок збираємо з тих самих компонентів.</span><span data-lang-block="pl" hidden>Najpierw akceptujemy 1–2 sekcje strony głównej, potem projektujemy kluczowe szablony: główną, usługę, realizację i kontakt. Resztę podstron składamy z tych samych komponentów.</span></p>
+              <div class="wa-tags"><span class="wa-tag"><span data-lang-block="uk">Дизайн</span><span data-lang-block="pl" hidden>Projekt</span></span><span class="wa-tag"><span data-lang-block="uk">Шаблони</span><span data-lang-block="pl" hidden>Szablony</span></span></div>
+            </div>
+            <div class="wa-vert"><h3><span data-lang-block="uk">Дизайн шаблонів</span><span data-lang-block="pl" hidden>Projekt szablonów</span></h3></div>
+          </article>
+
+          <article class="wa-card">
+            <div class="wa-num"><span class="wa-num__label"><span data-lang-block="uk">Етап</span><span data-lang-block="pl" hidden>Etap</span></span><span class="wa-num__line"></span><span class="wa-num__idx">(04)</span></div>
+            <div class="wa-content">
+              <div class="wa-image"><img src="assets/why-4.webp" alt="" loading="lazy" /></div>
+              <h3 class="wa-content__title"><span data-lang-block="uk">Розробка й CMS</span><span data-lang-block="pl" hidden>Wdrożenie i CMS</span></h3>
+              <p class="wa-content__text"><span data-lang-block="uk">Верстаємо на WordPress, Webflow або Next.js — залежно від задач і бюджету. Налаштовуємо CMS, форми, інтеграції та мовні версії з hreflang.</span><span data-lang-block="pl" hidden>Kodujemy na WordPressie, Webflow lub w Next.js — zależnie od potrzeb i budżetu. Konfigurujemy CMS, formularze, integracje i wersje językowe z hreflang.</span></p>
+              <div class="wa-tags"><span class="wa-tag"><span data-lang-block="uk">Розробка</span><span data-lang-block="pl" hidden>Kodowanie</span></span><span class="wa-tag"><span data-lang-block="uk">CMS</span><span data-lang-block="pl" hidden>CMS</span></span></div>
+            </div>
+            <div class="wa-vert"><h3><span data-lang-block="uk">Розробка й CMS</span><span data-lang-block="pl" hidden>Wdrożenie i CMS</span></h3></div>
+          </article>
+
+          <article class="wa-card">
+            <div class="wa-num"><span class="wa-num__label"><span data-lang-block="uk">Етап</span><span data-lang-block="pl" hidden>Etap</span></span><span class="wa-num__line"></span><span class="wa-num__idx">(05)</span></div>
+            <div class="wa-content">
+              <div class="wa-image"><img src="assets/why-5.webp" alt="" loading="lazy" /></div>
+              <h3 class="wa-content__title"><span data-lang-block="uk">Наповнення й перевірка</span><span data-lang-block="pl" hidden>Treści i testy</span></h3>
+              <p class="wa-content__text"><span data-lang-block="uk">Переносимо тексти, фото й кейси, перевіряємо швидкість, мобільну версію та індексацію. Ваші правки збираємо одним списком і вносимо разом, а не поштучно.</span><span data-lang-block="pl" hidden>Wgrywamy teksty, zdjęcia i realizacje, sprawdzamy szybkość, wersję mobilną i indeksację. Poprawki zbieramy w jedną listę i wprowadzamy razem, a nie pojedynczo.</span></p>
+              <div class="wa-tags"><span class="wa-tag"><span data-lang-block="uk">Контент</span><span data-lang-block="pl" hidden>Treści</span></span><span class="wa-tag"><span data-lang-block="uk">Тести</span><span data-lang-block="pl" hidden>Testy</span></span></div>
+            </div>
+            <div class="wa-vert"><h3><span data-lang-block="uk">Наповнення й перевірка</span><span data-lang-block="pl" hidden>Treści i testy</span></h3></div>
+          </article>
+
+          <article class="wa-card">
+            <div class="wa-num"><span class="wa-num__label"><span data-lang-block="uk">Етап</span><span data-lang-block="pl" hidden>Etap</span></span><span class="wa-num__line"></span><span class="wa-num__idx">(06)</span></div>
+            <div class="wa-content">
+              <div class="wa-image"><img src="assets/why-6.webp" alt="" loading="lazy" /></div>
+              <h3 class="wa-content__title"><span data-lang-block="uk">Запуск і навчання</span><span data-lang-block="pl" hidden>Start i szkolenie</span></h3>
+              <p class="wa-content__text"><span data-lang-block="uk">Публікуємо сайт, налаштовуємо редиректи й аналітику, передаємо доступи. Для деяких проєктів записуємо відеоінструкцію, як працювати з CMS.</span><span data-lang-block="pl" hidden>Publikujemy stronę, ustawiamy przekierowania i analitykę, przekazujemy dostępy. Przy części projektów nagrywamy instrukcję wideo, jak pracować z CMS.</span></p>
+              <div class="wa-tags"><span class="wa-tag"><span data-lang-block="uk">Запуск</span><span data-lang-block="pl" hidden>Start</span></span><span class="wa-tag"><span data-lang-block="uk">Навчання</span><span data-lang-block="pl" hidden>Szkolenie</span></span></div>
+            </div>
+            <div class="wa-vert"><h3><span data-lang-block="uk">Запуск і навчання</span><span data-lang-block="pl" hidden>Start i szkolenie</span></h3></div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="tariffs">
+      <div class="container">
+        <div class="section__head section__head--split reveal">
+          <h2 class="section__title"><span data-lang-block="uk">Ціна</span><span data-lang-block="pl" hidden>Cena</span></h2>
+          <span class="section__rule" aria-hidden="true"></span>
+          <span class="eyebrow"><span class="eyebrow__dot eyebrow__dot--square"></span><span><span data-lang-block="uk">Тарифи</span><span data-lang-block="pl" hidden>Pakiety</span></span></span>
+        </div>
+
+        <p class="tariff-lead reveal"><span data-lang-block="uk">Базовий корпоративний сайт має фіксовану ціну; складніші проєкти рахуємо після брифу, оцінка за 24 години. Оплата поетапно, за договором і з фактурою.</span><span data-lang-block="pl" hidden>Podstawowa strona firmowa ma stałą cenę, bardziej złożone projekty wyceniamy po briefie w 24 godziny. Płatność etapami, na umowę i fakturę. Ceny bez VAT (zwolnienie z VAT).</span></p>
+
+        <div class="tariffs">
+          <article class="tariff tariff--rec reveal">
+            <div class="tariff__stone" aria-hidden="true"></div>
+            <div class="tariff__meta">
+              <span class="tariff__badge"><span data-lang-block="uk">Оптимальний вибір</span><span data-lang-block="pl" hidden>Optymalny wybór</span></span>
+              <span class="tariff__tag"><span data-lang-block="uk">15–25 робочих днів</span><span data-lang-block="pl" hidden>15–25 dni roboczych</span></span>
+            </div>
+            <div class="tariff__top">
+              <span class="tariff__unit"><span data-lang-block="uk">від</span><span data-lang-block="pl" hidden>od</span></span>
+              <span class="tariff__price"><span class="plan-card__cur">€</span>450</span>
+              <span class="tariff__unit"><span data-lang-block="uk">/ проєкт</span><span data-lang-block="pl" hidden>/ projekt</span></span>
+            </div>
+            <h3 class="tariff__name"><span data-lang-block="uk">Сайт компанії</span><span data-lang-block="pl" hidden>Strona firmowa</span></h3>
+            <p class="tariff__sub"><span data-lang-block="uk">Для компанії з кількома послугами, якій потрібні зрозуміла структура й окремі сторінки під пошук.</span><span data-lang-block="pl" hidden>Dla firmy z kilkoma usługami, która potrzebuje czytelnej struktury i osobnych podstron pod wyszukiwarkę.</span></p>
+            <ul class="plan-card__list">
+              <li><span class="plan-check" aria-hidden="true"></span><span><span data-lang-block="uk">Окремі сторінки послуг</span><span data-lang-block="pl" hidden>Osobne podstrony usług</span></span></li>
+              <li><span class="plan-check" aria-hidden="true"></span><span><span data-lang-block="uk">Індивідуальний дизайн і адаптив</span><span data-lang-block="pl" hidden>Indywidualny projekt i wersja mobilna</span></span></li>
+              <li><span class="plan-check" aria-hidden="true"></span><span><span data-lang-block="uk">SEO-структура й мета-теги</span><span data-lang-block="pl" hidden>Struktura SEO i meta tagi</span></span></li>
+              <li><span class="plan-check" aria-hidden="true"></span><span><span data-lang-block="uk">Адмін-панель для редагування</span><span data-lang-block="pl" hidden>Panel do edycji treści</span></span></li>
+              <li><span class="plan-check" aria-hidden="true"></span><span><span data-lang-block="uk">Форми заявок у Telegram</span><span data-lang-block="pl" hidden>Formularze z wysyłką na Telegram</span></span></li>
+              <li><span class="plan-check" aria-hidden="true"></span><span><span data-lang-block="uk">Підключення аналітики</span><span data-lang-block="pl" hidden>Podpięcie analityki</span></span></li>
+              <li><span class="plan-check" aria-hidden="true"></span><span><span data-lang-block="uk">Передача всіх доступів</span><span data-lang-block="pl" hidden>Przekazanie wszystkich dostępów</span></span></li>
+            </ul>
+            <button type="button" class="tariff__cta tariff__cta--accent" data-open-popup>
+              <span><span data-lang-block="uk">Обрати тариф</span><span data-lang-block="pl" hidden>Wybierz pakiet</span></span>
+              <span class="tariff__cta-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </button>
+          </article>
+          <article class="tariff reveal">
+            <div class="tariff__meta">
+              <span class="tariff__tag"><span data-lang-block="uk">Оцінка за 24 години</span><span data-lang-block="pl" hidden>Wycena w 24 godziny</span></span>
+            </div>
+            <div class="tariff__top">
+              <span class="tariff__price"><span data-lang-block="uk">Оцінка</span><span data-lang-block="pl" hidden>Wycena</span></span>
+              <span class="tariff__unit"><span data-lang-block="uk">за 24 год</span><span data-lang-block="pl" hidden>w 24 h</span></span>
+            </div>
+            <h3 class="tariff__name"><span data-lang-block="uk">Розширений</span><span data-lang-block="pl" hidden>Rozbudowana</span></h3>
+            <p class="tariff__sub"><span data-lang-block="uk">Для проєктів із кількома мовами, блогом, калькуляторами чи інтеграціями з CRM та іншими сервісами.</span><span data-lang-block="pl" hidden>Dla projektów z kilkoma językami, blogiem, kalkulatorami albo integracją z CRM i innymi systemami.</span></p>
+            <ul class="plan-card__list">
+              <li><span class="plan-check" aria-hidden="true"></span><span><span data-lang-block="uk">Версії PL / UA / EN з hreflang</span><span data-lang-block="pl" hidden>Wersje PL / UA / EN z hreflang</span></span></li>
+              <li><span class="plan-check" aria-hidden="true"></span><span><span data-lang-block="uk">CMS для блогу, кейсів, вакансій</span><span data-lang-block="pl" hidden>CMS dla bloga, realizacji, ofert pracy</span></span></li>
+              <li><span class="plan-check" aria-hidden="true"></span><span><span data-lang-block="uk">Калькулятори й фільтри</span><span data-lang-block="pl" hidden>Kalkulatory i filtry</span></span></li>
+              <li><span class="plan-check" aria-hidden="true"></span><span><span data-lang-block="uk">Інтеграції з CRM і сервісами</span><span data-lang-block="pl" hidden>Integracje z CRM i usługami</span></span></li>
+              <li><span class="plan-check" aria-hidden="true"></span><span><span data-lang-block="uk">Перенесення старого сайту з редиректами</span><span data-lang-block="pl" hidden>Migracja starej strony z przekierowaniami</span></span></li>
+              <li><span class="plan-check" aria-hidden="true"></span><span><span data-lang-block="uk">Термін після оцінки функціоналу</span><span data-lang-block="pl" hidden>Termin po wycenie funkcji</span></span></li>
+            </ul>
+            <button type="button" class="tariff__cta tariff__cta--dark" data-open-popup>
+              <span><span data-lang-block="uk">Замовити</span><span data-lang-block="pl" hidden>Zamów</span></span>
+              <span class="tariff__cta-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </button>
+          </article>
+        </div>
+
+        <article class="tariff-addon reveal">
+          <div class="tariff-addon__price">
+            <span class="tariff__unit"><span data-lang-block="uk">від</span><span data-lang-block="pl" hidden>od</span></span>
+            <span class="tariff__price tariff__price--sm"><span class="plan-card__cur">€</span>20</span>
+            <span class="tariff__unit"><span data-lang-block="uk">/ місяць</span><span data-lang-block="pl" hidden>/ miesiąc</span></span>
+          </div>
+          <div class="tariff-addon__body">
+            <h3 class="tariff-addon__name">
+              <span class="tariff-addon__dot" aria-hidden="true"></span>
+              <span><span data-lang-block="uk">Технічна підтримка</span><span data-lang-block="pl" hidden>Opieka techniczna</span></span>
+              <span class="tariff__tag tariff__tag--sm"><span data-lang-block="uk">Після запуску</span><span data-lang-block="pl" hidden>Po starcie</span></span>
+            </h3>
+            <p class="tariff-addon__desc"><span data-lang-block="uk">Після здачі можемо й далі супроводжувати сайт і вносити зміни. Обсяг робіт залежить від розміру сайту й погоджується окремо.</span><span data-lang-block="pl" hidden>Po oddaniu możemy dalej opiekować się stroną i wprowadzać zmiany. Zakres zależy od wielkości witryny i ustalamy go osobno.</span></p>
+          </div>
+          <button type="button" class="btn btn--dark" data-open-popup>
+            <span><span data-lang-block="uk">Обговорити підтримку</span><span data-lang-block="pl" hidden>Zapytaj o opiekę</span></span>
+            <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </button>
+        </article>
+
+        <article class="tariff-addon reveal">
+          <div class="tariff-addon__price">
+            <span class="tariff__price tariff__price--sm"><span data-lang-block="uk">Оцінка</span><span data-lang-block="pl" hidden>Wycena</span></span>
+            <span class="tariff__unit"><span data-lang-block="uk">за 24 год</span><span data-lang-block="pl" hidden>w 24 h</span></span>
+          </div>
+          <div class="tariff-addon__body">
+            <h3 class="tariff-addon__name">
+              <span class="tariff-addon__dot" aria-hidden="true"></span>
+              <span><span data-lang-block="uk">SEO-просування</span><span data-lang-block="pl" hidden>Pozycjonowanie SEO</span></span>
+              <span class="tariff__tag tariff__tag--sm"><span data-lang-block="uk">Оцінка після брифу</span><span data-lang-block="pl" hidden>Wycena po briefie</span></span>
+            </h3>
+            <p class="tariff-addon__desc"><span data-lang-block="uk">Коли структура готова, сайт можна розвивати в пошуку: нові сторінки під запити, контент, технічні правки. Вартість рахуємо після брифу, за 24 години.</span><span data-lang-block="pl" hidden>Gdy struktura jest gotowa, stronę można rozwijać w Google: nowe podstrony pod frazy, treści, poprawki techniczne. Wycenę przygotowujemy po briefie, w 24 godziny.</span></p>
+          </div>
+          <button type="button" class="btn btn--dark" data-open-popup>
+            <span><span data-lang-block="uk">Запитати про SEO</span><span data-lang-block="pl" hidden>Zapytaj o SEO</span></span>
+            <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </button>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="section" id="cases">
+      <div class="container">
+        <div class="section__head section__head--split reveal">
+          <h2 class="section__title"><span data-lang-block="uk">Приклади робіт</span><span data-lang-block="pl" hidden>Przykładowe realizacje</span></h2>
+          <span class="section__rule" aria-hidden="true"></span>
+          <span class="eyebrow"><span class="eyebrow__dot eyebrow__dot--square"></span><span><span data-lang-block="uk">Кейси</span><span data-lang-block="pl" hidden>Realizacje</span></span></span>
+        </div>
+
+        <div class="cases reveal-group">
+          <a class="case" href="case-core-accounting" aria-label="Core Accounting">
+            <div class="case__media">
+              <img src="assets/cases/case13.webp" alt="Core Accounting" loading="lazy" width="1200" height="840" />
+            </div>
+            <div class="case__bar">
+              <div class="case__id">
+                <span class="case__num">(01)</span>
+                <h3 class="case__name">Core Accounting</h3>
+              </div>
+              <span class="case__cat"><span data-lang-block="uk">Бухгалтерія</span><span data-lang-block="pl" hidden>Księgowość</span></span>
+              <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </div>
+          </a>
+          <a class="case" href="case-common-group" aria-label="Common Group">
+            <div class="case__media">
+              <img src="assets/cases/case30.webp" alt="Common Group" loading="lazy" width="1200" height="840" />
+            </div>
+            <div class="case__bar">
+              <div class="case__id">
+                <span class="case__num">(02)</span>
+                <h3 class="case__name">Common Group</h3>
+              </div>
+              <span class="case__cat"><span data-lang-block="uk">Консалтинг HoReCa</span><span data-lang-block="pl" hidden>Doradztwo HoReCa</span></span>
+              <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </div>
+          </a>
+          <a class="case" href="case-herstel-bouw" aria-label="Herstel & Bouw">
+            <div class="case__media">
+              <img src="assets/cases/case35.webp" alt="Herstel & Bouw" loading="lazy" width="1200" height="840" />
+            </div>
+            <div class="case__bar">
+              <div class="case__id">
+                <span class="case__num">(03)</span>
+                <h3 class="case__name">Herstel & Bouw</h3>
+              </div>
+              <span class="case__cat"><span data-lang-block="uk">Будівництво</span><span data-lang-block="pl" hidden>Budownictwo</span></span>
+              <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </div>
+          </a>
+          <a class="case" href="case-lokalizacja" aria-label="Lokalizacja">
+            <div class="case__media">
+              <img src="assets/cases/case5.webp" alt="Lokalizacja" loading="lazy" width="1200" height="840" />
+            </div>
+            <div class="case__bar">
+              <div class="case__id">
+                <span class="case__num">(04)</span>
+                <h3 class="case__name">Lokalizacja</h3>
+              </div>
+              <span class="case__cat"><span data-lang-block="uk">Нерухомість</span><span data-lang-block="pl" hidden>Nieruchomości</span></span>
+              <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="faq">
+      <div class="container faq-layout">
+        <div class="faq-layout__head reveal">
+          <div class="head-kicker">
+            <span class="eyebrow"><span class="eyebrow__dot eyebrow__dot--square"></span><span data-i18n="faq.tag">FAQ</span></span>
+          </div>
+          <h2 class="section__title" data-i18n="faq.title">Питання та відповіді</h2>
+          <p class="section__lead" data-i18n="faq.desc">Не знайшли відповідь?<br>Напишіть нам у Telegram — відповімо швидко.</p>
+          <a href="https://t.me/Andrii_DEV9" target="_blank" rel="noopener" class="contact-card">
+            <span class="contact-card__photo"><img src="assets/photo.webp" alt="Andrii Shestakov" /></span>
+            <span class="contact-card__body">
+              <span class="contact-card__name">Andrii Shestakov</span>
+              <span class="contact-card__role">Founder &amp; CEO</span>
+            </span>
+            <span class="contact-card__cta">
+              <span data-i18n="hero.aside.cta">Написати</span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </span>
+          </a>
+        </div>
+
+        <div class="faq reveal-group">
+          <div class="faq__item">
+            <button type="button" class="faq__q" aria-expanded="false"><span class="faq__qn">(01)</span><span><span data-lang-block="uk">Скільки коштує корпоративний сайт?</span><span data-lang-block="pl" hidden>Ile kosztuje strona firmowa?</span></span><span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><p><span data-lang-block="uk">Корпоративний сайт коштує від €450 за базовий багатосторінковий варіант з адмін-панеллю, SEO-структурою та аналітикою. Багатомовність, блог, калькулятори чи інтеграції з CRM збільшують обсяг, тому точну вартість рахуємо після брифу — оцінка за 24 години. Остаточна ціна фіксується в договорі до старту робіт.</span><span data-lang-block="pl" hidden>Strona firmowa kosztuje od 450 € w wersji podstawowej z panelem edycji, strukturą SEO i analityką. Wersje językowe, blog, kalkulatory czy integracje z CRM zwiększają zakres, dlatego dokładną cenę liczymy po briefie — wycena w 24 godziny. Cena jest bez VAT (zwolnienie z VAT) i zapisujemy ją w umowie przed startem.</span></p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q" aria-expanded="false"><span class="faq__qn">(02)</span><span><span data-lang-block="uk">Скільки часу займає розробка багатосторінкового сайту?</span><span data-lang-block="pl" hidden>Ile trwa stworzenie strony internetowej dla firmy?</span></span><span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><p><span data-lang-block="uk">Розробка багатосторінкового сайту займає 15–25 робочих днів. Складні проєкти з інтеграціями, великим каталогом або особистим кабінетом — 30–45 робочих днів і більше. Реальний термін залежить і від вас: наскільки швидко погоджуються структура, дизайн і надходять тексти.</span><span data-lang-block="pl" hidden>Stworzenie strony firmowej trwa 15–25 dni roboczych. Złożone projekty z integracjami, dużym katalogiem albo panelem klienta to 30–45 dni roboczych i więcej. Realny termin zależy także od Ciebie: od tempa akceptacji struktury i projektu oraz dostarczenia tekstów.</span></p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q" aria-expanded="false"><span class="faq__qn">(03)</span><span><span data-lang-block="uk">Чим корпоративний сайт відрізняється від сайту-візитки?</span><span data-lang-block="pl" hidden>Czym strona firmowa różni się od wizytówki?</span></span><span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><p><span data-lang-block="uk">Корпоративний сайт має повноцінну структуру: окремі сторінки для кожної послуги, галузі чи міста, кейси, команду, блог і кілька мов. Візитка — це одна або до п'яти сторінок, щоб коротко представити компанію. Якщо ви хочете, щоб вас знаходили в Google за багатьма запитами, потрібен саме багатосторінковий сайт.</span><span data-lang-block="pl" hidden>Strona firmowa ma pełną strukturę: osobne podstrony dla każdej usługi, branży czy miasta, realizacje, zespół, bloga i kilka języków. Wizytówka to jedna strona lub do pięciu podstron, które krótko przedstawiają firmę. Jeśli chcesz, żeby klienci znajdowali Cię w Google na wiele fraz, potrzebujesz rozbudowanej strony.</span></p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q" aria-expanded="false"><span class="faq__qn">(04)</span><span><span data-lang-block="uk">Чи робите багатомовні сайти?</span><span data-lang-block="pl" hidden>Czy robicie strony wielojęzyczne?</span></span><span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><p><span data-lang-block="uk">Так, багатомовні сайти — наша сильна сторона: версії польською, українською, англійською з окремими адресами та hreflang. Завдяки цьому Google показує польську версію в Польщі, українську — в Україні і не вважає їх дублікатами. Тексти для перекладу можете надати ви, або обговорюємо переклад окремо.</span><span data-lang-block="pl" hidden>Tak, strony wielojęzyczne to nasza mocna strona: wersje polska, ukraińska i angielska z osobnymi adresami i znacznikami hreflang. Dzięki temu Google pokazuje polską wersję w Polsce, ukraińską na Ukrainie i nie traktuje ich jak duplikatów. Tłumaczenia możesz dostarczyć sam albo ustalamy je osobno.</span></p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q" aria-expanded="false"><span class="faq__qn">(05)</span><span><span data-lang-block="uk">Чи зможемо самі додавати новини й сторінки?</span><span data-lang-block="pl" hidden>Czy sami dodamy aktualności i podstrony?</span></span><span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><p><span data-lang-block="uk">Так, сайт отримує CMS — WordPress (Bricks) або Webflow CMS, — де ваша команда сама додає новини, кейси, вакансії й нові сторінки послуг із готових блоків. Дизайн при цьому не ламається. Після запуску показуємо, як працювати з панеллю, а для деяких проєктів записуємо відеоінструкцію.</span><span data-lang-block="pl" hidden>Tak, strona dostaje CMS — WordPress (Bricks) albo Webflow CMS — w którym Twój zespół sam dodaje aktualności, realizacje, oferty pracy i nowe podstrony usług z gotowych sekcji. Projekt graficzny przy tym się nie rozsypuje. Po starcie pokazujemy, jak obsługiwać panel, a przy części projektów nagrywamy instrukcję wideo.</span></p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q" aria-expanded="false"><span class="faq__qn">(06)</span><span><span data-lang-block="uk">Що буде зі старим сайтом під час редизайну?</span><span data-lang-block="pl" hidden>Co z obecną stroną przy nowej wersji?</span></span><span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><p><span data-lang-block="uk">Старий сайт працює, поки ми робимо новий, а після запуску за потреби налаштовуємо переадресації зі старих адрес на нові. Так посилання з Google, соцмереж і реклами не ведуть на порожні сторінки. Перед стартом переглядаємо поточний сайт і вирішуємо, що перенести, а що переписати.</span><span data-lang-block="pl" hidden>Obecna strona działa, dopóki przygotowujemy nową, a po starcie w razie potrzeby ustawiamy przekierowania ze starych adresów na nowe. Dzięki temu linki z Google, social mediów i reklam nie prowadzą do pustych stron. Przed startem przeglądamy dotychczasową witrynę i decydujemy, co przenieść, a co napisać od nowa.</span></p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q" aria-expanded="false"><span class="faq__qn">(07)</span><span><span data-lang-block="uk">Яку платформу обрати: WordPress, Webflow чи Next.js?</span><span data-lang-block="pl" hidden>Jaką platformę wybrać: WordPress, Webflow czy Next.js?</span></span><span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><p><span data-lang-block="uk">Для більшості компаній підходить WordPress: гнучкий, з великою кількістю рішень і зручною адмінкою. Webflow обирають, коли важливі дизайн і простий CMS без плагінів. Next.js — для проєктів із нестандартною логікою та інтеграціями. Платформу радимо після брифу, виходячи з задач, а не з наших уподобань.</span><span data-lang-block="pl" hidden>Dla większości firm sprawdza się WordPress: elastyczny, z mnóstwem gotowych rozwiązań i wygodnym panelem. Webflow wybiera się, gdy liczy się design i prosty CMS bez wtyczek. Next.js ma sens przy niestandardowej logice i integracjach. Platformę doradzamy po briefie, patrząc na Twoje potrzeby, a nie na nasze przyzwyczajenia.</span></p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q" aria-expanded="false"><span class="faq__qn">(08)</span><span><span data-lang-block="uk">Чи можна оплатити офіційно з фактурою?</span><span data-lang-block="pl" hidden>Czy wystawiacie fakturę i umowę?</span></span><span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><p><span data-lang-block="uk">Так, працюємо офіційно: за договором, з фактурою, оплата поетапно в EUR, USD або PLN. Студія працює у Вроцлаві, серед клієнтів — компанії з Польщі, України, Німеччини, Чехії, Нідерландів і США. Після здачі всі доступи до сайту, домену й хостингу залишаються у вас.</span><span data-lang-block="pl" hidden>Tak, pracujemy oficjalnie: na podstawie umowy, z fakturą, płatność etapami w EUR, USD lub PLN. Korzystamy ze zwolnienia z VAT, więc podane ceny są cenami końcowymi. Studio działa we Wrocławiu, a klientów mamy w Polsce, Ukrainie, Niemczech, Czechach, Holandii i USA. Po oddaniu wszystkie dostępy zostają u Ciebie.</span></p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--services" id="services">
+      <div class="container">
+        <div class="section__head section__head--split reveal">
+          <h2 class="section__title"><span data-lang-block="uk">Інші послуги</span><span data-lang-block="pl" hidden>Inne usługi</span></h2>
+          <span class="section__rule" aria-hidden="true"></span>
+          <span class="eyebrow"><span class="eyebrow__dot eyebrow__dot--square"></span><span><span data-lang-block="uk">Послуги</span><span data-lang-block="pl" hidden>Usługi</span></span></span>
+        </div>
+
+        <div class="services reveal-group">
+          <span class="service-preview" aria-hidden="true"></span>
+          <article class="service" data-img="assets/service-1.webp">
+            <span class="service__num">(01)</span>
+            <img class="service__img" src="assets/service-1.webp" alt="" loading="lazy" />
+            <div class="service__body">
+              <h3 class="service__title"><a href="svc-lending"><span data-lang-block="uk">Лендінг</span><span data-lang-block="pl" hidden>Landing page</span></a></h3>
+              <p class="service__text"><span data-lang-block="uk">Одна сторінка під рекламу й одну пропозицію — від €300 і за 3 дні.</span><span data-lang-block="pl" hidden>Jedna strona pod reklamę i jedną ofertę — od 300 €, gotowa w 3 dni.</span></p>
+            </div>
+            <a href="svc-lending" class="service__cta">
+              <span><span data-lang-block="uk">Детальніше</span><span data-lang-block="pl" hidden>Szczegóły</span></span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </a>
+          </article>
+
+          <article class="service" data-img="assets/service-1.webp">
+            <span class="service__num">(02)</span>
+            <img class="service__img" src="assets/service-1.webp" alt="" loading="lazy" />
+            <div class="service__body">
+              <h3 class="service__title"><a href="svc-sait-vizytka"><span data-lang-block="uk">Сайт-візитка</span><span data-lang-block="pl" hidden>Wizytówka WWW</span></a></h3>
+              <p class="service__text"><span data-lang-block="uk">Сайт, де клієнт за хвилину розуміє, хто ви, що робите і як вас знайти.</span><span data-lang-block="pl" hidden>Strona, na której klient w minutę sprawdzi, co robisz i jak Cię znaleźć.</span></p>
+            </div>
+            <a href="svc-sait-vizytka" class="service__cta">
+              <span><span data-lang-block="uk">Детальніше</span><span data-lang-block="pl" hidden>Szczegóły</span></span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </a>
+          </article>
+
+          <article class="service" data-img="assets/service-2.webp">
+            <span class="service__num">(03)</span>
+            <img class="service__img" src="assets/service-2.webp" alt="" loading="lazy" />
+            <div class="service__body">
+              <h3 class="service__title"><a href="svc-internet-magazyn"><span data-lang-block="uk">Онлайн-магазин</span><span data-lang-block="pl" hidden>Sklep online</span></a></h3>
+              <p class="service__text"><span data-lang-block="uk">Каталог, кошик, онлайн-оплата й доставка — магазин готовий за 20–30 днів.</span><span data-lang-block="pl" hidden>Katalog, koszyk, płatności online i dostawa — sklep gotowy w 20–30 dni.</span></p>
+            </div>
+            <a href="svc-internet-magazyn" class="service__cta">
+              <span><span data-lang-block="uk">Детальніше</span><span data-lang-block="pl" hidden>Szczegóły</span></span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </a>
+          </article>
+
+          <article class="service" data-img="assets/service-3.webp">
+            <span class="service__num">(04)</span>
+            <img class="service__img" src="assets/service-3.webp" alt="" loading="lazy" />
+            <div class="service__body">
+              <h3 class="service__title"><a href="svc-telegram-bot"><span data-lang-block="uk">Telegram-бот</span><span data-lang-block="pl" hidden>Bot Telegram</span></a></h3>
+              <p class="service__text"><span data-lang-block="uk">Бот приймає заявки, записи й оплати, поки ви зайняті роботою.</span><span data-lang-block="pl" hidden>Bot przyjmuje zgłoszenia, rezerwacje i płatności, gdy Ty zajmujesz się firmą.</span></p>
+            </div>
+            <a href="svc-telegram-bot" class="service__cta">
+              <span><span data-lang-block="uk">Детальніше</span><span data-lang-block="pl" hidden>Szczegóły</span></span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </a>
+          </article>
+
+          <article class="service" data-img="assets/service-4.webp">
+            <span class="service__num">(05)</span>
+            <img class="service__img" src="assets/service-4.webp" alt="" loading="lazy" />
+            <div class="service__body">
+              <h3 class="service__title"><a href="svc-seo"><span data-lang-block="uk">SEO</span><span data-lang-block="pl" hidden>Pozycjonowanie</span></a></h3>
+              <p class="service__text"><span data-lang-block="uk">Технічний аудит, структура й контент, щоб Google і клієнти знаходили ваш сайт.</span><span data-lang-block="pl" hidden>Audyt, struktura i treści, dzięki którym Google i klienci znajdą Twoją stronę.</span></p>
+            </div>
+            <a href="svc-seo" class="service__cta">
+              <span><span data-lang-block="uk">Детальніше</span><span data-lang-block="pl" hidden>Szczegóły</span></span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </a>
+          </article>
+
+          <article class="service" data-img="assets/service-5.webp">
+            <span class="service__num">(06)</span>
+            <img class="service__img" src="assets/service-5.webp" alt="" loading="lazy" />
+            <div class="service__body">
+              <h3 class="service__title"><a href="svc-aidentyka"><span data-lang-block="uk">Айдентика</span><span data-lang-block="pl" hidden>Identyfikacja</span></a></h3>
+              <p class="service__text"><span data-lang-block="uk">Логотип і фірмовий стиль, що добре виглядають на сайті, в соцмережах і друці.</span><span data-lang-block="pl" hidden>Logo i styl marki, które dobrze wyglądają na stronie, w social mediach i w druku.</span></p>
+            </div>
+            <a href="svc-aidentyka" class="service__cta">
+              <span><span data-lang-block="uk">Детальніше</span><span data-lang-block="pl" hidden>Szczegóły</span></span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="cta-form reveal">
+          <div class="cta-form__head">
+            <div class="head-kicker">
+              <span class="eyebrow"><span class="eyebrow__dot eyebrow__dot--square"></span><span data-i18n="contact.tag">Контакти</span></span>
+            </div>
+            <h2 class="section__title" data-i18n="form.title">Готові запустити сайт, магазин або Telegram-бот?</h2>
+            <p class="section__lead" data-i18n="form.desc">Залиште заявку, і ми зв’яжемося з вами, щоб обговорити задачу, формат проєкту, терміни та можливе рішення</p>
+            <ul class="cta-form__contacts">
+              <li><a href="https://t.me/Andrii_DEV9" target="_blank" rel="noopener">
+                <span class="cta-form__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3l-3 14.1c-.2 1-.8 1.2-1.7.8l-4.6-3.4-2.2 2.1c-.2.2-.4.4-.9.4l.3-4.7 8.5-7.7c.4-.3-.1-.5-.6-.2L7.3 13 2.8 11.6c-1-.3-1-1 .2-1.4l17-6.6c.8-.3 1.5.2 1.9 1z"/></svg></span>
+                <span>@Andrii_DEV9</span>
+              </a></li>
+              <li><a href="https://wa.me/48577503534" target="_blank" rel="noopener">
+                <span class="cta-form__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg></span>
+                <span>WhatsApp</span>
+              </a></li>
+              <li><a href="https://www.instagram.com/web.shestakov" target="_blank" rel="noopener">
+                <span class="cta-form__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span>
+                <span>@web.shestakov</span>
+              </a></li>
+              <li><a href="tel:+48577503534">
+                <span class="cta-form__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3h3l1.5 5-2 1.5a12 12 0 0 0 5 5l1.5-2 5 1.5v3a2 2 0 0 1-2 2A16 16 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg></span>
+                <span>+48 577 503 534</span>
+              </a></li>
+            </ul>
+          </div>
+
+          <form class="form" id="main-form" novalidate>
+            <div class="form__row">
+              <div class="field">
+                <label class="field__label" for="name" data-i18n="form.name">Ім’я</label>
+                <input class="field__input" type="text" id="name" name="name" required data-i18n-attr="placeholder:form.ph.name" placeholder="Ваше ім’я" />
+                <span class="field__error" data-i18n="form.err.required">Це поле обов’язкове</span>
+              </div>
+              <div class="field">
+                <label class="field__label" for="contact-value" data-i18n="form.contact">Телефон або Telegram</label>
+                <input class="field__input" type="text" id="contact-value" name="contact" required data-i18n-attr="placeholder:form.ph.contact" placeholder="+48 ... або @username" />
+                <span class="field__error" data-i18n="form.err.required">Це поле обов’язкове</span>
+              </div>
+            </div>
+            <div class="field">
+              <label class="field__label" for="need" data-i18n="form.need">Що потрібно розробити?</label>
+              <div class="field__select">
+                <select class="field__input" id="need" name="need" required>
+                  <option value="" data-i18n="form.opt.choose">Оберіть варіант</option>
+                  <option value="site" data-i18n="form.opt.site">Сайт</option>
+                  <option value="shop" data-i18n="form.opt.shop">Інтернет-магазин</option>
+                  <option value="bot" data-i18n="form.opt.bot">Telegram-бот</option>
+                  <option value="seo" data-i18n="form.opt.seo">SEO</option>
+                  <option value="identity" data-i18n="form.opt.identity">Айдентика</option>
+                  <option value="other" data-i18n="form.opt.other">Інше</option>
+                </select>
+                <span class="field__chevron" aria-hidden="true"></span>
+              </div>
+              <span class="field__error" data-i18n="form.err.required">Це поле обов’язкове</span>
+            </div>
+            <div class="field">
+              <label class="field__label" for="comment" data-i18n="form.comment">Коментар до проєкту</label>
+              <textarea class="field__input field__textarea" id="comment" name="comment" rows="4" data-i18n-attr="placeholder:form.ph.comment" placeholder="Коротко опишіть задачу"></textarea>
+            </div>
+            <input class="form__hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <label class="checkbox">
+              <input type="checkbox" id="agree" name="agree" required />
+              <span class="checkbox__box" aria-hidden="true"></span>
+              <span class="checkbox__label" data-i18n="form.agree">Я ознайомився/-лася з Політикою конфіденційності та погоджуюся на обробку моїх даних для опрацювання заявки</span>
+            </label>
+            <span class="field__error field__error--checkbox" data-i18n="form.err.agree">Потрібно підтвердити згоду</span>
+            <button type="submit" class="btn btn--accent btn--lg btn--block btn--between">
+              <span data-i18n="form.submit">Надіслати заявку</span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </button>
+            <p class="form__status form__status--success" role="status" data-i18n="form.success">Дякуємо! Ваша заявка надіслана. Ми скоро зв’яжемося з вами.</p>
+            <p class="form__status form__status--error" role="alert" data-i18n="form.error">Будь ласка, заповніть обов’язкові поля.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__cta reveal">
+        <h2 class="footer__big" data-i18n="footer.big">Обговоримо ваш проєкт?</h2>
+        <button type="button" class="btn btn--accent btn--lg" data-open-popup>
+          <span data-i18n="cta.header">Отримати консультацію</span>
+          <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </button>
+      </div>
+
+      <div class="footer__top">
+        <nav class="footer__nav" aria-label="Footer">
+          <div class="footer__navcol">
+            <a href="about" data-i18n="nav.about">Про нас</a>
+            <a href="index.html#why" data-i18n="nav.why">Переваги</a>
+          </div>
+          <div class="footer__navcol">
+            <a href="index.html#services" data-i18n="nav.services">Послуги</a>
+            <a href="index.html#cases" data-i18n="nav.cases">Кейси</a>
+          </div>
+          <div class="footer__navcol">
+            <a href="index.html#faq" data-i18n="nav.faq">FAQ</a>
+            <a href="index.html#partners" data-i18n="nav.partners">Партнерам</a>
+          </div>
+          <div class="footer__navcol">
+            <a href="#contact" data-i18n="nav.contacts">Контакти</a>
+          </div>
+        </nav>
+
+        <div class="footer__contacts">
+          <a href="tel:+48577503534" class="footer__mail">+48 577 503 534</a>
+          <a href="https://t.me/Andrii_DEV9" target="_blank" rel="noopener">Telegram</a>
+          <a href="https://wa.me/48577503534" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://www.instagram.com/web.shestakov" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+
+      <div class="footer__wordmark">
+        <img src="assets/footer-logo.svg" alt="Web Shestakov agency" />
+      </div>
+
+      <div class="footer__legal">
+        <a href="privacy.html" data-i18n="footer.privacy">політика конфіденційності</a>
+        <a href="#" data-cookie-settings data-i18n="footer.cookies">налаштування cookies</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ COOKIE BANNER ============ -->
+  <aside class="cookie" id="cookie-banner" role="region" aria-label="Cookie" hidden>
+    <p class="cookie__text">
+      <span data-i18n="cookie.text">Ми використовуємо cookie, щоб сайт працював коректно та був зручнішим.</span>
+      <a class="cookie__link" href="privacy.html" data-i18n="cookie.link">Політика конфіденційності</a>
+    </p>
+    <div class="cookie__actions">
+      <button type="button" class="cookie__btn cookie__btn--accept" data-cookie="accepted" data-i18n="cookie.accept">Прийняти</button>
+      <button type="button" class="cookie__btn cookie__btn--ghost" data-cookie="essential" data-i18n="cookie.decline">Лише необхідні</button>
+    </div>
+  </aside>
+
+  <!-- ============ FLOATING WIDGET ============ -->
+  <button type="button" class="floating-widget" data-open-popup aria-label="Web Shestakov">
+    <span class="floating-widget__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M21 4L3 11l6 2 2 6 3-5 5 3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+    <span class="floating-widget__text" data-i18n="widget.text">Заявка</span>
+  </button>
+
+  <!-- ============ MOBILE STICKY CTA ============ -->
+  <div class="sticky-cta">
+    <button type="button" class="btn btn--accent btn--block" data-open-popup>
+      <span data-i18n="cta.header">Отримати консультацію</span>
+    </button>
+  </div>
+
+  <!-- ============ POPUP FORM ============ -->
+  <div class="popup" id="popup" aria-hidden="true">
+    <div class="popup__overlay" data-close-popup></div>
+    <div class="popup__dialog" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+      <button type="button" class="popup__close" data-close-popup aria-label="Close">
+        <svg viewBox="0 0 24 24" width="22" height="22"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+      <span class="eyebrow"><span class="eyebrow__dot"></span><span data-i18n="contact.tag">Контакти</span></span>
+      <h3 class="popup__title" id="popup-title" data-i18n="form.title">Готові запустити сайт, магазин або Telegram-бот?</h3>
+
+      <form class="form" id="popup-form" novalidate>
+        <div class="field">
+          <label class="field__label" for="p-name" data-i18n="form.name">Ім’я</label>
+          <input class="field__input" type="text" id="p-name" name="name" required data-i18n-attr="placeholder:form.ph.name" placeholder="Ваше ім’я" />
+          <span class="field__error" data-i18n="form.err.required">Це поле обов’язкове</span>
+        </div>
+        <div class="field">
+          <label class="field__label" for="p-contact" data-i18n="form.contact">Телефон або Telegram</label>
+          <input class="field__input" type="text" id="p-contact" name="contact" required data-i18n-attr="placeholder:form.ph.contact" placeholder="+48 ... або @username" />
+          <span class="field__error" data-i18n="form.err.required">Це поле обов’язкове</span>
+        </div>
+        <div class="field">
+          <label class="field__label" for="p-need" data-i18n="form.need">Що потрібно розробити?</label>
+          <div class="field__select">
+            <select class="field__input" id="p-need" name="need" required>
+              <option value="" data-i18n="form.opt.choose">Оберіть варіант</option>
+              <option value="site" data-i18n="form.opt.site">Сайт</option>
+              <option value="shop" data-i18n="form.opt.shop">Інтернет-магазин</option>
+              <option value="bot" data-i18n="form.opt.bot">Telegram-бот</option>
+              <option value="seo" data-i18n="form.opt.seo">SEO</option>
+              <option value="identity" data-i18n="form.opt.identity">Айдентика</option>
+              <option value="other" data-i18n="form.opt.other">Інше</option>
+            </select>
+            <span class="field__chevron" aria-hidden="true"></span>
+          </div>
+          <span class="field__error" data-i18n="form.err.required">Це поле обов’язкове</span>
+        </div>
+        <div class="field">
+          <label class="field__label" for="p-comment" data-i18n="form.comment">Коментар</label>
+          <textarea class="field__input field__textarea" id="p-comment" name="comment" rows="3" data-i18n-attr="placeholder:form.ph.comment" placeholder="Коротко опишіть задачу"></textarea>
+        </div>
+        <input class="form__hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        <label class="checkbox">
+          <input type="checkbox" id="p-agree" name="agree" required />
+          <span class="checkbox__box" aria-hidden="true"></span>
+          <span class="checkbox__label" data-i18n="form.agree">Я ознайомився/-лася з Політикою конфіденційності та погоджуюся на обробку моїх даних для опрацювання заявки</span>
+        </label>
+        <span class="field__error field__error--checkbox" data-i18n="form.err.agree">Потрібно підтвердити згоду</span>
+        <button type="submit" class="btn btn--accent btn--lg btn--block">
+          <span data-i18n="form.submit">Надіслати заявку</span>
+        </button>
+        <p class="form__status form__status--success" role="status" data-i18n="form.success">Дякуємо! Ваша заявка надіслана. Ми скоро зв’яжемося з вами.</p>
+        <p class="form__status form__status--error" role="alert" data-i18n="form.error">Будь ласка, заповніть обов’язкові поля.</p>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

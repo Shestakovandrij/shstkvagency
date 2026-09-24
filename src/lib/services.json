@@ -1,0 +1,100 @@
+{
+ "services": [
+  {
+   "key": "lending",
+   "path_uk": "/lending/",
+   "path_pl": "/pl/landing-page/",
+   "name_uk": "Лендінг",
+   "name_pl": "Landing page",
+   "title_uk": "Створення лендінгу під ключ від €300 — ціна 2026 | SHSTKV Digital",
+   "title_pl": "Tworzenie landing page od 300 € — cena 2026 | SHSTKV Digital",
+   "desc_uk": "Замовити лендінг під ключ: від €300, запуск за 3 дні. Індивідуальний дизайн, мобільна версія, заявки в Telegram, базове SEO. Оцінка проєкту за 24 години.",
+   "desc_pl": "Landing page pod klucz od 300 €, gotowy w 3 dni. Własny projekt, wersja mobilna, zgłoszenia prosto na Telegram i podstawowe SEO. Wycena w 24 godziny.",
+   "price": "300"
+  },
+  {
+   "key": "sait-vizytka",
+   "path_uk": "/sait-vizytka/",
+   "path_pl": "/pl/strona-wizytowka/",
+   "name_uk": "Сайт-візитка",
+   "name_pl": "Wizytówka WWW",
+   "title_uk": "Сайт-візитка під ключ від €300 — ціна 2026 | SHSTKV Digital",
+   "title_pl": "Strona wizytówka dla firmy od 300 € — cena 2026 | SHSTKV Digital",
+   "desc_uk": "Замовити сайт-візитку під ключ: від €300, з адмін-панеллю — €450. Послуги, контакти, форма заявки, мобільна версія й базове SEO. Оцінка за 24 години.",
+   "desc_pl": "Strona wizytówka dla firmy od 300 €, z panelem do edycji za 450 €. Usługi, kontakt, formularz, wersja mobilna i podstawowe SEO. Wycena w 24 godziny.",
+   "price": "300"
+  },
+  {
+   "key": "korporatyvnyi-sait",
+   "path_uk": "/korporatyvnyi-sait/",
+   "path_pl": "/pl/strona-firmowa/",
+   "name_uk": "Сайт компанії",
+   "name_pl": "Strona firmowa",
+   "title_uk": "Розробка корпоративного сайту від €450 — ціна 2026 | SHSTKV Digital",
+   "title_pl": "Strona firmowa od 450 € — strony internetowe dla firm 2026",
+   "desc_uk": "Розробка корпоративного багатосторінкового сайту від €450 за 15–25 робочих днів. SEO-структура, CMS, версії UA/PL/EN з hreflang. Оцінка проєкту за 24 години.",
+   "desc_pl": "Tworzenie stron internetowych dla firm: strona firmowa od 450 €, realizacja w 15–25 dni roboczych. CMS, struktura SEO, wersje PL/UA/EN. Wycena w 24 godziny.",
+   "price": "450"
+  },
+  {
+   "key": "internet-magazyn",
+   "path_uk": "/internet-magazyn/",
+   "path_pl": "/pl/sklep-internetowy/",
+   "name_uk": "Онлайн-магазин",
+   "name_pl": "Sklep online",
+   "title_uk": "Створення інтернет-магазину від €800 — ціна 2026 | SHSTKV Digital",
+   "title_pl": "Sklep internetowy od 800 € — cena i wdrożenie 2026 | SHSTKV Digital",
+   "desc_uk": "Створення інтернет-магазину під ключ на WooCommerce від €800 за 20–30 робочих днів: каталог, кошик, онлайн-оплата, доставка, адмінка. Оцінка за 24 години.",
+   "desc_pl": "Sklep internetowy na WooCommerce od 800 € w 20–30 dni roboczych: katalog, koszyk, płatności online, dostawa i panel admina. Bezpłatna wycena w 24 godziny.",
+   "price": "800"
+  },
+  {
+   "key": "telegram-bot",
+   "path_uk": "/telegram-bot/",
+   "path_pl": "/pl/bot-telegram/",
+   "name_uk": "Telegram-бот",
+   "name_pl": "Bot Telegram",
+   "title_uk": "Створення Telegram-бота для бізнесу — ціна 2026 | SHSTKV Digital",
+   "title_pl": "Bot Telegram dla firmy — tworzenie i wycena 2026 | SHSTKV Digital",
+   "desc_uk": "Замовити Telegram-бота для бізнесу: заявки, бронювання, оплата, зв'язка з сайтом, CRM і Google Sheets. Ціна індивідуальна — оцінка за 24 години після брифу.",
+   "desc_pl": "Bot Telegram dla firmy: zgłoszenia, rezerwacje, płatności, integracja ze stroną, CRM i Google Sheets. Wycena indywidualna w 24 godziny po briefie. Napisz!",
+   "price": null
+  },
+  {
+   "key": "seo",
+   "path_uk": "/seo/",
+   "path_pl": "/pl/pozycjonowanie/",
+   "name_uk": "SEO",
+   "name_pl": "Pozycjonowanie",
+   "title_uk": "SEO-просування сайту — ціна після брифу 2026 | SHSTKV Digital",
+   "title_pl": "Pozycjonowanie stron i audyt SEO 2026 — Wrocław | SHSTKV Digital",
+   "desc_uk": "SEO-просування й оптимізація сайту: технічний аудит, Core Web Vitals, ключові слова, hreflang, Google Business Profile. Ціна після брифу, оцінка за 24 години.",
+   "desc_pl": "Pozycjonowanie stron firmowych: audyt SEO, Core Web Vitals, słowa kluczowe, hreflang, Profil Firmy w Google. Wycena po briefie w 24 h. Napisz do nas.",
+   "price": null
+  },
+  {
+   "key": "aidentyka",
+   "path_uk": "/aidentyka/",
+   "path_pl": "/pl/identyfikacja-wizualna/",
+   "name_uk": "Айдентика",
+   "name_pl": "Identyfikacja",
+   "title_uk": "Розробка айдентики та логотипу — ціна 2026 | SHSTKV Digital",
+   "title_pl": "Identyfikacja wizualna i logo dla firmy — cena 2026 | SHSTKV Digital",
+   "desc_uk": "Розробка айдентики й логотипу для бізнесу: кольори, шрифти, гайдлайн, шаблони для соцмереж і сайт у тому ж стилі. Ціна після брифу, оцінка за 24 години.",
+   "desc_pl": "Identyfikacja wizualna i projekt logo dla firmy: kolory, fonty, księga znaku, szablony social media i strona w tym samym stylu. Wycena po briefie w 24 h.",
+   "price": null
+  }
+ ],
+ "prices": {
+  "title_uk": "Ціни на створення сайтів у 2026 році — від €300 | SHSTKV Digital",
+  "title_pl": "Cennik stron internetowych 2026 — od 300 € | SHSTKV Digital",
+  "desc_uk": "Скільки коштує сайт у 2026: лендінг від €300, багатосторінковий сайт від €450, інтернет-магазин від €800, підтримка від €20/міс. Договір і faktura.",
+  "desc_pl": "Ile kosztuje strona internetowa w 2026: landing page od 300 €, strona firmowa od 450 €, sklep internetowy od 800 €, opieka od 20 €/mies. Umowa i faktura."
+ },
+ "contacts": {
+  "title_uk": "Контакти — SHSTKV Digital, веб-студія у Вроцлаві",
+  "title_pl": "Kontakt — SHSTKV Digital, studio stron internetowych we Wrocławiu",
+  "desc_uk": "Зв'язатися з SHSTKV Digital: Telegram, WhatsApp, телефон +48 577 503 534, email. Відповідаємо протягом 24 годин у робочі дні. Вроцлав, Польща.",
+  "desc_pl": "Kontakt z SHSTKV Digital: Telegram, WhatsApp, telefon +48 577 503 534, e-mail. Odpowiadamy w ciągu 24 godzin w dni robocze. Wrocław, Polska."
+ }
+}

@@ -49,6 +49,12 @@ hero=hero[:t1]+''.join(card(i+1,st,False) for i,st in enumerate(stats))+''.join(
 
 # --- services (copy from home as is)
 a2=s.index('    <section class="section section--services" id="services">'); services=s[a2:s.index('</section>',a2)+len('</section>')]
+# кнопки послуг ведуть на сторінки послуг
+for n,key in enumerate(['korporatyvnyi-sait','internet-magazyn','telegram-bot','seo','aidentyka'],1):
+    old='<button type="button" class="service__cta" data-open-popup aria-label="CTA">\n              <span data-i18n="service.%d.cta">'%n
+    assert old in services, n
+    services=services.replace(old,'<a href="svc-%s" class="service__cta">\n              <span data-i18n="service.%d.cta">'%(key,n))
+services=re.sub(r'(<a href="svc-[^"]+" class="service__cta">.*?)</button>', r'\1</a>', services, flags=re.S)
 # --- tariffs (copy) + extra addons
 a3=s.index('    <section class="section" id="tariffs">'); tariffs=s[a3:s.index('</section>',a3)+len('</section>')]
 addon_tpl='''        <article class="tariff-addon reveal">

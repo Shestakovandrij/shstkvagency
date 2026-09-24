@@ -17,6 +17,16 @@ Studio stron internetowych z Wrocławia: strony firmowe, landing page, sklepy in
 - [Про нас](https://www.shstkv-digital.com/pro-nas/) / [O nas](https://www.shstkv-digital.com/pl/o-nas/): команда, процес роботи, умови
 - [Портфоліо](https://www.shstkv-digital.com/portfolio/) / [Portfolio](https://www.shstkv-digital.com/pl/realizacje/): вибрані проєкти, у кожного своя сторінка-кейс
 
+## Послуги / Usługi
+- [Лендінг](https://www.shstkv-digital.com/lending/) / [Landing page](https://www.shstkv-digital.com/pl/landing-page/) — від €300
+- [Сайт-візитка](https://www.shstkv-digital.com/sait-vizytka/) / [Strona wizytówka](https://www.shstkv-digital.com/pl/strona-wizytowka/) — від €300
+- [Корпоративний сайт](https://www.shstkv-digital.com/korporatyvnyi-sait/) / [Strona firmowa](https://www.shstkv-digital.com/pl/strona-firmowa/) — від €450
+- [Інтернет-магазин](https://www.shstkv-digital.com/internet-magazyn/) / [Sklep internetowy](https://www.shstkv-digital.com/pl/sklep-internetowy/) — від €800
+- [Telegram-бот](https://www.shstkv-digital.com/telegram-bot/) / [Bot Telegram](https://www.shstkv-digital.com/pl/bot-telegram/) — оцінка за 24 год
+- [SEO](https://www.shstkv-digital.com/seo/) / [Pozycjonowanie](https://www.shstkv-digital.com/pl/pozycjonowanie/) — після брифу
+- [Айдентика](https://www.shstkv-digital.com/aidentyka/) / [Identyfikacja wizualna](https://www.shstkv-digital.com/pl/identyfikacja-wizualna/) — після брифу
+- [Ціни](https://www.shstkv-digital.com/tsiny/) / [Cennik](https://www.shstkv-digital.com/pl/cennik/) · [Контакти](https://www.shstkv-digital.com/kontakty/) / [Kontakt](https://www.shstkv-digital.com/pl/kontakt/)
+
 ## Контакти
 - Телефон / Telefon: +48 577 503 534
 - Email: webdeveloperandrii@gmail.com

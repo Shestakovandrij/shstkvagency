@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title data-i18n="meta.title">Web Shestakov — сайти, Telegram-боти, інтернет-магазини, SEO та айдентика</title>
+  <meta name="description" data-i18n="meta.description" content="Створюємо сучасні сайти, Telegram-боти, інтернет-магазини, SEO-рішення та айдентику для бізнесу. Допомагаємо залучати клієнтів, продавати онлайн і автоматизувати процеси." />
+
+  <link rel="canonical" href="https://www.shstkv-digital.com/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Web Shestakov" />
+  <meta property="og:url" content="https://www.shstkv-digital.com/" />
+  <meta property="og:locale" content="uk_UA" />
+  <meta property="og:locale:alternate" content="pl_PL" />
+  <meta property="og:title" data-i18n="meta.title" content="Web Shestakov — сайти, Telegram-боти, інтернет-магазини, SEO та айдентика" />
+  <meta property="og:description" data-i18n="meta.description" content="Сайти, Telegram-боти, інтернет-магазини, SEO та айдентика." />
+  <meta property="og:image" content="https://www.shstkv-digital.com/assets/og-image.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Web Shestakov — сайти, Telegram-боти, інтернет-магазини, SEO та айдентика" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://www.shstkv-digital.com/assets/og-image.jpg" />
+  <meta name="theme-color" content="#EEEEEE" />
+
+  <link rel="icon" href="/favicon.ico" sizes="32x32" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <script>
+    (function () {
+      try {
+        var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (!reduce) { document.documentElement.className += " anim-on"; }
+        window.setTimeout(function () {
+          if (!window.__wsReady) { document.documentElement.classList.remove("anim-on"); }
+        }, 2600);
+      } catch (e) { document.documentElement.classList.remove("anim-on"); }
+    })();
+
+  </script>
+
+
+  <!-- Meta Pixel + GA4. Скрипти вантажаться всередині tracking.js і лише
+       після згоди на куки — окремо код пікселя в <head> вставляти не треба. -->
+  <script src="tracking.js" defer></script>
+</head>
+
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ============ PRELOADER — "Digital Signal Ignition" ============
+       Sequence: grid breathes in → coral scanline sweeps (dots blink on its path) →
+       fragments converge into the centre → monogram mask-reveals (bottom→top) →
+       STKV wordmark wipes (left→right) + micro-flicker → status roller
+       (DESIGN / CODE / MOTION / LAUNCH) → ignition pop + pulse rings →
+       exit: panel wipes up, the lockup flies onto the header logo.
+       Colors: :root --bg / --accent in styles.css. Timings: the T object in preloader.js. -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html#home" class="header__logo" aria-label="Web Shestakov">
+        <img src="assets/logo.svg" alt="Web Shestakov" />
+      </a>
+
+      <div class="header__right">
+        <div class="lang" role="group" aria-label="Language switcher">
+          <button type="button" class="lang__btn is-active" data-lang="uk" aria-pressed="true">UA</button>
+          <span class="lang__sep" aria-hidden="true">/</span>
+          <button type="button" class="lang__btn" data-lang="pl" aria-pressed="false">PL</button>
+        </div>
+        <button type="button" class="menu-btn" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="menu-btn__label" data-i18n="nav.menu">Меню</span>
+          <span class="menu-btn__icon" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ MENU (dropdown panel, as template) ============ -->
+  <div class="menu" id="mobile-menu" aria-hidden="true">
+    <div class="menu__overlay" data-close-menu></div>
+    <div class="container menu__container">
+      <div class="menu__panel">
+        <button type="button" class="menu__close" id="menu-close" aria-label="Close">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+
+        <div class="menu__grid">
+          <nav class="menu__nav" aria-label="Menu">
+            <a href="about" class="menu__link" data-close-menu><span data-i18n="nav.about">Про нас</span><span class="menu__num">(01)</span></a>
+            <a href="index.html#why" class="menu__link" data-close-menu><span data-i18n="nav.why">Переваги</span><span class="menu__num">(02)</span></a>
+            <a href="index.html#services" class="menu__link" data-close-menu><span data-i18n="nav.services">Послуги</span><span class="menu__num">(03)</span></a>
+            <a href="index.html#cases" class="menu__link" data-close-menu><span data-i18n="nav.cases">Кейси</span><span class="menu__num">(04)</span></a>
+            <a href="portfolio.html" class="menu__link" data-close-menu><span data-i18n="nav.portfolio">Портфоліо</span><span class="menu__num">(05)</span></a>
+            <a href="index.html#budget" class="menu__link" data-close-menu><span data-i18n="nav.budget">Швидкий старт</span><span class="menu__num">(06)</span></a>
+            <a href="index.html#tariffs" class="menu__link" data-close-menu><span data-i18n="nav.tariffs">Тарифи</span><span class="menu__num">(07)</span></a>
+            <a href="index.html#faq" class="menu__link" data-close-menu><span data-i18n="nav.faq">FAQ</span><span class="menu__num">(08)</span></a>
+            <a href="index.html#partners" class="menu__link" data-close-menu><span data-i18n="nav.partners">Партнерам</span><span class="menu__num">(09)</span></a>
+            <a href="#contact" class="menu__link" data-close-menu><span data-i18n="nav.contacts">Контакти</span><span class="menu__num">(10)</span></a>
+          </nav>
+
+          <aside class="menu__side">
+            <a href="https://t.me/Andrii_DEV9" target="_blank" rel="noopener" class="contact-card menu__person" data-close-menu>
+              <span class="contact-card__photo"><img src="assets/photo.webp" alt="Andrii Shestakov" /></span>
+              <span class="contact-card__body">
+                <span class="contact-card__name">Andrii Shestakov</span>
+                <span class="contact-card__role">Founder &amp; CEO</span>
+              </span>
+              <span class="contact-card__cta">
+                <span data-i18n="hero.aside.cta">Написати</span>
+                <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </span>
+            </a>
+
+            <div class="menu__block">
+              <span class="menu__label" data-i18n="menu.follow">Соцмережі</span>
+              <div class="menu__socials">
+                <a href="https://www.instagram.com/web.shestakov" class="menu__social" target="_blank" rel="noopener" aria-label="Instagram">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+                </a>
+                <a href="https://t.me/Andrii_DEV9" class="menu__social" target="_blank" rel="noopener" aria-label="Telegram">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M21.9 4.3l-3 14.1c-.2 1-.8 1.2-1.7.8l-4.6-3.4-2.2 2.1c-.2.2-.4.4-.9.4l.3-4.7 8.5-7.7c.4-.3-.1-.5-.6-.2L7.3 13 2.8 11.6c-1-.3-1-1 .2-1.4l17-6.6c.8-.3 1.5.2 1.9 1z"/></svg>
+                </a>
+                <a href="https://wa.me/48577503534" class="menu__social" target="_blank" rel="noopener" aria-label="WhatsApp">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <div class="menu__block">
+              <span class="menu__label" data-i18n="menu.contact">Контакти</span>
+              <a href="tel:+48577503534" class="menu__contact">+48 577 503 534</a>
+              <a href="https://t.me/Andrii_DEV9" class="menu__contact" target="_blank" rel="noopener">@Andrii_DEV9</a>
+            </div>
+
+            <button type="button" class="btn btn--accent btn--block" data-open-popup data-close-menu>
+              <span data-i18n="cta.header">Отримати консультацію</span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </button>
+
+            <a class="menu__legal" href="privacy.html" data-close-menu data-i18n="footer.privacy">політика конфіденційності</a>
+          </aside>
+        </div>
+
+        <div class="menu__meta">
+          <span class="menu__meta-item"><span class="menu__meta-dot"></span>SHSTKV Digital — <span data-i18n="hero.aside.role">digital-агенція</span></span>
+          <span class="menu__meta-item">© 2026</span>
+          <span class="menu__meta-item menu__meta-item--status" data-i18n="menu.status">Приймаємо проєкти</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+      <div class="container">
+        <!-- Top row: wordmark + founder card on the same level (as template) -->
+        <div class="hero__top reveal">
+          <div class="hero__wordmark"><span data-lang-block="uk">SEO</span><span data-lang-block="pl" hidden>Pozycjonowanie</span></div>
+          <a href="https://t.me/Andrii_DEV9" target="_blank" rel="noopener" class="contact-card">
+            <span class="contact-card__photo"><img src="assets/photo.webp" alt="Andrii Shestakov" /></span>
+            <span class="contact-card__body">
+              <span class="contact-card__name">Andrii Shestakov</span>
+              <span class="contact-card__role">Founder &amp; CEO</span>
+            </span>
+            <span class="contact-card__cta">
+              <span data-i18n="hero.aside.cta">Написати</span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </span>
+          </a>
+        </div>
+
+        <!-- Big media panel -->
+        <div class="hero__panel reveal">
+          <div class="hero__panel-bg" aria-hidden="true"></div>
+
+          <div class="hero__socials" aria-label="Social">
+            <a href="https://www.instagram.com/web.shestakov" class="hero__social" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="https://t.me/Andrii_DEV9" class="hero__social" target="_blank" rel="noopener" aria-label="Telegram">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M21.9 4.3l-3 14.1c-.2 1-.8 1.2-1.7.8l-4.6-3.4-2.2 2.1c-.2.2-.4.4-.9.4l.3-4.7 8.5-7.7c.4-.3-.1-.5-.6-.2L7.3 13 2.8 11.6c-1-.3-1-1 .2-1.4l17-6.6c.8-.3 1.5.2 1.9 1z"/></svg>
+            </a>
+            <a href="https://wa.me/48577503534" class="hero__social" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+            </a>
+            <a href="tel:+48577503534" class="hero__social" aria-label="Phone">
+              <svg viewBox="0 0 32 32" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.27" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19.9272 5C21.6224 5.45592 23.1681 6.34928 24.4094 7.59059C25.6507 8.8319 26.5441 10.3776 27 12.0728"/>
+                <path d="M18.8916 8.86426C19.9088 9.13781 20.8362 9.67382 21.581 10.4186C22.3258 11.1634 22.8618 12.0908 23.1353 13.108"/>
+                <path d="M11.5595 15.6015C12.5968 17.7222 14.3158 19.4334 16.4412 20.461C16.5967 20.5347 16.7687 20.5666 16.9403 20.5537C17.1119 20.5407 17.2771 20.4832 17.4198 20.387L20.5492 18.3002C20.6877 18.2079 20.8469 18.1516 21.0126 18.1364C21.1782 18.1212 21.3451 18.1475 21.498 18.213L27.3526 20.7222C27.5515 20.8067 27.7175 20.9535 27.8257 21.1405C27.9339 21.3276 27.9783 21.5447 27.9524 21.7593C27.7673 23.2073 27.0608 24.5382 25.9652 25.5028C24.8695 26.4674 23.4598 26.9996 22 26.9996C17.4913 26.9996 13.1673 25.2086 9.97919 22.0204C6.79107 18.8323 5 14.5083 5 9.99963C5.00008 8.53985 5.53224 7.13015 6.49685 6.03448C7.46146 4.93881 8.79237 4.23231 10.2404 4.04726C10.4549 4.0213 10.672 4.06576 10.8591 4.17394C11.0461 4.28212 11.193 4.44816 11.2775 4.64704L13.7888 10.5068C13.8537 10.6583 13.8802 10.8236 13.8658 10.9879C13.8514 11.1522 13.7967 11.3103 13.7064 11.4483L11.6268 14.6258C11.5322 14.7687 11.4762 14.9338 11.4644 15.1048C11.4526 15.2758 11.4854 15.447 11.5595 15.6015Z"/>
+              </svg>
+            </a>
+          </div>
+
+          <div class="hero__overlay">
+            <h1 class="hero__headline"><span data-lang-block="uk">SEO-просування сайту в Google</span><span data-lang-block="pl" hidden>Pozycjonowanie stron w Google</span></h1>
+            <p class="hero__headline-sub hero__headline-sub--wide"><span data-lang-block="uk">Технічний аудит, структура й контент, щоб Google і клієнти знаходили ваш сайт.</span><span data-lang-block="pl" hidden>Audyt, struktura i treści, dzięki którym Google i klienci znajdą Twoją stronę.</span></p>
+          </div>
+
+          <!-- Bottom service shelf (marquee track on mobile, grid on desktop) -->
+          <div class="shelf">
+            <div class="shelf__track">
+              <a href="index.html#about" class="shelf__card">
+                <span class="shelf__thumb shelf__thumb--1" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num"><span data-lang-block="uk">Ціна</span><span data-lang-block="pl" hidden>Cena</span></span><span class="shelf__name"><span data-lang-block="uk">Після брифу</span><span data-lang-block="pl" hidden>Wycena po briefie</span></span></span>
+              </a>
+              <a href="index.html#about" class="shelf__card">
+                <span class="shelf__thumb shelf__thumb--2" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num"><span data-lang-block="uk">Оцінка</span><span data-lang-block="pl" hidden>Wycena</span></span><span class="shelf__name"><span data-lang-block="uk">За 24 години</span><span data-lang-block="pl" hidden>W ciągu 24 h</span></span></span>
+              </a>
+              <a href="index.html#about" class="shelf__card">
+                <span class="shelf__thumb shelf__thumb--3" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num"><span data-lang-block="uk">Результат</span><span data-lang-block="pl" hidden>Efekty</span></span><span class="shelf__name"><span data-lang-block="uk">За кілька місяців</span><span data-lang-block="pl" hidden>Po kilku miesiącach</span></span></span>
+              </a>
+              <a href="index.html#about" class="shelf__card">
+                <span class="shelf__thumb shelf__thumb--4" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num"><span data-lang-block="uk">Ринки</span><span data-lang-block="pl" hidden>Rynki</span></span><span class="shelf__name"><span data-lang-block="uk">Україна, Польща</span><span data-lang-block="pl" hidden>Polska, Ukraina</span></span></span>
+              </a>
+              <a href="index.html#about" class="shelf__card">
+                <span class="shelf__thumb shelf__thumb--5" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num"><span data-lang-block="uk">Інструменти</span><span data-lang-block="pl" hidden>Narzędzia</span></span><span class="shelf__name"><span data-lang-block="uk">GSC, GA4, GBP</span><span data-lang-block="pl" hidden>GSC, GA4, GBP</span></span></span>
+              </a>
+              <a href="index.html#about" class="shelf__card shelf__card--dup" aria-hidden="true" tabindex="-1">
+                <span class="shelf__thumb shelf__thumb--1" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num"><span data-lang-block="uk">Ціна</span><span data-lang-block="pl" hidden>Cena</span></span><span class="shelf__name"><span data-lang-block="uk">Після брифу</span><span data-lang-block="pl" hidden>Wycena po briefie</span></span></span>
+              </a>
+              <a href="index.html#about" class="shelf__card shelf__card--dup" aria-hidden="true" tabindex="-1">
+                <span class="shelf__thumb shelf__thumb--2" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num"><span data-lang-block="uk">Оцінка</span><span data-lang-block="pl" hidden>Wycena</span></span><span class="shelf__name"><span data-lang-block="uk">За 24 години</span><span data-lang-block="pl" hidden>W ciągu 24 h</span></span></span>
+              </a>
+              <a href="index.html#about" class="shelf__card shelf__card--dup" aria-hidden="true" tabindex="-1">
+                <span class="shelf__thumb shelf__thumb--3" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num"><span data-lang-block="uk">Результат</span><span data-lang-block="pl" hidden>Efekty</span></span><span class="shelf__name"><span data-lang-block="uk">За кілька місяців</span><span data-lang-block="pl" hidden>Po kilku miesiącach</span></span></span>
+              </a>
+              <a href="index.html#about" class="shelf__card shelf__card--dup" aria-hidden="true" tabindex="-1">
+                <span class="shelf__thumb shelf__thumb--4" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num"><span data-lang-block="uk">Ринки</span><span data-lang-block="pl" hidden>Rynki</span></span><span class="shelf__name"><span data-lang-block="uk">Україна, Польща</span><span data-lang-block="pl" hidden>Polska, Ukraina</span></span></span>
+              </a>
+              <a href="index.html#about" class="shelf__card shelf__card--dup" aria-hidden="true" tabindex="-1">
+                <span class="shelf__thumb shelf__thumb--5" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num"><span data-lang-block="uk">Інструменти</span><span data-lang-block="pl" hidden>Narzędzia</span></span><span class="shelf__name"><span data-lang-block="uk">GSC, GA4, GBP</span><span data-lang-block="pl" hidden>GSC, GA4, GBP</span></span></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile-only: desktop-style founder contact card below the banner -->
+        <div class="hero__below reveal">
+          <a href="https://t.me/Andrii_DEV9" target="_blank" rel="noopener" class="contact-card">
+            <span class="contact-card__photo"><img src="assets/photo.webp" alt="Andrii Shestakov" /></span>
+            <span class="contact-card__body">
+              <span class="contact-card__name">Andrii Shestakov</span>
+              <span class="contact-card__role">Founder &amp; CEO</span>
+            </span>
+            <span class="contact-card__cta">
+              <span data-i18n="hero.aside.cta">Написати</span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section__head section__head--split reveal">
+          <h2 class="section__title"><span data-lang-block="uk">Кому потрібне SEO</span><span data-lang-block="pl" hidden>Dla kogo SEO</span></h2>
+          <span class="section__rule" aria-hidden="true"></span>
+          <span class="eyebrow"><span class="eyebrow__dot eyebrow__dot--square"></span><span><span data-lang-block="uk">Що входить</span><span data-lang-block="pl" hidden>Co obejmuje</span></span></span>
+        </div>
+        <div class="partners-layout">
+          <div class="partners-intro reveal">
+            <p class="section__lead section__lead--partners"><span data-lang-block="uk">SEO-просування сайту — це робота, після якої Google краще розуміє ваші сторінки й частіше показує їх людям, що шукають саме вашу послугу. Воно потрібне бізнесу, який не хоче залежати лише від реклами: локальним сервісам, магазинам, B2B-компаніям, а також тим, хто виходить на польський чи український ринок. Ми починаємо з аудиту, виправляємо технічні помилки, будуємо структуру під реальні запити й підключаємо аналітику, щоб ви бачили, звідки приходять заявки.</span><span data-lang-block="pl" hidden>Pozycjonowanie stron to praca, dzięki której Google lepiej rozumie Twoje podstrony i częściej pokazuje je osobom szukającym dokładnie tego, co oferujesz. Sprawdza się w firmach, które nie chcą opierać się wyłącznie na reklamach: w lokalnych usługach, sklepach internetowych, firmach B2B i markach wchodzących na rynek polski lub ukraiński. Zaczynamy od audytu, poprawiamy błędy techniczne, budujemy strukturę pod realne zapytania i podpinamy analitykę, żebyś widział, skąd przychodzą zapytania od klientów.</span></p>
+
+            <div class="partners-marquee" role="list">
+              <div class="partners-marquee__track"><span class="partners-chip" role="listitem"><span data-lang-block="uk">Локальний бізнес</span><span data-lang-block="pl" hidden>Firmy lokalne</span></span><span class="partners-chip" role="listitem"><span data-lang-block="uk">Інтернет-магазини</span><span data-lang-block="pl" hidden>Sklepy online</span></span><span class="partners-chip" role="listitem"><span data-lang-block="uk">B2B-компанії</span><span data-lang-block="pl" hidden>Firmy B2B</span></span><span class="partners-chip" role="listitem"><span data-lang-block="uk">Сфера послуг</span><span data-lang-block="pl" hidden>Usługi</span></span><span class="partners-chip" role="listitem"><span data-lang-block="uk">Нові сайти</span><span data-lang-block="pl" hidden>Nowe strony</span></span><span class="partners-chip" role="listitem"><span data-lang-block="uk">Багатомовні сайти</span><span data-lang-block="pl" hidden>Strony wielojęzyczne</span></span><span class="partners-chip" aria-hidden="true"><span data-lang-block="uk">Локальний бізнес</span><span data-lang-block="pl" hidden>Firmy lokalne</span></span><span class="partners-chip" aria-hidden="true"><span data-lang-block="uk">Інтернет-магазини</span><span data-lang-block="pl" hidden>Sklepy online</span></span><span class="partners-chip" aria-hidden="true"><span data-lang-block="uk">B2B-компанії</span><span data-lang-block="pl" hidden>Firmy B2B</span></span><span class="partners-chip" aria-hidden="true"><span data-lang-block="uk">Сфера послуг</span><span data-lang-block="pl" hidden>Usługi</span></span><span class="partners-chip" aria-hidden="true"><span data-lang-block="uk">Нові сайти</span><span data-lang-block="pl" hidden>Nowe strony</span></span><span class="partners-chip" aria-hidden="true"><span data-lang-block="uk">Багатомовні сайти</span><span data-lang-block="pl" hidden>Strony wielojęzyczne</span></span></div>
+            </div>
+
+            <button type="button" class="btn btn--dark btn--lg" data-open-popup>
+              <span><span data-lang-block="uk">Обговорити проєкт</span><span data-lang-block="pl" hidden>Porozmawiajmy o projekcie</span></span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </button>
+          </div>
+
+          <div class="partners-cards reveal-group">
+            <article class="partner-card">
+              <span class="partner-card__num">(01)</span>
+              <div class="partner-card__body">
+                <h3 class="partner-card__text"><span data-lang-block="uk">Технічний аудит і швидкість</span><span data-lang-block="pl" hidden>Audyt techniczny i szybkość</span></h3>
+                <p class="partner-card__desc"><span data-lang-block="uk">Перевіряємо індексацію, помилки, дублі, мета-теги й Core Web Vitals. Виправляємо те, що заважає Google нормально сканувати сайт і що гальмує завантаження на телефоні.</span><span data-lang-block="pl" hidden>Sprawdzamy indeksację, błędy, duplikaty, meta tagi i Core Web Vitals. Poprawiamy to, co utrudnia Google skanowanie strony i spowalnia jej ładowanie na telefonie.</span></p>
+              </div>
+            </article>
+            <article class="partner-card">
+              <span class="partner-card__num">(02)</span>
+              <div class="partner-card__body">
+                <h3 class="partner-card__text"><span data-lang-block="uk">Ключові слова і структура</span><span data-lang-block="pl" hidden>Słowa kluczowe i struktura</span></h3>
+                <p class="partner-card__desc"><span data-lang-block="uk">Збираємо запити, за якими шукають ваші послуги, і розподіляємо їх по сторінках. Кожна важлива послуга отримує окрему сторінку з чітким заголовком і описом.</span><span data-lang-block="pl" hidden>Zbieramy frazy, po których klienci szukają Twoich usług, i przypisujemy je do podstron. Każda ważna usługa dostaje osobną podstronę z jasnym nagłówkiem i opisem.</span></p>
+              </div>
+            </article>
+            <article class="partner-card">
+              <span class="partner-card__num">(03)</span>
+              <div class="partner-card__body">
+                <h3 class="partner-card__text"><span data-lang-block="uk">Schema.org і hreflang</span><span data-lang-block="pl" hidden>Schema.org i hreflang</span></h3>
+                <p class="partner-card__desc"><span data-lang-block="uk">Додаємо структуровані дані, щоб Google бачив компанію, послуги, ціни та FAQ. Для багатомовних сайтів налаштовуємо hreflang, щоб українська й польська версії не конкурували між собою.</span><span data-lang-block="pl" hidden>Dodajemy dane strukturalne, żeby Google widział firmę, usługi, ceny i FAQ. W stronach wielojęzycznych ustawiamy hreflang, aby wersja polska i ukraińska nie konkurowały ze sobą.</span></p>
+              </div>
+            </article>
+            <article class="partner-card">
+              <span class="partner-card__num">(04)</span>
+              <div class="partner-card__body">
+                <h3 class="partner-card__text"><span data-lang-block="uk">Локальне SEO і мапи</span><span data-lang-block="pl" hidden>SEO lokalne i mapy</span></h3>
+                <p class="partner-card__desc"><span data-lang-block="uk">Налаштовуємо або впорядковуємо Google Business Profile, щоб компанія з'являлася на мапах і в локальній видачі. Звіряємо назву, адресу й контакти на сайті та в профілі.</span><span data-lang-block="pl" hidden>Zakładamy lub porządkujemy Profil Firmy w Google, żeby firma pojawiała się w Mapach i wynikach lokalnych. Ujednolicamy nazwę, adres i kontakt na stronie oraz w profilu.</span></p>
+              </div>
+            </article>
+            <article class="partner-card">
+              <span class="partner-card__num">(05)</span>
+              <div class="partner-card__body">
+                <h3 class="partner-card__text"><span data-lang-block="uk">Аналітика і видимість в AI</span><span data-lang-block="pl" hidden>Analityka i widoczność w AI</span></h3>
+                <p class="partner-card__desc"><span data-lang-block="uk">Підключаємо Google Search Console і GA4. Структуруємо тексти так, щоб ChatGPT чи Perplexity могли їх коректно прочитати й процитувати, хоча гарантувати згадки не може ніхто.</span><span data-lang-block="pl" hidden>Podpinamy Google Search Console i GA4. Układamy treści tak, by ChatGPT czy Perplexity mogły je poprawnie odczytać i zacytować, choć wzmianek nie da się nikomu zagwarantować.</span></p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="how">
+      <div class="container">
+        <div class="wa-head reveal">
+          <h2 class="wa-head__title"><span data-lang-block="uk">Етапи роботи</span><span data-lang-block="pl" hidden>Etapy pracy</span></h2>
+          <span class="wa-head__divider" aria-hidden="true"></span>
+          <span class="wa-head__tag"><span class="wa-head__dot" aria-hidden="true"></span><span><span data-lang-block="uk">Процес</span><span data-lang-block="pl" hidden>Proces</span></span></span>
+        </div>
+
+        <div class="why-acc reveal">
+          <article class="wa-card wa-card--open">
+            <div class="wa-num"><span class="wa-num__label"><span data-lang-block="uk">Етап</span><span data-lang-block="pl" hidden>Etap</span></span><span class="wa-num__line"></span><span class="wa-num__idx">(01)</span></div>
+            <div class="wa-content">
+              <div class="wa-image"><img src="assets/why-1.webp" alt="" loading="lazy" /></div>
+              <h3 class="wa-content__title"><span data-lang-block="uk">Бриф і доступи</span><span data-lang-block="pl" hidden>Brief i dostępy</span></h3>
+              <p class="wa-content__text"><span data-lang-block="uk">Обговорюємо бізнес, регіон і конкурентів. Отримуємо доступи до сайту, Search Console й аналітики або створюємо їх, якщо їх ще немає.</span><span data-lang-block="pl" hidden>Rozmawiamy o firmie, regionie i konkurencji. Dostajemy dostęp do strony, Search Console i analityki albo zakładamy je, jeśli jeszcze ich nie ma.</span></p>
+              <div class="wa-tags"><span class="wa-tag"><span data-lang-block="uk">Бриф</span><span data-lang-block="pl" hidden>Brief</span></span><span class="wa-tag"><span data-lang-block="uk">Доступи</span><span data-lang-block="pl" hidden>Dostępy</span></span></div>
+            </div>
+            <div class="wa-vert"><h3><span data-lang-block="uk">Бриф і доступи</span><span data-lang-block="pl" hidden>Brief i dostępy</span></h3></div>
+          </article>
+
+          <article class="wa-card">
+            <div class="wa-num"><span class="wa-num__label"><span data-lang-block="uk">Етап</span><span data-lang-block="pl" hidden>Etap</span></span><span class="wa-num__line"></span><span class="wa-num__idx">(02)</span></div>
+            <div class="wa-content">
+              <div class="wa-image"><img src="assets/why-2.webp" alt="" loading="lazy" /></div>
+              <h3 class="wa-content__title"><span data-lang-block="uk">Технічний аудит</span><span data-lang-block="pl" hidden>Audyt techniczny</span></h3>
+              <p class="wa-content__text"><span data-lang-block="uk">Скануємо сайт, перевіряємо індексацію, швидкість, мобільну версію й розмітку. На виході — список проблем із пріоритетами: що критично, а що може зачекати.</span><span data-lang-block="pl" hidden>Skanujemy stronę, sprawdzamy indeksację, szybkość, wersję mobilną i znaczniki. Efektem jest lista problemów z priorytetami: co jest krytyczne, a co może poczekać.</span></p>
+              <div class="wa-tags"><span class="wa-tag"><span data-lang-block="uk">Аудит</span><span data-lang-block="pl" hidden>Audyt</span></span><span class="wa-tag"><span data-lang-block="uk">Швидкість</span><span data-lang-block="pl" hidden>Szybkość</span></span></div>
+            </div>
+            <div class="wa-vert"><h3><span data-lang-block="uk">Технічний аудит</span><span data-lang-block="pl" hidden>Audyt techniczny</span></h3></div>
+          </article>
+
+          <article class="wa-card">
+            <div class="wa-num"><span class="wa-num__label"><span data-lang-block="uk">Етап</span><span data-lang-block="pl" hidden>Etap</span></span><span class="wa-num__line"></span><span class="wa-num__idx">(03)</span></div>
+            <div class="wa-content">
+              <div class="wa-image"><img src="assets/why-3.webp" alt="" loading="lazy" /></div>
+              <h3 class="wa-content__title"><span data-lang-block="uk">Запити і структура</span><span data-lang-block="pl" hidden>Frazy i struktura</span></h3>
+              <p class="wa-content__text"><span data-lang-block="uk">Збираємо семантику під ваш ринок і мову, розподіляємо запити по сторінках. Показуємо, яких сторінок бракує і які варто об'єднати.</span><span data-lang-block="pl" hidden>Zbieramy frazy pod Twój rynek i język, przypisujemy je do podstron. Pokazujemy, których podstron brakuje, a które warto połączyć.</span></p>
+              <div class="wa-tags"><span class="wa-tag"><span data-lang-block="uk">Семантика</span><span data-lang-block="pl" hidden>Frazy</span></span><span class="wa-tag"><span data-lang-block="uk">Структура</span><span data-lang-block="pl" hidden>Struktura</span></span></div>
+            </div>
+            <div class="wa-vert"><h3><span data-lang-block="uk">Запити і структура</span><span data-lang-block="pl" hidden>Frazy i struktura</span></h3></div>
+          </article>
+
+          <article class="wa-card">
+            <div class="wa-num"><span class="wa-num__label"><span data-lang-block="uk">Етап</span><span data-lang-block="pl" hidden>Etap</span></span><span class="wa-num__line"></span><span class="wa-num__idx">(04)</span></div>
+            <div class="wa-content">
+              <div class="wa-image"><img src="assets/why-4.webp" alt="" loading="lazy" /></div>
+              <h3 class="wa-content__title"><span data-lang-block="uk">Технічні виправлення</span><span data-lang-block="pl" hidden>Poprawki techniczne</span></h3>
+              <p class="wa-content__text"><span data-lang-block="uk">Правимо мета-теги, заголовки, редиректи, карту сайту, schema.org і hreflang. Оптимізуємо зображення й код, щоб сторінки швидше відкривалися на телефоні.</span><span data-lang-block="pl" hidden>Poprawiamy meta tagi, nagłówki, przekierowania, mapę strony, schema.org i hreflang. Optymalizujemy obrazy i kod, żeby podstrony szybciej ładowały się na telefonie.</span></p>
+              <div class="wa-tags"><span class="wa-tag"><span data-lang-block="uk">Код</span><span data-lang-block="pl" hidden>Kod</span></span><span class="wa-tag"><span data-lang-block="uk">Розмітка</span><span data-lang-block="pl" hidden>Znaczniki</span></span></div>
+            </div>
+            <div class="wa-vert"><h3><span data-lang-block="uk">Технічні виправлення</span><span data-lang-block="pl" hidden>Poprawki techniczne</span></h3></div>
+          </article>
+
+          <article class="wa-card">
+            <div class="wa-num"><span class="wa-num__label"><span data-lang-block="uk">Етап</span><span data-lang-block="pl" hidden>Etap</span></span><span class="wa-num__line"></span><span class="wa-num__idx">(05)</span></div>
+            <div class="wa-content">
+              <div class="wa-image"><img src="assets/why-5.webp" alt="" loading="lazy" /></div>
+              <h3 class="wa-content__title"><span data-lang-block="uk">Контент і локальне SEO</span><span data-lang-block="pl" hidden>Treści i SEO lokalne</span></h3>
+              <p class="wa-content__text"><span data-lang-block="uk">Допрацьовуємо або створюємо сторінки послуг і FAQ, налаштовуємо Google Business Profile. Тексти пишемо для людей, а не для щільності ключових слів.</span><span data-lang-block="pl" hidden>Dopracowujemy lub tworzymy podstrony usług i FAQ, konfigurujemy Profil Firmy w Google. Piszemy dla ludzi, a nie pod nasycenie słowami kluczowymi.</span></p>
+              <div class="wa-tags"><span class="wa-tag"><span data-lang-block="uk">Тексти</span><span data-lang-block="pl" hidden>Treści</span></span><span class="wa-tag"><span data-lang-block="uk">Мапи</span><span data-lang-block="pl" hidden>Mapy</span></span></div>
+            </div>
+            <div class="wa-vert"><h3><span data-lang-block="uk">Контент і локальне SEO</span><span data-lang-block="pl" hidden>Treści i SEO lokalne</span></h3></div>
+          </article>
+
+          <article class="wa-card">
+            <div class="wa-num"><span class="wa-num__label"><span data-lang-block="uk">Етап</span><span data-lang-block="pl" hidden>Etap</span></span><span class="wa-num__line"></span><span class="wa-num__idx">(06)</span></div>
+            <div class="wa-content">
+              <div class="wa-image"><img src="assets/why-6.webp" alt="" loading="lazy" /></div>
+              <h3 class="wa-content__title"><span data-lang-block="uk">Контроль і наступні кроки</span><span data-lang-block="pl" hidden>Kontrola i kolejne kroki</span></h3>
+              <p class="wa-content__text"><span data-lang-block="uk">Відстежуємо індексацію й покази в Search Console, дивимося, які сторінки ростуть. Пропонуємо наступні кроки або передаємо вам план для самостійної роботи.</span><span data-lang-block="pl" hidden>Śledzimy indeksację i wyświetlenia w Search Console, sprawdzamy, które podstrony rosną. Proponujemy kolejne kroki albo przekazujemy plan do samodzielnej pracy.</span></p>
+              <div class="wa-tags"><span class="wa-tag"><span data-lang-block="uk">Звіт</span><span data-lang-block="pl" hidden>Raport</span></span><span class="wa-tag"><span data-lang-block="uk">План</span><span data-lang-block="pl" hidden>Plan</span></span></div>
+            </div>
+            <div class="wa-vert"><h3><span data-lang-block="uk">Контроль і наступні кроки</span><span data-lang-block="pl" hidden>Kontrola i kolejne kroki</span></h3></div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="tariffs">
+      <div class="container">
+        <div class="section__head section__head--split reveal">
+          <h2 class="section__title"><span data-lang-block="uk">Ціна</span><span data-lang-block="pl" hidden>Cena</span></h2>
+          <span class="section__rule" aria-hidden="true"></span>
+          <span class="eyebrow"><span class="eyebrow__dot eyebrow__dot--square"></span><span><span data-lang-block="uk">Тарифи</span><span data-lang-block="pl" hidden>Pakiety</span></span></span>
+        </div>
+
+        <p class="tariff-lead reveal"><span data-lang-block="uk">Вартість SEO залежить від розміру сайту, ніші й конкуренції, тому точну ціну рахуємо після брифу, оцінка за 24 години. Працюємо офіційно, за договором, оплата в EUR, USD або PLN.</span><span data-lang-block="pl" hidden>Koszt pozycjonowania zależy od wielkości strony, branży i konkurencji, dlatego dokładną cenę podajemy po briefie, wycena w ciągu 24 h. Działamy na umowę i fakturę, ceny bez VAT (zwolnienie z VAT).</span></p>
+
+        <div class="tariffs">
+          <article class="tariff reveal">
+            <div class="tariff__meta">
+              <span class="tariff__tag"><span data-lang-block="uk">Разова робота</span><span data-lang-block="pl" hidden>Jednorazowo</span></span>
+            </div>
+            <div class="tariff__top">
+              <span class="tariff__price"><span data-lang-block="uk">Оцінка</span><span data-lang-block="pl" hidden>Wycena</span></span>
+              <span class="tariff__unit"><span data-lang-block="uk">за 24 год</span><span data-lang-block="pl" hidden>w 24 h</span></span>
+            </div>
+            <h3 class="tariff__name"><span data-lang-block="uk">SEO-аудит і технічна оптимізація</span><span data-lang-block="pl" hidden>Audyt SEO i optymalizacja</span></h3>
+            <p class="tariff__sub"><span data-lang-block="uk">Для сайту, який вже працює, але погано видно в Google. Знаходимо помилки й виправляємо їх.</span><span data-lang-block="pl" hidden>Dla działającej strony, której słabo widać w Google. Znajdujemy błędy i je poprawiamy.</span></p>
+            <ul class="plan-card__list">
+              <li><span class="plan-check" aria-hidden="true"></span><span><span data-lang-block="uk">Технічний аудит сайту</span><span data-lang-block="pl" hidden>Audyt techniczny strony</span></span></li>
+              <li><span class="plan-check" aria-hidden="true"></span><span><span data-lang-block="uk">Швидкість і Core Web Vitals</span><span data-lang-block="pl" hidden>Szybkość i Core Web Vitals</span></span></li>
+              <li><span class="plan-check" aria-hidden="true"></span><span><span data-lang-block="uk">Мета-теги, заголовки, редиректи</span><span data-lang-block="pl" hidden>Meta tagi, nagłówki, przekierowania</span></span></li>
+              <li><span class="plan-check" aria-hidden="true"></span><span><span data-lang-block="uk">Schema.org і hreflang</span><span data-lang-block="pl" hidden>Schema.org i hreflang</span></span></li>
+              <li><span class="plan-check" aria-hidden="true"></span><span><span data-lang-block="uk">Налаштування GSC і GA4</span><span data-lang-block="pl" hidden>Konfiguracja GSC i GA4</span></span></li>
+              <li><span class="plan-check" aria-hidden="true"></span><span><span data-lang-block="uk">Список пріоритетних доробок</span><span data-lang-block="pl" hidden>Lista priorytetowych poprawek</span></span></li>
+            </ul>
+            <button type="button" class="tariff__cta tariff__cta--dark" data-open-popup>
+              <span><span data-lang-block="uk">Замовити</span><span data-lang-block="pl" hidden>Zamów</span></span>
+              <span class="tariff__cta-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </button>
+          </article>
+          <article class="tariff tariff--rec reveal">
+            <div class="tariff__stone" aria-hidden="true"></div>
+            <div class="tariff__meta">
+              <span class="tariff__badge"><span data-lang-block="uk">Оптимальний вибір</span><span data-lang-block="pl" hidden>Optymalny wybór</span></span>
+              <span class="tariff__tag"><span data-lang-block="uk">Постійна робота</span><span data-lang-block="pl" hidden>Stała współpraca</span></span>
+            </div>
+            <div class="tariff__top">
+              <span class="tariff__price"><span data-lang-block="uk">Оцінка</span><span data-lang-block="pl" hidden>Wycena</span></span>
+              <span class="tariff__unit"><span data-lang-block="uk">за 24 год</span><span data-lang-block="pl" hidden>w 24 h</span></span>
+            </div>
+            <h3 class="tariff__name"><span data-lang-block="uk">Щомісячне SEO-просування</span><span data-lang-block="pl" hidden>Pozycjonowanie miesięczne</span></h3>
+            <p class="tariff__sub"><span data-lang-block="uk">Для бізнесу, який хоче стабільно нарощувати видимість: аудит плюс регулярна робота зі структурою й контентом.</span><span data-lang-block="pl" hidden>Dla firm, które chcą systematycznie budować widoczność: audyt plus regularna praca nad strukturą i treściami.</span></p>
+            <ul class="plan-card__list">
+              <li><span class="plan-check" aria-hidden="true"></span><span><span data-lang-block="uk">Усе з пакета «Аудит»</span><span data-lang-block="pl" hidden>Wszystko z pakietu „Audyt”</span></span></li>
+              <li><span class="plan-check" aria-hidden="true"></span><span><span data-lang-block="uk">Семантика і структура сторінок</span><span data-lang-block="pl" hidden>Frazy i struktura podstron</span></span></li>
+              <li><span class="plan-check" aria-hidden="true"></span><span><span data-lang-block="uk">Нові сторінки послуг і FAQ</span><span data-lang-block="pl" hidden>Nowe podstrony usług i FAQ</span></span></li>
+              <li><span class="plan-check" aria-hidden="true"></span><span><span data-lang-block="uk">Google Business Profile</span><span data-lang-block="pl" hidden>Profil Firmy w Google</span></span></li>
+              <li><span class="plan-check" aria-hidden="true"></span><span><span data-lang-block="uk">Контент під AI-відповіді</span><span data-lang-block="pl" hidden>Treści pod odpowiedzi AI</span></span></li>
+              <li><span class="plan-check" aria-hidden="true"></span><span><span data-lang-block="uk">Контроль у Search Console</span><span data-lang-block="pl" hidden>Kontrola w Search Console</span></span></li>
+              <li><span class="plan-check" aria-hidden="true"></span><span><span data-lang-block="uk">Звіт і план на наступний місяць</span><span data-lang-block="pl" hidden>Raport i plan na kolejny miesiąc</span></span></li>
+            </ul>
+            <button type="button" class="tariff__cta tariff__cta--accent" data-open-popup>
+              <span><span data-lang-block="uk">Обрати тариф</span><span data-lang-block="pl" hidden>Wybierz pakiet</span></span>
+              <span class="tariff__cta-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </button>
+          </article>
+        </div>
+
+        <article class="tariff-addon reveal">
+          <div class="tariff-addon__price">
+            <span class="tariff__unit"><span data-lang-block="uk">від</span><span data-lang-block="pl" hidden>od</span></span>
+            <span class="tariff__price tariff__price--sm"><span class="plan-card__cur">€</span>300</span>
+            <span class="tariff__unit"><span data-lang-block="uk">/ проєкт</span><span data-lang-block="pl" hidden>/ projekt</span></span>
+          </div>
+          <div class="tariff-addon__body">
+            <h3 class="tariff-addon__name">
+              <span class="tariff-addon__dot" aria-hidden="true"></span>
+              <span><span data-lang-block="uk">Новий сайт з базовим SEO</span><span data-lang-block="pl" hidden>Nowa strona z podstawowym SEO</span></span>
+              <span class="tariff__tag tariff__tag--sm"><span data-lang-block="uk">SEO вже всередині</span><span data-lang-block="pl" hidden>SEO w standardzie</span></span>
+            </h3>
+            <p class="tariff-addon__desc"><span data-lang-block="uk">Базова SEO-оптимізація входить у кожен сайт, який ми робимо: структура, мета-теги, швидкість, мобільна версія.</span><span data-lang-block="pl" hidden>Podstawowa optymalizacja SEO jest w każdej stronie, którą robimy: struktura, meta tagi, szybkość, wersja mobilna.</span></p>
+          </div>
+          <button type="button" class="btn btn--dark" data-open-popup>
+            <span><span data-lang-block="uk">Замовити сайт</span><span data-lang-block="pl" hidden>Zamów stronę</span></span>
+            <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </button>
+        </article>
+
+        <article class="tariff-addon reveal">
+          <div class="tariff-addon__price">
+            <span class="tariff__unit"><span data-lang-block="uk">від</span><span data-lang-block="pl" hidden>od</span></span>
+            <span class="tariff__price tariff__price--sm"><span class="plan-card__cur">€</span>20</span>
+            <span class="tariff__unit"><span data-lang-block="uk">/ місяць</span><span data-lang-block="pl" hidden>/ miesiąc</span></span>
+          </div>
+          <div class="tariff-addon__body">
+            <h3 class="tariff-addon__name">
+              <span class="tariff-addon__dot" aria-hidden="true"></span>
+              <span><span data-lang-block="uk">Підтримка сайту</span><span data-lang-block="pl" hidden>Opieka nad stroną</span></span>
+              <span class="tariff__tag tariff__tag--sm"><span data-lang-block="uk">Після запуску</span><span data-lang-block="pl" hidden>Po wdrożeniu</span></span>
+            </h3>
+            <p class="tariff-addon__desc"><span data-lang-block="uk">Сайт залишається під наглядом після SEO-робіт. Обсяг підтримки погоджуємо заздалегідь.</span><span data-lang-block="pl" hidden>Strona zostaje pod opieką po pracach SEO. Zakres wsparcia ustalamy z góry.</span></p>
+          </div>
+          <button type="button" class="btn btn--dark" data-open-popup>
+            <span><span data-lang-block="uk">Обговорити</span><span data-lang-block="pl" hidden>Porozmawiajmy</span></span>
+            <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </button>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="section" id="cases">
+      <div class="container">
+        <div class="section__head section__head--split reveal">
+          <h2 class="section__title"><span data-lang-block="uk">Приклади робіт</span><span data-lang-block="pl" hidden>Przykładowe realizacje</span></h2>
+          <span class="section__rule" aria-hidden="true"></span>
+          <span class="eyebrow"><span class="eyebrow__dot eyebrow__dot--square"></span><span><span data-lang-block="uk">Кейси</span><span data-lang-block="pl" hidden>Realizacje</span></span></span>
+        </div>
+
+        <div class="cases reveal-group">
+          <a class="case" href="case-core-accounting" aria-label="Core Accounting">
+            <div class="case__media">
+              <img src="assets/cases/case13.webp" alt="Core Accounting" loading="lazy" width="1200" height="840" />
+            </div>
+            <div class="case__bar">
+              <div class="case__id">
+                <span class="case__num">(01)</span>
+                <h3 class="case__name">Core Accounting</h3>
+              </div>
+              <span class="case__cat"><span data-lang-block="uk">Бухгалтерія</span><span data-lang-block="pl" hidden>Księgowość</span></span>
+              <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </div>
+          </a>
+          <a class="case" href="case-dictator-barbershop" aria-label="DICTATOR">
+            <div class="case__media">
+              <img src="assets/cases/case31.webp" alt="DICTATOR" loading="lazy" width="1200" height="840" />
+            </div>
+            <div class="case__bar">
+              <div class="case__id">
+                <span class="case__num">(02)</span>
+                <h3 class="case__name">DICTATOR</h3>
+              </div>
+              <span class="case__cat"><span data-lang-block="uk">Барбершопи</span><span data-lang-block="pl" hidden>Barber shopy</span></span>
+              <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </div>
+          </a>
+          <a class="case" href="case-herstel-bouw" aria-label="Herstel & Bouw">
+            <div class="case__media">
+              <img src="assets/cases/case35.webp" alt="Herstel & Bouw" loading="lazy" width="1200" height="840" />
+            </div>
+            <div class="case__bar">
+              <div class="case__id">
+                <span class="case__num">(03)</span>
+                <h3 class="case__name">Herstel & Bouw</h3>
+              </div>
+              <span class="case__cat"><span data-lang-block="uk">Будівництво</span><span data-lang-block="pl" hidden>Budownictwo</span></span>
+              <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </div>
+          </a>
+          <a class="case" href="case-rozmarin" aria-label="Rozmarin">
+            <div class="case__media">
+              <img src="assets/cases/case29.webp" alt="Rozmarin" loading="lazy" width="1200" height="840" />
+            </div>
+            <div class="case__bar">
+              <div class="case__id">
+                <span class="case__num">(04)</span>
+                <h3 class="case__name">Rozmarin</h3>
+              </div>
+              <span class="case__cat"><span data-lang-block="uk">Квіти</span><span data-lang-block="pl" hidden>Kwiaty</span></span>
+              <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="faq">
+      <div class="container faq-layout">
+        <div class="faq-layout__head reveal">
+          <div class="head-kicker">
+            <span class="eyebrow"><span class="eyebrow__dot eyebrow__dot--square"></span><span data-i18n="faq.tag">FAQ</span></span>
+          </div>
+          <h2 class="section__title" data-i18n="faq.title">Питання та відповіді</h2>
+          <p class="section__lead" data-i18n="faq.desc">Не знайшли відповідь?<br>Напишіть нам у Telegram — відповімо швидко.</p>
+          <a href="https://t.me/Andrii_DEV9" target="_blank" rel="noopener" class="contact-card">
+            <span class="contact-card__photo"><img src="assets/photo.webp" alt="Andrii Shestakov" /></span>
+            <span class="contact-card__body">
+              <span class="contact-card__name">Andrii Shestakov</span>
+              <span class="contact-card__role">Founder &amp; CEO</span>
+            </span>
+            <span class="contact-card__cta">
+              <span data-i18n="hero.aside.cta">Написати</span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </span>
+          </a>
+        </div>
+
+        <div class="faq reveal-group">
+          <div class="faq__item">
+            <button type="button" class="faq__q" aria-expanded="false"><span class="faq__qn">(01)</span><span><span data-lang-block="uk">Скільки коштує SEO-просування сайту?</span><span data-lang-block="pl" hidden>Ile kosztuje pozycjonowanie strony?</span></span><span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><p><span data-lang-block="uk">Ціну SEO рахуємо після брифу, оцінку надсилаємо протягом 24 годин. Вартість залежить від кількості сторінок, технічного стану сайту, ніші й конкуренції в регіоні. Разовий аудит із виправленнями й щомісячне просування оцінюються окремо, тож ви можете почати з аудиту й вирішити далі. Працюємо за договором, оплата в EUR, USD або PLN.</span><span data-lang-block="pl" hidden>Cenę pozycjonowania podajemy po briefie, wycenę wysyłamy w ciągu 24 godzin. Koszt zależy od liczby podstron, stanu technicznego strony, branży i konkurencji w regionie. Jednorazowy audyt z poprawkami i pozycjonowanie miesięczne wyceniamy osobno, więc możesz zacząć od audytu i zdecydować później. Działamy na umowę i fakturę, ceny bez VAT.</span></p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q" aria-expanded="false"><span class="faq__qn">(02)</span><span><span data-lang-block="uk">Коли будуть перші результати в Google?</span><span data-lang-block="pl" hidden>Kiedy będą pierwsze efekty w Google?</span></span><span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><p><span data-lang-block="uk">Зазвичай помітні зміни з'являються через кілька місяців, а не тижнів. Технічні виправлення Google враховує після повторного сканування, а нові сторінки мають проіндексуватися й набрати довіру. Термін залежить від віку домену, конкуренції й того, скільки сторінок потрібно доробити. Проміжні зміни, як-от індексацію й покази, видно в Search Console раніше.</span><span data-lang-block="pl" hidden>Zwykle wyraźne zmiany widać po kilku miesiącach, a nie tygodniach. Poprawki techniczne Google uwzględnia po ponownym skanowaniu, a nowe podstrony muszą się zaindeksować i zyskać zaufanie. Czas zależy od wieku domeny, konkurencji i liczby podstron do dopracowania. Zmiany pośrednie, np. indeksację i wyświetlenia, widać w Search Console wcześniej.</span></p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q" aria-expanded="false"><span class="faq__qn">(03)</span><span><span data-lang-block="uk">Чи гарантуєте ви топ-1 у Google?</span><span data-lang-block="pl" hidden>Czy gwarantujecie pierwsze miejsce w Google?</span></span><span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><p><span data-lang-block="uk">Ні, і чесний підрядник не дасть такої гарантії. Позиції залежать від алгоритмів Google, конкурентів і багатьох факторів поза сайтом. Ми відповідаємо за якість роботи: технічний стан, структуру, контент і налаштування, а динаміку показуємо в Search Console. Якщо хтось обіцяє топ-1 за тиждень, варто уточнити, якими методами.</span><span data-lang-block="pl" hidden>Nie, i żaden uczciwy wykonawca takiej gwarancji nie da. Pozycje zależą od algorytmów Google, konkurencji i wielu czynników poza stroną. Odpowiadamy za jakość pracy: stan techniczny, strukturę, treści i konfigurację, a zmiany pokazujemy w Search Console. Jeśli ktoś obiecuje pierwsze miejsce w tydzień, warto dopytać, jakimi metodami.</span></p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q" aria-expanded="false"><span class="faq__qn">(04)</span><span><span data-lang-block="uk">Чим SEO-аудит відрізняється від SEO-просування?</span><span data-lang-block="pl" hidden>Czym audyt SEO różni się od pozycjonowania?</span></span><span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><p><span data-lang-block="uk">Аудит — це разова перевірка й виправлення технічних проблем, після якої сайт готовий до росту. Просування — регулярна робота щомісяця: нові сторінки, контент, локальне SEO й контроль у Search Console. Аудит підходить, якщо ви готові далі працювати самі, просування — якщо хочете, щоб цим займалася команда.</span><span data-lang-block="pl" hidden>Audyt to jednorazowe sprawdzenie i naprawa problemów technicznych, po którym strona jest gotowa do wzrostu. Pozycjonowanie to regularna praca co miesiąc: nowe podstrony, treści, SEO lokalne i kontrola w Search Console. Audyt wystarczy, jeśli dalej chcesz działać sam, pozycjonowanie, jeśli wolisz oddać to zespołowi.</span></p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q" aria-expanded="false"><span class="faq__qn">(05)</span><span><span data-lang-block="uk">Чи можна просувати сайт, який робили не ви?</span><span data-lang-block="pl" hidden>Czy pozycjonujecie strony, których nie robiliście?</span></span><span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><p><span data-lang-block="uk">Так, починаємо з аудиту, щоб зрозуміти, що можна виправити на поточній платформі. Найзручніше працюємо з WordPress, Webflow і сайтами на коді. Якщо платформа сильно обмежує SEO, чесно скажемо про це й запропонуємо варіанти, зокрема переробку ключових сторінок. Після здачі всі доступи залишаються у вас.</span><span data-lang-block="pl" hidden>Tak, zaczynamy od audytu, żeby sprawdzić, co da się poprawić na obecnej platformie. Najwygodniej pracujemy z WordPressem, Webflow i stronami pisanymi w kodzie. Jeśli platforma mocno ogranicza SEO, powiemy to wprost i zaproponujemy rozwiązania, np. przebudowę kluczowych podstron. Po zakończeniu prac wszystkie dostępy zostają u Ciebie.</span></p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q" aria-expanded="false"><span class="faq__qn">(06)</span><span><span data-lang-block="uk">Що таке локальне SEO і навіщо Google Business Profile?</span><span data-lang-block="pl" hidden>Czym jest SEO lokalne i po co Profil Firmy w Google?</span></span><span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><p><span data-lang-block="uk">Локальне SEO допомагає з'являтися в Google Мапах і видачі за запитами з назвою міста чи «поруч». Основа — заповнений Google Business Profile з тими ж назвою, адресою й телефоном, що й на сайті. Для салонів, сервісів і майстрів це часто найшвидше джерело звернень. Профіль допомагаємо створити або навести в ньому лад.</span><span data-lang-block="pl" hidden>SEO lokalne pomaga pojawiać się w Mapach Google i wynikach z nazwą miasta lub frazą „w pobliżu”. Podstawą jest uzupełniony Profil Firmy w Google z tą samą nazwą, adresem i telefonem co na stronie. Dla salonów, serwisów i fachowców to często najszybsze źródło zapytań. Pomagamy założyć profil albo uporządkować istniejący.</span></p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q" aria-expanded="false"><span class="faq__qn">(07)</span><span><span data-lang-block="uk">Чи можна просувати сайт одночасно в Україні й Польщі?</span><span data-lang-block="pl" hidden>Czy da się pozycjonować stronę w Polsce i Ukrainie jednocześnie?</span></span><span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><p><span data-lang-block="uk">Так, для цього робимо окремі мовні версії з власними URL і налаштовуємо hreflang. Запити підбираємо під кожен ринок окремо, бо поляки й українці шукають ту саму послугу різними словами. Дослівний переклад сторінок для SEO зазвичай працює погано. Спілкуємося українською й польською, тож тексти для обох ринків звучать природно.</span><span data-lang-block="pl" hidden>Tak, tworzymy osobne wersje językowe z własnymi adresami URL i ustawiamy hreflang. Frazy dobieramy osobno pod każdy rynek, bo Polacy i Ukraińcy szukają tej samej usługi innymi słowami. Dosłowne tłumaczenie podstron zwykle słabo sprawdza się w SEO. Pracujemy po polsku i ukraińsku, więc treści na oba rynki brzmią naturalnie.</span></p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q" aria-expanded="false"><span class="faq__qn">(08)</span><span><span data-lang-block="uk">Що потрібно від мене для старту SEO?</span><span data-lang-block="pl" hidden>Czego potrzebujecie ode mnie na start?</span></span><span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><p><span data-lang-block="uk">Потрібні доступи до сайту, хостингу, Search Console й аналітики, якщо вони є, та короткий бриф. У брифі розкажіть про послуги, регіон, головних конкурентів і які заявки вам найцікавіші. Решту, від налаштування сервісів до структури сторінок, беремо на себе. Відповідаємо протягом кількох годин у робочий час.</span><span data-lang-block="pl" hidden>Potrzebujemy dostępu do strony, hostingu, Search Console i analityki, jeśli już są, oraz krótkiego briefu. Opisz w nim usługi, region, głównych konkurentów i to, jakie zapytania są dla Ciebie najcenniejsze. Resztę, od konfiguracji narzędzi po strukturę podstron, bierzemy na siebie. Odpowiadamy w ciągu kilku godzin w dni robocze.</span></p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--services" id="services">
+      <div class="container">
+        <div class="section__head section__head--split reveal">
+          <h2 class="section__title"><span data-lang-block="uk">Інші послуги</span><span data-lang-block="pl" hidden>Inne usługi</span></h2>
+          <span class="section__rule" aria-hidden="true"></span>
+          <span class="eyebrow"><span class="eyebrow__dot eyebrow__dot--square"></span><span><span data-lang-block="uk">Послуги</span><span data-lang-block="pl" hidden>Usługi</span></span></span>
+        </div>
+
+        <div class="services reveal-group">
+          <span class="service-preview" aria-hidden="true"></span>
+          <article class="service" data-img="assets/service-1.webp">
+            <span class="service__num">(01)</span>
+            <img class="service__img" src="assets/service-1.webp" alt="" loading="lazy" />
+            <div class="service__body">
+              <h3 class="service__title"><a href="svc-lending"><span data-lang-block="uk">Лендінг</span><span data-lang-block="pl" hidden>Landing page</span></a></h3>
+              <p class="service__text"><span data-lang-block="uk">Одна сторінка під рекламу й одну пропозицію — від €300 і за 3 дні.</span><span data-lang-block="pl" hidden>Jedna strona pod reklamę i jedną ofertę — od 300 €, gotowa w 3 dni.</span></p>
+            </div>
+            <a href="svc-lending" class="service__cta">
+              <span><span data-lang-block="uk">Детальніше</span><span data-lang-block="pl" hidden>Szczegóły</span></span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </a>
+          </article>
+
+          <article class="service" data-img="assets/service-1.webp">
+            <span class="service__num">(02)</span>
+            <img class="service__img" src="assets/service-1.webp" alt="" loading="lazy" />
+            <div class="service__body">
+              <h3 class="service__title"><a href="svc-sait-vizytka"><span data-lang-block="uk">Сайт-візитка</span><span data-lang-block="pl" hidden>Wizytówka WWW</span></a></h3>
+              <p class="service__text"><span data-lang-block="uk">Сайт, де клієнт за хвилину розуміє, хто ви, що робите і як вас знайти.</span><span data-lang-block="pl" hidden>Strona, na której klient w minutę sprawdzi, co robisz i jak Cię znaleźć.</span></p>
+            </div>
+            <a href="svc-sait-vizytka" class="service__cta">
+              <span><span data-lang-block="uk">Детальніше</span><span data-lang-block="pl" hidden>Szczegóły</span></span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </a>
+          </article>
+
+          <article class="service" data-img="assets/service-1.webp">
+            <span class="service__num">(03)</span>
+            <img class="service__img" src="assets/service-1.webp" alt="" loading="lazy" />
+            <div class="service__body">
+              <h3 class="service__title"><a href="svc-korporatyvnyi-sait"><span data-lang-block="uk">Сайт компанії</span><span data-lang-block="pl" hidden>Strona firmowa</span></a></h3>
+              <p class="service__text"><span data-lang-block="uk">Багатосторінковий сайт з окремою сторінкою під кожну послугу, мову й запит.</span><span data-lang-block="pl" hidden>Rozbudowana strona z osobną podstroną dla każdej usługi, języka i frazy.</span></p>
+            </div>
+            <a href="svc-korporatyvnyi-sait" class="service__cta">
+              <span><span data-lang-block="uk">Детальніше</span><span data-lang-block="pl" hidden>Szczegóły</span></span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </a>
+          </article>
+
+          <article class="service" data-img="assets/service-2.webp">
+            <span class="service__num">(04)</span>
+            <img class="service__img" src="assets/service-2.webp" alt="" loading="lazy" />
+            <div class="service__body">
+              <h3 class="service__title"><a href="svc-internet-magazyn"><span data-lang-block="uk">Онлайн-магазин</span><span data-lang-block="pl" hidden>Sklep online</span></a></h3>
+              <p class="service__text"><span data-lang-block="uk">Каталог, кошик, онлайн-оплата й доставка — магазин готовий за 20–30 днів.</span><span data-lang-block="pl" hidden>Katalog, koszyk, płatności online i dostawa — sklep gotowy w 20–30 dni.</span></p>
+            </div>
+            <a href="svc-internet-magazyn" class="service__cta">
+              <span><span data-lang-block="uk">Детальніше</span><span data-lang-block="pl" hidden>Szczegóły</span></span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </a>
+          </article>
+
+          <article class="service" data-img="assets/service-3.webp">
+            <span class="service__num">(05)</span>
+            <img class="service__img" src="assets/service-3.webp" alt="" loading="lazy" />
+            <div class="service__body">
+              <h3 class="service__title"><a href="svc-telegram-bot"><span data-lang-block="uk">Telegram-бот</span><span data-lang-block="pl" hidden>Bot Telegram</span></a></h3>
+              <p class="service__text"><span data-lang-block="uk">Бот приймає заявки, записи й оплати, поки ви зайняті роботою.</span><span data-lang-block="pl" hidden>Bot przyjmuje zgłoszenia, rezerwacje i płatności, gdy Ty zajmujesz się firmą.</span></p>
+            </div>
+            <a href="svc-telegram-bot" class="service__cta">
+              <span><span data-lang-block="uk">Детальніше</span><span data-lang-block="pl" hidden>Szczegóły</span></span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </a>
+          </article>
+
+          <article class="service" data-img="assets/service-5.webp">
+            <span class="service__num">(06)</span>
+            <img class="service__img" src="assets/service-5.webp" alt="" loading="lazy" />
+            <div class="service__body">
+              <h3 class="service__title"><a href="svc-aidentyka"><span data-lang-block="uk">Айдентика</span><span data-lang-block="pl" hidden>Identyfikacja</span></a></h3>
+              <p class="service__text"><span data-lang-block="uk">Логотип і фірмовий стиль, що добре виглядають на сайті, в соцмережах і друці.</span><span data-lang-block="pl" hidden>Logo i styl marki, które dobrze wyglądają na stronie, w social mediach i w druku.</span></p>
+            </div>
+            <a href="svc-aidentyka" class="service__cta">
+              <span><span data-lang-block="uk">Детальніше</span><span data-lang-block="pl" hidden>Szczegóły</span></span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="cta-form reveal">
+          <div class="cta-form__head">
+            <div class="head-kicker">
+              <span class="eyebrow"><span class="eyebrow__dot eyebrow__dot--square"></span><span data-i18n="contact.tag">Контакти</span></span>
+            </div>
+            <h2 class="section__title" data-i18n="form.title">Готові запустити сайт, магазин або Telegram-бот?</h2>
+            <p class="section__lead" data-i18n="form.desc">Залиште заявку, і ми зв’яжемося з вами, щоб обговорити задачу, формат проєкту, терміни та можливе рішення</p>
+            <ul class="cta-form__contacts">
+              <li><a href="https://t.me/Andrii_DEV9" target="_blank" rel="noopener">
+                <span class="cta-form__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3l-3 14.1c-.2 1-.8 1.2-1.7.8l-4.6-3.4-2.2 2.1c-.2.2-.4.4-.9.4l.3-4.7 8.5-7.7c.4-.3-.1-.5-.6-.2L7.3 13 2.8 11.6c-1-.3-1-1 .2-1.4l17-6.6c.8-.3 1.5.2 1.9 1z"/></svg></span>
+                <span>@Andrii_DEV9</span>
+              </a></li>
+              <li><a href="https://wa.me/48577503534" target="_blank" rel="noopener">
+                <span class="cta-form__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg></span>
+                <span>WhatsApp</span>
+              </a></li>
+              <li><a href="https://www.instagram.com/web.shestakov" target="_blank" rel="noopener">
+                <span class="cta-form__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span>
+                <span>@web.shestakov</span>
+              </a></li>
+              <li><a href="tel:+48577503534">
+                <span class="cta-form__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3h3l1.5 5-2 1.5a12 12 0 0 0 5 5l1.5-2 5 1.5v3a2 2 0 0 1-2 2A16 16 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg></span>
+                <span>+48 577 503 534</span>
+              </a></li>
+            </ul>
+          </div>
+
+          <form class="form" id="main-form" novalidate>
+            <div class="form__row">
+              <div class="field">
+                <label class="field__label" for="name" data-i18n="form.name">Ім’я</label>
+                <input class="field__input" type="text" id="name" name="name" required data-i18n-attr="placeholder:form.ph.name" placeholder="Ваше ім’я" />
+                <span class="field__error" data-i18n="form.err.required">Це поле обов’язкове</span>
+              </div>
+              <div class="field">
+                <label class="field__label" for="contact-value" data-i18n="form.contact">Телефон або Telegram</label>
+                <input class="field__input" type="text" id="contact-value" name="contact" required data-i18n-attr="placeholder:form.ph.contact" placeholder="+48 ... або @username" />
+                <span class="field__error" data-i18n="form.err.required">Це поле обов’язкове</span>
+              </div>
+            </div>
+            <div class="field">
+              <label class="field__label" for="need" data-i18n="form.need">Що потрібно розробити?</label>
+              <div class="field__select">
+                <select class="field__input" id="need" name="need" required>
+                  <option value="" data-i18n="form.opt.choose">Оберіть варіант</option>
+                  <option value="site" data-i18n="form.opt.site">Сайт</option>
+                  <option value="shop" data-i18n="form.opt.shop">Інтернет-магазин</option>
+                  <option value="bot" data-i18n="form.opt.bot">Telegram-бот</option>
+                  <option value="seo" data-i18n="form.opt.seo">SEO</option>
+                  <option value="identity" data-i18n="form.opt.identity">Айдентика</option>
+                  <option value="other" data-i18n="form.opt.other">Інше</option>
+                </select>
+                <span class="field__chevron" aria-hidden="true"></span>
+              </div>
+              <span class="field__error" data-i18n="form.err.required">Це поле обов’язкове</span>
+            </div>
+            <div class="field">
+              <label class="field__label" for="comment" data-i18n="form.comment">Коментар до проєкту</label>
+              <textarea class="field__input field__textarea" id="comment" name="comment" rows="4" data-i18n-attr="placeholder:form.ph.comment" placeholder="Коротко опишіть задачу"></textarea>
+            </div>
+            <input class="form__hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <label class="checkbox">
+              <input type="checkbox" id="agree" name="agree" required />
+              <span class="checkbox__box" aria-hidden="true"></span>
+              <span class="checkbox__label" data-i18n="form.agree">Я ознайомився/-лася з Політикою конфіденційності та погоджуюся на обробку моїх даних для опрацювання заявки</span>
+            </label>
+            <span class="field__error field__error--checkbox" data-i18n="form.err.agree">Потрібно підтвердити згоду</span>
+            <button type="submit" class="btn btn--accent btn--lg btn--block btn--between">
+              <span data-i18n="form.submit">Надіслати заявку</span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </button>
+            <p class="form__status form__status--success" role="status" data-i18n="form.success">Дякуємо! Ваша заявка надіслана. Ми скоро зв’яжемося з вами.</p>
+            <p class="form__status form__status--error" role="alert" data-i18n="form.error">Будь ласка, заповніть обов’язкові поля.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__cta reveal">
+        <h2 class="footer__big" data-i18n="footer.big">Обговоримо ваш проєкт?</h2>
+        <button type="button" class="btn btn--accent btn--lg" data-open-popup>
+          <span data-i18n="cta.header">Отримати консультацію</span>
+          <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </button>
+      </div>
+
+      <div class="footer__top">
+        <nav class="footer__nav" aria-label="Footer">
+          <div class="footer__navcol">
+            <a href="about" data-i18n="nav.about">Про нас</a>
+            <a href="index.html#why" data-i18n="nav.why">Переваги</a>
+          </div>
+          <div class="footer__navcol">
+            <a href="index.html#services" data-i18n="nav.services">Послуги</a>
+            <a href="index.html#cases" data-i18n="nav.cases">Кейси</a>
+          </div>
+          <div class="footer__navcol">
+            <a href="index.html#faq" data-i18n="nav.faq">FAQ</a>
+            <a href="index.html#partners" data-i18n="nav.partners">Партнерам</a>
+          </div>
+          <div class="footer__navcol">
+            <a href="#contact" data-i18n="nav.contacts">Контакти</a>
+          </div>
+        </nav>
+
+        <div class="footer__contacts">
+          <a href="tel:+48577503534" class="footer__mail">+48 577 503 534</a>
+          <a href="https://t.me/Andrii_DEV9" target="_blank" rel="noopener">Telegram</a>
+          <a href="https://wa.me/48577503534" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://www.instagram.com/web.shestakov" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+
+      <div class="footer__wordmark">
+        <img src="assets/footer-logo.svg" alt="Web Shestakov agency" />
+      </div>
+
+      <div class="footer__legal">
+        <a href="privacy.html" data-i18n="footer.privacy">політика конфіденційності</a>
+        <a href="#" data-cookie-settings data-i18n="footer.cookies">налаштування cookies</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ COOKIE BANNER ============ -->
+  <aside class="cookie" id="cookie-banner" role="region" aria-label="Cookie" hidden>
+    <p class="cookie__text">
+      <span data-i18n="cookie.text">Ми використовуємо cookie, щоб сайт працював коректно та був зручнішим.</span>
+      <a class="cookie__link" href="privacy.html" data-i18n="cookie.link">Політика конфіденційності</a>
+    </p>
+    <div class="cookie__actions">
+      <button type="button" class="cookie__btn cookie__btn--accept" data-cookie="accepted" data-i18n="cookie.accept">Прийняти</button>
+      <button type="button" class="cookie__btn cookie__btn--ghost" data-cookie="essential" data-i18n="cookie.decline">Лише необхідні</button>
+    </div>
+  </aside>
+
+  <!-- ============ FLOATING WIDGET ============ -->
+  <button type="button" class="floating-widget" data-open-popup aria-label="Web Shestakov">
+    <span class="floating-widget__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M21 4L3 11l6 2 2 6 3-5 5 3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+    <span class="floating-widget__text" data-i18n="widget.text">Заявка</span>
+  </button>
+
+  <!-- ============ MOBILE STICKY CTA ============ -->
+  <div class="sticky-cta">
+    <button type="button" class="btn btn--accent btn--block" data-open-popup>
+      <span data-i18n="cta.header">Отримати консультацію</span>
+    </button>
+  </div>
+
+  <!-- ============ POPUP FORM ============ -->
+  <div class="popup" id="popup" aria-hidden="true">
+    <div class="popup__overlay" data-close-popup></div>
+    <div class="popup__dialog" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+      <button type="button" class="popup__close" data-close-popup aria-label="Close">
+        <svg viewBox="0 0 24 24" width="22" height="22"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+      <span class="eyebrow"><span class="eyebrow__dot"></span><span data-i18n="contact.tag">Контакти</span></span>
+      <h3 class="popup__title" id="popup-title" data-i18n="form.title">Готові запустити сайт, магазин або Telegram-бот?</h3>
+
+      <form class="form" id="popup-form" novalidate>
+        <div class="field">
+          <label class="field__label" for="p-name" data-i18n="form.name">Ім’я</label>
+          <input class="field__input" type="text" id="p-name" name="name" required data-i18n-attr="placeholder:form.ph.name" placeholder="Ваше ім’я" />
+          <span class="field__error" data-i18n="form.err.required">Це поле обов’язкове</span>
+        </div>
+        <div class="field">
+          <label class="field__label" for="p-contact" data-i18n="form.contact">Телефон або Telegram</label>
+          <input class="field__input" type="text" id="p-contact" name="contact" required data-i18n-attr="placeholder:form.ph.contact" placeholder="+48 ... або @username" />
+          <span class="field__error" data-i18n="form.err.required">Це поле обов’язкове</span>
+        </div>
+        <div class="field">
+          <label class="field__label" for="p-need" data-i18n="form.need">Що потрібно розробити?</label>
+          <div class="field__select">
+            <select class="field__input" id="p-need" name="need" required>
+              <option value="" data-i18n="form.opt.choose">Оберіть варіант</option>
+              <option value="site" data-i18n="form.opt.site">Сайт</option>
+              <option value="shop" data-i18n="form.opt.shop">Інтернет-магазин</option>
+              <option value="bot" data-i18n="form.opt.bot">Telegram-бот</option>
+              <option value="seo" data-i18n="form.opt.seo">SEO</option>
+              <option value="identity" data-i18n="form.opt.identity">Айдентика</option>
+              <option value="other" data-i18n="form.opt.other">Інше</option>
+            </select>
+            <span class="field__chevron" aria-hidden="true"></span>
+          </div>
+          <span class="field__error" data-i18n="form.err.required">Це поле обов’язкове</span>
+        </div>
+        <div class="field">
+          <label class="field__label" for="p-comment" data-i18n="form.comment">Коментар</label>
+          <textarea class="field__input field__textarea" id="p-comment" name="comment" rows="3" data-i18n-attr="placeholder:form.ph.comment" placeholder="Коротко опишіть задачу"></textarea>
+        </div>
+        <input class="form__hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        <label class="checkbox">
+          <input type="checkbox" id="p-agree" name="agree" required />
+          <span class="checkbox__box" aria-hidden="true"></span>
+          <span class="checkbox__label" data-i18n="form.agree">Я ознайомився/-лася з Політикою конфіденційності та погоджуюся на обробку моїх даних для опрацювання заявки</span>
+        </label>
+        <span class="field__error field__error--checkbox" data-i18n="form.err.agree">Потрібно підтвердити згоду</span>
+        <button type="submit" class="btn btn--accent btn--lg btn--block">
+          <span data-i18n="form.submit">Надіслати заявку</span>
+        </button>
+        <p class="form__status form__status--success" role="status" data-i18n="form.success">Дякуємо! Ваша заявка надіслана. Ми скоро зв’яжемося з вами.</p>
+        <p class="form__status form__status--error" role="alert" data-i18n="form.error">Будь ласка, заповніть обов’язкові поля.</p>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

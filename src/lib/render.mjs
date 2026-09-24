@@ -50,7 +50,7 @@ function rewriteUrls(document, lang) {
     if (!value || isExternal(value)) return value;
     const [file, hash] = value.split("#");
     if (LEGACY_LINKS[file] != null) return href(LEGACY_LINKS[file], lang) + (hash ? "#" + hash : "");
-    if (/^(case-[a-z0-9-]+|about)$/.test(file)) return href(file, lang) + (hash ? "#" + hash : "");
+    if (/^(case-[a-z0-9-]+|svc-[a-z0-9-]+|about|prices|contacts)$/.test(file)) return href(file, lang) + (hash ? "#" + hash : "");
     return "/" + value.replace(/^\.\//, "");
   };
 
@@ -143,6 +143,33 @@ function jsonLd(page, document) {
     about: { "@id": SITE + "/#organization" },
     ...(page.group !== "home" ? { breadcrumb: { "@id": SITE + page.path + "#breadcrumb" } } : {})
   });
+
+  // Послуга з ціною «від» — рівно те, що видно в тарифах сторінки.
+  if (page.service) {
+    graph.push({
+      "@type": "Service",
+      "@id": SITE + page.path + "#service",
+      name: page.crumb,
+      serviceType: page.crumb,
+      url: SITE + page.path,
+      description: page.description,
+      provider: { "@id": SITE + "/#organization" },
+      areaServed: ["PL", "UA", "EU"].map((c) => (c === "EU" ? { "@type": "Place", name: "European Union" } : { "@type": "Country", name: c === "PL" ? "Poland" : "Ukraine" })),
+      ...(page.service.price
+        ? { offers: { "@type": "Offer", priceCurrency: "EUR", price: page.service.price, priceSpecification: { "@type": "PriceSpecification", minPrice: page.service.price, priceCurrency: "EUR" } } }
+        : {})
+    });
+  }
+
+  // FAQ на сторінках послуг, цін, контактів і «Про нас» — з розмітки сторінки.
+  if (/^(svc-|prices$|contacts$|about$)/.test(page.group)) {
+    const qa = [...document.querySelectorAll("#faq .faq__item")].map((it) => ({
+      "@type": "Question",
+      name: it.querySelector(".faq__q").textContent.replace(/^\s*\(\d+\)/, "").trim(),
+      acceptedAnswer: { "@type": "Answer", text: it.querySelector(".faq__a").textContent.trim() }
+    }));
+    if (qa.length) graph.push({ "@type": "FAQPage", "@id": SITE + page.path + "#faq", inLanguage: page.lang, mainEntity: qa });
+  }
 
   // Хлібні крихти: Головна → (Портфоліо для кейсів) → сторінка.
   if (page.group !== "home") {
