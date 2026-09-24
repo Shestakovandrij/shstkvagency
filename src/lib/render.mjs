@@ -50,7 +50,7 @@ function rewriteUrls(document, lang) {
     if (!value || isExternal(value)) return value;
     const [file, hash] = value.split("#");
     if (LEGACY_LINKS[file] != null) return href(LEGACY_LINKS[file], lang) + (hash ? "#" + hash : "");
-    if (/^(case-[a-z0-9-]+|svc-[a-z0-9-]+|city-[a-z0-9-]+|about|prices|contacts)$/.test(file)) return href(file, lang) + (hash ? "#" + hash : "");
+    if (/^(case-[a-z0-9-]+|svc-[a-z0-9-]+|city-[a-z0-9-]+|post-[a-z0-9-]+|about|prices|contacts|blog)$/.test(file)) return href(file, lang) + (hash ? "#" + hash : "");
     return "/" + value.replace(/^\.\//, "");
   };
 
@@ -161,8 +161,25 @@ function jsonLd(page, document) {
     });
   }
 
+  // Стаття блогу: автор, дати, видавець.
+  if (page.post) {
+    graph.push({
+      "@type": "BlogPosting",
+      "@id": SITE + page.path + "#article",
+      headline: page.crumb,
+      description: page.description,
+      inLanguage: page.lang,
+      datePublished: page.post.date,
+      dateModified: page.post.modified,
+      image: SITE + "/" + page.post.img,
+      mainEntityOfPage: SITE + page.path,
+      author: { "@type": "Person", name: "Andrii Shestakov", jobTitle: "Founder & CEO", url: SITE + href("about", page.lang) },
+      publisher: { "@id": SITE + "/#organization" }
+    });
+  }
+
   // FAQ на сторінках послуг, цін, контактів і «Про нас» — з розмітки сторінки.
-  if (/^(svc-|city-|prices$|contacts$|about$)/.test(page.group)) {
+  if (/^(svc-|city-|post-|prices$|contacts$|about$)/.test(page.group)) {
     const qa = [...document.querySelectorAll("#faq .faq__item")].map((it) => ({
       "@type": "Question",
       name: it.querySelector(".faq__q").textContent.replace(/^\s*\(\d+\)/, "").trim(),
@@ -176,6 +193,7 @@ function jsonLd(page, document) {
     const home = page.lang === "pl" ? "Strona główna" : "Головна";
     const trail = [{ name: home, path: href("home", page.lang) }];
     if (page.group.startsWith("case-")) trail.push({ name: "Portfolio", path: href("portfolio", page.lang) });
+    if (page.group.startsWith("post-")) trail.push({ name: page.lang === "pl" ? "Blog" : "Блог", path: href("blog", page.lang) });
     if (page.group.startsWith("city-") && page.group !== "city-polshcha" && page.lang === "uk") trail.push({ name: "Польща", path: "/polshcha/" });
     trail.push({ name: page.crumb || page.title, path: page.path });
     graph.push({

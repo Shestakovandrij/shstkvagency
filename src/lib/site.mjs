@@ -121,6 +121,22 @@ export const PAGES = [
 ];
 
 /* Сторінки кейсів: генерує scripts/build_cases.py (src/lib/cases.json). */
+let BLOG = { posts: [] };
+try { BLOG = JSON.parse(readFileSync(join(process.cwd(), "src", "lib", "blog.json"), "utf8")); } catch (e) {}
+if (BLOG.posts.length) {
+  PAGES.push(
+    { group: "blog", lang: "uk", path: "/blog/", template: "blog", crumb: "Блог", title: "Блог про створення сайтів, SEO і продажі онлайн | SHSTKV Digital", description: "Практичні статті від веб-студії SHSTKV Digital: скільки коштує сайт, яку платформу обрати, чому сайту немає в Google. Досвід 35+ проєктів.", priority: 0.7 },
+    { group: "blog", lang: "pl", path: "/pl/blog/", template: "blog", crumb: "Blog", title: "Blog o tworzeniu stron internetowych i SEO | SHSTKV Digital", description: "Praktyczne artykuły studia SHSTKV Digital: ile kosztuje strona, jaką platformę wybrać, dlaczego strony nie ma w Google. Doświadczenie z 35+ projektów.", priority: 0.7 }
+  );
+  for (const b of BLOG.posts) {
+    const post = { date: b.date, modified: b.modified, img: b.img };
+    PAGES.push(
+      { group: "post-" + b.key, lang: "uk", path: b.path_uk, template: "post-" + b.key, crumb: b.h1_uk, post, ogType: "article", title: b.title_uk, description: b.desc_uk, priority: 0.6 },
+      { group: "post-" + b.key, lang: "pl", path: b.path_pl, template: "post-" + b.key, crumb: b.h1_pl, post, ogType: "article", title: b.title_pl, description: b.desc_pl, priority: 0.6 }
+    );
+  }
+}
+
 const SVC = JSON.parse(readFileSync(join(process.cwd(), "src", "lib", "services.json"), "utf8"));
 for (const v of SVC.services) {
   PAGES.push(

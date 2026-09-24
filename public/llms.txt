@@ -34,6 +34,12 @@ Studio stron internetowych z Wrocławia: strony firmowe, landing page, sklepy in
 - Краків: [UA](https://www.shstkv-digital.com/polshcha/krakiv/) / [Strony internetowe Kraków](https://www.shstkv-digital.com/pl/strony-internetowe-krakow/)
 - Варшава: [UA](https://www.shstkv-digital.com/polshcha/varshava/) / [Strony internetowe Warszawa](https://www.shstkv-digital.com/pl/strony-internetowe-warszawa/)
 
+## Блог / Blog
+- [WordPress, Webflow чи код: на чому робити сайт](https://www.shstkv-digital.com/blog/wordpress-webflow-chy-kod/) / [WordPress, Webflow czy strona pisana od zera](https://www.shstkv-digital.com/pl/blog/wordpress-webflow-czy-kod/)
+- [Скільки коштує сайт у 2026 році](https://www.shstkv-digital.com/blog/skilky-koshtuie-sait-2026/) / [Ile kosztuje strona internetowa w 2026 roku](https://www.shstkv-digital.com/pl/blog/ile-kosztuje-strona-internetowa-2026/)
+- [Чому сайту немає в Google і що з цим робити](https://www.shstkv-digital.com/blog/chomu-saitu-nemaie-v-google/) / [Dlaczego mojej strony nie ma w Google i jak to naprawić](https://www.shstkv-digital.com/pl/blog/dlaczego-strony-nie-ma-w-google/)
+- [Лендінг чи сайт-візитка: що обрати для бізнесу](https://www.shstkv-digital.com/blog/lendinh-chy-sait-vizytka/) / [Landing page czy strona wizytówka — co wybrać?](https://www.shstkv-digital.com/pl/blog/landing-page-czy-strona-wizytowka/)
+
 ## Контакти
 - Телефон / Telefon: +48 577 503 534
 - Email: webdeveloperandrii@gmail.com

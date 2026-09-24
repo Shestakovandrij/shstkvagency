@@ -1,0 +1,60 @@
+{
+ "posts": [
+  {
+   "key": "wordpress-webflow-kod",
+   "path_uk": "/blog/wordpress-webflow-chy-kod/",
+   "path_pl": "/pl/blog/wordpress-webflow-czy-kod/",
+   "h1_uk": "WordPress, Webflow чи код: на чому робити сайт",
+   "h1_pl": "WordPress, Webflow czy strona pisana od zera",
+   "title_uk": "WordPress, Webflow чи код: на чому робити сайт у 2026 | SHSTKV Digital",
+   "title_pl": "WordPress, Webflow czy strona pisana od zera? Wybór 2026",
+   "desc_uk": "На чому зробити сайт у 2026: WordPress, Webflow чи код на Next.js. Чесно про плюси й мінуси, витрати щомісяця, хто чим володіє і як ми обираємо платформу.",
+   "desc_pl": "WordPress, Webflow czy strona pisana od zera w Next.js? Uczciwie o plusach i minusach, kosztach utrzymania, własności strony i o tym, jak dobieramy platformę.",
+   "img": "assets/why-4.webp",
+   "date": "2026-09-24",
+   "modified": "2026-09-24"
+  },
+  {
+   "key": "skilky-koshtuie-sait",
+   "path_uk": "/blog/skilky-koshtuie-sait-2026/",
+   "path_pl": "/pl/blog/ile-kosztuje-strona-internetowa-2026/",
+   "h1_uk": "Скільки коштує сайт у 2026 році",
+   "h1_pl": "Ile kosztuje strona internetowa w 2026 roku",
+   "title_uk": "Скільки коштує сайт у 2026 році: ціни й терміни | SHSTKV Digital",
+   "title_pl": "Ile kosztuje strona internetowa w 2026? Ceny | SHSTKV Digital",
+   "desc_uk": "Скільки коштує сайт у 2026: від чого залежить ціна лендінгу, візитки й магазину, які витрати приховані і як читати комерційну пропозицію. Наші ціни — від €300.",
+   "desc_pl": "Ile kosztuje strona internetowa w 2026: od czego zależy cena wizytówki, strony firmowej i sklepu, jakie są ukryte koszty i jak czytać wycenę. Ceny od 300 €.",
+   "img": "assets/why-2.webp",
+   "date": "2026-09-24",
+   "modified": "2026-09-24"
+  },
+  {
+   "key": "nemaie-v-google",
+   "path_uk": "/blog/chomu-saitu-nemaie-v-google/",
+   "path_pl": "/pl/blog/dlaczego-strony-nie-ma-w-google/",
+   "h1_uk": "Чому сайту немає в Google і що з цим робити",
+   "h1_pl": "Dlaczego mojej strony nie ma w Google i jak to naprawić",
+   "title_uk": "Чому сайту немає в Google: чекліст 2026 | SHSTKV Digital",
+   "title_pl": "Dlaczego strony nie ma w Google? Checklista 2026 | SHSTKV Digital",
+   "desc_uk": "Сайт не індексується? Перевіряємо site:, Search Console, noindex, robots.txt, canonical і sitemap. Покроковий чекліст від веб-студії з 12+ роками досвіду.",
+   "desc_pl": "Strona nie jest indeksowana? Sprawdź site:, Google Search Console, noindex, robots.txt, canonical i mapę witryny. Praktyczna checklista od studia z Wrocławia.",
+   "img": "assets/why-5.webp",
+   "date": "2026-09-24",
+   "modified": "2026-09-24"
+  },
+  {
+   "key": "lendinh-chy-vizytka",
+   "path_uk": "/blog/lendinh-chy-sait-vizytka/",
+   "path_pl": "/pl/blog/landing-page-czy-strona-wizytowka/",
+   "h1_uk": "Лендінг чи сайт-візитка: що обрати для бізнесу",
+   "h1_pl": "Landing page czy strona wizytówka — co wybrać?",
+   "title_uk": "Лендінг чи сайт-візитка: що обрати для бізнесу | SHSTKV Digital",
+   "title_pl": "Landing page czy strona wizytówka — co wybrać | SHSTKV Digital",
+   "desc_uk": "Чим відрізняється лендінг від сайту-візитки, кому що підходить і коли потрібен багатосторінковий сайт. Порівняльна таблиця, типові помилки й ціни від €300.",
+   "desc_pl": "Landing page a strona wizytówka: czym się różnią, kiedy wybrać każdą z nich i kiedy potrzebna jest większa strona. Tabela porównawcza, błędy i ceny od 300 €.",
+   "img": "assets/why-3.webp",
+   "date": "2026-09-24",
+   "modified": "2026-09-24"
+  }
+ ]
+}

@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title data-i18n="meta.title">Web Shestakov — сайти, Telegram-боти, інтернет-магазини, SEO та айдентика</title>
+  <meta name="description" data-i18n="meta.description" content="Створюємо сучасні сайти, Telegram-боти, інтернет-магазини, SEO-рішення та айдентику для бізнесу. Допомагаємо залучати клієнтів, продавати онлайн і автоматизувати процеси." />
+
+  <link rel="canonical" href="https://www.shstkv-digital.com/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Web Shestakov" />
+  <meta property="og:url" content="https://www.shstkv-digital.com/" />
+  <meta property="og:locale" content="uk_UA" />
+  <meta property="og:locale:alternate" content="pl_PL" />
+  <meta property="og:title" data-i18n="meta.title" content="Web Shestakov — сайти, Telegram-боти, інтернет-магазини, SEO та айдентика" />
+  <meta property="og:description" data-i18n="meta.description" content="Сайти, Telegram-боти, інтернет-магазини, SEO та айдентика." />
+  <meta property="og:image" content="https://www.shstkv-digital.com/assets/og-image.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Web Shestakov — сайти, Telegram-боти, інтернет-магазини, SEO та айдентика" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://www.shstkv-digital.com/assets/og-image.jpg" />
+  <meta name="theme-color" content="#EEEEEE" />
+
+  <link rel="icon" href="/favicon.ico" sizes="32x32" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <script>
+    (function () {
+      try {
+        var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (!reduce) { document.documentElement.className += " anim-on"; }
+        window.setTimeout(function () {
+          if (!window.__wsReady) { document.documentElement.classList.remove("anim-on"); }
+        }, 2600);
+      } catch (e) { document.documentElement.classList.remove("anim-on"); }
+    })();
+
+  </script>
+
+
+  <!-- Meta Pixel + GA4. Скрипти вантажаться всередині tracking.js і лише
+       після згоди на куки — окремо код пікселя в <head> вставляти не треба. -->
+  <script src="tracking.js" defer></script>
+</head>
+
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ============ PRELOADER — "Digital Signal Ignition" ============
+       Sequence: grid breathes in → coral scanline sweeps (dots blink on its path) →
+       fragments converge into the centre → monogram mask-reveals (bottom→top) →
+       STKV wordmark wipes (left→right) + micro-flicker → status roller
+       (DESIGN / CODE / MOTION / LAUNCH) → ignition pop + pulse rings →
+       exit: panel wipes up, the lockup flies onto the header logo.
+       Colors: :root --bg / --accent in styles.css. Timings: the T object in preloader.js. -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html#home" class="header__logo" aria-label="Web Shestakov">
+        <img src="assets/logo.svg" alt="Web Shestakov" />
+      </a>
+
+      <div class="header__right">
+        <div class="lang" role="group" aria-label="Language switcher">
+          <button type="button" class="lang__btn is-active" data-lang="uk" aria-pressed="true">UA</button>
+          <span class="lang__sep" aria-hidden="true">/</span>
+          <button type="button" class="lang__btn" data-lang="pl" aria-pressed="false">PL</button>
+        </div>
+        <button type="button" class="menu-btn" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="menu-btn__label" data-i18n="nav.menu">Меню</span>
+          <span class="menu-btn__icon" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ MENU (dropdown panel, as template) ============ -->
+  <div class="menu" id="mobile-menu" aria-hidden="true">
+    <div class="menu__overlay" data-close-menu></div>
+    <div class="container menu__container">
+      <div class="menu__panel">
+        <button type="button" class="menu__close" id="menu-close" aria-label="Close">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+
+        <div class="menu__grid">
+          <nav class="menu__nav" aria-label="Menu">
+            <a href="about" class="menu__link" data-close-menu><span data-i18n="nav.about">Про нас</span><span class="menu__num">(01)</span></a>
+            <a href="index.html#why" class="menu__link" data-close-menu><span data-i18n="nav.why">Переваги</span><span class="menu__num">(02)</span></a>
+            <a href="index.html#services" class="menu__link" data-close-menu><span data-i18n="nav.services">Послуги</span><span class="menu__num">(03)</span></a>
+            <a href="index.html#cases" class="menu__link" data-close-menu><span data-i18n="nav.cases">Кейси</span><span class="menu__num">(04)</span></a>
+            <a href="portfolio.html" class="menu__link" data-close-menu><span data-i18n="nav.portfolio">Портфоліо</span><span class="menu__num">(05)</span></a>
+            <a href="index.html#budget" class="menu__link" data-close-menu><span data-i18n="nav.budget">Швидкий старт</span><span class="menu__num">(06)</span></a>
+            <a href="index.html#tariffs" class="menu__link" data-close-menu><span data-i18n="nav.tariffs">Тарифи</span><span class="menu__num">(07)</span></a>
+            <a href="index.html#faq" class="menu__link" data-close-menu><span data-i18n="nav.faq">FAQ</span><span class="menu__num">(08)</span></a>
+            <a href="index.html#partners" class="menu__link" data-close-menu><span data-i18n="nav.partners">Партнерам</span><span class="menu__num">(09)</span></a>
+            <a href="#contact" class="menu__link" data-close-menu><span data-i18n="nav.contacts">Контакти</span><span class="menu__num">(10)</span></a>
+          </nav>
+
+          <aside class="menu__side">
+            <a href="https://t.me/Andrii_DEV9" target="_blank" rel="noopener" class="contact-card menu__person" data-close-menu>
+              <span class="contact-card__photo"><img src="assets/photo.webp" alt="Andrii Shestakov" /></span>
+              <span class="contact-card__body">
+                <span class="contact-card__name">Andrii Shestakov</span>
+                <span class="contact-card__role">Founder &amp; CEO</span>
+              </span>
+              <span class="contact-card__cta">
+                <span data-i18n="hero.aside.cta">Написати</span>
+                <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </span>
+            </a>
+
+            <div class="menu__block">
+              <span class="menu__label" data-i18n="menu.follow">Соцмережі</span>
+              <div class="menu__socials">
+                <a href="https://www.instagram.com/web.shestakov" class="menu__social" target="_blank" rel="noopener" aria-label="Instagram">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+                </a>
+                <a href="https://t.me/Andrii_DEV9" class="menu__social" target="_blank" rel="noopener" aria-label="Telegram">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M21.9 4.3l-3 14.1c-.2 1-.8 1.2-1.7.8l-4.6-3.4-2.2 2.1c-.2.2-.4.4-.9.4l.3-4.7 8.5-7.7c.4-.3-.1-.5-.6-.2L7.3 13 2.8 11.6c-1-.3-1-1 .2-1.4l17-6.6c.8-.3 1.5.2 1.9 1z"/></svg>
+                </a>
+                <a href="https://wa.me/48577503534" class="menu__social" target="_blank" rel="noopener" aria-label="WhatsApp">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <div class="menu__block">
+              <span class="menu__label" data-i18n="menu.contact">Контакти</span>
+              <a href="tel:+48577503534" class="menu__contact">+48 577 503 534</a>
+              <a href="https://t.me/Andrii_DEV9" class="menu__contact" target="_blank" rel="noopener">@Andrii_DEV9</a>
+            </div>
+
+            <button type="button" class="btn btn--accent btn--block" data-open-popup data-close-menu>
+              <span data-i18n="cta.header">Отримати консультацію</span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </button>
+
+            <a class="menu__legal" href="privacy.html" data-close-menu data-i18n="footer.privacy">політика конфіденційності</a>
+          </aside>
+        </div>
+
+        <div class="menu__meta">
+          <span class="menu__meta-item"><span class="menu__meta-dot"></span>SHSTKV Digital — <span data-i18n="hero.aside.role">digital-агенція</span></span>
+          <span class="menu__meta-item">© 2026</span>
+          <span class="menu__meta-item menu__meta-item--status" data-i18n="menu.status">Приймаємо проєкти</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+      <div class="container">
+        <!-- Top row: wordmark + founder card on the same level (as template) -->
+        <div class="hero__top reveal">
+          <div class="hero__wordmark"><span data-lang-block="uk">Блог</span><span data-lang-block="pl" hidden>Blog</span></div>
+          <a href="https://t.me/Andrii_DEV9" target="_blank" rel="noopener" class="contact-card">
+            <span class="contact-card__photo"><img src="assets/photo.webp" alt="Andrii Shestakov" /></span>
+            <span class="contact-card__body">
+              <span class="contact-card__name">Andrii Shestakov</span>
+              <span class="contact-card__role">Founder &amp; CEO</span>
+            </span>
+            <span class="contact-card__cta">
+              <span data-i18n="hero.aside.cta">Написати</span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </span>
+          </a>
+        </div>
+
+        <!-- Big media panel -->
+        <div class="hero__panel reveal">
+          <div class="hero__panel-bg" aria-hidden="true"></div>
+
+          <div class="hero__socials" aria-label="Social">
+            <a href="https://www.instagram.com/web.shestakov" class="hero__social" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="https://t.me/Andrii_DEV9" class="hero__social" target="_blank" rel="noopener" aria-label="Telegram">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M21.9 4.3l-3 14.1c-.2 1-.8 1.2-1.7.8l-4.6-3.4-2.2 2.1c-.2.2-.4.4-.9.4l.3-4.7 8.5-7.7c.4-.3-.1-.5-.6-.2L7.3 13 2.8 11.6c-1-.3-1-1 .2-1.4l17-6.6c.8-.3 1.5.2 1.9 1z"/></svg>
+            </a>
+            <a href="https://wa.me/48577503534" class="hero__social" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+            </a>
+            <a href="tel:+48577503534" class="hero__social" aria-label="Phone">
+              <svg viewBox="0 0 32 32" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.27" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19.9272 5C21.6224 5.45592 23.1681 6.34928 24.4094 7.59059C25.6507 8.8319 26.5441 10.3776 27 12.0728"/>
+                <path d="M18.8916 8.86426C19.9088 9.13781 20.8362 9.67382 21.581 10.4186C22.3258 11.1634 22.8618 12.0908 23.1353 13.108"/>
+                <path d="M11.5595 15.6015C12.5968 17.7222 14.3158 19.4334 16.4412 20.461C16.5967 20.5347 16.7687 20.5666 16.9403 20.5537C17.1119 20.5407 17.2771 20.4832 17.4198 20.387L20.5492 18.3002C20.6877 18.2079 20.8469 18.1516 21.0126 18.1364C21.1782 18.1212 21.3451 18.1475 21.498 18.213L27.3526 20.7222C27.5515 20.8067 27.7175 20.9535 27.8257 21.1405C27.9339 21.3276 27.9783 21.5447 27.9524 21.7593C27.7673 23.2073 27.0608 24.5382 25.9652 25.5028C24.8695 26.4674 23.4598 26.9996 22 26.9996C17.4913 26.9996 13.1673 25.2086 9.97919 22.0204C6.79107 18.8323 5 14.5083 5 9.99963C5.00008 8.53985 5.53224 7.13015 6.49685 6.03448C7.46146 4.93881 8.79237 4.23231 10.2404 4.04726C10.4549 4.0213 10.672 4.06576 10.8591 4.17394C11.0461 4.28212 11.193 4.44816 11.2775 4.64704L13.7888 10.5068C13.8537 10.6583 13.8802 10.8236 13.8658 10.9879C13.8514 11.1522 13.7967 11.3103 13.7064 11.4483L11.6268 14.6258C11.5322 14.7687 11.4762 14.9338 11.4644 15.1048C11.4526 15.2758 11.4854 15.447 11.5595 15.6015Z"/>
+              </svg>
+            </a>
+          </div>
+
+          <div class="hero__overlay">
+            <h1 class="hero__headline"><span data-lang-block="uk">Скільки коштує сайт у 2026 році</span><span data-lang-block="pl" hidden>Ile kosztuje strona internetowa w 2026 roku</span></h1>
+            <p class="hero__headline-sub hero__headline-sub--wide"><span data-lang-block="uk">Від чого залежить ціна сайту, де ховаються додаткові витрати і скільки беремо ми.</span><span data-lang-block="pl" hidden>Od czego zależy cena strony, gdzie kryją się dodatkowe koszty i ile bierzemy my.</span></p>
+          </div>
+
+          <!-- Bottom service shelf (marquee track on mobile, grid on desktop) -->
+          <div class="shelf">
+            <div class="shelf__track">
+              <a href="#article" class="shelf__card">
+                <span class="shelf__thumb shelf__thumb--1" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num"><span data-lang-block="uk">Автор</span><span data-lang-block="pl" hidden>Autor</span></span><span class="shelf__name"><span data-lang-block="uk">Andrii Shestakov</span><span data-lang-block="pl" hidden>Andrii Shestakov</span></span></span>
+              </a>
+              <a href="#article" class="shelf__card">
+                <span class="shelf__thumb shelf__thumb--2" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num"><span data-lang-block="uk">Опубліковано</span><span data-lang-block="pl" hidden>Opublikowano</span></span><span class="shelf__name"><span data-lang-block="uk">24 вересня 2026</span><span data-lang-block="pl" hidden>24 września 2026</span></span></span>
+              </a>
+              <a href="#article" class="shelf__card">
+                <span class="shelf__thumb shelf__thumb--3" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num"><span data-lang-block="uk">Читання</span><span data-lang-block="pl" hidden>Czas czytania</span></span><span class="shelf__name"><span data-lang-block="uk">8 хв</span><span data-lang-block="pl" hidden>8 min</span></span></span>
+              </a>
+              <a href="#article" class="shelf__card">
+                <span class="shelf__thumb shelf__thumb--4" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num"><span data-lang-block="uk">Тема</span><span data-lang-block="pl" hidden>Temat</span></span><span class="shelf__name"><span data-lang-block="uk">Ціни</span><span data-lang-block="pl" hidden>Ceny</span></span></span>
+              </a>
+              <a href="#article" class="shelf__card">
+                <span class="shelf__thumb shelf__thumb--5" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num"><span data-lang-block="uk">Студія</span><span data-lang-block="pl" hidden>Studio</span></span><span class="shelf__name"><span data-lang-block="uk">SHSTKV Digital</span><span data-lang-block="pl" hidden>SHSTKV Digital</span></span></span>
+              </a>
+              <a href="#article" class="shelf__card shelf__card--dup" aria-hidden="true" tabindex="-1">
+                <span class="shelf__thumb shelf__thumb--1" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num"><span data-lang-block="uk">Автор</span><span data-lang-block="pl" hidden>Autor</span></span><span class="shelf__name"><span data-lang-block="uk">Andrii Shestakov</span><span data-lang-block="pl" hidden>Andrii Shestakov</span></span></span>
+              </a>
+              <a href="#article" class="shelf__card shelf__card--dup" aria-hidden="true" tabindex="-1">
+                <span class="shelf__thumb shelf__thumb--2" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num"><span data-lang-block="uk">Опубліковано</span><span data-lang-block="pl" hidden>Opublikowano</span></span><span class="shelf__name"><span data-lang-block="uk">24 вересня 2026</span><span data-lang-block="pl" hidden>24 września 2026</span></span></span>
+              </a>
+              <a href="#article" class="shelf__card shelf__card--dup" aria-hidden="true" tabindex="-1">
+                <span class="shelf__thumb shelf__thumb--3" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num"><span data-lang-block="uk">Читання</span><span data-lang-block="pl" hidden>Czas czytania</span></span><span class="shelf__name"><span data-lang-block="uk">8 хв</span><span data-lang-block="pl" hidden>8 min</span></span></span>
+              </a>
+              <a href="#article" class="shelf__card shelf__card--dup" aria-hidden="true" tabindex="-1">
+                <span class="shelf__thumb shelf__thumb--4" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num"><span data-lang-block="uk">Тема</span><span data-lang-block="pl" hidden>Temat</span></span><span class="shelf__name"><span data-lang-block="uk">Ціни</span><span data-lang-block="pl" hidden>Ceny</span></span></span>
+              </a>
+              <a href="#article" class="shelf__card shelf__card--dup" aria-hidden="true" tabindex="-1">
+                <span class="shelf__thumb shelf__thumb--5" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num"><span data-lang-block="uk">Студія</span><span data-lang-block="pl" hidden>Studio</span></span><span class="shelf__name"><span data-lang-block="uk">SHSTKV Digital</span><span data-lang-block="pl" hidden>SHSTKV Digital</span></span></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile-only: desktop-style founder contact card below the banner -->
+        <div class="hero__below reveal">
+          <a href="https://t.me/Andrii_DEV9" target="_blank" rel="noopener" class="contact-card">
+            <span class="contact-card__photo"><img src="assets/photo.webp" alt="Andrii Shestakov" /></span>
+            <span class="contact-card__body">
+              <span class="contact-card__name">Andrii Shestakov</span>
+              <span class="contact-card__role">Founder &amp; CEO</span>
+            </span>
+            <span class="contact-card__cta">
+              <span data-i18n="hero.aside.cta">Написати</span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="article">
+      <div class="container">
+        <article class="doc__body">
+        <section class="doc__sec">
+          <h2><span class="doc__num">00</span><span data-lang-block="uk">Коротка відповідь</span><span data-lang-block="pl" hidden>W skrócie</span></h2>
+          <div class="doc__card doc__lead-card"><p><span data-lang-block="uk">Ціна сайту у 2026 році залежить від типу, кількості сторінок, функцій і того, хто робить. У нас лендінг коштує від €300 із запуском за 3 дні, багатосторінковий сайт — від €450 за 15–25 робочих днів, інтернет-магазин — від €800 за 20–30 робочих днів. Окремо закладайте домен, хостинг, платні сервіси та підтримку.</span><span data-lang-block="pl" hidden>Cena strony w 2026 roku zależy od rodzaju, liczby podstron, funkcji i wykonawcy. U nas landing page kosztuje od 300 € ze startem w 3 dni, strona firmowa — od 450 € w 15–25 dni roboczych, a sklep internetowy — od 800 € w 20–30 dni roboczych. Osobno trzeba doliczyć domenę, hosting, płatne usługi i opiekę.</span></p></div>
+        </section>
+        <section class="doc__sec">
+          <h2><span class="doc__num">01</span><span data-lang-block="uk">Чому на одне питання — десять різних цін</span><span data-lang-block="pl" hidden>Dlaczego na jedno pytanie dostajesz dziesięć różnych cen</span></h2>
+          <p><span data-lang-block="uk">Коли власник бізнесу розсилає запит «скільки коштує сайт» п'ятьом підрядникам, він отримує п'ять відповідей, які відрізняються в рази. Це не тому, що хтось обманює. Просто кожен уявляє під словом «сайт» щось своє: хтось — одну сторінку на шаблоні, хтось — дизайн з нуля, тексти, аналітику й SEO.</span><span data-lang-block="pl" hidden>Kiedy właściciel firmy wysyła pytanie „ile kosztuje strona internetowa” do pięciu wykonawców, dostaje pięć odpowiedzi, które różnią się kilkukrotnie. Nikt tu nie kombinuje. Po prostu każdy pod hasłem „strona” rozumie coś innego: jeden gotowy szablon z podmienionym logo, drugi — projekt od zera, teksty, analitykę i SEO.</span></p>
+          <p><span data-lang-block="uk">За 12+ років у веб-розробці ми помітили закономірність: найдорожче обходяться не великі бюджети, а нечіткі. Тому спершу розберемося, з чого складається ціна, а вже потім — у цифри.</span><span data-lang-block="pl" hidden>Przez ponad 12 lat w branży zauważyliśmy prostą zależność: najdrożej wychodzą nie duże budżety, tylko niejasne. Dlatego najpierw rozłóżmy cenę na części, a dopiero potem przejdźmy do liczb.</span></p>
+        </section>
+        <section class="doc__sec">
+          <h2><span class="doc__num">02</span><span data-lang-block="uk">Від чого залежить ціна створення сайту</span><span data-lang-block="pl" hidden>Od czego zależy cena strony www</span></h2>
+          <p><span data-lang-block="uk">Головний чинник — тип сайту. Далі на ціну впливають обсяг контенту, складність функцій і те, скільки роботи бере на себе підрядник, а скільки залишається вам.</span><span data-lang-block="pl" hidden>Najważniejszy jest rodzaj strony. Dalej na cenę wpływa ilość treści, złożoność funkcji i to, ile pracy bierze na siebie wykonawca, a ile zostaje po Twojej stronie.</span></p>
+          <ul>
+            <li><span data-lang-block="uk"><strong>Тип і кількість сторінок.</strong> Лендінг на одну пропозицію, візитка на 1–5 сторінок, корпоративний сайт із розділами послуг чи магазин із каталогом — це різні обсяги роботи.</span><span data-lang-block="pl" hidden><strong>Rodzaj i liczba podstron.</strong> Landing pod jedną ofertę, wizytówka na 1–5 podstron, strona firmowa z działami usług czy sklep z katalogiem — to zupełnie inny zakres pracy.</span></li>
+            <li><span data-lang-block="uk"><strong>Дизайн.</strong> Готовий шаблон дешевший, індивідуальний дизайн під ваш бренд — дорожчий, але не схожий на сотні інших сайтів.</span><span data-lang-block="pl" hidden><strong>Projekt graficzny.</strong> Gotowy szablon jest tańszy, indywidualny projekt pod Twoją markę — droższy, ale nie wygląda jak setki innych stron.</span></li>
+            <li><span data-lang-block="uk"><strong>Функції.</strong> Калькулятор, онлайн-оплата, інтеграція зі службою доставки, кабінет клієнта — кожна додає дні розробки.</span><span data-lang-block="pl" hidden><strong>Funkcje.</strong> Kalkulator, płatności online (BLIK, karty), integracja z InPost, konto klienta — każda z nich to dodatkowe dni pracy.</span></li>
+            <li><span data-lang-block="uk"><strong>Мови.</strong> Кожна мовна версія — це переклад, окремі мета-теги й налаштування hreflang.</span><span data-lang-block="pl" hidden><strong>Wersje językowe.</strong> Każdy język to tłumaczenie, osobne meta tagi i konfiguracja hreflang.</span></li>
+            <li><span data-lang-block="uk"><strong>Контент.</strong> Якщо тексти й фото готові, робота йде швидше. Якщо їх треба писати й знімати — це окремий пункт бюджету.</span><span data-lang-block="pl" hidden><strong>Treści.</strong> Jeśli teksty i zdjęcia są gotowe, praca idzie szybciej. Jeśli trzeba je napisać i zrobić — to osobna pozycja w budżecie.</span></li>
+            <li><span data-lang-block="uk"><strong>Редагування.</strong> Адмін-панель, де ви самі міняєте ціни й фото, коштує дорожче за статичний сайт, зате економить на правках потім.</span><span data-lang-block="pl" hidden><strong>Edycja.</strong> Panel, w którym sam zmieniasz ceny i zdjęcia, kosztuje więcej niż strona statyczna, ale potem oszczędza na drobnych poprawkach.</span></li>
+          </ul>
+        </section>
+        <section class="doc__sec">
+          <h2><span class="doc__num">03</span><span data-lang-block="uk">Ціни за типами сайтів: наша таблиця</span><span data-lang-block="pl" hidden>Ceny według rodzaju strony: nasz cennik</span></h2>
+          <p><span data-lang-block="uk">Нижче — наші стартові ціни на бюджетні варіанти. Усе, що виходить за їхні межі, ми рахуємо після брифу, а оцінку надсилаємо протягом 24 годин. Повний перелік — на сторінці <a href="prices">цін на створення сайтів</a>.</span><span data-lang-block="pl" hidden>Poniżej nasze ceny startowe dla budżetowych wariantów. Wszystko, co wykracza poza ich zakres, wyceniamy po briefie i odsyłamy wycenę w ciągu 24 godzin. Pełna lista jest w naszym <a href="prices">cenniku stron internetowych</a>. Ceny są bez VAT, bo korzystamy ze zwolnienia z VAT.</span></p>
+          <div class="doc__table-wrap"><table class="doc__table"><thead><tr><th><span data-lang-block="uk">Тип сайту</span><span data-lang-block="pl" hidden>Rodzaj strony</span></th><th><span data-lang-block="uk">Типовий обсяг</span><span data-lang-block="pl" hidden>Typowy zakres</span></th><th><span data-lang-block="uk">Ціна</span><span data-lang-block="pl" hidden>Cena</span></th><th><span data-lang-block="uk">Термін</span><span data-lang-block="pl" hidden>Termin</span></th></tr></thead><tbody><tr><td><span data-lang-block="uk">Лендінг «Старт»</span><span data-lang-block="pl" hidden>Landing „Start”</span></td><td><span data-lang-block="uk">Одна сторінка під одну пропозицію, форма заявки в Telegram</span><span data-lang-block="pl" hidden>Jedna strona pod jedną ofertę, formularz z wysyłką na Telegram</span></td><td><span data-lang-block="uk">від €300</span><span data-lang-block="pl" hidden>od 300 €</span></td><td><span data-lang-block="uk">3 дні</span><span data-lang-block="pl" hidden>3 dni</span></td></tr><tr><td><span data-lang-block="uk">Лендінг «Про»</span><span data-lang-block="pl" hidden>Landing „Pro”</span></td><td><span data-lang-block="uk">Детальніший дизайн, анімації, аналітика, адмін-панель</span><span data-lang-block="pl" hidden>Dopracowany projekt, animacje, analityka, panel edycji</span></td><td><span data-lang-block="uk">€450</span><span data-lang-block="pl" hidden>450 €</span></td><td><span data-lang-block="uk">4–5 днів</span><span data-lang-block="pl" hidden>4–5 dni</span></td></tr><tr><td><span data-lang-block="uk">Сайт-візитка</span><span data-lang-block="pl" hidden>Strona wizytówka</span></td><td><span data-lang-block="uk">One page або 1–5 сторінок: послуги, ціни, контакти, карта</span><span data-lang-block="pl" hidden>One page lub 1–5 podstron: usługi, cennik, kontakt, mapa</span></td><td><span data-lang-block="uk">від €300</span><span data-lang-block="pl" hidden>od 300 €</span></td><td><span data-lang-block="uk">від 3 днів</span><span data-lang-block="pl" hidden>od 3 dni</span></td></tr><tr><td><span data-lang-block="uk">Багатосторінковий / корпоративний</span><span data-lang-block="pl" hidden>Strona firmowa</span></td><td><span data-lang-block="uk">Розділи послуг, про компанію, кейси, блог, CMS</span><span data-lang-block="pl" hidden>Działy usług, o firmie, realizacje, blog, CMS</span></td><td><span data-lang-block="uk">від €450</span><span data-lang-block="pl" hidden>od 450 €</span></td><td><span data-lang-block="uk">15–25 робочих днів</span><span data-lang-block="pl" hidden>15–25 dni roboczych</span></td></tr><tr><td><span data-lang-block="uk">Інтернет-магазин</span><span data-lang-block="pl" hidden>Sklep internetowy</span></td><td><span data-lang-block="uk">Каталог, кошик, оплата, доставка, WooCommerce</span><span data-lang-block="pl" hidden>Katalog, koszyk, płatności, dostawa, WooCommerce</span></td><td><span data-lang-block="uk">від €800</span><span data-lang-block="pl" hidden>od 800 €</span></td><td><span data-lang-block="uk">20–30 робочих днів</span><span data-lang-block="pl" hidden>20–30 dni roboczych</span></td></tr><tr><td><span data-lang-block="uk">Складний магазин або сервіс</span><span data-lang-block="pl" hidden>Rozbudowany sklep lub serwis</span></td><td><span data-lang-block="uk">Фільтри, інтеграції, особистий кабінет, нестандартна логіка</span><span data-lang-block="pl" hidden>Filtry, integracje, konto klienta, niestandardowa logika</span></td><td><span data-lang-block="uk">після брифу</span><span data-lang-block="pl" hidden>po briefie</span></td><td><span data-lang-block="uk">30–45+ робочих днів</span><span data-lang-block="pl" hidden>30–45+ dni roboczych</span></td></tr></tbody></table></div>
+          <p><span data-lang-block="uk">Усі тарифи вже включають індивідуальний дизайн, мобільну версію, базову SEO-оптимізацію, допомогу з текстами і 30 днів підтримки після запуску. Детальніше про кожен формат — на сторінках <a href="svc-lending">створення лендінгу</a> та <a href="svc-internet-magazyn">розробки інтернет-магазину</a>.</span><span data-lang-block="pl" hidden>Każdy pakiet obejmuje indywidualny projekt, wersję mobilną, podstawowe SEO, pomoc z tekstami i 30 dni wsparcia po starcie. Szczegóły znajdziesz na stronach <a href="svc-sait-vizytka">strony wizytówki</a> i <a href="svc-internet-magazyn">sklepu internetowego</a>.</span></p>
+        </section>
+        <section class="doc__sec">
+          <h2><span class="doc__num">04</span><span data-lang-block="uk">Приховані витрати: що не входить у ціну розробки</span><span data-lang-block="pl" hidden>Ukryte koszty: czego nie ma w cenie wykonania</span></h2>
+          <p><span data-lang-block="uk">Розробка — це разовий платіж. Але сайт живе роками, і частина витрат з'являється після запуску. Чесний підрядник називає їх одразу, щоб вони не стали сюрпризом.</span><span data-lang-block="pl" hidden>Wykonanie strony to płatność jednorazowa. Ale strona działa latami i część kosztów pojawia się dopiero po starcie. Uczciwy wykonawca mówi o nich od razu, żeby nie były niespodzianką.</span></p>
+          <ul>
+            <li><span data-lang-block="uk"><strong>Домен</strong> — щорічна оплата реєстратору. Радимо оформлювати його на себе, а не на розробника.</span><span data-lang-block="pl" hidden><strong>Domena</strong> — opłata co roku u rejestratora. Zawsze rejestruj ją na siebie albo na swoją firmę, nie na wykonawcę.</span></li>
+            <li><span data-lang-block="uk"><strong>Хостинг</strong> — щомісячна або річна оплата. Для невеликих сайтів вистачає тарифу на кшталт Hostinger, для навантажених проєктів — VPS.</span><span data-lang-block="pl" hidden><strong>Hosting</strong> — opłata miesięczna lub roczna. Małym stronom wystarczy pakiet w stylu Hostingera, większym projektom — VPS.</span></li>
+            <li><span data-lang-block="uk"><strong>Платні плагіни й платформи</strong> — ліцензії тем, плагінів WordPress або підписка Webflow. Уточнюйте, чи вони разові, чи щорічні.</span><span data-lang-block="pl" hidden><strong>Płatne wtyczki i platformy</strong> — licencje motywów i wtyczek WordPressa albo abonament Webflow. Dopytaj, czy są jednorazowe, czy odnawiane co roku.</span></li>
+            <li><span data-lang-block="uk"><strong>Контент</strong> — фотосесія, копірайтинг, переклади на інші мови.</span><span data-lang-block="pl" hidden><strong>Treści</strong> — sesja zdjęciowa, copywriting, tłumaczenia na inne języki.</span></li>
+            <li><span data-lang-block="uk"><strong>Підтримка</strong> — оновлення, резервні копії, дрібні правки. У нас — від €20 на місяць після безкоштовних 30 днів.</span><span data-lang-block="pl" hidden><strong>Opieka techniczna</strong> — aktualizacje, kopie zapasowe, drobne poprawki. U nas od 20 € miesięcznie po darmowych 30 dniach.</span></li>
+            <li><span data-lang-block="uk"><strong>Просування</strong> — SEO, реклама, профіль Google. Сайт без трафіку — це вітрина в порожньому провулку.</span><span data-lang-block="pl" hidden><strong>Promocja</strong> — SEO, reklama, Profil Firmy w Google. Strona bez ruchu to witryna w pustej bocznej uliczce.</span></li>
+          </ul>
+          <div class="doc__card"><p><span data-lang-block="uk">Попросіть підрядника окремим рядком прописати щорічні витрати на домен, хостинг і ліцензії. Якщо він не може цього зробити — ви не знаєте реальної вартості сайту.</span><span data-lang-block="pl" hidden>Poproś wykonawcę, żeby osobną pozycją rozpisał roczne koszty domeny, hostingu i licencji. Jeśli nie potrafi tego zrobić — nie znasz prawdziwego kosztu strony.</span></p></div>
+        </section>
+        <section class="doc__sec">
+          <h2><span class="doc__num">05</span><span data-lang-block="uk">Фрилансер, студія чи агенція: у чому різниця</span><span data-lang-block="pl" hidden>Freelancer, studio czy agencja: czym się różnią</span></h2>
+          <p><span data-lang-block="uk">Цифри ринку змінюються постійно, тому порівнюємо не суми, а логіку ціни.</span><span data-lang-block="pl" hidden>Stawki na rynku ciągle się zmieniają, więc porównujemy nie kwoty, tylko logikę ceny.</span></p>
+          <h3><span data-lang-block="uk">Фрилансер на шаблоні</span><span data-lang-block="pl" hidden>Freelancer na szablonie</span></h3>
+          <p><span data-lang-block="uk">Найдешевший варіант. Підходить, коли потрібно швидко й просто. Ризики: дизайн, як у тисяч інших сайтів, одна людина відповідає за все, і якщо вона зникне — доступи й знання про сайт зникнуть разом із нею.</span><span data-lang-block="pl" hidden>Najtańsza opcja. Sprawdzi się, gdy potrzebujesz czegoś szybko i prosto. Ryzyka: wygląd jak tysiące innych stron, jedna osoba odpowiada za wszystko, a gdy zniknie — razem z nią znikają dostępy i wiedza o stronie.</span></p>
+          <h3><span data-lang-block="uk">Невелика студія</span><span data-lang-block="pl" hidden>Małe studio</span></h3>
+          <p><span data-lang-block="uk">Середній бюджет. Над проєктом працює команда — дизайнер, розробник, SEO-спеціаліст, — але ви спілкуєтеся напряму з виконавцем, без менеджерів-посередників. Так працюємо і ми.</span><span data-lang-block="pl" hidden>Średni budżet. Nad projektem pracuje zespół — projektant, programista, specjalista SEO — ale rozmawiasz bezpośrednio z wykonawcą, bez pośredników. Tak pracujemy my.</span></p>
+          <h3><span data-lang-block="uk">Агенція</span><span data-lang-block="pl" hidden>Agencja</span></h3>
+          <p><span data-lang-block="uk">Найдорожче. У ціні — акаунт-менеджери, процеси, дослідження, великі команди. Виправдано для складних продуктів і корпорацій, але для малого бізнесу часто означає переплату за структуру, а не за результат.</span><span data-lang-block="pl" hidden>Najdrożej. W cenie są opiekunowie klienta, procesy, badania i duże zespoły. Ma to sens przy złożonych produktach i korporacjach, ale dla JDG czy małej spółki często oznacza przepłacanie za strukturę, a nie za efekt.</span></p>
+        </section>
+        <section class="doc__sec">
+          <h2><span class="doc__num">06</span><span data-lang-block="uk">Як читати комерційну пропозицію</span><span data-lang-block="pl" hidden>Jak czytać wycenę strony</span></h2>
+          <p><span data-lang-block="uk">Дві пропозиції з однаковою сумою можуть містити зовсім різний обсяг робіт. Перш ніж порівнювати ціни, перевірте, що саме за ними стоїть.</span><span data-lang-block="pl" hidden>Dwie oferty na tę samą kwotę mogą obejmować zupełnie inny zakres. Zanim porównasz ceny, sprawdź, co dokładnie się za nimi kryje.</span></p>
+          <ul>
+            <li><span data-lang-block="uk">Чи дизайн індивідуальний, чи це шаблон?</span><span data-lang-block="pl" hidden>Czy projekt jest indywidualny, czy to szablon?</span></li>
+            <li><span data-lang-block="uk">Скільки сторінок і які саме функції входять?</span><span data-lang-block="pl" hidden>Ile podstron i jakie dokładnie funkcje są w cenie?</span></li>
+            <li><span data-lang-block="uk">Хто пише тексти й готує фото?</span><span data-lang-block="pl" hidden>Kto przygotowuje teksty i zdjęcia?</span></li>
+            <li><span data-lang-block="uk">Чи є мобільна версія, базове SEO й аналітика?</span><span data-lang-block="pl" hidden>Czy jest wersja mobilna, podstawowe SEO i analityka?</span></li>
+            <li><span data-lang-block="uk">Чи отримаєте ви всі доступи: домен, хостинг, CMS?</span><span data-lang-block="pl" hidden>Czy dostaniesz wszystkie dostępy: domenę, hosting, CMS?</span></li>
+            <li><span data-lang-block="uk">Що буде після запуску і скільки коштує підтримка?</span><span data-lang-block="pl" hidden>Co dzieje się po starcie i ile kosztuje opieka?</span></li>
+          </ul>
+          <p><span data-lang-block="uk">Також дивіться на документи. Ми працюємо за договором і з фактурою, оплата поетапна — у EUR, USD або PLN. Якщо підрядник пропонує «все на словах», це теж ризик, і його вартість ви дізнаєтеся пізніше.</span><span data-lang-block="pl" hidden>Zwróć też uwagę na formalności. My pracujemy na umowę i wystawiamy fakturę, płatność jest etapowa — w EUR, USD lub PLN. Jeśli wykonawca proponuje „wszystko na słowo”, to też jest ryzyko, a jego cenę poznasz później.</span></p>
+        </section>
+        <section class="doc__sec">
+          <h2><span class="doc__num">07</span><span data-lang-block="uk">Чому найдешевший сайт часто стає найдорожчим</span><span data-lang-block="pl" hidden>Dlaczego najtańsza strona często okazuje się najdroższa</span></h2>
+          <p><span data-lang-block="uk">До нас регулярно приходять із сайтами, які колись зробили «задешево». Типові історії: домен оформлено на розробника, який не виходить на зв'язок; сайт не відкривається нормально на смартфоні; шаблон перевантажений плагінами і повільно вантажиться; змінити ціну можна лише через програміста.</span><span data-lang-block="pl" hidden>Regularnie trafiają do nas firmy ze stronami zrobionymi kiedyś „po taniości”. Typowe historie: domena zarejestrowana na wykonawcę, który nie odbiera telefonu; strona źle działa na smartfonie; szablon obciążony wtyczkami ładuje się wolno; zmiana ceny wymaga programisty.</span></p>
+          <p><span data-lang-block="uk">У результаті бізнес платить двічі: спершу за перший сайт, потім — за новий. Нормальна мінімальна ціна — це не найменша сума на ринку, а та, за яку ви отримуєте сайт, що працює, належить вам і не потребує переробки за рік.</span><span data-lang-block="pl" hidden>W efekcie firma płaci dwa razy: najpierw za pierwszą stronę, potem za nową. Rozsądne minimum to nie najniższa kwota na rynku, tylko taka, za którą dostajesz działającą stronę, która należy do Ciebie i nie wymaga przeróbki po roku.</span></p>
+          <div class="doc__card"><p><span data-lang-block="uk">Після здачі проєкту ми передаємо клієнту всі доступи — до сайту, домену, хостингу, CMS і сервісів. Сайт має належати вам, а не підряднику.</span><span data-lang-block="pl" hidden>Po oddaniu projektu przekazujemy klientowi wszystkie dostępy — do strony, domeny, hostingu, CMS i usług. Strona ma należeć do Ciebie, a nie do wykonawcy.</span></p></div>
+        </section>
+        <section class="doc__sec">
+          <h2><span class="doc__num">08</span><span data-lang-block="uk">Як заощадити без шкоди для результату</span><span data-lang-block="pl" hidden>Jak zaoszczędzić i nie stracić na jakości</span></h2>
+          <ul>
+            <li><span data-lang-block="uk">Почніть із лендінгу чи візитки, а розширюйте сайт, коли бізнес покаже, що це потрібно.</span><span data-lang-block="pl" hidden>Zacznij od landingu lub wizytówki, a rozbudowuj stronę, gdy firma pokaże, że tego potrzebuje.</span></li>
+            <li><span data-lang-block="uk">Підготуйте тексти, фото й приклади робіт заздалегідь — це скорочує терміни.</span><span data-lang-block="pl" hidden>Przygotuj teksty, zdjęcia i realizacje z wyprzedzeniem — to skraca termin.</span></li>
+            <li><span data-lang-block="uk">Погодьте структуру до старту дизайну. Зміни затвердженої структури посеред проєкту — найчастіша причина перегляду бюджету.</span><span data-lang-block="pl" hidden>Zatwierdź strukturę przed projektem graficznym. Zmiany zatwierdzonej struktury w trakcie to najczęstszy powód zmiany budżetu.</span></li>
+            <li><span data-lang-block="uk">Збирайте правки одним списком, а не по одній у месенджері.</span><span data-lang-block="pl" hidden>Zbieraj poprawki w jedną listę, zamiast wysyłać je pojedynczo na komunikatorze.</span></li>
+            <li><span data-lang-block="uk">Не купуйте функції «на виріст» — додати їх пізніше зазвичай простіше, ніж здається.</span><span data-lang-block="pl" hidden>Nie kupuj funkcji „na zapas” — dodanie ich później zwykle jest prostsze, niż się wydaje.</span></li>
+          </ul>
+          <p><span data-lang-block="uk">Якщо сумніваєтеся, який формат потрібен, опишіть задачу через <a href="contacts">форму контактів</a> — порадимо, з чого почати, і надішлемо оцінку протягом 24 годин.</span><span data-lang-block="pl" hidden>Jeśli nie wiesz, jaki format wybrać, opisz zadanie przez <a href="contacts">formularz kontaktowy</a> — doradzimy, od czego zacząć, i wyślemy wycenę w ciągu 24 godzin.</span></p>
+        </section>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="next">
+      <div class="container">
+        <div class="section__head section__head--split reveal">
+          <h2 class="section__title"><span data-lang-block="uk">Що далі</span><span data-lang-block="pl" hidden>Co dalej</span></h2>
+          <span class="section__rule" aria-hidden="true"></span>
+          <span class="eyebrow"><span class="eyebrow__dot eyebrow__dot--square"></span><span><span data-lang-block="uk">Послуга</span><span data-lang-block="pl" hidden>Usługa</span></span></span>
+        </div>
+        <article class="tariff-addon reveal">
+          <div class="tariff-addon__price">
+            <span class="tariff__unit"><span data-lang-block="uk">від</span><span data-lang-block="pl" hidden>od</span></span>
+            <span class="tariff__price tariff__price--sm"><span class="plan-card__cur">€</span>300</span>
+            <span class="tariff__unit"><span data-lang-block="uk">/ проєкт</span><span data-lang-block="pl" hidden>/ projekt</span></span>
+          </div>
+          <div class="tariff-addon__body">
+            <h3 class="tariff-addon__name">
+              <span class="tariff-addon__dot" aria-hidden="true"></span>
+              <span><span data-lang-block="uk">Ціни на сайти</span><span data-lang-block="pl" hidden>Cennik stron</span></span>
+              <span class="tariff__tag tariff__tag--sm"><span data-lang-block="uk">2026</span><span data-lang-block="pl" hidden>2026</span></span>
+            </h3>
+            <p class="tariff-addon__desc"><span data-lang-block="uk">Хочете знати точну ціну свого сайту? Перегляньте <a href="prices">наші ціни</a> або опишіть задачу — оцінку надішлемо протягом 24 годин.</span><span data-lang-block="pl" hidden>Chcesz poznać dokładną cenę swojej strony? Zajrzyj do <a href="prices">cennika</a> albo opisz projekt — wycenę wyślemy w ciągu 24 godzin.</span></p>
+          </div>
+          <a href="prices" class="btn btn--dark">
+            <span><span data-lang-block="uk">Детальніше</span><span data-lang-block="pl" hidden>Szczegóły</span></span>
+            <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="section section--soft" id="faq">
+      <div class="container faq-layout">
+        <div class="faq-layout__head reveal">
+          <div class="head-kicker">
+            <span class="eyebrow"><span class="eyebrow__dot eyebrow__dot--square"></span><span data-i18n="faq.tag">FAQ</span></span>
+          </div>
+          <h2 class="section__title"><span data-lang-block="uk">Питання й відповіді</span><span data-lang-block="pl" hidden>Pytania i odpowiedzi</span></h2>
+          <p class="section__lead" data-i18n="faq.desc">Не знайшли відповідь?<br>Напишіть нам у Telegram — відповімо швидко.</p>
+          <a href="https://t.me/Andrii_DEV9" target="_blank" rel="noopener" class="contact-card">
+            <span class="contact-card__photo"><img src="assets/photo.webp" alt="Andrii Shestakov" /></span>
+            <span class="contact-card__body">
+              <span class="contact-card__name">Andrii Shestakov</span>
+              <span class="contact-card__role">Founder &amp; CEO</span>
+            </span>
+            <span class="contact-card__cta">
+              <span data-i18n="hero.aside.cta">Написати</span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </span>
+          </a>
+        </div>
+
+        <div class="faq reveal-group">
+          <div class="faq__item">
+            <button type="button" class="faq__q" aria-expanded="false"><span class="faq__qn">(01)</span><span><span data-lang-block="uk">Скільки коштує сайт для малого бізнесу у 2026 році?</span><span data-lang-block="pl" hidden>Ile kosztuje strona dla małej firmy w 2026 roku?</span></span><span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><p><span data-lang-block="uk">У нас сайт для малого бізнесу коштує від €300 за лендінг або візитку і від €450 за багатосторінковий сайт. Ціна включає індивідуальний дизайн, мобільну версію, базове SEO і 30 днів підтримки. Окремо варто закласти домен і хостинг, які оплачуються щороку, а також можливі платні плагіни.</span><span data-lang-block="pl" hidden>U nas strona dla małej firmy kosztuje od 300 € za landing lub wizytówkę i od 450 € za stronę firmową, bez VAT. W cenie jest indywidualny projekt, wersja mobilna, podstawowe SEO i 30 dni wsparcia. Osobno trzeba doliczyć domenę i hosting, opłacane co roku, oraz ewentualne płatne wtyczki.</span></p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q" aria-expanded="false"><span class="faq__qn">(02)</span><span><span data-lang-block="uk">Скільки часу займає створення сайту?</span><span data-lang-block="pl" hidden>Ile trwa wykonanie strony internetowej?</span></span><span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><p><span data-lang-block="uk">Лендінг ми запускаємо за 3 дні, розширену версію — за 4–5 днів. Багатосторінковий сайт займає 15–25 робочих днів, інтернет-магазин — 20–30 робочих днів, складні магазини й сервіси — 30–45 робочих днів і більше. Терміни скорочуються, якщо тексти й фото готові до старту.</span><span data-lang-block="pl" hidden>Landing page uruchamiamy w 3 dni, wersję rozszerzoną w 4–5 dni. Strona firmowa zajmuje 15–25 dni roboczych, sklep internetowy 20–30 dni roboczych, a rozbudowane sklepy i serwisy 30–45 dni roboczych lub dłużej. Termin skraca się, gdy teksty i zdjęcia są gotowe przed startem.</span></p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q" aria-expanded="false"><span class="faq__qn">(03)</span><span><span data-lang-block="uk">Які щорічні витрати на сайт після запуску?</span><span data-lang-block="pl" hidden>Jakie są roczne koszty utrzymania strony?</span></span><span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><p><span data-lang-block="uk">Обов'язкові щорічні витрати — це домен і хостинг, які варто оформлювати на себе. До них можуть додатися ліцензії платних плагінів або підписка на платформу, наприклад Webflow. Якщо потрібні оновлення й дрібні правки, підтримка в нас коштує від €20 на місяць після 30 безкоштовних днів.</span><span data-lang-block="pl" hidden>Obowiązkowe koszty roczne to domena i hosting, które warto rejestrować na własną firmę. Mogą do nich dojść licencje płatnych wtyczek lub abonament platformy, np. Webflow. Jeśli potrzebujesz aktualizacji i drobnych poprawek, opieka techniczna u nas kosztuje od 20 € miesięcznie po 30 darmowych dniach.</span></p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q" aria-expanded="false"><span class="faq__qn">(04)</span><span><span data-lang-block="uk">Чому ціни на сайти так сильно відрізняються?</span><span data-lang-block="pl" hidden>Dlaczego ceny stron internetowych tak bardzo się różnią?</span></span><span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><p><span data-lang-block="uk">Ціни відрізняються, бо різні підрядники пропонують різний обсяг робіт під тим самим словом «сайт». Шаблон без текстів і SEO коштує дешевше, ніж індивідуальний дизайн з аналітикою та підтримкою. Порівнюйте не суми, а перелік того, що входить у кожну пропозицію, і хто отримає доступи після запуску.</span><span data-lang-block="pl" hidden>Ceny się różnią, bo pod tym samym hasłem „strona” wykonawcy oferują zupełnie inny zakres. Szablon bez tekstów i SEO kosztuje mniej niż indywidualny projekt z analityką i opieką. Porównuj nie kwoty, tylko listę tego, co wchodzi w każdą ofertę, i to, kto dostanie dostępy po starcie.</span></p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q" aria-expanded="false"><span class="faq__qn">(05)</span><span><span data-lang-block="uk">Чи можна оплатити сайт частинами?</span><span data-lang-block="pl" hidden>Czy za stronę można zapłacić w ratach?</span></span><span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><p><span data-lang-block="uk">Так, ми працюємо з поетапною оплатою за договором і з фактурою, тож не потрібно платити всю суму одразу. Приймаємо оплату в EUR, USD або PLN. Точну вартість складних проєктів рахуємо після брифу й надсилаємо оцінку протягом 24 годин, щоб ви знали бюджет до початку робіт.</span><span data-lang-block="pl" hidden>Tak, płatność jest podzielona na etapy, na podstawie umowy i faktury. Przyjmujemy EUR, USD lub PLN, a ceny są bez VAT, bo korzystamy ze zwolnienia z VAT. Rozbudowane projekty wyceniamy po briefie i wysyłamy wycenę w ciągu 24 godzin, żebyś znał budżet przed startem.</span></p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--services" id="services">
+      <div class="container">
+        <div class="section__head section__head--split reveal">
+          <h2 class="section__title"><span data-lang-block="uk">Читайте також</span><span data-lang-block="pl" hidden>Przeczytaj też</span></h2>
+          <span class="section__rule" aria-hidden="true"></span>
+          <span class="eyebrow"><span class="eyebrow__dot eyebrow__dot--square"></span><span><span data-lang-block="uk">Блог</span><span data-lang-block="pl" hidden>Blog</span></span></span>
+        </div>
+
+        <div class="services reveal-group">
+          <span class="service-preview" aria-hidden="true"></span>
+          <article class="service" data-img="assets/why-4.webp">
+            <span class="service__num">(01)</span>
+            <img class="service__img" src="assets/why-4.webp" alt="" loading="lazy" />
+            <div class="service__body">
+              <h3 class="service__title"><a href="post-wordpress-webflow-kod"><span data-lang-block="uk">WordPress, Webflow чи код: на чому робити сайт</span><span data-lang-block="pl" hidden>WordPress, Webflow czy strona pisana od zera</span></a></h3>
+              <p class="service__text"><span data-lang-block="uk">Порівнюємо три підходи, якими працюємо щодня, і пояснюємо, як обрати свій.</span><span data-lang-block="pl" hidden>Porównujemy trzy technologie, na których pracujemy na co dzień, i podpowiadamy wybór.</span></p>
+            </div>
+            <a href="post-wordpress-webflow-kod" class="service__cta">
+              <span><span data-lang-block="uk">Читати</span><span data-lang-block="pl" hidden>Czytaj</span></span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </a>
+          </article>
+
+          <article class="service" data-img="assets/why-5.webp">
+            <span class="service__num">(02)</span>
+            <img class="service__img" src="assets/why-5.webp" alt="" loading="lazy" />
+            <div class="service__body">
+              <h3 class="service__title"><a href="post-nemaie-v-google"><span data-lang-block="uk">Чому сайту немає в Google і що з цим робити</span><span data-lang-block="pl" hidden>Dlaczego mojej strony nie ma w Google i jak to naprawić</span></a></h3>
+              <p class="service__text"><span data-lang-block="uk">Покроковий чекліст: від перевірки site: до Search Console та технічних помилок.</span><span data-lang-block="pl" hidden>Krok po kroku: od komendy site: po Search Console i błędy techniczne.</span></p>
+            </div>
+            <a href="post-nemaie-v-google" class="service__cta">
+              <span><span data-lang-block="uk">Читати</span><span data-lang-block="pl" hidden>Czytaj</span></span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </a>
+          </article>
+
+          <article class="service" data-img="assets/why-3.webp">
+            <span class="service__num">(03)</span>
+            <img class="service__img" src="assets/why-3.webp" alt="" loading="lazy" />
+            <div class="service__body">
+              <h3 class="service__title"><a href="post-lendinh-chy-vizytka"><span data-lang-block="uk">Лендінг чи сайт-візитка: що обрати для бізнесу</span><span data-lang-block="pl" hidden>Landing page czy strona wizytówka — co wybrać?</span></a></h3>
+              <p class="service__text"><span data-lang-block="uk">Розбираємо різницю, типові помилки й те, як обрати формат під свою задачу.</span><span data-lang-block="pl" hidden>Różnice, typowe błędy i prosty sposób, by dobrać format strony do celu.</span></p>
+            </div>
+            <a href="post-lendinh-chy-vizytka" class="service__cta">
+              <span><span data-lang-block="uk">Читати</span><span data-lang-block="pl" hidden>Czytaj</span></span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="cta-form reveal">
+          <div class="cta-form__head">
+            <div class="head-kicker">
+              <span class="eyebrow"><span class="eyebrow__dot eyebrow__dot--square"></span><span data-i18n="contact.tag">Контакти</span></span>
+            </div>
+            <h2 class="section__title" data-i18n="form.title">Готові запустити сайт, магазин або Telegram-бот?</h2>
+            <p class="section__lead" data-i18n="form.desc">Залиште заявку, і ми зв’яжемося з вами, щоб обговорити задачу, формат проєкту, терміни та можливе рішення</p>
+            <ul class="cta-form__contacts">
+              <li><a href="https://t.me/Andrii_DEV9" target="_blank" rel="noopener">
+                <span class="cta-form__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3l-3 14.1c-.2 1-.8 1.2-1.7.8l-4.6-3.4-2.2 2.1c-.2.2-.4.4-.9.4l.3-4.7 8.5-7.7c.4-.3-.1-.5-.6-.2L7.3 13 2.8 11.6c-1-.3-1-1 .2-1.4l17-6.6c.8-.3 1.5.2 1.9 1z"/></svg></span>
+                <span>@Andrii_DEV9</span>
+              </a></li>
+              <li><a href="https://wa.me/48577503534" target="_blank" rel="noopener">
+                <span class="cta-form__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg></span>
+                <span>WhatsApp</span>
+              </a></li>
+              <li><a href="https://www.instagram.com/web.shestakov" target="_blank" rel="noopener">
+                <span class="cta-form__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span>
+                <span>@web.shestakov</span>
+              </a></li>
+              <li><a href="tel:+48577503534">
+                <span class="cta-form__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3h3l1.5 5-2 1.5a12 12 0 0 0 5 5l1.5-2 5 1.5v3a2 2 0 0 1-2 2A16 16 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg></span>
+                <span>+48 577 503 534</span>
+              </a></li>
+            </ul>
+          </div>
+
+          <form class="form" id="main-form" novalidate>
+            <div class="form__row">
+              <div class="field">
+                <label class="field__label" for="name" data-i18n="form.name">Ім’я</label>
+                <input class="field__input" type="text" id="name" name="name" required data-i18n-attr="placeholder:form.ph.name" placeholder="Ваше ім’я" />
+                <span class="field__error" data-i18n="form.err.required">Це поле обов’язкове</span>
+              </div>
+              <div class="field">
+                <label class="field__label" for="contact-value" data-i18n="form.contact">Телефон або Telegram</label>
+                <input class="field__input" type="text" id="contact-value" name="contact" required data-i18n-attr="placeholder:form.ph.contact" placeholder="+48 ... або @username" />
+                <span class="field__error" data-i18n="form.err.required">Це поле обов’язкове</span>
+              </div>
+            </div>
+            <div class="field">
+              <label class="field__label" for="need" data-i18n="form.need">Що потрібно розробити?</label>
+              <div class="field__select">
+                <select class="field__input" id="need" name="need" required>
+                  <option value="" data-i18n="form.opt.choose">Оберіть варіант</option>
+                  <option value="site" data-i18n="form.opt.site">Сайт</option>
+                  <option value="shop" data-i18n="form.opt.shop">Інтернет-магазин</option>
+                  <option value="bot" data-i18n="form.opt.bot">Telegram-бот</option>
+                  <option value="seo" data-i18n="form.opt.seo">SEO</option>
+                  <option value="identity" data-i18n="form.opt.identity">Айдентика</option>
+                  <option value="other" data-i18n="form.opt.other">Інше</option>
+                </select>
+                <span class="field__chevron" aria-hidden="true"></span>
+              </div>
+              <span class="field__error" data-i18n="form.err.required">Це поле обов’язкове</span>
+            </div>
+            <div class="field">
+              <label class="field__label" for="comment" data-i18n="form.comment">Коментар до проєкту</label>
+              <textarea class="field__input field__textarea" id="comment" name="comment" rows="4" data-i18n-attr="placeholder:form.ph.comment" placeholder="Коротко опишіть задачу"></textarea>
+            </div>
+            <input class="form__hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <label class="checkbox">
+              <input type="checkbox" id="agree" name="agree" required />
+              <span class="checkbox__box" aria-hidden="true"></span>
+              <span class="checkbox__label" data-i18n="form.agree">Я ознайомився/-лася з Політикою конфіденційності та погоджуюся на обробку моїх даних для опрацювання заявки</span>
+            </label>
+            <span class="field__error field__error--checkbox" data-i18n="form.err.agree">Потрібно підтвердити згоду</span>
+            <button type="submit" class="btn btn--accent btn--lg btn--block btn--between">
+              <span data-i18n="form.submit">Надіслати заявку</span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </button>
+            <p class="form__status form__status--success" role="status" data-i18n="form.success">Дякуємо! Ваша заявка надіслана. Ми скоро зв’яжемося з вами.</p>
+            <p class="form__status form__status--error" role="alert" data-i18n="form.error">Будь ласка, заповніть обов’язкові поля.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__cta reveal">
+        <h2 class="footer__big" data-i18n="footer.big">Обговоримо ваш проєкт?</h2>
+        <button type="button" class="btn btn--accent btn--lg" data-open-popup>
+          <span data-i18n="cta.header">Отримати консультацію</span>
+          <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </button>
+      </div>
+
+      <div class="footer__top">
+        <nav class="footer__nav" aria-label="Footer">
+          <div class="footer__navcol">
+            <a href="about" data-i18n="nav.about">Про нас</a>
+            <a href="index.html#why" data-i18n="nav.why">Переваги</a>
+          </div>
+          <div class="footer__navcol">
+            <a href="index.html#services" data-i18n="nav.services">Послуги</a>
+            <a href="index.html#cases" data-i18n="nav.cases">Кейси</a>
+          </div>
+          <div class="footer__navcol">
+            <a href="index.html#faq" data-i18n="nav.faq">FAQ</a>
+            <a href="index.html#partners" data-i18n="nav.partners">Партнерам</a>
+          </div>
+          <div class="footer__navcol">
+            <a href="#contact" data-i18n="nav.contacts">Контакти</a>
+            <a href="prices" data-i18n="nav.prices">Ціни</a>
+            <a href="blog" data-i18n="nav.blog">Блог</a>
+          </div>
+        </nav>
+
+        <div class="footer__contacts">
+          <a href="tel:+48577503534" class="footer__mail">+48 577 503 534</a>
+          <a href="https://t.me/Andrii_DEV9" target="_blank" rel="noopener">Telegram</a>
+          <a href="https://wa.me/48577503534" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://www.instagram.com/web.shestakov" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+
+      <div class="footer__wordmark">
+        <img src="assets/footer-logo.svg" alt="Web Shestakov agency" />
+      </div>
+
+      <div class="footer__legal">
+        <a href="privacy.html" data-i18n="footer.privacy">політика конфіденційності</a>
+        <a href="#" data-cookie-settings data-i18n="footer.cookies">налаштування cookies</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ COOKIE BANNER ============ -->
+  <aside class="cookie" id="cookie-banner" role="region" aria-label="Cookie" hidden>
+    <p class="cookie__text">
+      <span data-i18n="cookie.text">Ми використовуємо cookie, щоб сайт працював коректно та був зручнішим.</span>
+      <a class="cookie__link" href="privacy.html" data-i18n="cookie.link">Політика конфіденційності</a>
+    </p>
+    <div class="cookie__actions">
+      <button type="button" class="cookie__btn cookie__btn--accept" data-cookie="accepted" data-i18n="cookie.accept">Прийняти</button>
+      <button type="button" class="cookie__btn cookie__btn--ghost" data-cookie="essential" data-i18n="cookie.decline">Лише необхідні</button>
+    </div>
+  </aside>
+
+  <!-- ============ FLOATING WIDGET ============ -->
+  <button type="button" class="floating-widget" data-open-popup aria-label="Web Shestakov">
+    <span class="floating-widget__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M21 4L3 11l6 2 2 6 3-5 5 3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+    <span class="floating-widget__text" data-i18n="widget.text">Заявка</span>
+  </button>
+
+  <!-- ============ MOBILE STICKY CTA ============ -->
+  <div class="sticky-cta">
+    <button type="button" class="btn btn--accent btn--block" data-open-popup>
+      <span data-i18n="cta.header">Отримати консультацію</span>
+    </button>
+  </div>
+
+  <!-- ============ POPUP FORM ============ -->
+  <div class="popup" id="popup" aria-hidden="true">
+    <div class="popup__overlay" data-close-popup></div>
+    <div class="popup__dialog" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+      <button type="button" class="popup__close" data-close-popup aria-label="Close">
+        <svg viewBox="0 0 24 24" width="22" height="22"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+      <span class="eyebrow"><span class="eyebrow__dot"></span><span data-i18n="contact.tag">Контакти</span></span>
+      <h3 class="popup__title" id="popup-title" data-i18n="form.title">Готові запустити сайт, магазин або Telegram-бот?</h3>
+
+      <form class="form" id="popup-form" novalidate>
+        <div class="field">
+          <label class="field__label" for="p-name" data-i18n="form.name">Ім’я</label>
+          <input class="field__input" type="text" id="p-name" name="name" required data-i18n-attr="placeholder:form.ph.name" placeholder="Ваше ім’я" />
+          <span class="field__error" data-i18n="form.err.required">Це поле обов’язкове</span>
+        </div>
+        <div class="field">
+          <label class="field__label" for="p-contact" data-i18n="form.contact">Телефон або Telegram</label>
+          <input class="field__input" type="text" id="p-contact" name="contact" required data-i18n-attr="placeholder:form.ph.contact" placeholder="+48 ... або @username" />
+          <span class="field__error" data-i18n="form.err.required">Це поле обов’язкове</span>
+        </div>
+        <div class="field">
+          <label class="field__label" for="p-need" data-i18n="form.need">Що потрібно розробити?</label>
+          <div class="field__select">
+            <select class="field__input" id="p-need" name="need" required>
+              <option value="" data-i18n="form.opt.choose">Оберіть варіант</option>
+              <option value="site" data-i18n="form.opt.site">Сайт</option>
+              <option value="shop" data-i18n="form.opt.shop">Інтернет-магазин</option>
+              <option value="bot" data-i18n="form.opt.bot">Telegram-бот</option>
+              <option value="seo" data-i18n="form.opt.seo">SEO</option>
+              <option value="identity" data-i18n="form.opt.identity">Айдентика</option>
+              <option value="other" data-i18n="form.opt.other">Інше</option>
+            </select>
+            <span class="field__chevron" aria-hidden="true"></span>
+          </div>
+          <span class="field__error" data-i18n="form.err.required">Це поле обов’язкове</span>
+        </div>
+        <div class="field">
+          <label class="field__label" for="p-comment" data-i18n="form.comment">Коментар</label>
+          <textarea class="field__input field__textarea" id="p-comment" name="comment" rows="3" data-i18n-attr="placeholder:form.ph.comment" placeholder="Коротко опишіть задачу"></textarea>
+        </div>
+        <input class="form__hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        <label class="checkbox">
+          <input type="checkbox" id="p-agree" name="agree" required />
+          <span class="checkbox__box" aria-hidden="true"></span>
+          <span class="checkbox__label" data-i18n="form.agree">Я ознайомився/-лася з Політикою конфіденційності та погоджуюся на обробку моїх даних для опрацювання заявки</span>
+        </label>
+        <span class="field__error field__error--checkbox" data-i18n="form.err.agree">Потрібно підтвердити згоду</span>
+        <button type="submit" class="btn btn--accent btn--lg btn--block">
+          <span data-i18n="form.submit">Надіслати заявку</span>
+        </button>
+        <p class="form__status form__status--success" role="status" data-i18n="form.success">Дякуємо! Ваша заявка надіслана. Ми скоро зв’яжемося з вами.</p>
+        <p class="form__status form__status--error" role="alert" data-i18n="form.error">Будь ласка, заповніть обов’язкові поля.</p>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
