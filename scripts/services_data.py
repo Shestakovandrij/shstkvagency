@@ -9,12 +9,12 @@ SERVICES = [
    'name_pl': 'Landing page',
    'title_uk': 'Створення лендінгу під ключ від €300 — ціна 2026 | SHSTKV Digital',
    'title_pl': 'Tworzenie landing page od 300 € — cena 2026 | SHSTKV Digital',
-   'desc_uk': 'Замовити лендінг під ключ: від €300, запуск за 3 дні. Індивідуальний дизайн, мобільна версія, заявки в Telegram, базове SEO. Оцінка проєкту за 24 години.',
-   'desc_pl': 'Landing page pod klucz od 300 €, gotowy w 3 dni. Własny projekt, wersja mobilna, zgłoszenia prosto na Telegram i podstawowe SEO. Wycena w 24 godziny.',
+   'desc_uk': 'Лендінг — односторінковий сайт під одну пропозицію. Під ключ від €300, запуск за 3 дні: дизайн, мобільна версія, заявки в Telegram, базове SEO.',
+   'desc_pl': 'Landing page to jednostronicowa strona pod jedną ofertę. Pod klucz od 300 €, gotowa w 3 dni: projekt, wersja mobilna, zgłoszenia na Telegram, SEO.',
    'h1_uk': 'Створення лендінгу під ключ',
    'h1_pl': 'Tworzenie landing page pod klucz',
-   'sub_uk': 'Одна сторінка під рекламу й одну пропозицію — від €300 і за 3 дні.',
-   'sub_pl': 'Jedna strona pod reklamę i jedną ofertę — od 300 €, gotowa w 3 dni.',
+   'sub_uk': 'Односторінковий сайт під одну пропозицію й рекламу — від €300 за 3 дні.',
+   'sub_pl': 'Jednostronicowa strona pod jedną ofertę i reklamę — od 300 €, gotowa w 3 dni.',
    'facts': [['Ціна', 'Cena', 'від €300', 'od 300 €'],
              ['Термін', 'Termin', '3–5 днів', '3–5 dni'],
              ['Платформа', 'Platforma', 'WordPress, Webflow', 'WordPress, Webflow'],
@@ -22,13 +22,14 @@ SERVICES = [
              ['Підтримка', 'Wsparcie', '30 днів у ціні', '30 dni w cenie']],
    'intro_title_uk': 'Для кого лендінг',
    'intro_title_pl': 'Dla kogo landing page',
-   'lead_uk': 'Створення лендінгу має сенс, коли у вас одна конкретна пропозиція і трафік із реклами: Google Ads, Meta чи TikTok. Лендінг веде відвідувача від першого екрана до заявки без зайвих '
-              'сторінок і відволікань. Він підходить для запуску нової послуги, тесту ніші, набору на курс або продажу B2B-продукту. Ми робимо дизайн під вашу аудиторію, допомагаємо з текстами, які '
-              'відповідають на заперечення клієнта, і ставимо форму, що одразу надсилає заявку в Telegram. Ліди приходять у месенджер за секунди, а не губляться в пошті.',
-   'lead_pl': 'Tworzenie landing page ma sens, gdy masz jedną konkretną ofertę i ruch z reklam: Google Ads, Meta albo TikTok. Landing prowadzi użytkownika od pierwszego ekranu do wysłania zapytania — '
-              'bez zbędnych podstron i rozpraszaczy. Sprawdzi się przy starcie nowej usługi, teście niszy, zapisach na kurs czy sprzedaży produktu B2B. Projektujemy go pod Twoich odbiorców, pomagamy z '
-              'tekstami, które odpowiadają na obiekcje klienta, i podpinamy formularz wysyłający zgłoszenie od razu na Telegram. Leady trafiają do komunikatora w kilka sekund, a nie giną w skrzynce '
-              'mailowej.',
+   'lead_uk': 'Лендінг (landing page) — це односторінковий сайт, де вся інформація про одну пропозицію зібрана на одній сторінці: від заголовка до форми заявки. Він має сенс, коли у вас одна конкретна '
+              'пропозиція і трафік із реклами: Google Ads, Meta чи TikTok. Лендінг веде відвідувача від першого екрана до заявки без зайвих сторінок і відволікань. Він підходить для запуску нової '
+              'послуги, тесту ніші, набору на курс або продажу B2B-продукту. Ми робимо дизайн під вашу аудиторію, допомагаємо з текстами, які відповідають на заперечення клієнта, і ставимо форму, що '
+              'одразу надсилає заявку в Telegram. Ліди приходять у месенджер за секунди, а не губляться в пошті.',
+   'lead_pl': 'Landing page to jednostronicowa strona, na której cała informacja o jednej ofercie mieści się na jednej stronie: od nagłówka po formularz. Ma sens, gdy masz jedną konkretną ofertę i '
+              'ruch z reklam: Google Ads, Meta albo TikTok. Landing prowadzi użytkownika od pierwszego ekranu do wysłania zapytania — bez zbędnych podstron i rozpraszaczy. Sprawdzi się przy starcie '
+              'nowej usługi, teście niszy, zapisach na kurs czy sprzedaży produktu B2B. Projektujemy go pod Twoich odbiorców, pomagamy z tekstami, które odpowiadają na obiekcje klienta, i podpinamy '
+              'formularz wysyłający zgłoszenie od razu na Telegram. Leady trafiają do komunikatora w kilka sekund, a nie giną w skrzynce mailowej.',
    'pills': [['Google Ads', 'Google Ads'],
              ['Meta і TikTok Ads', 'Meta i TikTok Ads'],
              ['Послуги й ремонти', 'Usługi i remonty'],
@@ -141,7 +142,14 @@ SERVICES = [
                'cta_uk': 'Обговорити підтримку',
                'cta_pl': 'Zapytaj o opiekę'}],
    'cases': ['bellissimo-home', 'td-solar', 'axiom-technology', 'tarik-invest'],
-   'faq': [['Скільки коштує лендінг під ключ?',
+   'faq': [['Що таке лендінг?',
+            'Co to jest landing page?',
+            'Лендінг — це односторінковий сайт під одну пропозицію: послугу, продукт, курс чи акцію. Усе, що потрібно клієнту для рішення, — вигоди, ціна, приклади, відповіді на питання й форма заявки '
+            '— розміщено на одній сторінці, яку гортають згори донизу. Тому лендінг найкраще працює з рекламою: відвідувач не блукає сторінками, а одразу залишає заявку.',
+            'Landing page to jednostronicowa strona poświęcona jednej ofercie: usłudze, produktowi, kursowi lub promocji. Wszystko, czego klient potrzebuje do decyzji — korzyści, cena, przykłady, '
+            'odpowiedzi na pytania i formularz — jest na jednej stronie przewijanej od góry do dołu. Dlatego landing najlepiej współpracuje z reklamą: odwiedzający nie błądzi po podstronach, tylko od '
+            'razu wysyła zapytanie.'],
+           ['Скільки коштує лендінг під ключ?',
             'Ile kosztuje landing page pod klucz?',
             'Лендінг під ключ коштує від €300 у тарифі «Старт» і €450 у тарифі «Про». У ціну входять дизайн, мобільна версія, базове SEO, форма заявки в Telegram і 30 днів підтримки. Якщо потрібні '
             'калькулятор, каталог чи інтеграція з CRM, точну вартість рахуємо після брифу — оцінка за 24 години.',
