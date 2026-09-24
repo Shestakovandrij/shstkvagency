@@ -50,7 +50,7 @@ function rewriteUrls(document, lang) {
     if (!value || isExternal(value)) return value;
     const [file, hash] = value.split("#");
     if (LEGACY_LINKS[file] != null) return href(LEGACY_LINKS[file], lang) + (hash ? "#" + hash : "");
-    if (/^(case-[a-z0-9-]+|svc-[a-z0-9-]+|about|prices|contacts)$/.test(file)) return href(file, lang) + (hash ? "#" + hash : "");
+    if (/^(case-[a-z0-9-]+|svc-[a-z0-9-]+|city-[a-z0-9-]+|about|prices|contacts)$/.test(file)) return href(file, lang) + (hash ? "#" + hash : "");
     return "/" + value.replace(/^\.\//, "");
   };
 
@@ -162,7 +162,7 @@ function jsonLd(page, document) {
   }
 
   // FAQ на сторінках послуг, цін, контактів і «Про нас» — з розмітки сторінки.
-  if (/^(svc-|prices$|contacts$|about$)/.test(page.group)) {
+  if (/^(svc-|city-|prices$|contacts$|about$)/.test(page.group)) {
     const qa = [...document.querySelectorAll("#faq .faq__item")].map((it) => ({
       "@type": "Question",
       name: it.querySelector(".faq__q").textContent.replace(/^\s*\(\d+\)/, "").trim(),
@@ -176,6 +176,7 @@ function jsonLd(page, document) {
     const home = page.lang === "pl" ? "Strona główna" : "Головна";
     const trail = [{ name: home, path: href("home", page.lang) }];
     if (page.group.startsWith("case-")) trail.push({ name: "Portfolio", path: href("portfolio", page.lang) });
+    if (page.group.startsWith("city-") && page.group !== "city-polshcha" && page.lang === "uk") trail.push({ name: "Польща", path: "/polshcha/" });
     trail.push({ name: page.crumb || page.title, path: page.path });
     graph.push({
       "@type": "BreadcrumbList",
@@ -185,6 +186,21 @@ function jsonLd(page, document) {
   }
 
   return JSON.stringify({ "@context": "https://schema.org", "@graph": graph });
+}
+
+/* Шрифти з власного домену (ті самі файли, що віддавав Google Fonts) — без запитів до сторонніх серверів. */
+const FONT_PRELOAD = { uk: ["/fonts/intertight-NGSwv5HMAFg6IuGlBNMjxLsH8ahuQ2e8.woff2", "/fonts/intertight-NGSwv5HMAFg6IuGlBNMjxLsD8ahuQ2e8Smg.woff2"], pl: ["/fonts/intertight-NGSwv5HMAFg6IuGlBNMjxLsH8ahuQ2e8.woff2", "/fonts/intertight-NGSwv5HMAFg6IuGlBNMjxLsJ8ahuQ2e8Smg.woff2"] };
+
+function selfHostFonts(document, lang) {
+  const head = document.head;
+  head.querySelectorAll('link[href^="https://fonts.googleapis.com"], link[href^="https://fonts.gstatic.com"]').forEach((el) => {
+    if (el.getAttribute("rel") !== "stylesheet") return el.remove();
+    const portfolio = /Alumni/.test(el.getAttribute("href"));
+    const tpl = document.createElement("template");
+    tpl.innerHTML = FONT_PRELOAD[lang].map((f) => `<link rel="preload" href="${f}" as="font" type="font/woff2" crossorigin />`).join("\n  ") +
+      `\n  <link rel="stylesheet" href="/fonts/${portfolio ? "fonts-portfolio" : "fonts"}.css" />`;
+    el.replaceWith(...tpl.content.childNodes);
+  });
 }
 
 function rewriteHead(document, page) {
@@ -223,6 +239,11 @@ function rewriteHead(document, page) {
     `<script type="application/ld+json">${jsonLd(page, document)}</script>`
   ];
 
+  // Сторінка без перекладу: перемикач мов веде на головну іншої мови.
+  for (const l of ["uk", "pl"]) {
+    if (!alts.some((x) => x.lang === l)) document.documentElement.setAttribute("data-alt-" + l, href("home", l));
+  }
+
   const anchor = head.querySelector('meta[name="viewport"]');
   const frag = document.createElement("template");
   frag.innerHTML = "\n  " + tags.join("\n  ");
@@ -235,5 +256,6 @@ export function renderPage(page) {
   applyLang(document, page.lang);
   rewriteUrls(document, page.lang);
   rewriteHead(document, page);
+  selfHostFonts(document, page.lang);
   return "<!DOCTYPE html>\n" + document.documentElement.outerHTML + "\n";
 }

@@ -703,7 +703,8 @@
      а перемикач веде на відповідну адресу з <link rel="alternate" hreflang>. */
   function altUrl(lang) {
     var link = document.querySelector('link[rel="alternate"][hreflang="' + lang + '"]');
-    if (!link) return null;
+    // сторінка існує лише однією мовою — ведемо на головну потрібної мови
+    if (!link) return document.documentElement.getAttribute("data-alt-" + lang);
     try { return new URL(link.getAttribute("href")).pathname; } catch (e) { return null; }
   }
 

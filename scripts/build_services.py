@@ -8,6 +8,7 @@ TPL = os.path.join(HERE, '..', 'src', 'templates')
 sys.path.insert(0, HERE)
 from services_data import SERVICES
 from services_pages import PRICES, CONTACTS
+from cities_data import CITIES
 from cases_data import CASES
 
 CASE = {c['slug']: c for c in CASES}
@@ -256,17 +257,17 @@ def faq_block(qa, title=None, lead=None):
         f = f.replace('<p class="section__lead" data-i18n="faq.desc">Не знайшли відповідь?<br>Напишіть нам у Telegram — відповімо швидко.</p>', '<p class="section__lead">' + lead + '</p>')
     return f
 
-def services_block(items, title, tag):
+def services_block(items, title, tag, prefix='svc-'):
     arts = ''
     for i, s in enumerate(items, 1):
         arts += f'''          <article class="service" data-img="{s['img']}">
             <span class="service__num">(0{i})</span>
             <img class="service__img" src="{s['img']}" alt="" loading="lazy" />
             <div class="service__body">
-              <h3 class="service__title"><a href="svc-{s['key']}">{L(s['name_uk'], s['name_pl'])}</a></h3>
+              <h3 class="service__title"><a href="{prefix}{s['key']}">{L(s['name_uk'], s['name_pl'])}</a></h3>
               <p class="service__text">{L(s['sub_uk'], s['sub_pl'])}</p>
             </div>
-            <a href="svc-{s['key']}" class="service__cta">
+            <a href="{prefix}{s['key']}" class="service__cta">
               <span>{L('Детальніше', 'Szczegóły')}</span>
               {ARROW}
             </a>
@@ -356,7 +357,63 @@ write('contacts', [
     faq_block(C['faq'], L('Перед тим як написати', 'Zanim napiszesz')),
 ])
 
-json.dump({'services': out, 'prices': {k: P[k] for k in ('title_uk', 'title_pl', 'desc_uk', 'desc_pl')},
+# ---------- гео-сторінки: хаб /polshcha/ і міста
+def local_block(c):
+    k = CASE[c['local_case']]
+    lp = ''.join(f'<span class="budget-pill" role="listitem">{L(u, p)}</span>' for u, p in c['local_pills'])
+    lp += ''.join(f'<span class="budget-pill" aria-hidden="true">{L(u, p)}</span>' for u, p in c['local_pills'])
+    return '''    <section class="section" id="local">
+      <div class="container">
+''' + head(L(c['local_title_uk'], c['local_title_pl']), L(c['name_uk'], c['name_pl'])) + '''
+        <div class="budget-grid">
+        <div class="budget-intro reveal">
+          <p class="budget-lead">''' + L(c['local_lead_uk'], c['local_lead_pl']) + '''</p>
+          <p class="budget-sub">''' + L(c['local_sub_uk'], c['local_sub_pl']) + '''</p>
+          <div class="budget-pills" role="list">
+            <div class="budget-pills__track">''' + lp + '''</div>
+          </div>
+          <a href="#contact" class="btn btn--dark btn--lg budget-intro__btn">
+            <span>''' + L('Обговорити проєкт', 'Porozmawiajmy o projekcie') + '''</span>
+            ''' + ARROW + '''
+          </a>
+        </div>
+        <div class="reveal">
+          <a class="bx-card" href="case-''' + k['slug'] + '''" aria-label="''' + k['name'] + '''">
+            <div class="bx-card__media"><img src="''' + k['img'] + '''" alt="''' + k['name'] + '''" loading="lazy" /></div>
+            <div class="bx-card__bar">
+              <span class="bx-card__cat">''' + k['name'] + ' · ' + L(k['facts'][1][2], k['facts'][1][3]) + '''</span>
+              <span class="bx-card__cta" aria-hidden="true">''' + ARROW_LG + '''</span>
+            </div>
+          </a>
+        </div>
+        </div>
+      </div>
+    </section>'''
+
+CITY_TARIFFS = [a for a in PRICES['addons'] if a.get('href') in ('svc-korporatyvnyi-sait', 'svc-internet-magazyn') or a['name_uk'] == 'Підтримка сайту']
+city_out = []
+city_list = [c for c in CITIES if c['key'] != 'polshcha']
+for c in CITIES:
+    hub = c['key'] == 'polshcha'
+    if hub:
+        items = [dict(key=x['key'], img=f"assets/service-{i % 5 + 1}.webp", name_uk=x['name_uk'], name_pl=x['name_pl'], sub_uk=x['sub_uk'], sub_pl=x['sub_pl']) for i, x in enumerate(city_list)]
+        tail = services_block(items, L('Міста', 'Miasta'), L('Польща', 'Polska'), 'city-')
+    else:
+        tail = services_block(SERVICES, L('Послуги', 'Usługi'), L('Що робимо', 'Co robimy'))
+    body = [
+        hero(wm(c['name_uk'], c['name_pl']), L(c['h1_uk'], c['h1_pl']), L(c['sub_uk'], c['sub_pl']), c['facts'], 'about'),
+        intro('about', L(c['intro_title_uk'], c['intro_title_pl']), L(c['incl_title_uk'], c['incl_title_pl']), L(c['lead_uk'], c['lead_pl']), c['pills'], c['incl'], L('Обговорити проєкт', 'Porozmawiajmy o projekcie')),
+        local_block(c),
+        tariffs_block(L('Ціни', 'Cennik'), L('Тарифи', 'Pakiety'), L(PRICES['plans_lead_uk'], PRICES['plans_lead_pl']), PRICES['plans'], CITY_TARIFFS),
+        cases_block(c['cases']),
+        faq_block(c['faq']),
+        tail,
+        CONTACT,
+    ]
+    write('city-' + c['key'], body)
+    city_out.append({k: c[k] for k in ('key', 'path_uk', 'path_pl', 'name_uk', 'name_pl', 'title_uk', 'title_pl', 'desc_uk', 'desc_pl')})
+
+json.dump({'services': out, 'cities': city_out, 'prices': {k: P[k] for k in ('title_uk', 'title_pl', 'desc_uk', 'desc_pl')},
            'contacts': {k: C[k] for k in ('title_uk', 'title_pl', 'desc_uk', 'desc_pl')}},
           open(os.path.join(HERE, '..', 'src', 'lib', 'services.json'), 'w'), ensure_ascii=False, indent=1)
 print('built', len(SERVICES), 'services + prices + contacts')

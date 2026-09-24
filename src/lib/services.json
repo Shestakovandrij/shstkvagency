@@ -85,6 +85,63 @@
    "price": null
   }
  ],
+ "cities": [
+  {
+   "key": "polshcha",
+   "path_uk": "/polshcha/",
+   "path_pl": null,
+   "name_uk": "Польща",
+   "name_pl": "Польща",
+   "title_uk": "Створення сайту в Польщі для JDG від €300 | SHSTKV Digital",
+   "title_pl": "Створення сайту в Польщі для JDG від €300 | SHSTKV Digital",
+   "desc_uk": "Розробка сайтів у Польщі для українського бізнесу: польська й українська версії, faktura, RODO, BLIK і Przelewy24. Лендінг від €300, оцінка за 24 години.",
+   "desc_pl": "Розробка сайтів у Польщі для українського бізнесу: польська й українська версії, faktura, RODO, BLIK і Przelewy24. Лендінг від €300, оцінка за 24 години."
+  },
+  {
+   "key": "vroclav",
+   "path_uk": "/polshcha/vroclav/",
+   "path_pl": "/pl/strony-internetowe-wroclaw/",
+   "name_uk": "Вроцлав",
+   "name_pl": "Wrocław",
+   "title_uk": "Створення сайту у Вроцлаві від €300 — веб-студія | SHSTKV Digital",
+   "title_pl": "Strony internetowe Wrocław od 300 € — agencja | SHSTKV Digital",
+   "desc_uk": "Веб-студія у Вроцлаві: створення сайтів, лендінгів і магазинів для місцевого бізнесу. Можна зустрітися особисто. Лендінг від €300, оцінка за 24 години.",
+   "desc_pl": "Tworzenie stron internetowych we Wrocławiu: landing page od 300 €, strony firmowe i sklepy. Spotkanie na miejscu, faktura, ceny bez VAT. Wycena w 24 h."
+  },
+  {
+   "key": "poznan",
+   "path_uk": "/polshcha/poznan/",
+   "path_pl": "/pl/strony-internetowe-poznan/",
+   "name_uk": "Познань",
+   "name_pl": "Poznań",
+   "title_uk": "Створення сайту в Познані від €300 — лендінг і SEO | SHSTKV Digital",
+   "title_pl": "Tworzenie stron www Poznań od 300 € | SHSTKV Digital",
+   "desc_uk": "Створення сайтів у Познані для сервісного й B2B-бізнесу: лендінг від €300, калькулятор, заявки в Telegram. Дистанційно, договір і faktura, оцінка за 24 год.",
+   "desc_pl": "Strony internetowe Poznań: landing page od 300 € dla usług i B2B, kalkulator, zapytania na Telegramie. Zdalnie, umowa i faktura, ceny bez VAT. Wycena w 24 h."
+  },
+  {
+   "key": "krakiv",
+   "path_uk": "/polshcha/krakiv/",
+   "path_pl": "/pl/strony-internetowe-krakow/",
+   "name_uk": "Краків",
+   "name_pl": "Kraków",
+   "title_uk": "Створення сайту Краків — від €300, PL/EN/UA | SHSTKV Digital",
+   "title_pl": "Strony internetowe Kraków — od 300 €, PL/EN/UA | SHSTKV Digital",
+   "desc_uk": "Створення сайту в Кракові: лендінг від €300, багатосторінковий сайт від €450, магазин від €800. Версії PL/EN/UA, договір і faktura. Оцінка за 24 години.",
+   "desc_pl": "Strony internetowe Kraków: landing page od 300 €, strona firmowa od 450 €, sklep od 800 €. Wersje PL/EN/UA, umowa i faktura bez VAT. Wycena w 24 godziny."
+  },
+  {
+   "key": "varshava",
+   "path_uk": "/polshcha/varshava/",
+   "path_pl": "/pl/strony-internetowe-warszawa/",
+   "name_uk": "Варшава",
+   "name_pl": "Warszawa",
+   "title_uk": "Створення сайту Варшава — від €300, під SEO | SHSTKV Digital",
+   "title_pl": "Strony internetowe Warszawa — od 300 €, pod SEO | SHSTKV Digital",
+   "desc_uk": "Створення сайту у Варшаві дистанційно: лендінг від €300, сайт від €450, магазин від €800. SEO-структура, польська мова, договір і faktura. Оцінка за 24 години.",
+   "desc_pl": "Tworzenie stron internetowych Warszawa: landing page od 300 €, strona firmowa od 450 €, sklep od 800 €. Struktura pod SEO, umowa, faktura bez VAT. Wycena w 24h."
+  }
+ ],
  "prices": {
   "title_uk": "Ціни на створення сайтів у 2026 році — від €300 | SHSTKV Digital",
   "title_pl": "Cennik stron internetowych 2026 — od 300 € | SHSTKV Digital",

@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title data-i18n="meta.title">Web Shestakov — сайти, Telegram-боти, інтернет-магазини, SEO та айдентика</title>
+  <meta name="description" data-i18n="meta.description" content="Створюємо сучасні сайти, Telegram-боти, інтернет-магазини, SEO-рішення та айдентику для бізнесу. Допомагаємо залучати клієнтів, продавати онлайн і автоматизувати процеси." />
+
+  <link rel="canonical" href="https://www.shstkv-digital.com/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Web Shestakov" />
+  <meta property="og:url" content="https://www.shstkv-digital.com/" />
+  <meta property="og:locale" content="uk_UA" />
+  <meta property="og:locale:alternate" content="pl_PL" />
+  <meta property="og:title" data-i18n="meta.title" content="Web Shestakov — сайти, Telegram-боти, інтернет-магазини, SEO та айдентика" />
+  <meta property="og:description" data-i18n="meta.description" content="Сайти, Telegram-боти, інтернет-магазини, SEO та айдентика." />
+  <meta property="og:image" content="https://www.shstkv-digital.com/assets/og-image.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Web Shestakov — сайти, Telegram-боти, інтернет-магазини, SEO та айдентика" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://www.shstkv-digital.com/assets/og-image.jpg" />
+  <meta name="theme-color" content="#EEEEEE" />
+
+  <link rel="icon" href="/favicon.ico" sizes="32x32" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <script>
+    (function () {
+      try {
+        var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (!reduce) { document.documentElement.className += " anim-on"; }
+        window.setTimeout(function () {
+          if (!window.__wsReady) { document.documentElement.classList.remove("anim-on"); }
+        }, 2600);
+      } catch (e) { document.documentElement.classList.remove("anim-on"); }
+    })();
+
+  </script>
+
+
+  <!-- Meta Pixel + GA4. Скрипти вантажаться всередині tracking.js і лише
+       після згоди на куки — окремо код пікселя в <head> вставляти не треба. -->
+  <script src="tracking.js" defer></script>
+</head>
+
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ============ PRELOADER — "Digital Signal Ignition" ============
+       Sequence: grid breathes in → coral scanline sweeps (dots blink on its path) →
+       fragments converge into the centre → monogram mask-reveals (bottom→top) →
+       STKV wordmark wipes (left→right) + micro-flicker → status roller
+       (DESIGN / CODE / MOTION / LAUNCH) → ignition pop + pulse rings →
+       exit: panel wipes up, the lockup flies onto the header logo.
+       Colors: :root --bg / --accent in styles.css. Timings: the T object in preloader.js. -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html#home" class="header__logo" aria-label="Web Shestakov">
+        <img src="assets/logo.svg" alt="Web Shestakov" />
+      </a>
+
+      <div class="header__right">
+        <div class="lang" role="group" aria-label="Language switcher">
+          <button type="button" class="lang__btn is-active" data-lang="uk" aria-pressed="true">UA</button>
+          <span class="lang__sep" aria-hidden="true">/</span>
+          <button type="button" class="lang__btn" data-lang="pl" aria-pressed="false">PL</button>
+        </div>
+        <button type="button" class="menu-btn" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="menu-btn__label" data-i18n="nav.menu">Меню</span>
+          <span class="menu-btn__icon" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ MENU (dropdown panel, as template) ============ -->
+  <div class="menu" id="mobile-menu" aria-hidden="true">
+    <div class="menu__overlay" data-close-menu></div>
+    <div class="container menu__container">
+      <div class="menu__panel">
+        <button type="button" class="menu__close" id="menu-close" aria-label="Close">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+
+        <div class="menu__grid">
+          <nav class="menu__nav" aria-label="Menu">
+            <a href="about" class="menu__link" data-close-menu><span data-i18n="nav.about">Про нас</span><span class="menu__num">(01)</span></a>
+            <a href="index.html#why" class="menu__link" data-close-menu><span data-i18n="nav.why">Переваги</span><span class="menu__num">(02)</span></a>
+            <a href="index.html#services" class="menu__link" data-close-menu><span data-i18n="nav.services">Послуги</span><span class="menu__num">(03)</span></a>
+            <a href="index.html#cases" class="menu__link" data-close-menu><span data-i18n="nav.cases">Кейси</span><span class="menu__num">(04)</span></a>
+            <a href="portfolio.html" class="menu__link" data-close-menu><span data-i18n="nav.portfolio">Портфоліо</span><span class="menu__num">(05)</span></a>
+            <a href="index.html#budget" class="menu__link" data-close-menu><span data-i18n="nav.budget">Швидкий старт</span><span class="menu__num">(06)</span></a>
+            <a href="index.html#tariffs" class="menu__link" data-close-menu><span data-i18n="nav.tariffs">Тарифи</span><span class="menu__num">(07)</span></a>
+            <a href="index.html#faq" class="menu__link" data-close-menu><span data-i18n="nav.faq">FAQ</span><span class="menu__num">(08)</span></a>
+            <a href="index.html#partners" class="menu__link" data-close-menu><span data-i18n="nav.partners">Партнерам</span><span class="menu__num">(09)</span></a>
+            <a href="#contact" class="menu__link" data-close-menu><span data-i18n="nav.contacts">Контакти</span><span class="menu__num">(10)</span></a>
+          </nav>
+
+          <aside class="menu__side">
+            <a href="https://t.me/Andrii_DEV9" target="_blank" rel="noopener" class="contact-card menu__person" data-close-menu>
+              <span class="contact-card__photo"><img src="assets/photo.webp" alt="Andrii Shestakov" /></span>
+              <span class="contact-card__body">
+                <span class="contact-card__name">Andrii Shestakov</span>
+                <span class="contact-card__role">Founder &amp; CEO</span>
+              </span>
+              <span class="contact-card__cta">
+                <span data-i18n="hero.aside.cta">Написати</span>
+                <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </span>
+            </a>
+
+            <div class="menu__block">
+              <span class="menu__label" data-i18n="menu.follow">Соцмережі</span>
+              <div class="menu__socials">
+                <a href="https://www.instagram.com/web.shestakov" class="menu__social" target="_blank" rel="noopener" aria-label="Instagram">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+                </a>
+                <a href="https://t.me/Andrii_DEV9" class="menu__social" target="_blank" rel="noopener" aria-label="Telegram">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M21.9 4.3l-3 14.1c-.2 1-.8 1.2-1.7.8l-4.6-3.4-2.2 2.1c-.2.2-.4.4-.9.4l.3-4.7 8.5-7.7c.4-.3-.1-.5-.6-.2L7.3 13 2.8 11.6c-1-.3-1-1 .2-1.4l17-6.6c.8-.3 1.5.2 1.9 1z"/></svg>
+                </a>
+                <a href="https://wa.me/48577503534" class="menu__social" target="_blank" rel="noopener" aria-label="WhatsApp">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <div class="menu__block">
+              <span class="menu__label" data-i18n="menu.contact">Контакти</span>
+              <a href="tel:+48577503534" class="menu__contact">+48 577 503 534</a>
+              <a href="https://t.me/Andrii_DEV9" class="menu__contact" target="_blank" rel="noopener">@Andrii_DEV9</a>
+            </div>
+
+            <button type="button" class="btn btn--accent btn--block" data-open-popup data-close-menu>
+              <span data-i18n="cta.header">Отримати консультацію</span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </button>
+
+            <a class="menu__legal" href="privacy.html" data-close-menu data-i18n="footer.privacy">політика конфіденційності</a>
+          </aside>
+        </div>
+
+        <div class="menu__meta">
+          <span class="menu__meta-item"><span class="menu__meta-dot"></span>SHSTKV Digital — <span data-i18n="hero.aside.role">digital-агенція</span></span>
+          <span class="menu__meta-item">© 2026</span>
+          <span class="menu__meta-item menu__meta-item--status" data-i18n="menu.status">Приймаємо проєкти</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+      <div class="container">
+        <!-- Top row: wordmark + founder card on the same level (as template) -->
+        <div class="hero__top reveal">
+          <div class="hero__wordmark"><span data-lang-block="uk">Польща</span><span data-lang-block="pl" hidden>Польща</span></div>
+          <a href="https://t.me/Andrii_DEV9" target="_blank" rel="noopener" class="contact-card">
+            <span class="contact-card__photo"><img src="assets/photo.webp" alt="Andrii Shestakov" /></span>
+            <span class="contact-card__body">
+              <span class="contact-card__name">Andrii Shestakov</span>
+              <span class="contact-card__role">Founder &amp; CEO</span>
+            </span>
+            <span class="contact-card__cta">
+              <span data-i18n="hero.aside.cta">Написати</span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </span>
+          </a>
+        </div>
+
+        <!-- Big media panel -->
+        <div class="hero__panel reveal">
+          <div class="hero__panel-bg" aria-hidden="true"></div>
+
+          <div class="hero__socials" aria-label="Social">
+            <a href="https://www.instagram.com/web.shestakov" class="hero__social" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="https://t.me/Andrii_DEV9" class="hero__social" target="_blank" rel="noopener" aria-label="Telegram">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M21.9 4.3l-3 14.1c-.2 1-.8 1.2-1.7.8l-4.6-3.4-2.2 2.1c-.2.2-.4.4-.9.4l.3-4.7 8.5-7.7c.4-.3-.1-.5-.6-.2L7.3 13 2.8 11.6c-1-.3-1-1 .2-1.4l17-6.6c.8-.3 1.5.2 1.9 1z"/></svg>
+            </a>
+            <a href="https://wa.me/48577503534" class="hero__social" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+            </a>
+            <a href="tel:+48577503534" class="hero__social" aria-label="Phone">
+              <svg viewBox="0 0 32 32" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.27" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19.9272 5C21.6224 5.45592 23.1681 6.34928 24.4094 7.59059C25.6507 8.8319 26.5441 10.3776 27 12.0728"/>
+                <path d="M18.8916 8.86426C19.9088 9.13781 20.8362 9.67382 21.581 10.4186C22.3258 11.1634 22.8618 12.0908 23.1353 13.108"/>
+                <path d="M11.5595 15.6015C12.5968 17.7222 14.3158 19.4334 16.4412 20.461C16.5967 20.5347 16.7687 20.5666 16.9403 20.5537C17.1119 20.5407 17.2771 20.4832 17.4198 20.387L20.5492 18.3002C20.6877 18.2079 20.8469 18.1516 21.0126 18.1364C21.1782 18.1212 21.3451 18.1475 21.498 18.213L27.3526 20.7222C27.5515 20.8067 27.7175 20.9535 27.8257 21.1405C27.9339 21.3276 27.9783 21.5447 27.9524 21.7593C27.7673 23.2073 27.0608 24.5382 25.9652 25.5028C24.8695 26.4674 23.4598 26.9996 22 26.9996C17.4913 26.9996 13.1673 25.2086 9.97919 22.0204C6.79107 18.8323 5 14.5083 5 9.99963C5.00008 8.53985 5.53224 7.13015 6.49685 6.03448C7.46146 4.93881 8.79237 4.23231 10.2404 4.04726C10.4549 4.0213 10.672 4.06576 10.8591 4.17394C11.0461 4.28212 11.193 4.44816 11.2775 4.64704L13.7888 10.5068C13.8537 10.6583 13.8802 10.8236 13.8658 10.9879C13.8514 11.1522 13.7967 11.3103 13.7064 11.4483L11.6268 14.6258C11.5322 14.7687 11.4762 14.9338 11.4644 15.1048C11.4526 15.2758 11.4854 15.447 11.5595 15.6015Z"/>
+              </svg>
+            </a>
+          </div>
+
+          <div class="hero__overlay">
+            <h1 class="hero__headline"><span data-lang-block="uk">Створення сайту в Польщі</span><span data-lang-block="pl" hidden>Створення сайту в Польщі</span></h1>
+            <p class="hero__headline-sub hero__headline-sub--wide"><span data-lang-block="uk">Сайт для вашої JDG: польською для клієнтів, спілкування з нами — українською.</span><span data-lang-block="pl" hidden>Сайт для вашої JDG: польською для клієнтів, спілкування з нами — українською.</span></p>
+          </div>
+
+          <!-- Bottom service shelf (marquee track on mobile, grid on desktop) -->
+          <div class="shelf">
+            <div class="shelf__track">
+              <a href="index.html#about" class="shelf__card">
+                <span class="shelf__thumb shelf__thumb--1" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num"><span data-lang-block="uk">Ціна</span><span data-lang-block="pl" hidden>Ціна</span></span><span class="shelf__name"><span data-lang-block="uk">від €300</span><span data-lang-block="pl" hidden>від €300</span></span></span>
+              </a>
+              <a href="index.html#about" class="shelf__card">
+                <span class="shelf__thumb shelf__thumb--2" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num"><span data-lang-block="uk">Документи</span><span data-lang-block="pl" hidden>Документи</span></span><span class="shelf__name"><span data-lang-block="uk">Договір і faktura</span><span data-lang-block="pl" hidden>Договір і faktura</span></span></span>
+              </a>
+              <a href="index.html#about" class="shelf__card">
+                <span class="shelf__thumb shelf__thumb--3" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num"><span data-lang-block="uk">Мови сайту</span><span data-lang-block="pl" hidden>Мови сайту</span></span><span class="shelf__name"><span data-lang-block="uk">PL, UA, EN</span><span data-lang-block="pl" hidden>PL, UA, EN</span></span></span>
+              </a>
+              <a href="index.html#about" class="shelf__card">
+                <span class="shelf__thumb shelf__thumb--4" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num"><span data-lang-block="uk">Спілкування</span><span data-lang-block="pl" hidden>Спілкування</span></span><span class="shelf__name"><span data-lang-block="uk">Українською</span><span data-lang-block="pl" hidden>Українською</span></span></span>
+              </a>
+              <a href="index.html#about" class="shelf__card">
+                <span class="shelf__thumb shelf__thumb--5" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num"><span data-lang-block="uk">Студія</span><span data-lang-block="pl" hidden>Студія</span></span><span class="shelf__name"><span data-lang-block="uk">Вроцлав</span><span data-lang-block="pl" hidden>Вроцлав</span></span></span>
+              </a>
+              <a href="index.html#about" class="shelf__card shelf__card--dup" aria-hidden="true" tabindex="-1">
+                <span class="shelf__thumb shelf__thumb--1" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num"><span data-lang-block="uk">Ціна</span><span data-lang-block="pl" hidden>Ціна</span></span><span class="shelf__name"><span data-lang-block="uk">від €300</span><span data-lang-block="pl" hidden>від €300</span></span></span>
+              </a>
+              <a href="index.html#about" class="shelf__card shelf__card--dup" aria-hidden="true" tabindex="-1">
+                <span class="shelf__thumb shelf__thumb--2" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num"><span data-lang-block="uk">Документи</span><span data-lang-block="pl" hidden>Документи</span></span><span class="shelf__name"><span data-lang-block="uk">Договір і faktura</span><span data-lang-block="pl" hidden>Договір і faktura</span></span></span>
+              </a>
+              <a href="index.html#about" class="shelf__card shelf__card--dup" aria-hidden="true" tabindex="-1">
+                <span class="shelf__thumb shelf__thumb--3" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num"><span data-lang-block="uk">Мови сайту</span><span data-lang-block="pl" hidden>Мови сайту</span></span><span class="shelf__name"><span data-lang-block="uk">PL, UA, EN</span><span data-lang-block="pl" hidden>PL, UA, EN</span></span></span>
+              </a>
+              <a href="index.html#about" class="shelf__card shelf__card--dup" aria-hidden="true" tabindex="-1">
+                <span class="shelf__thumb shelf__thumb--4" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num"><span data-lang-block="uk">Спілкування</span><span data-lang-block="pl" hidden>Спілкування</span></span><span class="shelf__name"><span data-lang-block="uk">Українською</span><span data-lang-block="pl" hidden>Українською</span></span></span>
+              </a>
+              <a href="index.html#about" class="shelf__card shelf__card--dup" aria-hidden="true" tabindex="-1">
+                <span class="shelf__thumb shelf__thumb--5" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num"><span data-lang-block="uk">Студія</span><span data-lang-block="pl" hidden>Студія</span></span><span class="shelf__name"><span data-lang-block="uk">Вроцлав</span><span data-lang-block="pl" hidden>Вроцлав</span></span></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile-only: desktop-style founder contact card below the banner -->
+        <div class="hero__below reveal">
+          <a href="https://t.me/Andrii_DEV9" target="_blank" rel="noopener" class="contact-card">
+            <span class="contact-card__photo"><img src="assets/photo.webp" alt="Andrii Shestakov" /></span>
+            <span class="contact-card__body">
+              <span class="contact-card__name">Andrii Shestakov</span>
+              <span class="contact-card__role">Founder &amp; CEO</span>
+            </span>
+            <span class="contact-card__cta">
+              <span data-i18n="hero.aside.cta">Написати</span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section__head section__head--split reveal">
+          <h2 class="section__title"><span data-lang-block="uk">Сайт для бізнесу в Польщі</span><span data-lang-block="pl" hidden>Сайт для бізнесу в Польщі</span></h2>
+          <span class="section__rule" aria-hidden="true"></span>
+          <span class="eyebrow"><span class="eyebrow__dot eyebrow__dot--square"></span><span><span data-lang-block="uk">Що враховуємо</span><span data-lang-block="pl" hidden>Що враховуємо</span></span></span>
+        </div>
+        <div class="partners-layout">
+          <div class="partners-intro reveal">
+            <p class="section__lead section__lead--partners"><span data-lang-block="uk">Створення сайту в Польщі для українського бізнесу — це не переклад українського сайту на польську. Польський клієнт шукає інакше: вводить «послуга + місто», дивиться Profil Firmy w Google, очікує ціну з приміткою про VAT, оплату BLIK і зрозумілу політику приватності. Наша студія працює у Вроцлаві, тож ці дрібниці знаємо зсередини. Робимо сайт для вашої JDG чи компанії: польська версія природною мовою, українська — для своєї аудиторії, а обговорення проєкту — українською. Договір і faktura офіційно, оплата в PLN, EUR або USD.</span><span data-lang-block="pl" hidden>Створення сайту в Польщі для українського бізнесу — це не переклад українського сайту на польську. Польський клієнт шукає інакше: вводить «послуга + місто», дивиться Profil Firmy w Google, очікує ціну з приміткою про VAT, оплату BLIK і зрозумілу політику приватності. Наша студія працює у Вроцлаві, тож ці дрібниці знаємо зсередини. Робимо сайт для вашої JDG чи компанії: польська версія природною мовою, українська — для своєї аудиторії, а обговорення проєкту — українською. Договір і faktura офіційно, оплата в PLN, EUR або USD.</span></p>
+
+            <div class="partners-marquee" role="list">
+              <div class="partners-marquee__track"><span class="partners-chip" role="listitem"><span data-lang-block="uk">Послуги й ремонт</span><span data-lang-block="pl" hidden>Послуги й ремонт</span></span><span class="partners-chip" role="listitem"><span data-lang-block="uk">Краса й здоров'я</span><span data-lang-block="pl" hidden>Краса й здоров'я</span></span><span class="partners-chip" role="listitem"><span data-lang-block="uk">Клінінг</span><span data-lang-block="pl" hidden>Клінінг</span></span><span class="partners-chip" role="listitem"><span data-lang-block="uk">Доставка їжі</span><span data-lang-block="pl" hidden>Доставка їжі</span></span><span class="partners-chip" role="listitem"><span data-lang-block="uk">Інтернет-магазин</span><span data-lang-block="pl" hidden>Інтернет-магазин</span></span><span class="partners-chip" role="listitem"><span data-lang-block="uk">B2B і виробництво</span><span data-lang-block="pl" hidden>B2B і виробництво</span></span><span class="partners-chip" aria-hidden="true"><span data-lang-block="uk">Послуги й ремонт</span><span data-lang-block="pl" hidden>Послуги й ремонт</span></span><span class="partners-chip" aria-hidden="true"><span data-lang-block="uk">Краса й здоров'я</span><span data-lang-block="pl" hidden>Краса й здоров'я</span></span><span class="partners-chip" aria-hidden="true"><span data-lang-block="uk">Клінінг</span><span data-lang-block="pl" hidden>Клінінг</span></span><span class="partners-chip" aria-hidden="true"><span data-lang-block="uk">Доставка їжі</span><span data-lang-block="pl" hidden>Доставка їжі</span></span><span class="partners-chip" aria-hidden="true"><span data-lang-block="uk">Інтернет-магазин</span><span data-lang-block="pl" hidden>Інтернет-магазин</span></span><span class="partners-chip" aria-hidden="true"><span data-lang-block="uk">B2B і виробництво</span><span data-lang-block="pl" hidden>B2B і виробництво</span></span></div>
+            </div>
+
+            <button type="button" class="btn btn--dark btn--lg" data-open-popup>
+              <span><span data-lang-block="uk">Обговорити проєкт</span><span data-lang-block="pl" hidden>Porozmawiajmy o projekcie</span></span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </button>
+          </div>
+
+          <div class="partners-cards reveal-group">
+            <article class="partner-card">
+              <span class="partner-card__num">(01)</span>
+              <div class="partner-card__body">
+                <h3 class="partner-card__text"><span data-lang-block="uk">Польська версія без кальки</span><span data-lang-block="pl" hidden>Польська версія без кальки</span></h3>
+                <p class="partner-card__desc"><span data-lang-block="uk">Тексти польською пишемо так, як формулює запит польський клієнт, а не перекладаємо дослівно. Українську версію залишаємо для своєї аудиторії, мови зв'язуємо через hreflang.</span><span data-lang-block="pl" hidden>Тексти польською пишемо так, як формулює запит польський клієнт, а не перекладаємо дослівно. Українську версію залишаємо для своєї аудиторії, мови зв'язуємо через hreflang.</span></p>
+              </div>
+            </article>
+            <article class="partner-card">
+              <span class="partner-card__num">(02)</span>
+              <div class="partner-card__body">
+                <h3 class="partner-card__text"><span data-lang-block="uk">Оплати, звичні полякам</span><span data-lang-block="pl" hidden>Оплати, звичні полякам</span></h3>
+                <p class="partner-card__desc"><span data-lang-block="uk">За потреби підключаємо Przelewy24, BLIK або PayU, а для магазину — доставку InPost і Paczkomaty. Покупець платить і отримує замовлення так, як звик, і не кидає кошик.</span><span data-lang-block="pl" hidden>За потреби підключаємо Przelewy24, BLIK або PayU, а для магазину — доставку InPost і Paczkomaty. Покупець платить і отримує замовлення так, як звик, і не кидає кошик.</span></p>
+              </div>
+            </article>
+            <article class="partner-card">
+              <span class="partner-card__num">(03)</span>
+              <div class="partner-card__body">
+                <h3 class="partner-card__text"><span data-lang-block="uk">RODO і cookies</span><span data-lang-block="pl" hidden>RODO і cookies</span></h3>
+                <p class="partner-card__desc"><span data-lang-block="uk">Додаємо банер cookies, сторінку політики приватності й згоди у формах відповідно до RODO. Технічну частину робимо ми, юридичну консультацію за потреби краще отримати в юриста.</span><span data-lang-block="pl" hidden>Додаємо банер cookies, сторінку політики приватності й згоди у формах відповідно до RODO. Технічну частину робимо ми, юридичну консультацію за потреби краще отримати в юриста.</span></p>
+              </div>
+            </article>
+            <article class="partner-card">
+              <span class="partner-card__num">(04)</span>
+              <div class="partner-card__body">
+                <h3 class="partner-card__text"><span data-lang-block="uk">Локальне SEO й Google</span><span data-lang-block="pl" hidden>Локальне SEO й Google</span></h3>
+                <p class="partner-card__desc"><span data-lang-block="uk">Будуємо структуру під запити «послуга + місто» і допомагаємо заповнити Profil Firmy w Google. Так вас знаходять клієнти у Вроцлаві, Познані, Кракові чи Варшаві, а не лише знайомі.</span><span data-lang-block="pl" hidden>Будуємо структуру під запити «послуга + місто» і допомагаємо заповнити Profil Firmy w Google. Так вас знаходять клієнти у Вроцлаві, Познані, Кракові чи Варшаві, а не лише знайомі.</span></p>
+              </div>
+            </article>
+            <article class="partner-card">
+              <span class="partner-card__num">(05)</span>
+              <div class="partner-card__body">
+                <h3 class="partner-card__text"><span data-lang-block="uk">Документи для JDG</span><span data-lang-block="pl" hidden>Документи для JDG</span></h3>
+                <p class="partner-card__desc"><span data-lang-block="uk">Працюємо за договором і виставляємо fakturę, ціни без VAT, бо студія звільнена від VAT. Оплата поетапно в PLN, EUR чи USD — зручно для обліку вашої діяльності.</span><span data-lang-block="pl" hidden>Працюємо за договором і виставляємо fakturę, ціни без VAT, бо студія звільнена від VAT. Оплата поетапно в PLN, EUR чи USD — зручно для обліку вашої діяльності.</span></p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="local">
+      <div class="container">
+        <div class="section__head section__head--split reveal">
+          <h2 class="section__title"><span data-lang-block="uk">Наші проєкти в Польщі</span><span data-lang-block="pl" hidden>Наші проєкти в Польщі</span></h2>
+          <span class="section__rule" aria-hidden="true"></span>
+          <span class="eyebrow"><span class="eyebrow__dot eyebrow__dot--square"></span><span><span data-lang-block="uk">Польща</span><span data-lang-block="pl" hidden>Польща</span></span></span>
+        </div>
+
+        <div class="budget-grid">
+        <div class="budget-intro reveal">
+          <p class="budget-lead"><span data-lang-block="uk">Ми вже робили сайти для бізнесу у Вроцлаві, Познані, Кракові, Любліні та для компаній, що продають по всій Польщі: квітковий магазин, клінінг, нерухомість, ремонти, снеки, декоративні панелі й каталог запчастин.</span><span data-lang-block="pl" hidden>Ми вже робили сайти для бізнесу у Вроцлаві, Познані, Кракові, Любліні та для компаній, що продають по всій Польщі: квітковий магазин, клінінг, нерухомість, ремонти, снеки, декоративні панелі й каталог запчастин.</span></p>
+          <p class="budget-sub"><span data-lang-block="uk">Особисто зустрітися можна у Вроцлаві, за домовленістю. З іншими містами працюємо дистанційно: дзвінки й месенджери, погодження дизайну онлайн, договір і faktura електронно. На результат це не впливає — ви спілкуєтеся напряму з дизайнером і розробником, а відповідь отримуєте за кілька годин у робочий час, максимум за 24 години.</span><span data-lang-block="pl" hidden>Особисто зустрітися можна у Вроцлаві, за домовленістю. З іншими містами працюємо дистанційно: дзвінки й месенджери, погодження дизайну онлайн, договір і faktura електронно. На результат це не впливає — ви спілкуєтеся напряму з дизайнером і розробником, а відповідь отримуєте за кілька годин у робочий час, максимум за 24 години.</span></p>
+          <div class="budget-pills" role="list">
+            <div class="budget-pills__track"><span class="budget-pill" role="listitem"><span data-lang-block="uk">Вроцлав</span><span data-lang-block="pl" hidden>Вроцлав</span></span><span class="budget-pill" role="listitem"><span data-lang-block="uk">Познань</span><span data-lang-block="pl" hidden>Познань</span></span><span class="budget-pill" role="listitem"><span data-lang-block="uk">Краків</span><span data-lang-block="pl" hidden>Краків</span></span><span class="budget-pill" role="listitem"><span data-lang-block="uk">Люблін</span><span data-lang-block="pl" hidden>Люблін</span></span><span class="budget-pill" role="listitem"><span data-lang-block="uk">Уся Польща</span><span data-lang-block="pl" hidden>Уся Польща</span></span><span class="budget-pill" aria-hidden="true"><span data-lang-block="uk">Вроцлав</span><span data-lang-block="pl" hidden>Вроцлав</span></span><span class="budget-pill" aria-hidden="true"><span data-lang-block="uk">Познань</span><span data-lang-block="pl" hidden>Познань</span></span><span class="budget-pill" aria-hidden="true"><span data-lang-block="uk">Краків</span><span data-lang-block="pl" hidden>Краків</span></span><span class="budget-pill" aria-hidden="true"><span data-lang-block="uk">Люблін</span><span data-lang-block="pl" hidden>Люблін</span></span><span class="budget-pill" aria-hidden="true"><span data-lang-block="uk">Уся Польща</span><span data-lang-block="pl" hidden>Уся Польща</span></span></div>
+          </div>
+          <a href="#contact" class="btn btn--dark btn--lg budget-intro__btn">
+            <span><span data-lang-block="uk">Обговорити проєкт</span><span data-lang-block="pl" hidden>Porozmawiajmy o projekcie</span></span>
+            <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </a>
+        </div>
+        <div class="reveal">
+          <a class="bx-card" href="case-snek" aria-label="Snek">
+            <div class="bx-card__media"><img src="assets/cases/case8.webp" alt="Snek" loading="lazy" /></div>
+            <div class="bx-card__bar">
+              <span class="bx-card__cat">Snek · <span data-lang-block="uk">Польща</span><span data-lang-block="pl" hidden>Polska</span></span>
+              <span class="bx-card__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </div>
+          </a>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="tariffs">
+      <div class="container">
+        <div class="section__head section__head--split reveal">
+          <h2 class="section__title"><span data-lang-block="uk">Ціни</span><span data-lang-block="pl" hidden>Cennik</span></h2>
+          <span class="section__rule" aria-hidden="true"></span>
+          <span class="eyebrow"><span class="eyebrow__dot eyebrow__dot--square"></span><span><span data-lang-block="uk">Тарифи</span><span data-lang-block="pl" hidden>Pakiety</span></span></span>
+        </div>
+
+        <p class="tariff-lead reveal"><span data-lang-block="uk">Ціни нижче — стартові варіанти для малого бізнесу. Складніші проєкти рахуємо під задачу: після короткого брифу надсилаємо оцінку протягом 24 годин.</span><span data-lang-block="pl" hidden>Poniższe ceny to pakiety startowe dla małych firm. Bardziej złożone projekty wyceniamy indywidualnie: po krótkim briefie wysyłamy wycenę w ciągu 24 godzin. Ceny bez VAT (zwolnienie z VAT).</span></p>
+
+        <div class="tariffs">
+          <article class="tariff reveal">
+            <div class="tariff__meta">
+              <span class="tariff__tag"><span data-lang-block="uk">Запуск за 3 дні</span><span data-lang-block="pl" hidden>Start w 3 dni</span></span>
+            </div>
+            <div class="tariff__top">
+              <span class="tariff__price"><span class="plan-card__cur">€</span>300</span>
+              <span class="tariff__unit"><span data-lang-block="uk">/ проєкт</span><span data-lang-block="pl" hidden>/ projekt</span></span>
+            </div>
+            <h3 class="tariff__name"><span data-lang-block="uk">Старт</span><span data-lang-block="pl" hidden>Start</span></h3>
+            <p class="tariff__sub"><span data-lang-block="uk">Лендінг або проста сторінка компанії для швидкого запуску, перевірки ідеї чи старту реклами.</span><span data-lang-block="pl" hidden>Landing page lub prosta strona firmy — na szybki start, test pomysłu albo kampanię reklamową.</span></p>
+            <ul class="plan-card__list">
+              <li><span class="plan-check" aria-hidden="true"></span><span><span data-lang-block="uk">Індивідуальний дизайн</span><span data-lang-block="pl" hidden>Indywidualny projekt graficzny</span></span></li>
+              <li><span class="plan-check" aria-hidden="true"></span><span><span data-lang-block="uk">Адаптація під мобільні пристрої</span><span data-lang-block="pl" hidden>Wersja mobilna</span></span></li>
+              <li><span class="plan-check" aria-hidden="true"></span><span><span data-lang-block="uk">Базова SEO-оптимізація</span><span data-lang-block="pl" hidden>Podstawowa optymalizacja SEO</span></span></li>
+              <li><span class="plan-check" aria-hidden="true"></span><span><span data-lang-block="uk">Форма заявки з відправкою в Telegram</span><span data-lang-block="pl" hidden>Formularz z powiadomieniem na Telegram</span></span></li>
+              <li><span class="plan-check" aria-hidden="true"></span><span><span data-lang-block="uk">Допомога з текстами</span><span data-lang-block="pl" hidden>Pomoc z tekstami</span></span></li>
+              <li><span class="plan-check" aria-hidden="true"></span><span><span data-lang-block="uk">30 днів підтримки після запуску</span><span data-lang-block="pl" hidden>30 dni wsparcia po starcie</span></span></li>
+            </ul>
+            <button type="button" class="tariff__cta tariff__cta--dark" data-open-popup>
+              <span><span data-lang-block="uk">Замовити</span><span data-lang-block="pl" hidden>Zamów</span></span>
+              <span class="tariff__cta-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </button>
+          </article>
+          <article class="tariff tariff--rec reveal">
+            <div class="tariff__stone" aria-hidden="true"></div>
+            <div class="tariff__meta">
+              <span class="tariff__badge"><span data-lang-block="uk">Оптимальний вибір</span><span data-lang-block="pl" hidden>Optymalny wybór</span></span>
+              <span class="tariff__tag"><span data-lang-block="uk">Запуск за 4–5 днів</span><span data-lang-block="pl" hidden>Start w 4–5 dni</span></span>
+            </div>
+            <div class="tariff__top">
+              <span class="tariff__price"><span class="plan-card__cur">€</span>450</span>
+              <span class="tariff__unit"><span data-lang-block="uk">/ проєкт</span><span data-lang-block="pl" hidden>/ projekt</span></span>
+            </div>
+            <h3 class="tariff__name"><span data-lang-block="uk">Про</span><span data-lang-block="pl" hidden>Pro</span></h3>
+            <p class="tariff__sub"><span data-lang-block="uk">Для бізнесу, якому потрібен сильніший дизайн, більше функцій і можливість самому редагувати сайт.</span><span data-lang-block="pl" hidden>Dla firm, które potrzebują mocniejszego designu, więcej funkcji i samodzielnej edycji strony.</span></p>
+            <ul class="plan-card__list">
+              <li><span class="plan-check" aria-hidden="true"></span><span><span data-lang-block="uk">Усе з тарифу «Старт»</span><span data-lang-block="pl" hidden>Wszystko z pakietu Start</span></span></li>
+              <li><span class="plan-check" aria-hidden="true"></span><span><span data-lang-block="uk">Деталізованіший дизайн</span><span data-lang-block="pl" hidden>Bardziej dopracowany design</span></span></li>
+              <li><span class="plan-check" aria-hidden="true"></span><span><span data-lang-block="uk">Анімації та мікровзаємодії</span><span data-lang-block="pl" hidden>Animacje i mikrointerakcje</span></span></li>
+              <li><span class="plan-check" aria-hidden="true"></span><span><span data-lang-block="uk">Розширена робота з текстами</span><span data-lang-block="pl" hidden>Rozszerzona praca nad tekstami</span></span></li>
+              <li><span class="plan-check" aria-hidden="true"></span><span><span data-lang-block="uk">Підключення аналітики</span><span data-lang-block="pl" hidden>Podłączenie analityki</span></span></li>
+              <li><span class="plan-check" aria-hidden="true"></span><span><span data-lang-block="uk">Адмін-панель для редагування</span><span data-lang-block="pl" hidden>Panel do edycji treści</span></span></li>
+              <li><span class="plan-check" aria-hidden="true"></span><span><span data-lang-block="uk">30 днів підтримки після запуску</span><span data-lang-block="pl" hidden>30 dni wsparcia po starcie</span></span></li>
+            </ul>
+            <button type="button" class="tariff__cta tariff__cta--accent" data-open-popup>
+              <span><span data-lang-block="uk">Обрати тариф</span><span data-lang-block="pl" hidden>Wybierz pakiet</span></span>
+              <span class="tariff__cta-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </button>
+          </article>
+        </div>
+
+        <article class="tariff-addon reveal">
+          <div class="tariff-addon__price">
+            <span class="tariff__unit"><span data-lang-block="uk">від</span><span data-lang-block="pl" hidden>od</span></span>
+            <span class="tariff__price tariff__price--sm"><span class="plan-card__cur">€</span>450</span>
+            <span class="tariff__unit"><span data-lang-block="uk">/ проєкт</span><span data-lang-block="pl" hidden>/ projekt</span></span>
+          </div>
+          <div class="tariff-addon__body">
+            <h3 class="tariff-addon__name">
+              <span class="tariff-addon__dot" aria-hidden="true"></span>
+              <span><span data-lang-block="uk">Багатосторінковий сайт</span><span data-lang-block="pl" hidden>Strona firmowa</span></span>
+              <span class="tariff__tag tariff__tag--sm"><span data-lang-block="uk">15–25 роб. днів</span><span data-lang-block="pl" hidden>15–25 dni rob.</span></span>
+            </h3>
+            <p class="tariff-addon__desc"><span data-lang-block="uk">Сайт компанії з окремими сторінками послуг, кейсами, блогом і кількома мовами. Ціна залежить від кількості сторінок і функцій.</span><span data-lang-block="pl" hidden>Strona firmy z osobnymi podstronami usług, realizacjami, blogiem i kilkoma językami. Cena zależy od liczby podstron i funkcji.</span></p>
+          </div>
+          <a href="svc-korporatyvnyi-sait" class="btn btn--dark">
+            <span><span data-lang-block="uk">Детальніше</span><span data-lang-block="pl" hidden>Szczegóły</span></span>
+            <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </a>
+        </article>
+
+        <article class="tariff-addon reveal">
+          <div class="tariff-addon__price">
+            <span class="tariff__unit"><span data-lang-block="uk">від</span><span data-lang-block="pl" hidden>od</span></span>
+            <span class="tariff__price tariff__price--sm"><span class="plan-card__cur">€</span>800</span>
+            <span class="tariff__unit"><span data-lang-block="uk">/ проєкт</span><span data-lang-block="pl" hidden>/ projekt</span></span>
+          </div>
+          <div class="tariff-addon__body">
+            <h3 class="tariff-addon__name">
+              <span class="tariff-addon__dot" aria-hidden="true"></span>
+              <span><span data-lang-block="uk">Інтернет-магазин</span><span data-lang-block="pl" hidden>Sklep internetowy</span></span>
+              <span class="tariff__tag tariff__tag--sm"><span data-lang-block="uk">20–30 роб. днів</span><span data-lang-block="pl" hidden>20–30 dni rob.</span></span>
+            </h3>
+            <p class="tariff-addon__desc"><span data-lang-block="uk">Каталог, кошик, онлайн-оплата, доставка й адмінка. Складні магазини з CRM та інтеграціями — 30–45+ робочих днів.</span><span data-lang-block="pl" hidden>Katalog, koszyk, płatności online, dostawa i panel. Złożone sklepy z CRM i integracjami — 30–45+ dni roboczych.</span></p>
+          </div>
+          <a href="svc-internet-magazyn" class="btn btn--dark">
+            <span><span data-lang-block="uk">Детальніше</span><span data-lang-block="pl" hidden>Szczegóły</span></span>
+            <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </a>
+        </article>
+
+        <article class="tariff-addon reveal">
+          <div class="tariff-addon__price">
+            <span class="tariff__unit"><span data-lang-block="uk">від</span><span data-lang-block="pl" hidden>od</span></span>
+            <span class="tariff__price tariff__price--sm"><span class="plan-card__cur">€</span>20</span>
+            <span class="tariff__unit"><span data-lang-block="uk">/ місяць</span><span data-lang-block="pl" hidden>/ miesiąc</span></span>
+          </div>
+          <div class="tariff-addon__body">
+            <h3 class="tariff-addon__name">
+              <span class="tariff-addon__dot" aria-hidden="true"></span>
+              <span><span data-lang-block="uk">Підтримка сайту</span><span data-lang-block="pl" hidden>Opieka nad stroną</span></span>
+              <span class="tariff__tag tariff__tag--sm"><span data-lang-block="uk">Щомісяця</span><span data-lang-block="pl" hidden>Co miesiąc</span></span>
+            </h3>
+            <p class="tariff-addon__desc"><span data-lang-block="uk">Технічний супровід після запуску: оновлення, невеликі правки, консультації та допомога з обслуговуванням.</span><span data-lang-block="pl" hidden>Opieka techniczna po starcie: aktualizacje, drobne poprawki, konsultacje i pomoc w utrzymaniu strony.</span></p>
+          </div>
+          <button type="button" class="btn btn--dark" data-open-popup>
+            <span><span data-lang-block="uk">Додати підтримку</span><span data-lang-block="pl" hidden>Dodaj opiekę</span></span>
+            <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </button>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="section" id="cases">
+      <div class="container">
+        <div class="section__head section__head--split reveal">
+          <h2 class="section__title"><span data-lang-block="uk">Приклади робіт</span><span data-lang-block="pl" hidden>Przykładowe realizacje</span></h2>
+          <span class="section__rule" aria-hidden="true"></span>
+          <span class="eyebrow"><span class="eyebrow__dot eyebrow__dot--square"></span><span><span data-lang-block="uk">Кейси</span><span data-lang-block="pl" hidden>Realizacje</span></span></span>
+        </div>
+
+        <div class="cases reveal-group">
+          <a class="case" href="case-elart-cleaning" aria-label="Elart Cleaning">
+            <div class="case__media">
+              <img src="assets/cases/case16.webp" alt="Elart Cleaning" loading="lazy" width="1200" height="840" />
+            </div>
+            <div class="case__bar">
+              <div class="case__id">
+                <span class="case__num">(01)</span>
+                <h3 class="case__name">Elart Cleaning</h3>
+              </div>
+              <span class="case__cat"><span data-lang-block="uk">Клінінг</span><span data-lang-block="pl" hidden>Sprzątanie</span></span>
+              <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </div>
+          </a>
+          <a class="case" href="case-axiom-technology" aria-label="Axiom Technology">
+            <div class="case__media">
+              <img src="assets/cases/case26.webp" alt="Axiom Technology" loading="lazy" width="1200" height="840" />
+            </div>
+            <div class="case__bar">
+              <div class="case__id">
+                <span class="case__num">(02)</span>
+                <h3 class="case__name">Axiom Technology</h3>
+              </div>
+              <span class="case__cat"><span data-lang-block="uk">Діодні лазери</span><span data-lang-block="pl" hidden>Lasery diodowe</span></span>
+              <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </div>
+          </a>
+          <a class="case" href="case-lokalizacja" aria-label="Lokalizacja">
+            <div class="case__media">
+              <img src="assets/cases/case5.webp" alt="Lokalizacja" loading="lazy" width="1200" height="840" />
+            </div>
+            <div class="case__bar">
+              <div class="case__id">
+                <span class="case__num">(03)</span>
+                <h3 class="case__name">Lokalizacja</h3>
+              </div>
+              <span class="case__cat"><span data-lang-block="uk">Нерухомість</span><span data-lang-block="pl" hidden>Nieruchomości</span></span>
+              <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </div>
+          </a>
+          <a class="case" href="case-big-mark" aria-label="BIG-MARK">
+            <div class="case__media">
+              <img src="assets/cases/case15.webp" alt="BIG-MARK" loading="lazy" width="1200" height="840" />
+            </div>
+            <div class="case__bar">
+              <div class="case__id">
+                <span class="case__num">(04)</span>
+                <h3 class="case__name">BIG-MARK</h3>
+              </div>
+              <span class="case__cat"><span data-lang-block="uk">Ремонти</span><span data-lang-block="pl" hidden>Remonty</span></span>
+              <span class="case__cta" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="faq">
+      <div class="container faq-layout">
+        <div class="faq-layout__head reveal">
+          <div class="head-kicker">
+            <span class="eyebrow"><span class="eyebrow__dot eyebrow__dot--square"></span><span data-i18n="faq.tag">FAQ</span></span>
+          </div>
+          <h2 class="section__title" data-i18n="faq.title">Питання та відповіді</h2>
+          <p class="section__lead" data-i18n="faq.desc">Не знайшли відповідь?<br>Напишіть нам у Telegram — відповімо швидко.</p>
+          <a href="https://t.me/Andrii_DEV9" target="_blank" rel="noopener" class="contact-card">
+            <span class="contact-card__photo"><img src="assets/photo.webp" alt="Andrii Shestakov" /></span>
+            <span class="contact-card__body">
+              <span class="contact-card__name">Andrii Shestakov</span>
+              <span class="contact-card__role">Founder &amp; CEO</span>
+            </span>
+            <span class="contact-card__cta">
+              <span data-i18n="hero.aside.cta">Написати</span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </span>
+          </a>
+        </div>
+
+        <div class="faq reveal-group">
+          <div class="faq__item">
+            <button type="button" class="faq__q" aria-expanded="false"><span class="faq__qn">(01)</span><span><span data-lang-block="uk">Скільки коштує створення сайту в Польщі?</span><span data-lang-block="pl" hidden>Скільки коштує створення сайту в Польщі?</span></span><span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><p><span data-lang-block="uk">Лендінг у нас коштує від €300 (тариф «Старт», запуск за 3 дні), тариф «Про» — €450, багатосторінковий сайт — від €450, інтернет-магазин — від €800. Складніші проєкти рахуємо після брифу, оцінка за 24 години. Ціни без VAT, бо студія звільнена від VAT; платити можна в PLN, EUR або USD.</span><span data-lang-block="pl" hidden>Лендінг у нас коштує від €300 (тариф «Старт», запуск за 3 дні), тариф «Про» — €450, багатосторінковий сайт — від €450, інтернет-магазин — від €800. Складніші проєкти рахуємо після брифу, оцінка за 24 години. Ціни без VAT, бо студія звільнена від VAT; платити можна в PLN, EUR або USD.</span></p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q" aria-expanded="false"><span class="faq__qn">(02)</span><span><span data-lang-block="uk">Чи можна замовити сайт для JDG, яку відкрив українець?</span><span data-lang-block="pl" hidden>Чи можна замовити сайт для JDG, яку відкрив українець?</span></span><span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><p><span data-lang-block="uk">Так, громадянство власника для нас значення не має: укладаємо договір і виставляємо fakturę на вашу JDG. З реєстрацією в CEIDG і податками не консультуємо, але зробимо сайт, який виглядає як повноцінний польський бізнес: польська версія, реквізити, політика приватності й контакти, зрозумілі місцевому клієнту.</span><span data-lang-block="pl" hidden>Так, громадянство власника для нас значення не має: укладаємо договір і виставляємо fakturę на вашу JDG. З реєстрацією в CEIDG і податками не консультуємо, але зробимо сайт, який виглядає як повноцінний польський бізнес: польська версія, реквізити, політика приватності й контакти, зрозумілі місцевому клієнту.</span></p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q" aria-expanded="false"><span class="faq__qn">(03)</span><span><span data-lang-block="uk">Чи потрібна польська версія, якщо зараз клієнти — українці?</span><span data-lang-block="pl" hidden>Чи потрібна польська версія, якщо зараз клієнти — українці?</span></span><span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><p><span data-lang-block="uk">Якщо плануєте рости в Польщі — так. Поляки шукають послуги польською, і сайт лише українською для них у пошуку фактично не існує. Оптимально зробити дві версії: польську як основну для Google і українську для своєї аудиторії, пов'язавши їх через hreflang, щоб кожен бачив свою мову.</span><span data-lang-block="pl" hidden>Якщо плануєте рости в Польщі — так. Поляки шукають послуги польською, і сайт лише українською для них у пошуку фактично не існує. Оптимально зробити дві версії: польську як основну для Google і українську для своєї аудиторії, пов'язавши їх через hreflang, щоб кожен бачив свою мову.</span></p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q" aria-expanded="false"><span class="faq__qn">(04)</span><span><span data-lang-block="uk">Чи можна спілкуватися зі студією українською?</span><span data-lang-block="pl" hidden>Чи можна спілкуватися зі студією українською?</span></span><span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><p><span data-lang-block="uk">Так, увесь проєкт можна вести українською: дзвінки, бриф, погодження дизайну й правки. Польську версію сайту при цьому пишемо природною польською, а не машинним перекладом. Якщо у вас є польськомовний партнер чи менеджер, можемо паралельно спілкуватися з ним польською. Відповідаємо за кілька годин у робочий час.</span><span data-lang-block="pl" hidden>Так, увесь проєкт можна вести українською: дзвінки, бриф, погодження дизайну й правки. Польську версію сайту при цьому пишемо природною польською, а не машинним перекладом. Якщо у вас є польськомовний партнер чи менеджер, можемо паралельно спілкуватися з ним польською. Відповідаємо за кілька годин у робочий час.</span></p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q" aria-expanded="false"><span class="faq__qn">(05)</span><span><span data-lang-block="uk">Що потрібно на сайті для відповідності RODO?</span><span data-lang-block="pl" hidden>Що потрібно на сайті для відповідності RODO?</span></span><span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><p><span data-lang-block="uk">Як мінімум — банер cookies з вибором згоди, політика приватності й згода на обробку даних у формах. Ми додаємо це технічно й налаштовуємо так, щоб аналітика запускалася після згоди. Текст політики допомагаємо підготувати, але юридичної консультації не даємо — для складних випадків краще звернутися до юриста.</span><span data-lang-block="pl" hidden>Як мінімум — банер cookies з вибором згоди, політика приватності й згода на обробку даних у формах. Ми додаємо це технічно й налаштовуємо так, щоб аналітика запускалася після згоди. Текст політики допомагаємо підготувати, але юридичної консультації не даємо — для складних випадків краще звернутися до юриста.</span></p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q" aria-expanded="false"><span class="faq__qn">(06)</span><span><span data-lang-block="uk">Чи можна підключити BLIK і Przelewy24?</span><span data-lang-block="pl" hidden>Чи можна підключити BLIK і Przelewy24?</span></span><span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><p><span data-lang-block="uk">Так, для інтернет-магазину чи онлайн-запису підключаємо Przelewy24, BLIK або PayU, а також доставку InPost і Paczkomaty. Договір із платіжним оператором укладаєте ви на свою JDG, ми налаштовуємо інтеграцію на сайті й перевіряємо, що оплата проходить коректно ще до запуску. Інтеграцію враховуємо в оцінці проєкту.</span><span data-lang-block="pl" hidden>Так, для інтернет-магазину чи онлайн-запису підключаємо Przelewy24, BLIK або PayU, а також доставку InPost і Paczkomaty. Договір із платіжним оператором укладаєте ви на свою JDG, ми налаштовуємо інтеграцію на сайті й перевіряємо, що оплата проходить коректно ще до запуску. Інтеграцію враховуємо в оцінці проєкту.</span></p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q" aria-expanded="false"><span class="faq__qn">(07)</span><span><span data-lang-block="uk">Ви працюєте лише з Вроцлавом чи з усією Польщею?</span><span data-lang-block="pl" hidden>Ви працюєте лише з Вроцлавом чи з усією Польщею?</span></span><span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><p><span data-lang-block="uk">З усією Польщею. Студія працює у Вроцлаві, і тут можна зустрітися особисто за домовленістю. Клієнтів із Познані, Кракова, Варшави, Любліна та інших міст ведемо дистанційно: дзвінки, месенджери, договір і faktura електронно. Серед наших проєктів є сайти для бізнесу з кількох польських міст.</span><span data-lang-block="pl" hidden>З усією Польщею. Студія працює у Вроцлаві, і тут можна зустрітися особисто за домовленістю. Клієнтів із Познані, Кракова, Варшави, Любліна та інших міст ведемо дистанційно: дзвінки, месенджери, договір і faktura електронно. Серед наших проєктів є сайти для бізнесу з кількох польських міст.</span></p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q" aria-expanded="false"><span class="faq__qn">(08)</span><span><span data-lang-block="uk">У мене був сайт для ФОП в Україні — чи можна адаптувати його під Польщу?</span><span data-lang-block="pl" hidden>У мене був сайт для ФОП в Україні — чи можна адаптувати його під Польщу?</span></span><span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><p><span data-lang-block="uk">Так, часто це можливо: додаємо польську версію, змінюємо реквізити й валюту, підключаємо польські оплати, оновлюємо контакти й Profil Firmy w Google. Спершу дивимося, що є, і чесно кажемо, що вигідніше — доопрацювати старий сайт чи зробити новий. Оцінку даємо за 24 години після брифу.</span><span data-lang-block="pl" hidden>Так, часто це можливо: додаємо польську версію, змінюємо реквізити й валюту, підключаємо польські оплати, оновлюємо контакти й Profil Firmy w Google. Спершу дивимося, що є, і чесно кажемо, що вигідніше — доопрацювати старий сайт чи зробити новий. Оцінку даємо за 24 години після брифу.</span></p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--services" id="services">
+      <div class="container">
+        <div class="section__head section__head--split reveal">
+          <h2 class="section__title"><span data-lang-block="uk">Міста</span><span data-lang-block="pl" hidden>Miasta</span></h2>
+          <span class="section__rule" aria-hidden="true"></span>
+          <span class="eyebrow"><span class="eyebrow__dot eyebrow__dot--square"></span><span><span data-lang-block="uk">Польща</span><span data-lang-block="pl" hidden>Polska</span></span></span>
+        </div>
+
+        <div class="services reveal-group">
+          <span class="service-preview" aria-hidden="true"></span>
+          <article class="service" data-img="assets/service-1.webp">
+            <span class="service__num">(01)</span>
+            <img class="service__img" src="assets/service-1.webp" alt="" loading="lazy" />
+            <div class="service__body">
+              <h3 class="service__title"><a href="city-vroclav"><span data-lang-block="uk">Вроцлав</span><span data-lang-block="pl" hidden>Wrocław</span></a></h3>
+              <p class="service__text"><span data-lang-block="uk">Студія працює у Вроцлаві: проєкт можна обговорити наживо, а не лише в чаті.</span><span data-lang-block="pl" hidden>Studio działa we Wrocławiu — projekt omówimy na żywo, nie tylko na czacie.</span></p>
+            </div>
+            <a href="city-vroclav" class="service__cta">
+              <span><span data-lang-block="uk">Детальніше</span><span data-lang-block="pl" hidden>Szczegóły</span></span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </a>
+          </article>
+
+          <article class="service" data-img="assets/service-2.webp">
+            <span class="service__num">(02)</span>
+            <img class="service__img" src="assets/service-2.webp" alt="" loading="lazy" />
+            <div class="service__body">
+              <h3 class="service__title"><a href="city-poznan"><span data-lang-block="uk">Познань</span><span data-lang-block="pl" hidden>Poznań</span></a></h3>
+              <p class="service__text"><span data-lang-block="uk">Сайти для сервісних і B2B-компаній Познані — дистанційно, з договором і faktura.</span><span data-lang-block="pl" hidden>Strony dla firm usługowych i B2B z Poznania — zdalnie, na umowę i z fakturą.</span></p>
+            </div>
+            <a href="city-poznan" class="service__cta">
+              <span><span data-lang-block="uk">Детальніше</span><span data-lang-block="pl" hidden>Szczegóły</span></span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </a>
+          </article>
+
+          <article class="service" data-img="assets/service-3.webp">
+            <span class="service__num">(03)</span>
+            <img class="service__img" src="assets/service-3.webp" alt="" loading="lazy" />
+            <div class="service__body">
+              <h3 class="service__title"><a href="city-krakiv"><span data-lang-block="uk">Краків</span><span data-lang-block="pl" hidden>Kraków</span></a></h3>
+              <p class="service__text"><span data-lang-block="uk">Сайти для сервісу, туризму й нерухомості — польською, англійською, українською.</span><span data-lang-block="pl" hidden>Strony dla usług, turystyki i nieruchomości — po polsku, angielsku i ukraińsku.</span></p>
+            </div>
+            <a href="city-krakiv" class="service__cta">
+              <span><span data-lang-block="uk">Детальніше</span><span data-lang-block="pl" hidden>Szczegóły</span></span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </a>
+          </article>
+
+          <article class="service" data-img="assets/service-4.webp">
+            <span class="service__num">(04)</span>
+            <img class="service__img" src="assets/service-4.webp" alt="" loading="lazy" />
+            <div class="service__body">
+              <h3 class="service__title"><a href="city-varshava"><span data-lang-block="uk">Варшава</span><span data-lang-block="pl" hidden>Warszawa</span></a></h3>
+              <p class="service__text"><span data-lang-block="uk">Сайт зі структурою під пошук для найконкурентнішого ринку Польщі — дистанційно.</span><span data-lang-block="pl" hidden>Strona z konstrukcją pod SEO na najbardziej konkurencyjny rynek w Polsce — zdalnie.</span></p>
+            </div>
+            <a href="city-varshava" class="service__cta">
+              <span><span data-lang-block="uk">Детальніше</span><span data-lang-block="pl" hidden>Szczegóły</span></span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="cta-form reveal">
+          <div class="cta-form__head">
+            <div class="head-kicker">
+              <span class="eyebrow"><span class="eyebrow__dot eyebrow__dot--square"></span><span data-i18n="contact.tag">Контакти</span></span>
+            </div>
+            <h2 class="section__title" data-i18n="form.title">Готові запустити сайт, магазин або Telegram-бот?</h2>
+            <p class="section__lead" data-i18n="form.desc">Залиште заявку, і ми зв’яжемося з вами, щоб обговорити задачу, формат проєкту, терміни та можливе рішення</p>
+            <ul class="cta-form__contacts">
+              <li><a href="https://t.me/Andrii_DEV9" target="_blank" rel="noopener">
+                <span class="cta-form__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3l-3 14.1c-.2 1-.8 1.2-1.7.8l-4.6-3.4-2.2 2.1c-.2.2-.4.4-.9.4l.3-4.7 8.5-7.7c.4-.3-.1-.5-.6-.2L7.3 13 2.8 11.6c-1-.3-1-1 .2-1.4l17-6.6c.8-.3 1.5.2 1.9 1z"/></svg></span>
+                <span>@Andrii_DEV9</span>
+              </a></li>
+              <li><a href="https://wa.me/48577503534" target="_blank" rel="noopener">
+                <span class="cta-form__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg></span>
+                <span>WhatsApp</span>
+              </a></li>
+              <li><a href="https://www.instagram.com/web.shestakov" target="_blank" rel="noopener">
+                <span class="cta-form__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span>
+                <span>@web.shestakov</span>
+              </a></li>
+              <li><a href="tel:+48577503534">
+                <span class="cta-form__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3h3l1.5 5-2 1.5a12 12 0 0 0 5 5l1.5-2 5 1.5v3a2 2 0 0 1-2 2A16 16 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg></span>
+                <span>+48 577 503 534</span>
+              </a></li>
+            </ul>
+          </div>
+
+          <form class="form" id="main-form" novalidate>
+            <div class="form__row">
+              <div class="field">
+                <label class="field__label" for="name" data-i18n="form.name">Ім’я</label>
+                <input class="field__input" type="text" id="name" name="name" required data-i18n-attr="placeholder:form.ph.name" placeholder="Ваше ім’я" />
+                <span class="field__error" data-i18n="form.err.required">Це поле обов’язкове</span>
+              </div>
+              <div class="field">
+                <label class="field__label" for="contact-value" data-i18n="form.contact">Телефон або Telegram</label>
+                <input class="field__input" type="text" id="contact-value" name="contact" required data-i18n-attr="placeholder:form.ph.contact" placeholder="+48 ... або @username" />
+                <span class="field__error" data-i18n="form.err.required">Це поле обов’язкове</span>
+              </div>
+            </div>
+            <div class="field">
+              <label class="field__label" for="need" data-i18n="form.need">Що потрібно розробити?</label>
+              <div class="field__select">
+                <select class="field__input" id="need" name="need" required>
+                  <option value="" data-i18n="form.opt.choose">Оберіть варіант</option>
+                  <option value="site" data-i18n="form.opt.site">Сайт</option>
+                  <option value="shop" data-i18n="form.opt.shop">Інтернет-магазин</option>
+                  <option value="bot" data-i18n="form.opt.bot">Telegram-бот</option>
+                  <option value="seo" data-i18n="form.opt.seo">SEO</option>
+                  <option value="identity" data-i18n="form.opt.identity">Айдентика</option>
+                  <option value="other" data-i18n="form.opt.other">Інше</option>
+                </select>
+                <span class="field__chevron" aria-hidden="true"></span>
+              </div>
+              <span class="field__error" data-i18n="form.err.required">Це поле обов’язкове</span>
+            </div>
+            <div class="field">
+              <label class="field__label" for="comment" data-i18n="form.comment">Коментар до проєкту</label>
+              <textarea class="field__input field__textarea" id="comment" name="comment" rows="4" data-i18n-attr="placeholder:form.ph.comment" placeholder="Коротко опишіть задачу"></textarea>
+            </div>
+            <input class="form__hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <label class="checkbox">
+              <input type="checkbox" id="agree" name="agree" required />
+              <span class="checkbox__box" aria-hidden="true"></span>
+              <span class="checkbox__label" data-i18n="form.agree">Я ознайомився/-лася з Політикою конфіденційності та погоджуюся на обробку моїх даних для опрацювання заявки</span>
+            </label>
+            <span class="field__error field__error--checkbox" data-i18n="form.err.agree">Потрібно підтвердити згоду</span>
+            <button type="submit" class="btn btn--accent btn--lg btn--block btn--between">
+              <span data-i18n="form.submit">Надіслати заявку</span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </button>
+            <p class="form__status form__status--success" role="status" data-i18n="form.success">Дякуємо! Ваша заявка надіслана. Ми скоро зв’яжемося з вами.</p>
+            <p class="form__status form__status--error" role="alert" data-i18n="form.error">Будь ласка, заповніть обов’язкові поля.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__cta reveal">
+        <h2 class="footer__big" data-i18n="footer.big">Обговоримо ваш проєкт?</h2>
+        <button type="button" class="btn btn--accent btn--lg" data-open-popup>
+          <span data-i18n="cta.header">Отримати консультацію</span>
+          <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </button>
+      </div>
+
+      <div class="footer__top">
+        <nav class="footer__nav" aria-label="Footer">
+          <div class="footer__navcol">
+            <a href="about" data-i18n="nav.about">Про нас</a>
+            <a href="index.html#why" data-i18n="nav.why">Переваги</a>
+          </div>
+          <div class="footer__navcol">
+            <a href="index.html#services" data-i18n="nav.services">Послуги</a>
+            <a href="index.html#cases" data-i18n="nav.cases">Кейси</a>
+          </div>
+          <div class="footer__navcol">
+            <a href="index.html#faq" data-i18n="nav.faq">FAQ</a>
+            <a href="index.html#partners" data-i18n="nav.partners">Партнерам</a>
+          </div>
+          <div class="footer__navcol">
+            <a href="#contact" data-i18n="nav.contacts">Контакти</a>
+          </div>
+        </nav>
+
+        <div class="footer__contacts">
+          <a href="tel:+48577503534" class="footer__mail">+48 577 503 534</a>
+          <a href="https://t.me/Andrii_DEV9" target="_blank" rel="noopener">Telegram</a>
+          <a href="https://wa.me/48577503534" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://www.instagram.com/web.shestakov" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+
+      <div class="footer__wordmark">
+        <img src="assets/footer-logo.svg" alt="Web Shestakov agency" />
+      </div>
+
+      <div class="footer__legal">
+        <a href="privacy.html" data-i18n="footer.privacy">політика конфіденційності</a>
+        <a href="#" data-cookie-settings data-i18n="footer.cookies">налаштування cookies</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ COOKIE BANNER ============ -->
+  <aside class="cookie" id="cookie-banner" role="region" aria-label="Cookie" hidden>
+    <p class="cookie__text">
+      <span data-i18n="cookie.text">Ми використовуємо cookie, щоб сайт працював коректно та був зручнішим.</span>
+      <a class="cookie__link" href="privacy.html" data-i18n="cookie.link">Політика конфіденційності</a>
+    </p>
+    <div class="cookie__actions">
+      <button type="button" class="cookie__btn cookie__btn--accept" data-cookie="accepted" data-i18n="cookie.accept">Прийняти</button>
+      <button type="button" class="cookie__btn cookie__btn--ghost" data-cookie="essential" data-i18n="cookie.decline">Лише необхідні</button>
+    </div>
+  </aside>
+
+  <!-- ============ FLOATING WIDGET ============ -->
+  <button type="button" class="floating-widget" data-open-popup aria-label="Web Shestakov">
+    <span class="floating-widget__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M21 4L3 11l6 2 2 6 3-5 5 3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+    <span class="floating-widget__text" data-i18n="widget.text">Заявка</span>
+  </button>
+
+  <!-- ============ MOBILE STICKY CTA ============ -->
+  <div class="sticky-cta">
+    <button type="button" class="btn btn--accent btn--block" data-open-popup>
+      <span data-i18n="cta.header">Отримати консультацію</span>
+    </button>
+  </div>
+
+  <!-- ============ POPUP FORM ============ -->
+  <div class="popup" id="popup" aria-hidden="true">
+    <div class="popup__overlay" data-close-popup></div>
+    <div class="popup__dialog" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+      <button type="button" class="popup__close" data-close-popup aria-label="Close">
+        <svg viewBox="0 0 24 24" width="22" height="22"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+      <span class="eyebrow"><span class="eyebrow__dot"></span><span data-i18n="contact.tag">Контакти</span></span>
+      <h3 class="popup__title" id="popup-title" data-i18n="form.title">Готові запустити сайт, магазин або Telegram-бот?</h3>
+
+      <form class="form" id="popup-form" novalidate>
+        <div class="field">
+          <label class="field__label" for="p-name" data-i18n="form.name">Ім’я</label>
+          <input class="field__input" type="text" id="p-name" name="name" required data-i18n-attr="placeholder:form.ph.name" placeholder="Ваше ім’я" />
+          <span class="field__error" data-i18n="form.err.required">Це поле обов’язкове</span>
+        </div>
+        <div class="field">
+          <label class="field__label" for="p-contact" data-i18n="form.contact">Телефон або Telegram</label>
+          <input class="field__input" type="text" id="p-contact" name="contact" required data-i18n-attr="placeholder:form.ph.contact" placeholder="+48 ... або @username" />
+          <span class="field__error" data-i18n="form.err.required">Це поле обов’язкове</span>
+        </div>
+        <div class="field">
+          <label class="field__label" for="p-need" data-i18n="form.need">Що потрібно розробити?</label>
+          <div class="field__select">
+            <select class="field__input" id="p-need" name="need" required>
+              <option value="" data-i18n="form.opt.choose">Оберіть варіант</option>
+              <option value="site" data-i18n="form.opt.site">Сайт</option>
+              <option value="shop" data-i18n="form.opt.shop">Інтернет-магазин</option>
+              <option value="bot" data-i18n="form.opt.bot">Telegram-бот</option>
+              <option value="seo" data-i18n="form.opt.seo">SEO</option>
+              <option value="identity" data-i18n="form.opt.identity">Айдентика</option>
+              <option value="other" data-i18n="form.opt.other">Інше</option>
+            </select>
+            <span class="field__chevron" aria-hidden="true"></span>
+          </div>
+          <span class="field__error" data-i18n="form.err.required">Це поле обов’язкове</span>
+        </div>
+        <div class="field">
+          <label class="field__label" for="p-comment" data-i18n="form.comment">Коментар</label>
+          <textarea class="field__input field__textarea" id="p-comment" name="comment" rows="3" data-i18n-attr="placeholder:form.ph.comment" placeholder="Коротко опишіть задачу"></textarea>
+        </div>
+        <input class="form__hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        <label class="checkbox">
+          <input type="checkbox" id="p-agree" name="agree" required />
+          <span class="checkbox__box" aria-hidden="true"></span>
+          <span class="checkbox__label" data-i18n="form.agree">Я ознайомився/-лася з Політикою конфіденційності та погоджуюся на обробку моїх даних для опрацювання заявки</span>
+        </label>
+        <span class="field__error field__error--checkbox" data-i18n="form.err.agree">Потрібно підтвердити згоду</span>
+        <button type="submit" class="btn btn--accent btn--lg btn--block">
+          <span data-i18n="form.submit">Надіслати заявку</span>
+        </button>
+        <p class="form__status form__status--success" role="status" data-i18n="form.success">Дякуємо! Ваша заявка надіслана. Ми скоро зв’яжемося з вами.</p>
+        <p class="form__status form__status--error" role="alert" data-i18n="form.error">Будь ласка, заповніть обов’язкові поля.</p>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

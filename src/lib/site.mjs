@@ -128,6 +128,10 @@ for (const v of SVC.services) {
     { group: "svc-" + v.key, lang: "pl", path: v.path_pl, template: "svc-" + v.key, crumb: v.name_pl, service: v, title: v.title_pl, description: v.desc_pl, priority: 0.9 }
   );
 }
+for (const c of SVC.cities || []) {
+  PAGES.push({ group: "city-" + c.key, lang: "uk", path: c.path_uk, template: "city-" + c.key, crumb: c.name_uk, title: c.title_uk, description: c.desc_uk, priority: 0.8 });
+  if (c.path_pl) PAGES.push({ group: "city-" + c.key, lang: "pl", path: c.path_pl, template: "city-" + c.key, crumb: c.name_pl, title: c.title_pl, description: c.desc_pl, priority: 0.8 });
+}
 PAGES.push(
   { group: "prices", lang: "uk", path: "/tsiny/", template: "prices", crumb: "Ціни", title: SVC.prices.title_uk, description: SVC.prices.desc_uk, priority: 0.9 },
   { group: "prices", lang: "pl", path: "/pl/cennik/", template: "prices", crumb: "Cennik", title: SVC.prices.title_pl, description: SVC.prices.desc_pl, priority: 0.9 },
