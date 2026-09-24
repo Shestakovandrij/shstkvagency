@@ -1,0 +1,23 @@
+# SHSTKV Digital (Web Shestakov)
+
+> Веб-студія з Вроцлава (Польща): сайти, лендінги, інтернет-магазини й Telegram-боти для бізнесу в Польщі, Україні та ЄС. Засновник — Andrii Shestakov, 12+ років у веб-розробці, 35+ проєктів у 6 країнах (Польща, Україна, Німеччина, Чехія, Нідерланди, США). Спілкування українською та польською. Працюємо офіційно: договір і faktura, оплата поетапно в EUR, USD або PLN.
+
+Studio stron internetowych z Wrocławia: strony firmowe, landing page, sklepy internetowe i boty Telegram dla firm w Polsce i UE. Obsługa po polsku i ukraińsku, umowa i faktura (zwolnienie z VAT).
+
+## Ціни / Ceny
+- Лендінг — від €300, запуск від 3 днів / Landing page — od 300 €
+- Багатосторінковий сайт — від €450 / Strona wielostronicowa — od 450 €
+- Інтернет-магазин — від €800, 20–30 робочих днів / Sklep internetowy — od 800 €
+- Підтримка сайту — від €20 на місяць / Opieka nad stroną — od 20 € miesięcznie
+- Telegram-боти та складні сервіси — оцінка за 24 години після брифу
+
+## Основні сторінки
+- [Головна (UA)](https://www.shstkv-digital.com/): послуги, тарифи, FAQ
+- [Strona główna (PL)](https://www.shstkv-digital.com/pl/)
+- [Про нас](https://www.shstkv-digital.com/pro-nas/) / [O nas](https://www.shstkv-digital.com/pl/o-nas/): команда, процес роботи, умови
+- [Портфоліо](https://www.shstkv-digital.com/portfolio/) / [Portfolio](https://www.shstkv-digital.com/pl/realizacje/): вибрані проєкти, у кожного своя сторінка-кейс
+
+## Контакти
+- Телефон / Telefon: +48 577 503 534
+- Email: webdeveloperandrii@gmail.com
+- Місто: Вроцлав, Польща (працюємо дистанційно по всій Польщі, Україні та ЄС)

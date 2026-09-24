@@ -33,9 +33,9 @@ export const PAGES = [
     lang: "uk",
     path: "/",
     template: "home",
-    title: "Розробка сайтів під ключ від $300 — Україна та Польща | Web Shestakov",
+    title: "Розробка сайтів під ключ від €300 — Україна та Польща | Web Shestakov",
     description:
-      "Лендінги, корпоративні сайти, інтернет-магазини та Telegram-боти під ключ від $300. Запуск від 3 днів, 30+ проєктів для бізнесу в Польщі, Україні та ЄС. Безкоштовна консультація.",
+      "Лендінги, корпоративні сайти, інтернет-магазини та Telegram-боти під ключ від €300. Запуск від 3 днів, 30+ проєктів для бізнесу в Польщі, Україні та ЄС. Безкоштовна консультація.",
     priority: 1.0
   },
   {
@@ -52,6 +52,7 @@ export const PAGES = [
     group: "portfolio",
     lang: "uk",
     path: "/portfolio/",
+    crumb: "Портфоліо",
     template: "portfolio",
     title: "Портфоліо: сайти та інтернет-магазини, які ми створили | Web Shestakov",
     description:
@@ -59,13 +60,25 @@ export const PAGES = [
     priority: 0.8
   },
   {
+    group: "portfolio",
+    lang: "pl",
+    path: "/pl/realizacje/",
+    crumb: "Portfolio",
+    template: "portfolio-pl",
+    title: "Portfolio: strony i sklepy internetowe, które stworzyliśmy | Web Shestakov",
+    description:
+      "Realizacje Web Shestakov: landing page, strony firmowe i sklepy internetowe dla firm w Polsce, Ukrainie, Niemczech, Czechach i Holandii.",
+    priority: 0.8
+  },
+  {
     group: "about",
     lang: "uk",
     path: "/pro-nas/",
+    crumb: "Про нас",
     template: "about",
     title: "Про нас — SHSTKV Digital, веб-студія у Вроцлаві: 12+ років досвіду, 35+ проєктів",
     description:
-      "SHSTKV Digital — студія Андрія Шестакова у Вроцлаві: сайти від $300, магазини від $800, Telegram-боти. 12+ років досвіду, 35+ проєктів у 6 країнах, договір і faktura.",
+      "SHSTKV Digital — студія Андрія Шестакова у Вроцлаві: сайти від €300, магазини від €800, Telegram-боти. 12+ років досвіду, 35+ проєктів у 6 країнах, договір і faktura.",
     ogType: "website",
     priority: 0.7
   },
@@ -73,10 +86,11 @@ export const PAGES = [
     group: "about",
     lang: "pl",
     path: "/pl/o-nas/",
+    crumb: "O nas",
     template: "about",
     title: "O nas — SHSTKV Digital, studio stron internetowych we Wrocławiu: 12+ lat doświadczenia",
     description:
-      "SHSTKV Digital to studio Andrija Szestakowa we Wrocławiu: strony od $300, sklepy od $800, boty Telegram. 12+ lat doświadczenia, 35+ projektów w 6 krajach, umowa i faktura.",
+      "SHSTKV Digital to studio Andrija Szestakowa we Wrocławiu: strony od 300 €, sklepy od 800 €, boty Telegram. 12+ lat doświadczenia, 35+ projektów w 6 krajach, umowa i faktura.",
     ogType: "website",
     priority: 0.7
   },
@@ -84,6 +98,7 @@ export const PAGES = [
     group: "privacy",
     lang: "uk",
     path: "/privacy/",
+    crumb: "Політика конфіденційності",
     template: "privacy",
     title: "Політика конфіденційності — Web Shestakov",
     description:
@@ -95,6 +110,7 @@ export const PAGES = [
     group: "privacy",
     lang: "pl",
     path: "/pl/polityka-prywatnosci/",
+    crumb: "Polityka prywatności",
     template: "privacy",
     title: "Polityka prywatności — Web Shestakov",
     description:
@@ -108,8 +124,8 @@ export const PAGES = [
 const CASES = JSON.parse(readFileSync(join(process.cwd(), "src", "lib", "cases.json"), "utf8"));
 for (const c of CASES) {
   PAGES.push(
-    { group: "case-" + c.slug, lang: "uk", path: "/keisy/" + c.slug + "/", template: "case-" + c.slug, title: c.title_uk, description: c.desc_uk, ogType: "article", priority: 0.6 },
-    { group: "case-" + c.slug, lang: "pl", path: "/pl/realizacje/" + c.slug + "/", template: "case-" + c.slug, title: c.title_pl, description: c.desc_pl, ogType: "article", priority: 0.6 }
+    { group: "case-" + c.slug, lang: "uk", path: "/keisy/" + c.slug + "/", template: "case-" + c.slug, crumb: c.name, title: c.title_uk, description: c.desc_uk, ogType: "article", priority: 0.6 },
+    { group: "case-" + c.slug, lang: "pl", path: "/pl/realizacje/" + c.slug + "/", template: "case-" + c.slug, crumb: c.name, title: c.title_pl, description: c.desc_pl, ogType: "article", priority: 0.6 }
   );
 }
 

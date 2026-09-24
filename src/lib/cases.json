@@ -2,8 +2,8 @@
  {
   "slug": "rozmarin",
   "name": "Rozmarin",
-  "title_uk": "Інтернет-магазин квітів у Вроцлаві — кейс Rozmarin | Web Shestakov",
-  "title_pl": "Sklep internetowy z kwiatami we Wrocławiu — realizacja Rozmarin | Web Shestakov",
+  "title_uk": "Інтернет-магазин квітів у Вроцлаві — кейс Rozmarin | SHSTKV Digital",
+  "title_pl": "Sklep internetowy z kwiatami we Wrocławiu — realizacja Rozmarin | SHSTKV Digital",
   "desc_uk": "Як ми зробили інтернет-магазин квіткового бутика Rozmarin у Вроцлаві: WooCommerce, три мови, каталог композицій і преміум-колекція.",
   "desc_pl": "Jak stworzyliśmy sklep internetowy kwiaciarni Rozmarin we Wrocławiu: WooCommerce, trzy języki, katalog kompozycji i kolekcja premium."
  },
@@ -34,8 +34,8 @@
  {
   "slug": "dictator-barbershop",
   "name": "DICTATOR",
-  "title_uk": "Сайт для мережі барбершопів — кейс DICTATOR, Дніпро | Web Shestakov",
-  "title_pl": "Strona dla sieci barber shopów — realizacja DICTATOR | Web Shestakov",
+  "title_uk": "Сайт для мережі барбершопів — кейс DICTATOR, Дніпро | SHSTKV Digital",
+  "title_pl": "Strona dla sieci barber shopów — realizacja DICTATOR | SHSTKV Digital",
   "desc_uk": "Багатосторінковий сайт для преміальної мережі барбершопів DICTATOR у Дніпрі: вибір філії, онлайн-запис, майстри, акції, Barber Academy і франшиза.",
   "desc_pl": "Strona wielostronicowa dla sieci barber shopów premium DICTATOR w Dnieprze: wybór salonu, rezerwacja online, barberzy, promocje, akademia i franczyza."
  },
@@ -74,9 +74,201 @@
  {
   "slug": "kora-candle",
   "name": "Kora Candle",
-  "title_uk": "Інтернет-магазин свічок ручної роботи — кейс Kora Candle | Web Shestakov",
+  "title_uk": "Інтернет-магазин свічок ручної роботи — кейс Kora Candle | SHSTKV Digital",
   "title_pl": "Sklep internetowy ze świecami ręcznie robionymi — realizacja Kora Candle",
   "desc_uk": "Інтернет-магазин на WooCommerce для бренду свічок ручної роботи Kora Candle: каталог, подарункові набори, декор і запис на майстер-класи.",
   "desc_pl": "Sklep na WooCommerce dla marki ręcznie robionych świec Kora Candle: katalog, zestawy prezentowe, dekoracje i zapisy na warsztaty."
+ },
+ {
+  "slug": "lokalizacja",
+  "name": "Lokalizacja",
+  "title_uk": "Сайт агентства нерухомості в Кракові — кейс Lokalizacja",
+  "title_pl": "Strona biura nieruchomości w Krakowie — realizacja Lokalizacja",
+  "desc_uk": "Як ми зробили сайт агентства нерухомості в Кракові: каталог об'єктів із фільтрами, сторінки для продавців, покупців і орендарів, польська та англійська версії.",
+  "desc_pl": "Jak zrobiliśmy stronę biura nieruchomości w Krakowie: katalog ofert z filtrami, strony dla sprzedających, kupujących i najemców, wersja PL i EN."
+ },
+ {
+  "slug": "voltaris-energy",
+  "name": "Voltaris Energy",
+  "title_uk": "Лендінг для будівництва сонячних електростанцій — кейс Voltaris",
+  "title_pl": "Landing page firmy fotowoltaicznej — realizacja Voltaris",
+  "desc_uk": "Як ми зробили лендінг для будівельника сонячних електростанцій в Україні: каталог послуг, реалізовані об'єкти, форма розрахунку СЕС, відгуки та FAQ.",
+  "desc_pl": "Jak zrobiliśmy landing page dla firmy budującej elektrownie słoneczne w Ukrainie: katalog usług, realizacje, formularz wyceny instalacji, opinie i FAQ."
+ },
+ {
+  "slug": "adfocus-store",
+  "name": "AdFocus Store",
+  "title_uk": "Інтернет-магазин рекламних акаунтів TikTok і Meta — кейс AdFocus",
+  "title_pl": "Sklep z kontami reklamowymi TikTok i Meta — realizacja AdFocus",
+  "desc_uk": "Як ми зробили інтернет-магазин рекламних акаунтів на WooCommerce: каталог із фільтрами за країною й верифікацією, послуга прогріву та три мовні версії.",
+  "desc_pl": "Jak zrobiliśmy sklep z kontami reklamowymi na WooCommerce: katalog z filtrami według kraju i weryfikacji, usługa rozgrzewania kont i trzy wersje językowe."
+ },
+ {
+  "slug": "the-beast-beauty",
+  "name": "The Beast Beauty",
+  "title_uk": "Інтернет-магазин парфумів у Чернівцях — кейс The Beast & Beauty",
+  "title_pl": "Sklep z perfumami w Czerniowcach — realizacja The Beast & Beauty",
+  "desc_uk": "Як ми зробили інтернет-магазин парфумів на WooCommerce: аромати на розпив від 2 мл, фільтри за нотами й сезоном, покупка в один клік і доставка Новою поштою.",
+  "desc_pl": "Jak zrobiliśmy sklep z perfumami na WooCommerce: odlewki zapachów od 2 ml, opisy nut i pory roku, zakup jednym kliknięciem i dostawa Nową Pocztą."
+ },
+ {
+  "slug": "cut2earn",
+  "name": "Cut2Earn",
+  "title_uk": "Лендінг курсу з відеомонтажу — кейс Cut2Earn | SHSTKV Digital",
+  "title_pl": "Landing page kursu montażu wideo — realizacja Cut2Earn",
+  "desc_uk": "Як ми зробили лендінг онлайн-курсу з відеомонтажу на Webflow: програма з шести блоків, відгуки учнів із точками А і Б, три тарифи та FAQ перед записом.",
+  "desc_pl": "Jak zrobiliśmy landing page kursu montażu wideo na Webflow: program w sześciu blokach, opinie kursantów z punktem A i B, trzy pakiety i FAQ przed zapisem."
+ },
+ {
+  "slug": "common-group",
+  "name": "Common Group",
+  "title_uk": "Сайт для HoReCa-консалтингу в Іспанії — кейс Common Group",
+  "title_pl": "Strona doradztwa HoReCa w Hiszpanii — realizacja Common Group",
+  "desc_uk": "Як ми зробили сайт на Next.js для консалтингу в ресторанному бізнесі: портфоліо проєктів у шести країнах, 10 послуг, покроковий бриф і три мови.",
+  "desc_pl": "Jak zrobiliśmy stronę na Next.js dla firmy doradczej w gastronomii: portfolio projektów w sześciu krajach, 10 usług, brief krok po kroku i trzy języki."
+ },
+ {
+  "slug": "novalux",
+  "name": "Novalux",
+  "title_uk": "Сайт обслуговування будинків у Барселоні — кейс Novalux",
+  "title_pl": "Strona serwisu budynków w Barcelonie — realizacja Novalux",
+  "desc_uk": "Як ми зробили лендинг на Webflow для сервісу нерухомості в Барселоні: послуги для будинків і басейнів, проєкти «до і після» та заявка у WhatsApp.",
+  "desc_pl": "Jak zrobiliśmy landing na Webflow dla serwisu nieruchomości w Barcelonie: usługi dla budynków i basenów, realizacje „przed i po” oraz zgłoszenie na WhatsApp."
+ },
+ {
+  "slug": "oglab",
+  "name": "OGlab",
+  "title_uk": "Лендинг рушника для сушіння авто — кейс OGlab | SHSTKV Digital",
+  "title_pl": "Landing ręcznika do osuszania auta — realizacja OGlab | SHSTKV Digital",
+  "desc_uk": "Як ми зробили лендинг одного товару для OGlab: рушник для сушіння авто, наочна технологія Twisted Loop, FAQ і замовлення з Новою Поштою та оплатою карткою.",
+  "desc_pl": "Jak zrobiliśmy landing jednego produktu dla OGlab: ręcznik do osuszania auta, technologia Twisted Loop pokazana w praktyce, FAQ i zamówienie z płatnością kartą."
+ },
+ {
+  "slug": "sexy-ceramic",
+  "name": "Sexy Ceramic",
+  "title_uk": "Лендинг відбілювання зубів у Києві — кейс Sexy Ceramic",
+  "title_pl": "Landing wybielania zębów w Kijowie — realizacja Sexy Ceramic",
+  "desc_uk": "Як ми зробили лендинг домашнього відбілювання зубів у Києві: слайдер «до і після», відеовідгуки, етапи курсу, прозора ціна та запис через Telegram.",
+  "desc_pl": "Jak zrobiliśmy landing domowego wybielania zębów w Kijowie: suwak „przed i po”, wideoopinie, etapy kuracji, przejrzysta cena i zapis przez Telegram lub telefon."
+ },
+ {
+  "slug": "big-supply-chain",
+  "name": "BIG Supply Chain",
+  "title_uk": "Лендинг міжнародної логістики — кейс BIG Supply Chain | SHSTKV Digital",
+  "title_pl": "Landing logistyki międzynarodowej — realizacja BIG Supply Chain",
+  "desc_uk": "Як ми зробили лендинг для логістичної компанії з Одеси: перевезення морем, авіа, залізницею й авто, географія маршрутів, галузі та форма розрахунку.",
+  "desc_pl": "Jak zrobiliśmy landing dla firmy logistycznej z Odessy: przewozy morskie, lotnicze, kolejowe i drogowe, geografia tras, branże oraz formularz wyceny ładunku."
+ },
+ {
+  "slug": "remico",
+  "name": "Remico",
+  "title_uk": "B2B-лендинг бренду побутової хімії — кейс Remico | SHSTKV Digital",
+  "title_pl": "Landing B2B marki chemii gospodarczej — realizacja Remico",
+  "desc_uk": "Як ми зробили B2B-лендинг на Next.js для бренду побутової хімії REMICO: каталог з деталями товарів, аргументи для партнерів, сертифікати й заявка дилера.",
+  "desc_pl": "Jak zrobiliśmy landing B2B na Next.js dla marki chemii gospodarczej REMICO: katalog ze szczegółami produktów, argumenty dla partnerów, certyfikaty i zgłoszenie."
+ },
+ {
+  "slug": "andreis-service",
+  "name": "Andreis Service",
+  "title_uk": "Лендинг монтажу меблів у Берліні — кейс Andreis Service",
+  "title_pl": "Landing montażu mebli w Berlinie — realizacja Andreis Service",
+  "desc_uk": "Як ми зробили лендинг для монтажу кухонь і меблів у Берліні: послуги з цінами, проєкти з фільтром і заявка з фото чи посиланням на меблі з IKEA.",
+  "desc_pl": "Jak zrobiliśmy landing dla montażu kuchni i mebli w Berlinie: usługi z cenami, realizacje z filtrem i zgłoszenie ze zdjęciami lub linkiem do mebli z IKEA."
+ },
+ {
+  "slug": "axiom-technology",
+  "name": "Axiom Technology",
+  "title_uk": "Лендинг діодних лазерів — кейс Axiom Technology | SHSTKV Digital",
+  "title_pl": "Landing laserów diodowych — realizacja Axiom Technology",
+  "desc_uk": "Як ми зробили лендинг для дистриб'ютора діодних лазерів у Польщі: дві моделі з цінами, калькулятор доходу салону, лізинг, FAQ і форма заявки — UA та PL.",
+  "desc_pl": "Jak zrobiliśmy landing dla dystrybutora laserów diodowych z Poznania: dwa modele z cenami, kalkulator przychodu salonu, leasing, FAQ i formularz — UA i PL."
+ },
+ {
+  "slug": "turboeagle",
+  "name": "TurboEagle",
+  "title_uk": "Сайт продажу авто в Португалії — кейс TurboEagle | SHSTKV Digital",
+  "title_pl": "Sprzedaż aut w Portugalii — realizacja TurboEagle | SHSTKV Digital",
+  "desc_uk": "Як ми зробили сайт для продажу електро- та гібридних BMW і Mercedes у Португалії: каталог авто з фільтрами, квіз підбору, імпорт з Німеччини і три мови.",
+  "desc_pl": "Jak zrobiliśmy stronę sprzedaży elektrycznych i hybrydowych BMW i Mercedesów w Portugalii: katalog z filtrami, quiz doboru auta, import z Niemiec i trzy języki."
+ },
+ {
+  "slug": "hybrid-doctor",
+  "name": "Hybrid Doctor",
+  "title_uk": "Запчастини для гібридів Toyota — кейс Hybrid Doctor | SHSTKV Digital",
+  "title_pl": "Części do hybryd Toyoty — realizacja Hybrid Doctor | SHSTKV Digital",
+  "desc_uk": "Як ми зробили сайт для постачальника запчастин до гібридів Toyota і Lexus у Польщі: каталог за категоріями, заявка для СТО, три мови та швидкий Next.js.",
+  "desc_pl": "Jak zrobiliśmy stronę dostawcy części do hybryd Toyoty i Lexusa w Polsce: katalog według kategorii, formularz dla warsztatów, trzy języki i szybki Next.js."
+ },
+ {
+  "slug": "fpv-element",
+  "name": "FPV Element",
+  "title_uk": "Інтернет-магазин FPV-дронів — кейс FPV Element | SHSTKV Digital",
+  "title_pl": "Sklep z dronami FPV — realizacja FPV Element | SHSTKV Digital",
+  "desc_uk": "Як ми зробили інтернет-магазин для виробника FPV-дронів: каталог комплектуючих за категоріями, кошик і список бажань, оптова форма заявки на WooCommerce.",
+  "desc_pl": "Jak zrobiliśmy sklep internetowy dla producenta dronów FPV: katalog podzespołów według kategorii, koszyk i lista życzeń, formularz hurtowy na WooCommerce."
+ },
+ {
+  "slug": "kickrave",
+  "name": "KickRave",
+  "title_uk": "Інтернет-магазин кросівок в Україні — кейс KickRave | SHSTKV Digital",
+  "title_pl": "Sklep ze sneakersami — realizacja KickRave | SHSTKV Digital",
+  "desc_uk": "Як ми зробили інтернет-магазин кросівок на WooCommerce: чоловічий і жіночий каталоги, новинки, вибір розміру, швидкий перегляд, список бажань і кабінет.",
+  "desc_pl": "Jak zrobiliśmy sklep ze sneakersami na WooCommerce: katalog męski i damski, nowości, wybór rozmiaru, szybki podgląd, lista życzeń i konto klienta na Ukrainie."
+ },
+ {
+  "slug": "torii",
+  "name": "Torii",
+  "title_uk": "Сайт доставки суші в Одесі — кейс Torii | SHSTKV Digital",
+  "title_pl": "Strona dostawy sushi w Odessie — realizacja Torii | SHSTKV Digital",
+  "desc_uk": "Як ми зробили сайт доставки суші для Torii в Одесі: меню з 20+ категорій, кошик і онлайн-оплата, зони доставки з цінами, кабінет клієнта на WooCommerce.",
+  "desc_pl": "Jak zrobiliśmy stronę dostawy sushi dla Torii w Odessie: menu z ponad 20 kategoriami, koszyk i płatność online, strefy dostawy z cenami i konto klienta."
+ },
+ {
+  "slug": "snek",
+  "name": "Snek",
+  "title_uk": "Сайт-магазин снеків із доставкою по Польщі — кейс Snek",
+  "title_pl": "Sklep internetowy z przekąskami w Polsce — realizacja Snek",
+  "desc_uk": "Як ми зробили сайт для продажу снеків у Польщі: каталог джерків, рибних снеків і боксів, кошик з оплатою, доставка InPost і три мови — UA, PL, RU.",
+  "desc_pl": "Jak zrobiliśmy stronę do sprzedaży przekąsek w Polsce: katalog jerky, przekąsek rybnych i boksów, koszyk z płatnością, dostawa InPost i trzy języki."
+ },
+ {
+  "slug": "epoxmax",
+  "name": "Epoxmax",
+  "title_uk": "Лендінг декоративних панелей для інтер'єру — кейс Epoxmax",
+  "title_pl": "Landing page paneli dekoracyjnych do wnętrz — realizacja Epoxmax",
+  "desc_uk": "Як ми зробили лендінг на Next.js для виробника декоративних панелей у Польщі: портфоліо з фільтром за кімнатами, форма з типом приміщення і FAQ.",
+  "desc_pl": "Jak zrobiliśmy landing page na Next.js dla producenta paneli dekoracyjnych w Polsce: portfolio z filtrem pomieszczeń, formularz z typem wnętrza i FAQ."
+ },
+ {
+  "slug": "big-mark",
+  "name": "BIG-MARK",
+  "title_uk": "Лендінг ремонтної компанії в Любліні — кейс BIG-MARK | SHSTKV Digital",
+  "title_pl": "Landing page firmy remontowej w Lublinie — realizacja BIG-MARK",
+  "desc_uk": "Як ми зробили лендінг на Webflow для ремонтної компанії з Любліна: послуги й спецроботи з допусками, галерея робіт із фільтром, відгуки з Google і FAQ.",
+  "desc_pl": "Jak zrobiliśmy landing page na Webflow dla firmy remontowej z Lublina: usługi i prace z uprawnieniami, galeria realizacji z filtrem, opinie z Google i FAQ."
+ },
+ {
+  "slug": "totem-consulting",
+  "name": "Totem Consulting",
+  "title_uk": "Лендінг консалтингової компанії в Україні — кейс Totem Consulting",
+  "title_pl": "Landing page firmy doradczej z Ukrainy — realizacja Totem Consulting",
+  "desc_uk": "Як ми зробили лендінг для бізнес-консалтингу в Україні: чотири напрями послуг, блок про CEO, кейси партнерства й форма заявки на консультацію.",
+  "desc_pl": "Jak zrobiliśmy landing page dla firmy doradczej z Ukrainy: cztery obszary usług, sekcja o CEO, przypadki partnerstw i formularz zgłoszenia na konsultację."
+ },
+ {
+  "slug": "primebud",
+  "name": "PrimeBud",
+  "title_uk": "Лендінг ремонту під ключ у Києві — кейс PrimeBud | SHSTKV Digital",
+  "title_pl": "Landing page remontów pod klucz w Kijowie — realizacja PrimeBud",
+  "desc_uk": "Як ми зробили лендінг для ремонтної компанії з Києва: тарифи з ціною за м², кейси з бюджетом і площею, пакети дизайн-проєкту та покрокова форма заявки.",
+  "desc_pl": "Jak zrobiliśmy landing page dla firmy remontowej z Kijowa: pakiety z ceną za m², realizacje z budżetem i metrażem, projekty wnętrz i formularz krok po kroku."
+ },
+ {
+  "slug": "clione-beauty",
+  "name": "Clione Beauty",
+  "title_uk": "Інтернет-магазин б'юті-техніки та косметики — кейс Clione Beauty",
+  "title_pl": "Sklep internetowy z urządzeniami beauty — realizacja Clione Beauty",
+  "desc_uk": "Як ми зробили інтернет-магазин на WooCommerce для б'юті-техніки й косметики: каталог пристроїв, догляду й добавок, список бажань і форма підбору.",
+  "desc_pl": "Jak zrobiliśmy sklep na WooCommerce z urządzeniami beauty i kosmetykami: katalog urządzeń, pielęgnacji i suplementów, lista życzeń i formularz doboru."
  }
 ]

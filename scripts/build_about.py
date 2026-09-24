@@ -35,13 +35,13 @@ hero=hero[:o1]+'''<div class="hero__overlay">
           </div>
 
           '''+hero[o2:]
-stats=[('12+','років у веб-розробці','lat doświadczenia'),('35+','реалізованих проєктів','zrealizowanych projektów'),('6','країн клієнтів','krajów klientów'),('3–5','днів на лендінг','dni na landing page'),('24 год','максимум на відповідь','maks. czas odpowiedzi')]
+stats=[('12+','років у веб-розробці','lat doświadczenia'),('35+','реалізованих проєктів','zrealizowanych projektów'),('6','країн клієнтів','krajów klientów'),('3–5','днів на лендінг','dni na landing page'),(('24 год','24 h'),'максимум на відповідь','maks. czas odpowiedzi')]
 def card(i,st,dup):
     n,uk,pl=st
     extra=' shelf__card--dup" aria-hidden="true" tabindex="-1' if dup else ''
     return f'''              <a href="#how" class="shelf__card{extra}">
                 <span class="shelf__thumb shelf__thumb--{i}" aria-hidden="true"></span>
-                <span class="shelf__meta"><span class="shelf__num">({n})</span><span class="shelf__name">{L(uk,pl)}</span></span>
+                <span class="shelf__meta"><span class="shelf__num">({n if isinstance(n,str) else L(*n)})</span><span class="shelf__name">{L(uk,pl)}</span></span>
               </a>
 '''
 t1=hero.index('<div class="shelf__track">')+len('<div class="shelf__track">\n'); t2=hero.index('            </div>\n          </div>\n        </div>',t1)
@@ -71,7 +71,7 @@ addon_tpl='''        <article class="tariff-addon reveal">
         </article>
 
 '''
-extra=addon_tpl.format(price='<span class="plan-card__cur">$</span>800',unit=L('/ від','/ od'),name=L('Інтернет-магазин','Sklep internetowy'),tag=L('20–30 роб. днів','20–30 dni rob.'),
+extra=addon_tpl.format(price='<span class="plan-card__cur">€</span>800',unit=L('/ від','/ od'),name=L('Інтернет-магазин','Sklep internetowy'),tag=L('20–30 роб. днів','20–30 dni rob.'),
   desc=L('Каталог, кошик, онлайн-оплата, доставка, CRM та інтеграції. Складні магазини й сервіси з кастомним функціоналом — 30–45+ робочих днів.','Katalog, koszyk, płatności online, dostawa, CRM i integracje. Złożone sklepy i serwisy z niestandardowymi funkcjami — 30–45+ dni roboczych.'),
   cta=L('Замовити магазин','Zamów sklep'))
 extra+=addon_tpl.format(price=L('Інд.','Indyw.'),unit=L('оцінка','wycena'),name=L('Telegram-бот і складні сервіси','Bot Telegram i złożone systemy'),tag=L('оцінка за 24 год','wycena w 24 h'),
@@ -84,7 +84,7 @@ tariffs=tariffs[:k]+extra+tariffs[k:]
 tariffs=tariffs.replace('<p class="tariff-lead reveal" data-i18n="tariff.lead">Фіксована вартість під ключ — без прихованих доплат. Оберіть формат, який найкраще підходить під вашу задачу</p>','<p class="tariff-lead reveal">'+L('Фіксована вартість під ключ — без прихованих доплат. Працюємо офіційно: за договором і з faktura, оплата поетапна в EUR, USD або PLN.','Stała cena pod klucz — bez ukrytych dopłat. Działamy oficjalnie: umowa i faktura, płatność etapami w EUR, USD lub PLN. Ceny bez VAT (zwolnienie z VAT).')+'</p>')
 
 # --- who we are (budget-grid pattern from home)
-pills=[('Українська','Polski'),('Polski','Українська'),('WordPress','WordPress'),('Webflow','Webflow'),('React · Next.js','React · Next.js'),('SEO','SEO')]
+pills=[('Українська','Ukraiński'),('Польська','Polski'),('WordPress','WordPress'),('Webflow','Webflow'),('React · Next.js','React · Next.js'),('SEO','SEO')]
 pl_html=''.join(f'<span class="budget-pill" role="listitem">{L(u,p)}</span>' for u,p in pills)+''.join(f'<span class="budget-pill" aria-hidden="true">{L(u,p)}</span>' for u,p in pills)
 who='''    <section class="section" id="who">
       <div class="container">

@@ -68,7 +68,7 @@ for idx, c in enumerate(CASES):
     o1 = hero.index('<div class="hero__overlay">'); o2 = hero.index('<!-- Bottom service shelf')
     hero = hero[:o1] + '''<div class="hero__overlay">
             <h1 class="hero__headline">''' + L(c['h1_uk'], c['h1_pl']) + '''</h1>
-            <p class="hero__headline-sub">''' + L(c['sub_uk'], c['sub_pl']) + '''</p>
+            <p class="hero__headline-sub hero__headline-sub--wide">''' + L(c['sub_uk'], c['sub_pl']) + '''</p>
           </div>
 
           ''' + hero[o2:]

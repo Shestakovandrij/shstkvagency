@@ -114,7 +114,7 @@ function jsonLd(page, document) {
       return {
         "@type": "Offer",
         name: t(page.lang, `tariff.${n}.name`),
-        ...(amount ? { price: amount, priceCurrency: "USD" } : {}),
+        ...(amount ? { price: amount, priceCurrency: "EUR" } : {}),
         itemOffered: { "@type": "Service", name: t(page.lang, "service.1.t") }
       };
     });
@@ -140,8 +140,22 @@ function jsonLd(page, document) {
     description: page.description,
     inLanguage: page.lang,
     isPartOf: { "@id": SITE + "/#website" },
-    about: { "@id": SITE + "/#organization" }
+    about: { "@id": SITE + "/#organization" },
+    ...(page.group !== "home" ? { breadcrumb: { "@id": SITE + page.path + "#breadcrumb" } } : {})
   });
+
+  // Хлібні крихти: Головна → (Портфоліо для кейсів) → сторінка.
+  if (page.group !== "home") {
+    const home = page.lang === "pl" ? "Strona główna" : "Головна";
+    const trail = [{ name: home, path: href("home", page.lang) }];
+    if (page.group.startsWith("case-")) trail.push({ name: "Portfolio", path: href("portfolio", page.lang) });
+    trail.push({ name: page.crumb || page.title, path: page.path });
+    graph.push({
+      "@type": "BreadcrumbList",
+      "@id": SITE + page.path + "#breadcrumb",
+      itemListElement: trail.map((c, i) => ({ "@type": "ListItem", position: i + 1, name: c.name, item: SITE + c.path }))
+    });
+  }
 
   return JSON.stringify({ "@context": "https://schema.org", "@graph": graph });
 }
