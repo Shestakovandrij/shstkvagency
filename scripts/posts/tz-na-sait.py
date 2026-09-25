@@ -7,7 +7,7 @@ POST = {'key': 'tz-na-sait',
  'title_uk': 'ТЗ на сайт: шаблон і приклад технічного завдання | SHSTKV Digital',
  'title_pl': 'Brief strony internetowej — przykład i szablon | SHSTKV Digital',
  'desc_uk': 'Що писати в ТЗ на сайт і чим воно відрізняється від брифу. Готовий шаблон з 11 розділів, приклад заповненого брифу, типові помилки й наш процес роботи.',
- 'desc_pl': 'Co wpisać w brief strony internetowej i czym różni się od specyfikacji. Gotowy szablon z 11 punktami, przykład wypełnionego briefu, typowe błędy i nasz proces.',
+ 'desc_pl': 'Co wpisać w brief strony internetowej i czym różni się od specyfikacji. Gotowy szablon w 11 punktach, przykład wypełnionego briefu, typowe błędy i nasz proces.',
  'h1_uk': 'ТЗ на сайт: шаблон і приклад технічного завдання',
  'h1_pl': 'Brief strony internetowej — przykład i szablon',
  'sub_uk': 'Що написати студії, щоб отримати точну оцінку й сайт, який закриває вашу задачу.',
@@ -25,12 +25,12 @@ POST = {'key': 'tz-na-sait',
                            'ТЗ на сайт — це домовленість між вами й виконавцем, записана до початку роботи. Воно фіксує мету сайту, аудиторію, перелік сторінок, функції, мови, інтеграції, терміни й '
                            'бюджет. Без нього кожна сторона уявляє свій сайт, і різниця стає помітною лише тоді, коли дизайн уже намальовано.',
                            'Brief to spisane przed startem ustalenia między Tobą a wykonawcą. Opisuje cel strony, odbiorców, listę podstron, funkcje, wersje językowe, integracje, termin i budżet. '
-                           'Bez niego każda strona wyobraża sobie inny serwis, a różnica wychodzi na jaw dopiero wtedy, gdy projekt graficzny jest już gotowy.'),
+                           'Bez niego każdy z Was wyobraża sobie coś innego, a różnica wychodzi na jaw dopiero wtedy, gdy projekt graficzny jest już gotowy.'),
                           ('p',
                            'Від ТЗ залежать три речі. Перша — точна ціна: студія рахує не «сайт», а конкретний обсяг. Друга — терміни: коли матеріали й рішення зібрані заздалегідь, проєкт не стоїть '
                            'у паузах. Третя — результат: сайт відповідає вашій задачі, а не смаку дизайнера.',
-                           'Od briefu zależą trzy rzeczy. Po pierwsze wycena: wykonawca liczy nie „stronę”, tylko konkretny zakres prac. Po drugie termin: gdy materiały i decyzje są zebrane '
-                           'wcześniej, projekt nie stoi w miejscu. Po trzecie efekt: strona odpowiada na Twój cel, a nie na gust grafika.'),
+                           'Od briefu zależą trzy rzeczy. Po pierwsze wycena: wykonawca wycenia nie „stronę”, tylko konkretny zakres prac. Po drugie termin: gdy materiały i decyzje są zebrane '
+                           'wcześniej, projekt nie stoi w miejscu. Po trzecie efekt: strona służy Twojemu celowi, a nie gustowi grafika.'),
                           ('p',
                            'Писати ТЗ мовою програмістів не потрібно. Технічну частину — платформу, хостинг, структуру коду — ми беремо на себе. Від вас потрібне інше: знання свого бізнесу, клієнтів і '
                            'того, що має статися, коли людина відкриє сайт.',
@@ -42,7 +42,7 @@ POST = {'key': 'tz-na-sait',
                            'Бриф — це анкета від замовника: що за бізнес, яка мета, які побажання. ТЗ — детальний документ, який зазвичай готує виконавець на основі брифу: точна структура, функції, '
                            'поведінка форм, інтеграції. Для лендінгу чи візитки брифу досить, повне ТЗ потрібне складним сайтам і магазинам.',
                            'Brief to opis od klienta: czym zajmuje się firma, jaki jest cel, jakie są oczekiwania. Specyfikacja techniczna to szczegółowy dokument, który zwykle przygotowuje wykonawca '
-                           'na podstawie briefu: dokładna struktura, funkcje, działanie formularzy, integracje. Przy landing page lub wizytówce brief wystarczy, specyfikacja przydaje się w dużych '
+                           'na podstawie briefu: dokładna struktura, funkcje, działanie formularzy, integracje. Przy landingu lub wizytówce brief wystarczy, a specyfikacja przydaje się w dużych '
                            'serwisach i sklepach.'),
                           ('table',
                            [('Критерій', 'Kryterium'), ('Бриф', 'Brief'), ('ТЗ', 'Specyfikacja')],
@@ -52,7 +52,7 @@ POST = {'key': 'tz-na-sait',
                              ('Сторінки, функції, логіку, інтеграції', 'Podstrony, funkcje, logikę, integracje')],
                             [('Коли досить', 'Kiedy wystarczy'), ('Лендінг, візитка, невеликий сайт', 'Landing, wizytówka, mała strona firmowa'),
                              ('Магазин, сервіс, складні інтеграції', 'Sklep, serwis, złożone integracje')],
-                            [('Мета', 'Cel'), ('Оцінка й старт проєкту', 'Wycena i start projektu'), ('Фіксація обсягу робіт', 'Zamknięcie zakresu prac')]]),
+                            [('Мета', 'Cel'), ('Оцінка й старт проєкту', 'Wycena i start projektu'), ('Фіксація обсягу робіт', 'Ustalenie zakresu prac')]]),
                           ('p',
                            'На практиці межа розмита: добрий бриф із переліком сторінок і функцій уже наполовину ТЗ. Тому шаблон нижче ми зробили так, щоб він годився для обох випадків — для '
                            'невеликого сайту його достатньо, для складного він стає основою технічного завдання.',
@@ -77,7 +77,7 @@ POST = {'key': 'tz-na-sait',
                             ('<strong>Структура сторінок.</strong> Перелік сторінок чи блоків: головна, послуги, ціни, роботи, про нас, контакти.',
                              '<strong>Struktura.</strong> Lista podstron lub sekcji: strona główna, usługi, cennik, realizacje, o nas, kontakt.'),
                             ('<strong>Функції.</strong> Форма заявки, онлайн-запис, калькулятор, каталог, оплата, блог, куди надходять заявки.',
-                             '<strong>Funkcje.</strong> Formularz, rezerwacja online, kalkulator, katalog, płatności, blog, dokąd mają trafiać zapytania.'),
+                             '<strong>Funkcje.</strong> Formularz kontaktowy, rezerwacja online, kalkulator, katalog, płatności, blog, dokąd mają trafiać zapytania.'),
                             ('<strong>Контент.</strong> Хто пише тексти, чи є фото робіт, логотип, фірмові кольори, відгуки клієнтів.',
                              '<strong>Treści.</strong> Kto przygotuje teksty, czy są zdjęcia realizacji, logo, kolory firmowe, opinie klientów.'),
                             ('<strong>Мови.</strong> Скільки мовних версій і яка з них основна.',
@@ -85,44 +85,44 @@ POST = {'key': 'tz-na-sait',
                             ('<strong>Інтеграції.</strong> Telegram, CRM, Google Analytics, Meta Pixel, система бронювання, платіжний сервіс.',
                              '<strong>Integracje.</strong> Telegram, CRM, Google Analytics, Piksel Meta, system rezerwacji, bramka płatności.'),
                             ('<strong>Терміни й бюджет.</strong> Бажана дата запуску, чи є жорсткий дедлайн, орієнтовний бюджет або діапазон.',
-                             '<strong>Termin i budżet.</strong> Planowana data startu, czy jest sztywny termin, orientacyjny budżet lub widełki.'),
+                             '<strong>Termin i budżet.</strong> Planowana data startu, czy termin jest nieprzekraczalny, orientacyjny budżet lub widełki.'),
                             ('<strong>Доступи.</strong> Чи є домен, хостинг, пошта на домені, старий сайт, акаунти Google — і на кого вони оформлені.',
                              '<strong>Dostępy.</strong> Czy masz domenę, hosting, pocztę firmową, starą stronę, konta Google — i na kogo są zarejestrowane.')]),
                           ('card',
                            'Найважливіший пункт — ціль сайту. Якщо ви можете одним реченням сказати, що має зробити відвідувач, решта брифу складається значно легше.',
                            'Najważniejszy punkt to cel strony. Jeśli potrafisz jednym zdaniem powiedzieć, co ma zrobić odwiedzający, reszta briefu układa się znacznie łatwiej.')]},
               {'h2_uk': 'Приклад заповненого брифу',
-               'h2_pl': 'Brief strony internetowej — przykład wypełniony',
+               'h2_pl': 'Brief strony internetowej — wypełniony przykład',
                'blocks': [('p',
                            'Нижче — вигаданий приклад брифу для умовної клінінгової компанії з Познані. Це не реальний клієнт, а ілюстрація того, скільки тексту достатньо: коротко, конкретно, з '
                            'відповіддю на кожен пункт. Такого брифу нам вистачає, щоб запропонувати формат і назвати ціну.',
-                           'Poniżej fikcyjny przykład briefu dla umownej firmy sprzątającej z Poznania. To nie jest prawdziwy klient, tylko ilustracja, ile tekstu wystarczy: krótko, konkretnie, z '
+                           'Poniżej fikcyjny przykład briefu dla firmy sprzątającej z Poznania. To nie jest prawdziwy klient, tylko ilustracja, ile tekstu wystarczy: krótko, konkretnie, z '
                            'odpowiedzią na każdy punkt. Taki brief wystarcza nam, żeby zaproponować format i podać cenę.'),
                           ('table',
                            [('Розділ', 'Punkt'), ('Відповідь (приклад)', 'Odpowiedź (przykład)')],
                            [[('Про компанію', 'O firmie'),
-                             ('Клінінг квартир і офісів у Познані, команда з 6 людей, працюємо своїми засобами', 'Sprzątanie mieszkań i biur w Poznaniu, zespół 6 osób, pracujemy własnymi środkami')],
+                             ('Клінінг квартир і офісів у Познані, команда з 6 людей, працюємо своїми засобами', 'Sprzątanie mieszkań i biur w Poznaniu, zespół 6 osób, pracujemy na własnych środkach czystości')],
                             [('Ціль', 'Cel'), ('Заявка на прибирання з розрахунком ціни', 'Zapytanie o sprzątanie z wyliczeniem ceny')],
                             [('Аудиторія', 'Odbiorcy'),
                              ('Орендарі й власники квартир, невеликі офіси; приходять із Google і рекомендацій, переважно зі смартфона',
                               'Najemcy i właściciele mieszkań, małe biura; trafiają z Google i z poleceń, głównie z telefonu')],
                             [('Референси', 'Inspiracje'), ('2 сайти конкурентів; подобається, коли ціни видно одразу', '2 strony konkurencji; podoba nam się, gdy ceny widać od razu')],
                             [('Структура', 'Struktura'), ('Одна сторінка: послуги, пакети й ціни, як працюємо, фото, FAQ, контакти', 'Jedna strona: usługi, pakiety i ceny, jak pracujemy, zdjęcia, FAQ, kontakt')],
-                            [('Функції', 'Funkcje'), ('Форма з вибором кількості кімнат, заявки в Telegram', 'Formularz z wyborem liczby pokoi, zapytania na Telegram')],
+                            [('Функції', 'Funkcje'), ('Форма з вибором кількості кімнат, заявки в Telegram', 'Formularz z wyborem liczby pokoi, zapytania trafiają na Telegram')],
                             [('Контент', 'Treści'), ('Є логотип і фото до/після, тексти потрібна допомога', 'Mamy logo i zdjęcia przed i po, potrzebna pomoc z tekstami')],
                             [('Мови', 'Języki'), ('Польська основна, українська друга', 'Polski główny, ukraiński drugi')],
-                            [('Інтеграції', 'Integracje'), ('Google Analytics, пізніше Meta Pixel під рекламу', 'Google Analytics, później Piksel Meta pod kampanie')],
+                            [('Інтеграції', 'Integracje'), ('Google Analytics, пізніше Meta Pixel під рекламу', 'Google Analytics, później Piksel Meta do kampanii reklamowych')],
                             [('Терміни й бюджет', 'Termin i budżet'), ('Запуск за 2 тижні, бюджет до €500', 'Start w ciągu 2 tygodni, budżet do 500 €')],
                             [('Доступи', 'Dostępy'), ('Домен є, хостингу немає, пошта на Gmail', 'Domena jest, hostingu brak, poczta na Gmailu')]]),
                           ('p',
                            'З такого брифу видно: людям потрібна ціна одразу, клієнти приходять зі смартфонів, а текстів ще немає. Під це підходить односторінковий сайт — ось як ми розбирали '
                            'різницю між форматами в статті <a href="post-lendinh-chy-vizytka">лендінг чи сайт-візитка</a>. Схожий реальний проєкт — <a href="case-elart-cleaning">лендінг '
                            'клінінгової компанії Elart Cleaning</a> у Познані з прайсом і бронюванням. Що ще варто передбачити на сайті клінінгу, ми зібрали на сторінці <a href="niche-klininh">сайт для клінінгової компанії</a>.',
-                           'Z takiego briefu od razu widać: klienci chcą znać cenę, wchodzą z telefonu, a tekstów jeszcze nie ma. Pasuje tu strona typu one page — różnice między formatami '
+                           'Z takiego briefu od razu widać: klienci chcą od razu znać cenę, wchodzą z telefonu, a tekstów jeszcze nie ma. Pasuje tu strona typu one page — różnice między formatami '
                            'opisaliśmy w artykule <a href="post-lendinh-chy-vizytka">landing page czy strona wizytówka</a>. Podobny prawdziwy projekt to <a href="case-elart-cleaning">landing page '
-                           'firmy sprzątającej Elart Cleaning</a> z Poznania, z cennikiem i rezerwacją. Co jeszcze warto zaplanować, opisaliśmy na stronie <a href="niche-klininh">strona internetowa dla firmy sprzątającej</a>.')]},
+                           'firmy sprzątającej Elart Cleaning</a> z Poznania, z cennikiem i rezerwacją. Co jeszcze warto przewidzieć, opisaliśmy na podstronie <a href="niche-klininh">strona internetowa dla firmy sprzątającej</a>.')]},
               {'h2_uk': 'Як заповнити ТЗ, якщо ви не розбираєтеся в сайтах',
-               'h2_pl': 'Jak napisać brief, jeśli nie znasz się na stronach',
+               'h2_pl': 'Jak napisać brief, jeśli nie znasz się na stronach internetowych',
                'blocks': [('p',
                            'Пишіть мовою свого бізнесу, а не мовою веб-розробки. Замість «потрібен лендінг із CTA» напишіть «хочу, щоб люди одразу бачили ціну й залишали номер телефону». Студія '
                            'сама переведе це в структуру, функції й технічні рішення.',
@@ -139,7 +139,7 @@ POST = {'key': 'tz-na-sait',
                           ('p',
                            'Бюджет теж варто вказати, навіть діапазоном. Це не спосіб «вичавити» максимум, а орієнтир: під €300 і під €1500 ми запропонуємо різні рішення для тієї самої задачі. '
                            'Від чого залежить ціна, розписали в статті <a href="post-skilky-koshtuie-sait">скільки коштує сайт</a>.',
-                           'Warto też podać budżet, choćby w widełkach. To nie sposób, by „wycisnąć” maksimum, tylko punkt odniesienia: przy 300 € i przy 1500 € zaproponujemy różne rozwiązania tego '
+                           'Warto też podać budżet, choćby w widełkach. To nie sposób na „wyciśnięcie” maksimum, tylko punkt odniesienia: przy 300 € i przy 1 500 € zaproponujemy różne rozwiązania tego '
                            'samego problemu. Od czego zależy cena, opisaliśmy w artykule <a href="post-skilky-koshtuie-sait">ile kosztuje strona internetowa</a>.')]},
               {'h2_uk': 'Типові помилки в ТЗ на сайт',
                'h2_pl': 'Najczęstsze błędy w briefie',
@@ -152,7 +152,7 @@ POST = {'key': 'tz-na-sait',
                           ('p',
                            'Сайт без мети неможливо оцінити: незрозуміло, що вважати успіхом і які блоки потрібні. Навіть проста мета «отримувати заявки на прибирання з Познані» одразу підказує '
                            'структуру, тексти й форму.',
-                           'Strony bez celu nie da się ocenić: nie wiadomo, co jest sukcesem ani jakie sekcje są potrzebne. Nawet prosty cel „pozyskiwać zapytania o sprzątanie w Poznaniu” od razu '
+                           'Strony bez celu nie da się ocenić: nie wiadomo, co uznać za sukces ani jakie sekcje są potrzebne. Nawet prosty cel „pozyskiwać zapytania o sprzątanie w Poznaniu” od razu '
                            'podpowiada strukturę, teksty i formularz.'),
                           ('h3', 'Копія чужого сайту', 'Kopia cudzej strony'),
                           ('p',
@@ -171,17 +171,17 @@ POST = {'key': 'tz-na-sait',
                            'Калькулятор, друга мова чи онлайн-оплата, додані після погодження структури, — це вже новий обсяг робіт, який оцінюється окремо. Навіть якщо функція потрібна «колись '
                            'потім», згадайте її в брифі: ми закладемо структуру так, щоб її було легко додати.',
                            'Kalkulator, druga wersja językowa czy płatności online dodane po zatwierdzeniu struktury to nowy zakres prac, wyceniany osobno. Nawet jeśli funkcja będzie potrzebna „kiedyś”, '
-                           'wspomnij o niej w briefie — zaplanujemy strukturę tak, żeby łatwo ją dodać.')]},
+                           'wspomnij o niej w briefie — zaplanujemy strukturę tak, żeby dało się ją łatwo dodać.')]},
               {'h2_uk': 'Як ми в студії працюємо з брифом',
                'h2_pl': 'Jak pracujemy z briefem w naszym studiu',
                'blocks': [('p',
                            'Бриф — друга сходинка нашого процесу після короткого обговорення формату, функцій, мов та інтеграцій. Протягом 24 годин після брифу ми даємо оцінку, а далі проєкт іде '
                            'етапами, і на кожному ви погоджуєте результат, перш ніж ми рухаємося далі.',
                            'Brief to drugi krok naszego procesu, po krótkiej rozmowie o formacie, funkcjach, językach i integracjach. W ciągu 24 godzin od otrzymania briefu podajemy wycenę, a dalej '
-                           'projekt idzie etapami — na każdym zatwierdzasz efekt, zanim ruszymy dalej.'),
+                           'projekt realizujemy etapami — na każdym zatwierdzasz efekt, zanim ruszymy dalej.'),
                           ('ul',
                            [('<strong>Бриф і матеріали.</strong> Тексти, фото, референси, логотип. Якщо зі структурою складно — допомагаємо.',
-                             '<strong>Brief i materiały.</strong> Teksty, zdjęcia, inspiracje, logo. Jeśli struktura sprawia trudność — pomagamy.'),
+                             '<strong>Brief i materiały.</strong> Teksty, zdjęcia, inspiracje, logo. Jeśli masz problem ze strukturą — pomagamy.'),
                             ('<strong>Структура.</strong> Погоджуємо перелік сторінок і блоків до початку дизайну.',
                              '<strong>Struktura.</strong> Zatwierdzamy listę podstron i sekcji, zanim zaczniemy projekt graficzny.'),
                             ('<strong>Дизайн.</strong> Спершу 1–2 блоки, щоб погодити стилістику, потім решта сторінок.',
@@ -189,7 +189,7 @@ POST = {'key': 'tz-na-sait',
                             ('<strong>Розробка.</strong> Webflow, WordPress/Bricks, чистий код або React; форми, CMS, калькулятори, аналітика, оплати.',
                              '<strong>Wdrożenie.</strong> Webflow, WordPress/Bricks, czysty kod lub React; formularze, CMS, kalkulatory, analityka, płatności.'),
                             ('<strong>Правки.</strong> Ви надсилаєте всі правки одним списком — так нічого не губиться.',
-                             '<strong>Poprawki.</strong> Przesyłasz wszystkie poprawki w jednej liście — dzięki temu nic nie ginie.'),
+                             '<strong>Poprawki.</strong> Przesyłasz wszystkie poprawki jedną listą — dzięki temu nic nie ginie.'),
                             ('<strong>Запуск і передача.</strong> Домен, хостинг, пошта й усі доступи переходять вам.',
                              '<strong>Start i przekazanie.</strong> Domena, hosting, poczta i wszystkie dostępy trafiają do Ciebie.')]),
                           ('p',
@@ -199,18 +199,18 @@ POST = {'key': 'tz-na-sait',
                            'wpłata przed startem, kolejna po zatwierdzonym etapie albo przed publikacją.'),
                           ('card',
                            'Шаблон вище можна надіслати нам заповненим або частково — решту уточнимо на короткому дзвінку чи в месенджері.',
-                           'Szablon możesz wysłać nam wypełniony w całości albo częściowo — resztę ustalimy w krótkiej rozmowie lub na komunikatorze.')]},
+                           'Szablon możesz wysłać nam wypełniony w całości albo częściowo — resztę ustalimy w krótkiej rozmowie lub przez komunikator.')]},
               {'h2_uk': 'Скільки коштує сайт після брифу',
                'h2_pl': 'Ile kosztuje strona po briefie',
                'blocks': [('p',
                            'Після брифу ми називаємо точну ціну, але базові орієнтири відомі заздалегідь: лендінг — від €300, багатосторінковий сайт — від €450, інтернет-магазин — від €800. Для '
                            'складних проєктів вартість рахуємо саме за брифом, оцінка — протягом 24 годин.',
                            'Dokładną cenę podajemy po briefie, ale punkty odniesienia są znane z góry: landing page od 300 €, strona firmowa od 450 €, sklep internetowy od 800 €. Przy złożonych '
-                           'projektach wycena powstaje właśnie na podstawie briefu, w ciągu 24 godzin. Ceny są bez VAT (zw.).'),
+                           'projektach wycena powstaje właśnie na podstawie briefu, w ciągu 24 godzin. Ceny są końcowe — nie doliczamy VAT (zwolnienie z VAT).'),
                           ('table',
                            [('Формат', 'Format'), ('Ціна', 'Cena'), ('Терміни', 'Termin')],
                            [[('<a href="svc-lending">Лендінг</a>', '<a href="svc-lending">Landing page</a>'), ('від €300', 'od 300 €'), ('3–5 днів', '3–5 dni')],
-                            [('<a href="svc-sait-vizytka">Сайт-візитка</a>', '<a href="svc-sait-vizytka">Strona wizytówka</a>'), ('від €300', 'od 300 €'), ('Після брифу', 'Po briefie')],
+                            [('<a href="svc-sait-vizytka">Сайт-візитка</a>', '<a href="svc-sait-vizytka">Strona wizytówka</a>'), ('від €300', 'od 300 €'), ('Після брифу', 'Ustalamy po briefie')],
                             [('<a href="svc-korporatyvnyi-sait">Багатосторінковий сайт</a>', '<a href="svc-korporatyvnyi-sait">Strona firmowa</a>'), ('від €450', 'od 450 €'),
                              ('15–25 роб. днів', '15–25 dni rob.')],
                             [('<a href="svc-internet-magazyn">Інтернет-магазин</a>', '<a href="svc-internet-magazyn">Sklep internetowy</a>'), ('від €800', 'od 800 €'),
@@ -230,7 +230,7 @@ POST = {'key': 'tz-na-sait',
           'Czym brief różni się od specyfikacji technicznej?',
           'Бриф пише замовник: що за бізнес, яка мета, які побажання. ТЗ — детальніший документ, який виконавець складає на основі брифу: точна структура, функції, логіка форм, інтеграції. '
           'Для лендінгу чи візитки брифу зазвичай досить, повне ТЗ потрібне магазинам і складним сайтам.',
-          'Brief pisze klient: czym zajmuje się firma, jaki jest cel i jakie oczekiwania. Specyfikacja to bardziej szczegółowy dokument, który wykonawca przygotowuje na podstawie briefu: '
+          'Brief pisze klient i opisuje w nim, czym zajmuje się firma, jaki jest cel i jakie są oczekiwania. Specyfikacja to bardziej szczegółowy dokument, który wykonawca przygotowuje na podstawie briefu: '
           'dokładna struktura, funkcje, logika formularzy, integracje. Przy landingu czy wizytówce brief zwykle wystarczy, specyfikacja przydaje się przy sklepach i dużych serwisach.'],
          ['Хто має писати ТЗ на сайт — замовник чи студія?',
           'Kto powinien przygotować brief — klient czy wykonawca?',
@@ -243,7 +243,7 @@ POST = {'key': 'tz-na-sait',
           'Так і напишіть у брифі. Ми допомагаємо зі структурою й текстами, а фото можна додати пізніше або використати тимчасові. Важливо знати це заздалегідь, щоб дизайн робився під реальний '
           'обсяг контенту, а не під порожні блоки.',
           'Napisz to wprost w briefie. Pomagamy ze strukturą i tekstami, a zdjęcia można dodać później albo użyć tymczasowych. Ważne, żeby wiedzieć o tym wcześniej — wtedy projekt powstaje pod '
-          'prawdziwą ilość treści, a nie pod puste sekcje.'],
+          'rzeczywistą ilość treści, a nie pod puste sekcje.'],
          ['Скільки часу займає оцінка сайту за брифом?',
           'Ile trwa wycena strony na podstawie briefu?',
           'Оцінку ми даємо протягом 24 годин після брифу. На заявки відповідаємо зазвичай за кілька годин у робочий час (пн–пт); повідомлення ввечері чи у вихідні обробляємо наступного робочого '

@@ -18,8 +18,8 @@ POST = {'key': 'lendinh-chy-vizytka',
  'answer_uk': 'Лендінг — це одна сторінка під одну пропозицію, куди ведуть рекламу, щоб отримати заявку. Сайт-візитка представляє компанію: послуги, ціни, приклади робіт і контакти на одній або 1–5 '
               'сторінках, її знаходять у Google за назвою чи «послуга + місто». Запускаєте рекламу на один продукт — беріть лендінг. Потрібна постійна адреса бізнесу в мережі — візитку.',
  'answer_pl': 'Landing page to jedna strona pod jedną ofertę, na którą kieruje się ruch z reklam, żeby zbierać zapytania. Strona wizytówka przedstawia firmę: usługi, cennik, realizacje i kontakt na '
-              'jednej lub 1–5 podstronach, a klienci trafiają na nią z Google po nazwie lub frazie „usługa + miasto”. Planujesz kampanię na jeden produkt — wybierz landing. Potrzebujesz stałej '
-              'wizytówki firmy w sieci — wizytówkę.',
+              'jednej lub 1–5 podstronach, a klienci trafiają na nią z Google po nazwie lub frazie „usługa + miasto”. Planujesz kampanię na jeden produkt — wybierz landing. Potrzebujesz stałego '
+              'adresu firmy w sieci — wizytówkę.',
  'sections': [{'h2_uk': 'Що таке лендінг',
                'h2_pl': 'Co to jest landing page',
                'blocks': [('p',
@@ -35,19 +35,19 @@ POST = {'key': 'lendinh-chy-vizytka',
                           ('p',
                            'Приклад із нашої практики — <a href="case-bellissimo-home">лендінг салону італійських меблів Bellissimo Home</a> у Вроцлаві. Людина одразу може порахувати орієнтовну '
                            'вартість у калькуляторі й записатися на зустріч у шоурумі, не шукаючи потрібну сторінку.',
-                           'Przykład z naszej praktyki to <a href="case-bellissimo-home">landing page salonu włoskich mebli Bellissimo Home</a> we Wrocławiu. Odwiedzający od razu liczy orientacyjny '
-                           'koszt w kalkulatorze i umawia się na spotkanie w showroomie, bez szukania właściwej podstrony.')]},
+                           'Przykład z naszej praktyki to <a href="case-bellissimo-home">landing page salonu włoskich mebli Bellissimo Home</a> we Wrocławiu. Odwiedzający może od razu obliczyć orientacyjny '
+                           'koszt w kalkulatorze i umówić się na spotkanie w showroomie, bez szukania właściwej podstrony.')]},
               {'h2_uk': 'Що таке сайт-візитка',
                'h2_pl': 'Co to jest strona wizytówka',
                'blocks': [('p',
                            "Сайт-візитка — це компактний сайт, який представляє компанію цілком: хто ви, які послуги надаєте, де працюєте, скільки це коштує і як з вами зв'язатися. Він буває "
                            'односторінковим (one page) або має 1–5 окремих сторінок: головна, послуги, ціни, роботи, контакти.',
                            'Strona wizytówka to niewielka witryna, która pokazuje firmę w całości: kim jesteś, co robisz, gdzie działasz, ile to kosztuje i jak się z Tobą skontaktować. Może to być '
-                           'strona one page albo 1–5 podstron: start, usługi, cennik, realizacje, kontakt.'),
+                           'strona one page albo 1–5 podstron: strona główna, usługi, cennik, realizacje, kontakt.'),
                           ('p',
                            'Головна різниця — у джерелі клієнтів. На візитку рідко ведуть рекламу: її знаходять за назвою компанії, з профілю в Google Maps, з паперової візитки чи за локальним '
                            'запитом на кшталт «клінінг Познань». Для такого пошуку важливі дані компанії, адреса, послуги окремими блоками й базове SEO.',
-                           'Najważniejsza różnica to źródło klientów. Na wizytówkę rzadko kieruje się reklamę: ludzie trafiają na nią po nazwie firmy, z Profilu Firmy w Google, z papierowej '
+                           'Najważniejsza różnica to źródło klientów. Na wizytówkę rzadko kieruje się ruch z reklam: ludzie trafiają na nią po nazwie firmy, z Profilu Firmy w Google, z papierowej '
                            'wizytówki albo po lokalnej frazie typu „sprzątanie mieszkań Poznań”. Liczą się tu dane firmy, adres, opisane usługi i podstawowe SEO.'),
                           ('p',
                            'Візитка — це постійна адреса бізнесу в мережі. Її відкривають, щоб перевірити, чи ви справжні, перед дзвінком, після рекомендації знайомого або коли порівнюють кількох '
@@ -58,7 +58,7 @@ POST = {'key': 'lendinh-chy-vizytka',
                'h2_pl': 'Landing page a strona wizytówka — różnice',
                'blocks': [('p',
                            'Зовні обидва формати можуть виглядати схоже, особливо якщо візитка зроблена як one page. Відрізняються вони задачею, джерелом трафіку й тим, як їх оцінюють.',
-                           'Z zewnątrz oba formaty mogą wyglądać podobnie, zwłaszcza gdy wizytówka jest zrobiona jako one page. Różnią się celem, źródłem ruchu i tym, po czym ocenia się, czy '
+                           'Z zewnątrz oba formaty mogą wyglądać podobnie, zwłaszcza gdy wizytówka ma formę one page. Różnią się celem, źródłem ruchu i tym, po czym ocenia się, czy '
                            'działają.'),
                           ('table',
                            [('Критерій', 'Kryterium'), ('Лендінг', 'Landing page'), ('Сайт-візитка', 'Strona wizytówka')],
@@ -73,16 +73,16 @@ POST = {'key': 'lendinh-chy-vizytka',
                           ('p',
                            'Ціни однакові не випадково: за обсягом роботи це схожі проєкти. Різниця — у структурі, текстах і тому, що саме ми налаштовуємо: для лендінгу — структуру під рекламне '
                            'оголошення й, за потреби, аналітику та пікселі, для візитки — дані компанії й локальне SEO.',
-                           'Ceny są podobne nie bez powodu: pod względem nakładu pracy to zbliżone projekty. Różnica leży w strukturze, tekstach i konfiguracji: przy landingu układ pod konkretną '
-                           'reklamę i w razie potrzeby analitykę oraz piksele, przy wizytówce — dane firmy i lokalne SEO.')]},
+                           'Ceny są podobne nie bez powodu: pod względem nakładu pracy to zbliżone projekty. Różnica tkwi w strukturze, tekstach i tym, co konfigurujemy: przy landingu — układ pod konkretną '
+                           'reklamę, a w razie potrzeby analitykę i piksele; przy wizytówce — dane firmy i lokalne SEO.')]},
               {'h2_uk': 'Коли обрати лендінг',
                'h2_pl': 'Kiedy wybrać landing page',
                'blocks': [('p',
                            'Лендінг — правильний вибір, коли у вас є одна зрозуміла пропозиція і план, як приводити на неї людей. Типові ситуації з наших проєктів:',
-                           'Landing page to dobry wybór, gdy masz jedną jasną ofertę i plan, jak przyprowadzić na nią ludzi. Typowe sytuacje z naszych projektów:'),
+                           'Landing page to dobry wybór, gdy masz jedną jasną ofertę i plan, jak przyciągnąć do niej klientów. Typowe sytuacje z naszych projektów:'),
                           ('ul',
                            [('запускаєте рекламу на одну послугу — монтаж, ремонт, клінінг, встановлення сонячних панелей;',
-                             'startujesz z kampanią na jedną usługę — montaż, remont, sprzątanie, fotowoltaikę;'),
+                             'uruchamiasz kampanię na jedną usługę — montaż, remont, sprzątanie, fotowoltaikę;'),
                             ('продаєте курс, консультацію чи подію з конкретною датою;', 'sprzedajesz kurs, konsultację albo wydarzenie z konkretną datą;'),
                             ('тестуєте нову нішу чи місто й не хочете одразу вкладатися у великий сайт;', 'testujesz nową branżę lub miasto i nie chcesz od razu inwestować w dużą stronę;'),
                             ('у вас уже є основний сайт, а під рекламну кампанію потрібна окрема сторінка;', 'masz już stronę firmową, a pod kampanię potrzebujesz osobnej strony;'),
@@ -103,7 +103,7 @@ POST = {'key': 'lendinh-chy-vizytka',
                           ('p',
                            "Для такого бізнесу важливо, щоб людина за хвилину зрозуміла, що ви робите, побачила ціни чи хоча б діапазон, приклади робіт і могла зв'язатися в один дотик зі смартфона. "
                            "Якщо послуг кілька і вас шукають за різними запитами, краще розбити візитку на кілька сторінок: кожна з них має шанс з'явитися в Google за своїм запитом.",
-                           'W takiej firmie liczy się to, żeby klient w minutę zrozumiał, czym się zajmujesz, zobaczył ceny albo chociaż widełki, realizacje i mógł się skontaktować jednym '
+                           'W takiej firmie liczy się to, żeby klient w ciągu minuty zrozumiał, czym się zajmujesz, zobaczył ceny (albo chociaż widełki) i realizacje, a potem skontaktował się jednym '
                            'dotknięciem na telefonie. Jeśli masz kilka usług i ludzie szukają Cię na różne frazy, lepiej podzielić wizytówkę na podstrony — każda ma wtedy szansę pojawić się w Google '
                            'na swoje zapytanie.'),
                           ('card',
@@ -122,7 +122,7 @@ POST = {'key': 'lendinh-chy-vizytka',
                            'Czasem ani landing, ani wizytówka nie wystarczą. Widać to już na etapie briefu: klient wymienia dziesięć usług, trzy lokalizacje, szkolenia i franczyzę — i wszystko ma '
                            'się zmieścić na „małej stronie”.'),
                           ('ul',
-                           [('більше 5–6 послуг, і кожну шукають окремим запитом;', 'masz więcej niż 5–6 usług i każdej szuka się inną frazą;'),
+                           [('більше 5–6 послуг, і кожну шукають окремим запитом;', 'masz więcej niż 5–6 usług, a klienci szukają każdej z nich pod inną frazą;'),
                             ('кілька філій, міст чи аудиторій (клієнти, партнери, франчайзі);', 'kilka oddziałów, miast albo grup odbiorców (klienci, partnerzy, franczyzobiorcy);'),
                             ('потрібні кілька мов, блог чи регулярні новини;', 'potrzebujesz kilku wersji językowych, bloga lub aktualności;'),
                             ('онлайн-запис у різні філії, калькулятори, інтеграції з CRM.', 'rezerwacje do różnych oddziałów, kalkulatory, integracje z CRM.')]),
@@ -130,14 +130,14 @@ POST = {'key': 'lendinh-chy-vizytka',
                            'Так було з мережею барбершопів у Дніпрі: <a href="case-dictator-barbershop">сайт DICTATOR</a> веде клієнта до запису в потрібну філію, а окремо продає навчання в академії '
                            'та франшизу. Візитка з цим не впоралася б. Такий <a href="svc-korporatyvnyi-sait">багатосторінковий сайт компанії</a> у нас коштує від €450 і займає 15–25 робочих днів, а '
                            'для складніших задач вартість рахуємо після брифу.',
-                           'Tak było w przypadku sieci barber shopów z Dniepru: <a href="case-dictator-barbershop">strona DICTATOR</a> prowadzi klienta do rezerwacji w wybranym salonie, a osobno '
+                           'Tak było w przypadku sieci barbershopów z Dniepru: <a href="case-dictator-barbershop">strona DICTATOR</a> prowadzi klienta do rezerwacji w wybranym salonie, a osobno '
                            'sprzedaje szkolenia w akademii i franczyzę. Wizytówka by tego nie udźwignęła. Taka <a href="svc-korporatyvnyi-sait">rozbudowana strona firmowa</a> kosztuje u nas od 450 € '
                            'i powstaje w 15–25 dni roboczych, a przy bardziej złożonych projektach wycenę robimy po briefie.')]},
               {'h2_uk': 'Типові помилки при виборі',
                'h2_pl': 'Najczęstsze błędy przy wyborze',
                'blocks': [('p',
                            'За роки роботи ми бачили ті самі помилки знову й знову. Вони коштують не стільки грошей на розробку, скільки часу й втрачених клієнтів.',
-                           'Przez lata widzieliśmy te same błędy w kółko. Kosztują nie tyle pieniądze na wykonanie strony, ile czas i utraconych klientów.'),
+                           'Przez lata pracy widzieliśmy te same błędy raz po raz. Ich koszt to nie tyle pieniądze wydane na stronę, ile stracony czas i utraceni klienci.'),
                           ('h3', 'Лендінг без рекламного трафіку', 'Landing bez ruchu z reklam'),
                           ('p',
                            'Власник замовляє лендінг, запускає його — і нічого не відбувається. Одна сторінка з одним заголовком майже не має шансів у пошуку за багатьма запитами, а без реклами на '
@@ -162,8 +162,8 @@ POST = {'key': 'lendinh-chy-vizytka',
                            'Лендінг у нас коштує від €300 (тариф «Старт», запуск за 3 дні) або €450 у тарифі «Про» з адмін-панеллю, анімаціями й аналітикою — запуск за 4–5 днів. Візитка — від €300, '
                            'з адмін-панеллю — €450. В обидва формати входять індивідуальний дизайн, мобільна версія, базове SEO, форма заявки з відправкою в Telegram і 30 днів підтримки.',
                            'Landing page kosztuje u nas od 300 € (pakiet Start, gotowy w 3 dni) albo 450 € w pakiecie Pro z panelem edycji, animacjami i analityką — gotowy w 4–5 dni. Wizytówka — od '
-                           '300 €, z panelem edycji 450 €. Ceny są bez VAT (zwolnienie z VAT), płatność na umowę i fakturę, w EUR, USD lub PLN. W obu formatach masz indywidualny projekt, wersję '
-                           'mobilną, podstawowe SEO, formularz z wysyłką na Telegram i 30 dni wsparcia.'),
+                           '300 €, z panelem edycji 450 €. Ceny są końcowe — nie doliczamy VAT (zwolnienie z VAT), płatność na umowę i fakturę, w EUR, USD lub PLN. W obu formatach masz indywidualny projekt, wersję '
+                           'mobilną, podstawowe SEO, formularz z powiadomieniami na Telegramie i 30 dni wsparcia.'),
                           ('card',
                            'Якщо сумніваєтеся, почніть не з формату, а з двох питань: звідки прийдуть клієнти і яку одну дію вони мають зробити на сайті. На брифі ми відповідаємо на них разом і '
                            'радимо формат — оцінку отримаєте протягом 24 годин.',
@@ -179,26 +179,26 @@ POST = {'key': 'lendinh-chy-vizytka',
           'Co lepsze dla małej firmy: landing czy wizytówka?',
           'Для більшості малих локальних бізнесів краще починати з візитки. Вона працює без постійного рекламного бюджету: її знаходять у Google, з профілю в Google Maps і за рекомендаціями. Лендінг '
           'має сенс, коли ви вже плануєте рекламу на конкретну послугу й готові за неї платити щомісяця.',
-          'Dla większości małych, lokalnych firm lepszym startem jest wizytówka. Działa bez stałego budżetu na reklamy: klienci trafiają na nią z Google, z Profilu Firmy w Mapach i z poleceń. '
+          'Dla większości małych, lokalnych firm lepszym startem jest wizytówka. Działa bez stałego budżetu na reklamy: klienci trafiają na nią z Google, z Profilu Firmy w Google i z poleceń. '
           'Landing page ma sens, gdy planujesz kampanię na konkretną usługę i jesteś gotów regularnie za nią płacić.'],
          ['Чи можна зробити сайт-візитку на одній сторінці?',
           'Czy strona wizytówka może być typu one page?',
           'Так, візитка на одній сторінці (one page) — поширений формат. Він підходить, коли у вас одна-дві послуги й усе вміщується в один скрол. Від лендінгу така візитка відрізняється змістом: '
           'вона розповідає про компанію й дає контакти, а не веде до однієї пропозиції з реклами.',
-          'Tak, strona wizytówka typu one page to popularne rozwiązanie. Sprawdza się, gdy masz jedną–dwie usługi i wszystko mieści się w jednym przewijaniu. Od landing page różni się treścią: '
+          'Tak, strona wizytówka typu one page to popularne rozwiązanie. Sprawdza się, gdy masz jedną lub dwie usługi i wszystko mieści się na jednej przewijanej stronie. Od landing page różni się treścią: '
           'opowiada o firmie i podaje kontakt, zamiast prowadzić do jednej oferty z kampanii reklamowej.'],
          ['Скільки коштує лендінг і сайт-візитка?',
           'Ile kosztuje landing page, a ile strona wizytówka?',
           'У нашій студії обидва формати коштують від €300. Лендінг у тарифі «Про» з адмін-панеллю, анімаціями й аналітикою — €450, візитка з адмін-панеллю — теж €450. Лендінг «Старт» запускаємо за '
           '3 дні, «Про» — за 4–5 днів. Багатосторінковий сайт — від €450, 15–25 робочих днів.',
           'U nas oba formaty kosztują od 300 €. Landing w pakiecie Pro z panelem edycji, animacjami i analityką to 450 €, wizytówka z panelem — również 450 €. Landing Start uruchamiamy w 3 dni, Pro '
-          'w 4–5 dni. Rozbudowana strona firmowa to koszt od 450 € i 15–25 dni roboczych. Ceny bez VAT.'],
+          'w 4–5 dni. Rozbudowana strona firmowa to koszt od 450 € i 15–25 dni roboczych. Ceny końcowe (zw. z VAT).'],
          ['Чи можна потім перетворити лендінг на повноцінний сайт?',
           'Czy landing można później rozbudować do pełnej strony?',
           'Так, але це простіше, якщо структуру продумати заздалегідь. Лендінг можна залишити як сторінку під рекламу, а поруч зробити сайт компанії в тому самому стилі. Переробляти одну рекламну '
           'сторінку на багатосторінковий сайт зазвичай довше, ніж одразу обрати правильний формат, тому це обговорюємо ще на брифі.',
           'Tak, ale łatwiej, gdy struktura jest przemyślana od początku. Landing może zostać stroną pod kampanie, a obok powstaje strona firmowa w tym samym stylu. Przerabianie jednej strony '
-          'reklamowej na serwis z wieloma podstronami zwykle trwa dłużej niż od razu dobrany format, dlatego rozmawiamy o tym już na briefie.']],
+          'reklamowej na serwis z wieloma podstronami zwykle trwa dłużej niż wybranie od razu właściwego formatu, dlatego rozmawiamy o tym już na briefie.']],
  'service': 'lending',
  'cta_uk': 'Не впевнені, що вам потрібно — лендінг чи візитка? Опишіть бізнес і джерела клієнтів, і ми порадимо формат та назвемо ціну протягом 24 годин.',
  'cta_pl': 'Nie wiesz, czy potrzebujesz landing page, czy wizytówki? Opisz swoją firmę i to, skąd przychodzą klienci — doradzimy format i podamy cenę w ciągu 24 godzin.',

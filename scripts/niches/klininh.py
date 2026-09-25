@@ -14,7 +14,7 @@ NICHE = {
     'h1_uk': 'Сайт для клінінгової компанії',
     'h1_pl': 'Strona internetowa dla firmy sprzątającej',
     'sub_uk': 'Клієнт бачить ціну прибирання ще до дзвінка і замовляє дату з телефона за хвилину.',
-    'sub_pl': 'Klient widzi cenę sprzątania przed telefonem i rezerwuje termin ze smartfona w minutę.',
+    'sub_pl': 'Klient widzi cenę sprzątania, zanim zadzwoni, i rezerwuje termin ze smartfona w minutę.',
     'facts': [['Ціна', 'Cena', 'від €300', 'od 300 €'],
               ['Лендінг', 'Landing page', 'від 3 днів', 'od 3 dni'],
               ['Калькулятор', 'Kalkulator', 'Метраж і послуги', 'Metraż i usługi'],
@@ -31,9 +31,9 @@ NICHE = {
                'Для старту підходить <a href="svc-lending">лендінг</a>, для кількох послуг і міст краще '
                '<a href="svc-korporatyvnyi-sait">багатосторінковий сайт</a> з окремою сторінкою під кожен запит.',
     'lead_pl': 'Strona internetowa dla firmy sprzątającej musi szybko odpowiedzieć na trzy pytania: ile to kosztuje, co dokładnie zostanie posprzątane i kiedy ekipa może przyjechać. '
-               'Ktoś, kto szuka sprzątania mieszkania po remoncie albo mycia okien, porównuje kilka firm na telefonie i pisze do tej, która pokazuje cenę od razu, a nie „do ustalenia”. '
+               'Ktoś, kto szuka sprzątania mieszkania po remoncie albo mycia okien, porównuje kilka firm w telefonie i pisze do tej, która pokazuje cenę od razu, a nie „do ustalenia”. '
                'Dlatego stronę budujemy wokół kalkulatora ceny i krótkiego formularza z wyborem terminu. '
-               'Obok lista czynności, dzielnice, w których pracujesz, i prawdziwe opinie z Google. '
+               'Obok umieszczamy listę czynności, dzielnice, w których pracujesz, i prawdziwe opinie z Google. '
                'Na początek wystarczy <a href="svc-lending">landing page</a>, a przy kilku usługach i miastach lepiej sprawdzi się '
                '<a href="svc-korporatyvnyi-sait">strona firmowa</a> z osobną podstroną pod każdą frazę.',
     'pills': [['Прибирання квартир', 'Sprzątanie mieszkań'],
@@ -41,19 +41,19 @@ NICHE = {
               ['Після ремонту', 'Po remoncie'],
               ['Хімчистка меблів', 'Pranie tapicerki'],
               ['Мийка вікон', 'Mycie okien'],
-              ['Прибирання під оренду', 'Sprzątanie najmu']],
+              ['Прибирання під оренду', 'Sprzątanie mieszkań na wynajem']],
     'incl': [['Калькулятор вартості',
               'Kalkulator ceny',
               'Клієнт вказує метраж, кількість кімнат і санвузлів, тип прибирання та додаткові послуги: мийку вікон, духовки, холодильника, балкона, хімчистку дивана. '
               'Сума перераховується одразу, а разом із заявкою ви отримуєте всі параметри й не уточнюєте їх телефоном. Формулу налаштовуємо під ваш прайс.',
               'Klient podaje metraż, liczbę pokoi i łazienek, rodzaj sprzątania oraz dodatki: mycie okien, piekarnika, lodówki, balkonu czy pranie kanapy. '
-              'Kwota przelicza się od razu, a razem ze zgłoszeniem dostajesz wszystkie parametry, więc nie dopytujesz o nie przez telefon. Wzór ustawiamy pod Twój cennik.'],
+              'Kwota przelicza się od razu, a razem ze zgłoszeniem dostajesz wszystkie parametry, więc nie dopytujesz o nie przez telefon. Sposób liczenia dopasowujemy do Twojego cennika.'],
              ['Замовлення з датою',
               'Rezerwacja terminu',
               'Після розрахунку клієнт обирає дату й час, вказує адресу й телефон. Заявка приходить вам у Telegram або на пошту з уже порахованою сумою. '
               'Форма коротка й зручна з мобільного: великі кнопки, мінімум полів, без реєстрації. Кнопки дзвінка й WhatsApp завжди під рукою.',
               'Po wyliczeniu ceny klient wybiera dzień i godzinę, podaje adres i numer telefonu. Zgłoszenie trafia do Ciebie na Telegram lub e-mail z gotową kwotą. '
-              'Formularz jest krótki i wygodny na smartfonie: duże przyciski, minimum pól, bez zakładania konta. Przycisk połączenia i WhatsApp zawsze pod ręką.'],
+              'Formularz jest krótki i wygodny na smartfonie: duże przyciski, minimum pól, bez zakładania konta. Przyciski połączenia i WhatsApp są zawsze pod ręką.'],
              ['Чекліст «що входить»',
               'Lista czynności',
               'Для кожного типу прибирання показуємо чіткий список по кімнатах: кухня, ванна, житлові кімнати, коридор. Окремо пишемо, що не входить і коштує додатково. '
@@ -66,28 +66,28 @@ NICHE = {
               'Узгоджуємо назви послуг із профілем компанії в Google. Детальніше про <a href="svc-seo">SEO-оптимізацію</a> і про те, чому сайту часто '
               '<a href="post-nemaie-v-google">немає в Google</a>.',
               'Tworzymy osobne podstrony pod frazy „sprzątanie mieszkań + miasto” i „sprzątanie po remoncie + miasto”, dodajemy listę dzielnic i obszar dojazdu. '
-              'Nazwy usług ujednolicamy z Profilem Firmy w Google. Więcej o <a href="svc-seo">pozycjonowaniu</a> i o tym, dlaczego strony często '
+              'Nazwy usług uzgadniamy z Profilem Firmy w Google. Więcej o <a href="svc-seo">pozycjonowaniu</a> i o tym, dlaczego strony często '
               '<a href="post-nemaie-v-google">nie ma w Google</a>.'],
              ['Довіра без вигадок',
               'Zaufanie bez ściemy',
               'У клінінгу людина пускає чужих у свій дім, тому показуємо команду, правила роботи, засоби, якими ви прибираєте, і реальні відгуки з Google з посиланням на профіль. '
               'Вигаданих відгуків і «тисяч задоволених клієнтів» не пишемо: Google і самі клієнти таке швидко помічають.',
               'Przy sprzątaniu klient wpuszcza obcych do domu, więc pokazujemy ekipę, zasady pracy, środki, których używasz, i prawdziwe opinie z Google z linkiem do profilu. '
-              'Nie wymyślamy recenzji ani „tysięcy zadowolonych klientów”: Google i sami klienci szybko to wyłapują.']],
+              'Nie wymyślamy opinii ani „tysięcy zadowolonych klientów”: Google i sami klienci szybko to wyłapują.']],
     'local_title_uk': 'Кейс: Elart Cleaning',
     'local_title_pl': 'Realizacja: Elart Cleaning',
     'local_lead_uk': 'Для Elart Cleaning у Познані ми зробили лендінг польською на Next.js. Компанія прибирає квартири, будинки й офіси, робить хімчистку меблів і допомагає з переїздами. '
                      'На сайті є прозорий прайс і пакети прибирання, «7 кроків від контакту до чистоти», блок про сталу команду, фото до і після, відгуки з оцінкою 4.9/5, FAQ і бронювання.',
-    'local_lead_pl': 'Dla Elart Cleaning z Poznania zrobiliśmy landing po polsku na Next.js. Firma sprząta mieszkania, domy i biura, pierze meble i pomaga przy przeprowadzkach. '
-                     'Na stronie jest przejrzysty cennik z pakietami, „7 kroków od kontaktu do czystej przestrzeni”, blok o stałej ekipie, zdjęcia przed i po, opinie 4.9/5, FAQ i rezerwacja.',
+    'local_lead_pl': 'Dla Elart Cleaning z Poznania zrobiliśmy landing po polsku na Next.js. Firma sprząta mieszkania, domy i biura, pierze tapicerkę i pomaga przy przeprowadzkach. '
+                     'Na stronie jest przejrzysty cennik z pakietami, „7 kroków od kontaktu do czystej przestrzeni”, blok o stałej ekipie, zdjęcia przed i po, opinie z oceną 4,9/5, FAQ i rezerwacja.',
     'local_sub_uk': 'Головний висновок для інших клінінгових компаній: клієнт обирає за ціною і довірою, тому обидві речі мають бути на першому екрані. '
                     'Ціни видно без дзвінка, процес розписано по кроках, а людей, які прийдуть у дім, показано з обличчями. '
                     'Цю логіку можна посилити калькулятором вартості й вибором дати, щоб клієнт замовив прибирання, поки ще тримає телефон у руках. '
                     'Суміжні проєкти нижче: Novalux обслуговує будинки й басейни в Барселоні, а Remico виробляє побутову хімію і продає її магазинам.',
     'local_sub_pl': 'Najważniejszy wniosek dla innych firm sprzątających: klient wybiera po cenie i zaufaniu, więc obie rzeczy muszą być widoczne od razu. '
-                    'Cennik jest dostępny bez dzwonienia, proces rozpisany krok po kroku, a ludzie, którzy przyjdą do domu, pokazani z twarzami. '
+                    'Ceny widać bez dzwonienia, proces jest rozpisany krok po kroku, a osoby, które przyjdą do domu, pokazane są z twarzy. '
                     'Tę logikę można wzmocnić kalkulatorem ceny i wyborem terminu, żeby klient zamówił sprzątanie, póki trzyma telefon w ręku. '
-                    'Poniżej projekty z pokrewnych branż: Novalux obsługuje budynki i baseny w Barcelonie, a Remico produkuje chemię gospodarczą dla sklepów.',
+                    'Poniżej projekty z pokrewnych branż: Novalux obsługuje budynki i baseny w Barcelonie, a Remico produkuje chemię gospodarczą i sprzedaje ją sklepom.',
     'local_case': 'elart-cleaning',
     'local_pills': [['Прайс і пакети', 'Cennik i pakiety'],
                     ['7 кроків', '7 kroków'],
@@ -102,13 +102,13 @@ NICHE = {
              'Ціни без VAT, бо студія звільнена від VAT. Усі тарифи є на сторінці <a href="prices">ціни</a>.',
              'Landing page dla firmy sprzątającej kosztuje od 300 € (pakiet Start), pakiet Pro z panelem do edycji — 450 €, a strona firmowa z podstronami usług i miast — od 450 €. '
              'Kalkulator ceny sprzątania wyceniamy osobno, bo wzór zależy od Twojego cennika. Wycenę wysyłamy w ciągu 24 godzin. '
-             'Ceny bez VAT (zwolnienie z VAT). Wszystkie pakiety znajdziesz w <a href="prices">cenniku</a>.'],
+             'Nie doliczamy VAT (zwolnienie z VAT). Wszystkie pakiety znajdziesz w <a href="prices">cenniku</a>.'],
             ['Скільки часу займає створення сайту?',
-             'Ile trwa zrobienie strony?',
+             'Ile trwa stworzenie strony?',
              'Лендінг у тарифі «Старт» запускаємо за 3 дні, у тарифі «Про» за 4–5 днів. Багатосторінковий сайт з кількома послугами й сторінками районів займає 15–25 робочих днів. '
              'Калькулятор і онлайн-замовлення можуть додати кілька днів, залежно від кількості параметрів. Найбільше на термін впливає те, як швидко готові прайс, тексти й фото.',
-             'Landing w pakiecie Start uruchamiamy w 3 dni, w pakiecie Pro w 4–5 dni. Strona firmowa z kilkoma usługami i podstronami dzielnic to 15–25 dni roboczych. '
-             'Kalkulator i rezerwacja online mogą dodać kilka dni, zależnie od liczby parametrów. Najbardziej na termin wpływa to, jak szybko przygotujesz cennik, teksty i zdjęcia.'],
+             'Landing page w pakiecie Start uruchamiamy w 3 dni, w pakiecie Pro w 4–5 dni. Strona firmowa z kilkoma usługami i podstronami dzielnic to 15–25 dni roboczych. '
+             'Kalkulator i rezerwacja online mogą dodać kilka dni, zależnie od liczby parametrów. Na termin najbardziej wpływa to, jak szybko przygotujesz cennik, teksty i zdjęcia.'],
             ['Що потрібно від нас для старту?',
              'Czego potrzebujecie ode mnie na start?',
              'Потрібні прайс або хоча б логіка ціни (за метр, за кімнату, додаткові послуги), список послуг, міста й райони, де ви працюєте, контакти й логотип. '
@@ -144,7 +144,7 @@ NICHE = {
              'Так, польську версію пишемо природною мовою, а не перекладом, бо більшість ваших клієнтів у Польщі шукають прибирання польською. '
              'Українську чи англійську додаємо для іноземців, які орендують житло, і для офісів міжнародних компаній. Версії пов\'язуємо через hreflang. '
              'Спілкуватися з нами під час проєкту можна польською або українською, як вам зручніше.',
-             'Tak, polską wersję piszemy naturalnym językiem, a nie tłumaczeniem, bo większość klientów w Polsce szuka sprzątania po polsku. '
+             'Tak, polską wersję piszemy od razu po polsku, a nie tłumaczymy, bo większość klientów w Polsce szuka sprzątania po polsku. '
              'Wersję ukraińską lub angielską dodajemy z myślą o obcokrajowcach wynajmujących mieszkania i biurach międzynarodowych firm. Wersje łączymy przez hreflang. '
              'Z nami rozmawiasz po polsku albo po ukraińsku.'],
             ['Що буде після запуску сайту?',
@@ -154,5 +154,5 @@ NICHE = {
              'Працюємо за договором і з faktura. Обговорити проєкт можна через <a href="contacts">контакти</a>.',
              'Dostajesz wszystkie dostępy: do strony, domeny, hostingu i CMS, a w pakietach Start i Pro także 30 dni wsparcia. '
              'W pakiecie Pro ceny, usługi i zdjęcia zmieniasz sam w panelu. Jeśli wolisz się tym nie zajmować, jest opieka od 20 € miesięcznie. '
-             'Pracujemy na umowę i z fakturą. Projekt omówimy po kontakcie przez <a href="contacts">formularz kontaktowy</a>.']],
+             'Pracujemy na podstawie umowy i wystawiamy fakturę. Projekt omówisz z nami przez <a href="contacts">formularz kontaktowy</a>.']],
 }

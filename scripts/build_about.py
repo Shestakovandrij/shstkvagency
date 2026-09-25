@@ -87,7 +87,7 @@ k=tariffs.index('        <article class="tariff-addon reveal">')
 note='''        <p class="tariff-lead reveal">'''+L('Працюємо офіційно: за договором і з рахунком-фактурою (faktura). Оплата поетапна — в EUR, USD або PLN.','Działamy oficjalnie: na podstawie umowy i faktury. Płatność etapami — w EUR, USD lub PLN. Ceny nie zawierają VAT (sprzedawca zwolniony z VAT).')+'''</p>
 '''
 tariffs=tariffs[:k]+extra+tariffs[k:]
-tariffs=tariffs.replace('<p class="tariff-lead reveal" data-i18n="tariff.lead">Фіксована вартість під ключ — без прихованих доплат. Оберіть формат, який найкраще підходить під вашу задачу</p>','<p class="tariff-lead reveal">'+L('Фіксована вартість під ключ — без прихованих доплат. Працюємо офіційно: за договором і з faktura, оплата поетапна в EUR, USD або PLN.','Stała cena pod klucz — bez ukrytych dopłat. Działamy oficjalnie: umowa i faktura, płatność etapami w EUR, USD lub PLN. Ceny bez VAT (zwolnienie z VAT).')+'</p>')
+tariffs=tariffs.replace('<p class="tariff-lead reveal" data-i18n="tariff.lead">Фіксована вартість під ключ — без прихованих доплат. Оберіть формат, який найкраще підходить під вашу задачу</p>','<p class="tariff-lead reveal">'+L('Фіксована вартість під ключ — без прихованих доплат. Працюємо офіційно: за договором і з faktura, оплата поетапна в EUR, USD або PLN.','Stała cena pod klucz — bez ukrytych dopłat. Działamy oficjalnie: umowa i faktura, płatność etapami w EUR, USD lub PLN. Ceny są końcowe — nie doliczamy VAT (zwolnienie z VAT).')+'</p>')
 
 # --- who we are (budget-grid pattern from home)
 pills=[('Українська','Ukraiński'),('Польська','Polski'),('WordPress','WordPress'),('Webflow','Webflow'),('React · Next.js','React · Next.js'),('SEO','SEO')]

@@ -49,11 +49,11 @@ SERVICES = [
             ['Мобільна версія',
              'Wersja mobilna',
              'Більшість рекламного трафіку приходить зі смартфонів, тому кнопки, форми й тексти перевіряємо на реальних розмірах екранів, а не лише в макеті.',
-             'Większość ruchu z reklam wchodzi ze smartfonów, dlatego przyciski, formularze i teksty sprawdzamy na prawdziwych rozmiarach ekranów, nie tylko w makiecie.'],
+             'Większość ruchu z reklam pochodzi ze smartfonów, dlatego przyciski, formularze i teksty sprawdzamy na ekranach w realnych rozmiarach, a nie tylko w makiecie.'],
             ['Заявки в Telegram',
              'Zgłoszenia na Telegram',
              'Форма надсилає заявку прямо у ваш Telegram, тож менеджер відповідає за хвилини. У тарифі «Про» підключаємо GA4 і пікселі, щоб бачити, яка реклама дає заявки.',
-             'Formularz wysyła zgłoszenie prosto na Twój Telegram, więc handlowiec odpisuje w kilka minut. W pakiecie Pro podpinamy GA4 i piksele, by widzieć, która reklama daje leady.'],
+             'Formularz wysyła zgłoszenie prosto na Twój Telegram, więc handlowiec odpisuje w kilka minut. W pakiecie Pro podpinamy GA4 i piksele, żeby widzieć, która reklama przynosi leady.'],
             ['Тексти й базове SEO',
              'Teksty i podstawowe SEO',
              'Допомагаємо сформулювати оффер і тексти блоків, налаштовуємо мета-теги, швидке завантаження й коректну індексацію, щоб сторінку знаходили і в пошуку.',
@@ -73,7 +73,7 @@ SERVICES = [
              ['Дизайн першого екрана',
               'Projekt pierwszego ekranu',
               'Малюємо перші 1–2 блоки й погоджуємо стиль. Після вашого «так» доробляємо решту сторінки та мобільну версію в тому самому візуальному ключі.',
-              'Projektujemy pierwsze 1–2 sekcje i akceptujemy styl. Po Twoim „tak” dokańczamy resztę strony i wersję mobilną w tym samym klimacie.',
+              'Projektujemy pierwsze 1–2 sekcje, a Ty akceptujesz styl. Po Twoim „tak” dokańczamy resztę strony i wersję mobilną w tym samym klimacie.',
               ['Дизайн', 'Projekt'],
               ['Адаптив', 'Mobile']],
              ['Верстка й підключення',
@@ -85,11 +85,11 @@ SERVICES = [
              ['Запуск і доступи',
               'Start i dostępy',
               'Ваші правки збираємо одним списком, вносимо їх, публікуємо сайт на вашому домені й передаємо всі доступи. Далі 30 днів супроводу без доплат.',
-              'Poprawki zbieramy w jedną listę, wprowadzamy je, publikujemy stronę na Twojej domenie i przekazujemy wszystkie dostępy. Potem 30 dni wsparcia bez dopłat.',
+              'Twoje poprawki zbieramy w jedną listę, wprowadzamy je, publikujemy stronę na Twojej domenie i przekazujemy wszystkie dostępy. Potem 30 dni wsparcia bez dopłat.',
               ['Запуск', 'Start'],
               ['Доступи', 'Dostępy']]],
    'plans_lead_uk': 'Фіксована ціна за проєкт. Оплата поетапно, за договором і з фактурою — у EUR, USD або PLN.',
-   'plans_lead_pl': 'Stała cena za projekt, płatność etapami na podstawie umowy i faktury — w EUR, USD lub PLN. Ceny bez VAT (zwolnienie z VAT).',
+   'plans_lead_pl': 'Stała cena za projekt, płatność etapami na podstawie umowy i faktury — w EUR, USD lub PLN. Ceny są końcowe — nie doliczamy VAT (zwolnienie z VAT).',
    'plans': [{'price': '300',
               'unit_uk': '/ проєкт',
               'unit_pl': '/ projekt',
@@ -99,7 +99,7 @@ SERVICES = [
               'name_uk': 'Старт',
               'name_pl': 'Start',
               'desc_uk': 'Коли рекламу треба запустити швидко і потрібна одна чиста сторінка, що збирає заявки.',
-              'desc_pl': 'Gdy reklama ma ruszyć szybko i potrzebujesz jednej czystej strony, która zbiera zgłoszenia.',
+              'desc_pl': 'Gdy reklama ma ruszyć szybko i potrzebujesz jednej prostej strony, która zbiera zgłoszenia.',
               'feats': [['Індивідуальний дизайн', 'Indywidualny projekt'],
                         ['Адаптація під мобільні', 'Wersja mobilna'],
                         ['Базова SEO-оптимізація', 'Podstawowa optymalizacja SEO'],
@@ -154,7 +154,7 @@ SERVICES = [
             'Лендінг під ключ коштує від €300 у тарифі «Старт» і €450 у тарифі «Про». У ціну входять дизайн, мобільна версія, базове SEO, форма заявки в Telegram і 30 днів підтримки. Якщо потрібні '
             'калькулятор, каталог чи інтеграція з CRM, точну вартість рахуємо після брифу — оцінка за 24 години.',
             'Landing page pod klucz kosztuje od 300 € w pakiecie Start i 450 € w pakiecie Pro. W cenie są projekt, wersja mobilna, podstawowe SEO, formularz z wysyłką na Telegram i 30 dni wsparcia. '
-            'Jeśli potrzebny jest kalkulator, katalog albo integracja z CRM, dokładną cenę liczymy po briefie — wycena w 24 godziny. Ceny są bez VAT (zwolnienie z VAT).'],
+            'Jeśli potrzebny jest kalkulator, katalog albo integracja z CRM, dokładną cenę liczymy po briefie — wycena w 24 godziny. Ceny są końcowe — nie doliczamy VAT (zwolnienie z VAT).'],
            ['Скільки часу займає створення лендінгу?',
             'Ile trwa stworzenie landing page?',
             'Лендінг у тарифі «Старт» запускаємо за 3 дні, у тарифі «Про» — за 4–5 днів. Відлік починається, коли погоджено бриф і є матеріали: логотип, фото, ціни, контакти. Якщо тексти чи фото '
@@ -177,10 +177,10 @@ SERVICES = [
             'Czego potrzebujecie ode mnie na start?',
             'Для старту потрібні опис пропозиції, ціни, контакти, логотип і фото або відео, якщо вони є. Корисно також надіслати 2–3 сайти, які вам подобаються, і сказати, звідки піде реклама. Тексти '
             "не обов'язково писати самому: допомагаємо сформулювати їх на основі ваших відповідей у брифі.",
-            'Na start potrzebujemy opisu oferty, cen, danych kontaktowych, logo oraz zdjęć lub wideo, jeśli je masz. Warto też podesłać 2–3 strony, które Ci się podobają, i powiedzieć, skąd pójdzie '
-            'reklama. Tekstów nie musisz pisać sam — pomagamy je sformułować na podstawie odpowiedzi z briefu.'],
+            'Na start potrzebujemy opisu oferty, cen, danych kontaktowych, logo oraz zdjęć lub wideo, jeśli je masz. Warto też podesłać 2–3 strony, które Ci się podobają, i napisać, gdzie będzie '
+            'prowadzona reklama. Tekstów nie musisz pisać sam — pomagamy je sformułować na podstawie odpowiedzi z briefu.'],
            ['Чи підійде лендінг для Google Ads і Meta Ads?',
-            'Czy landing nadaje się pod Google Ads i Meta Ads?',
+            'Czy landing nadaje się do kampanii Google Ads i Meta Ads?',
             'Так, лендінг якраз і створюється як сторінка призначення для реклами. У тарифі «Про» підключаємо GA4, Meta Pixel або TikTok Pixel, щоб рекламні кабінети бачили заявки. Саме налаштування '
             'кампаній не входить у лендінг, але можемо допомогти або підключити профільного спеціаліста.',
             'Tak, landing powstaje właśnie jako strona docelowa dla reklam. W pakiecie Pro podpinamy GA4, Meta Pixel lub TikTok Pixel, żeby systemy reklamowe widziały zgłoszenia. Samo ustawienie '
@@ -190,13 +190,13 @@ SERVICES = [
             'Так, після здачі ви отримуєте всі доступи: до сайту, домену, хостингу, адмін-панелі та підключених сервісів. Домен і хостинг радимо одразу оформлювати на вас, щоб лендінг був повністю '
             'вашою власністю. Допомагаємо з реєстрацією домену, SSL і налаштуванням пошти.',
             'Tak, po oddaniu projektu dostajesz komplet dostępów: do strony, domeny, hostingu, panelu i podpiętych usług. Domenę i hosting najlepiej od razu rejestrować na Ciebie, żeby landing był w '
-            'pełni Twoją własnością. Pomagamy przy rejestracji domeny, SSL i konfiguracji poczty.'],
+            'pełni Twoją własnością. Pomagamy w rejestracji domeny oraz konfiguracji SSL i poczty.'],
            ['Чи робите лендінги польською для ринку Польщі?',
             'Czy robicie landing page w kilku językach?',
             'Так, студія працює у Вроцлаві, і ми спілкуємося українською та польською. Робимо лендінги польською, українською, англійською, а також кілька мовних версій однієї сторінки. Для польських '
             'компаній оплата можлива в PLN, за договором і з фактурою, ціни без VAT.',
             'Tak, landing możemy przygotować po polsku, ukraińsku, angielsku albo w kilku wersjach językowych naraz. Studio działa we Wrocławiu, rozmawiamy po polsku i ukraińsku, a klientów mamy w '
-            'sześciu krajach. Płatność w PLN, na podstawie umowy i faktury, ceny bez VAT.']]},
+            'sześciu krajach. Płatność w PLN, na podstawie umowy i faktury, ceny końcowe (zw. z VAT).']]},
   {'key': 'sait-vizytka',
    'path_uk': '/sait-vizytka/',
    'path_pl': '/pl/strona-wizytowka/',
@@ -243,7 +243,7 @@ SERVICES = [
             ['Локальне SEO',
              'Lokalne SEO',
              'Налаштовуємо мета-теги, заголовки й дані компанії так, щоб сайт знаходили за запитами на кшталт «послуга + місто». Допомагаємо з профілем Google Business.',
-             'Ustawiamy meta tagi, nagłówki i dane firmy tak, by strona pojawiała się na frazy typu „usługa + miasto”. Pomagamy też z Profilem Firmy w Google.'],
+             'Ustawiamy meta tagi, nagłówki i dane firmy tak, by strona pojawiała się na frazy typu „usługa + miasto”. Pomagamy też przy Profilu Firmy w Google.'],
             ['Адмін-панель за €450',
              'Panel edycji za 450 €',
              'У версії з адмінкою ви самі змінюєте ціни, фото, тексти й послуги без розробника. Показуємо, як це робити, а для деяких проєктів записуємо відеоінструкцію.',
@@ -261,13 +261,13 @@ SERVICES = [
              ['Збір матеріалів',
               'Materiały',
               'Ви надсилаєте логотип, фото робіт, ціни й контакти. Якщо текстів немає — допомагаємо написати їх із ваших відповідей, без шаблонних фраз про «якість і надійність».',
-              'Przesyłasz logo, zdjęcia realizacji, ceny i dane kontaktowe. Jeśli nie masz tekstów, piszemy je z Twoich odpowiedzi — bez szablonowych haseł o „jakości i profesjonalizmie”.',
+              'Przesyłasz logo, zdjęcia realizacji, ceny i dane kontaktowe. Jeśli nie masz tekstów, piszemy je na podstawie Twoich odpowiedzi — bez szablonowych haseł o „jakości i profesjonalizmie”.',
               ['Тексти', 'Teksty'],
               ['Фото', 'Zdjęcia']],
              ['Дизайн у вашому стилі',
               'Projekt w Twoim stylu',
               'Підбираємо кольори й шрифти під ваш логотип, погоджуємо перші блоки, а потім доробляємо решту сторінок і мобільну версію в тому самому стилі.',
-              'Dobieramy kolory i fonty do Twojego logo, akceptujemy pierwsze sekcje, a potem dokańczamy pozostałe podstrony i wersję mobilną w tym samym stylu.',
+              'Dobieramy kolory i fonty do Twojego logo, dajemy Ci do akceptacji pierwsze sekcje, a potem dokańczamy pozostałe podstrony i wersję mobilną w tym samym stylu.',
               ['Стиль', 'Styl'],
               ['Адаптив', 'Mobile']],
              ['Збирання й наповнення',
@@ -279,11 +279,11 @@ SERVICES = [
              ['Публікація й Google',
               'Publikacja i Google',
               'Запускаємо сайт на вашому домені, відправляємо його на індексацію, допомагаємо з профілем Google Business і передаємо доступи до всього, що налаштували.',
-              'Publikujemy stronę na Twojej domenie, zgłaszamy ją do indeksacji, pomagamy z Profilem Firmy w Google i przekazujemy dostępy do wszystkiego, co skonfigurowaliśmy.',
+              'Publikujemy stronę na Twojej domenie, zgłaszamy ją do indeksacji, pomagamy przy Profilu Firmy w Google i przekazujemy dostępy do wszystkiego, co skonfigurowaliśmy.',
               ['Запуск', 'Start'],
               ['Індексація', 'Indeksacja']]],
    'plans_lead_uk': 'Ціна залежить від того, хто оновлюватиме сайт: ми чи ви. Оплата поетапно, за договором і з фактурою, у EUR, USD або PLN.',
-   'plans_lead_pl': 'Cena zależy od tego, kto będzie aktualizował stronę: my czy Ty. Płatność etapami, na umowę i fakturę, w EUR, USD lub PLN. Ceny bez VAT (zwolnienie z VAT).',
+   'plans_lead_pl': 'Cena zależy od tego, kto będzie aktualizował stronę: my czy Ty. Płatność etapami, na umowę i fakturę, w EUR, USD lub PLN. Ceny są końcowe — nie doliczamy VAT (zwolnienie z VAT).',
    'plans': [{'price': '300',
               'unit_uk': '/ проєкт',
               'unit_pl': '/ projekt',
@@ -298,7 +298,7 @@ SERVICES = [
                         ['Адаптація під смартфони', 'Wersja mobilna'],
                         ['Послуги, контакти, карта', 'Usługi, kontakt, mapa'],
                         ['Форма заявки в Telegram', 'Formularz z wysyłką na Telegram'],
-                        ['Базове SEO й допомога з текстами', 'Podstawowe SEO i pomoc z tekstami'],
+                        ['Базове SEO й допомога з текстами', 'Podstawowe SEO i pomoc przy tekstach'],
                         ['30 днів підтримки після запуску', '30 dni wsparcia po starcie']],
               'rec': False,
               'badge_uk': None,
@@ -312,7 +312,7 @@ SERVICES = [
               'name_uk': 'Візитка + CMS',
               'name_pl': 'Wizytówka + CMS',
               'desc_uk': 'Для бізнесу, де часто змінюються ціни, послуги чи фото робіт і не хочеться щоразу чекати на розробника.',
-              'desc_pl': 'Dla firm, w których często zmieniają się ceny, usługi lub zdjęcia realizacji i nie chcesz za każdym razem czekać na programistę.',
+              'desc_pl': 'Gdy często zmieniasz ceny, usługi lub zdjęcia realizacji i nie chcesz za każdym razem czekać na programistę.',
               'feats': [['Усе з базової версії', 'Wszystko z wersji podstawowej'],
                         ['Адмін-панель для контенту', 'Panel do edycji treści'],
                         ['Детальніший дизайн і анімації', 'Dopracowany projekt i animacje'],
@@ -331,7 +331,7 @@ SERVICES = [
                'tag_uk': 'Якщо без адмінки',
                'tag_pl': 'Gdy nie masz panelu',
                'desc_uk': 'Нові ціни, фото чи послуги вносимо ми, а ви просто пишете в месенджер. Обсяг робіт погоджуємо під ваш сайт.',
-               'desc_pl': 'Nowe ceny, zdjęcia czy usługi wprowadzamy my, a Ty po prostu piszesz na komunikatorze. Zakres prac ustalamy pod Twoją stronę.',
+               'desc_pl': 'Nowe ceny, zdjęcia czy usługi wprowadzamy my, a Ty po prostu wysyłasz nam wiadomość na komunikatorze. Zakres prac ustalamy pod Twoją stronę.',
                'cta_uk': 'Обговорити супровід',
                'cta_pl': 'Zapytaj o opiekę'}],
    'cases': ['dictator-barbershop', 'andreis-service', 'elart-cleaning', 'sexy-ceramic'],
@@ -340,7 +340,7 @@ SERVICES = [
             'Сайт-візитка під ключ коштує від €300 без адмін-панелі та €450 з адмін-панеллю, де ви самі редагуєте зміст. У ціну входять дизайн, мобільна версія, форма заявки, базове SEO і 30 днів '
             'підтримки. Якщо потрібні кілька мов, онлайн-запис чи інтеграції, вартість рахуємо після брифу.',
             'Strona wizytówka kosztuje od 300 € bez panelu edycji i 450 € z panelem, w którym sam zmieniasz treści. W cenie są projekt, wersja mobilna, formularz kontaktowy, podstawowe SEO i 30 dni '
-            'wsparcia. Ceny są bez VAT. Jeśli potrzebujesz kilku języków, rezerwacji online lub integracji, wycenę przygotujemy po briefie.'],
+            'wsparcia. Ceny są końcowe (zwolnienie z VAT). Jeśli potrzebujesz kilku języków, rezerwacji online lub integracji, wycenę przygotujemy po briefie.'],
            ['Чим сайт-візитка відрізняється від лендінгу?',
             'Czym strona wizytówka różni się od landing page?',
             "Візитка представляє компанію й контакти, а лендінг продає одну пропозицію під рекламу. На візитці є «про нас», кілька послуг, ціни, приклади робіт і способи зв'язку — одна або до п'яти "
@@ -364,7 +364,7 @@ SERVICES = [
             'Візитку на одну сторінку запускаємо приблизно в ті самі терміни, що й лендінг, — від 3 до 5 днів після брифу та отримання матеріалів. Якщо сторінок кілька, точний термін називаємо після '
             'брифу. Найчастіше швидкість залежить від того, як швидко готові тексти, фото й логотип.',
             'Wizytówkę na jednej stronie uruchamiamy w podobnym czasie co landing — od 3 do 5 dni od briefu i otrzymania materiałów. Przy kilku podstronach dokładny termin podajemy po briefie. W '
-            'praktyce tempo zależy głównie od tego, jak szybko gotowe są teksty, zdjęcia i logo.'],
+            'praktyce tempo zależy głównie od tego, jak szybko będą gotowe teksty, zdjęcia i logo.'],
            ['Чи знайдуть мій сайт у Google?',
             'Czy moja strona będzie widoczna w Google?',
             "Так, сайт буде проіндексований і налаштований під базове SEO: мета-теги, заголовки, швидкість, дані компанії. Разом із профілем Google Business це дає шанс з'являтися за запитами «послуга "
@@ -403,13 +403,13 @@ SERVICES = [
              ['Мови', 'Języki', 'PL, UA, EN', 'PL, UA, EN'],
              ['Доступи', 'Dostępy', 'усі у вас', 'wszystkie u Ciebie']],
    'intro_title_uk': 'Коли потрібен сайт компанії',
-   'intro_title_pl': 'Kiedy strona firmowa',
+   'intro_title_pl': 'Kiedy wybrać stronę firmową',
    'lead_uk': 'Розробка корпоративного сайту потрібна, коли однієї сторінки вже замало: у вас кілька напрямків, послуги для різних клієнтів, команда, кейси й новини. Багатосторінковий сайт дає кожній '
               "послузі окрему сторінку, а отже — шанс з'явитися в Google за власним запитом. Він також працює на довіру партнерів і тендерних комісій: показує масштаб, процеси й досвід компанії. Наша "
               'сильна сторона — багатомовні сайти для Польщі, України та ЄС: версії PL, UA, EN з коректним hreflang, щоб кожна мова показувалась у пошуку своєї країни.',
    'lead_pl': 'Strona firmowa jest potrzebna, gdy jedna strona to już za mało: masz kilka obszarów działalności, usługi dla różnych klientów, zespół, realizacje i aktualności. Rozbudowana witryna daje '
               'każdej usłudze osobną podstronę, a więc szansę na pozycję w Google na własną frazę. Buduje też zaufanie kontrahentów i komisji przetargowych, bo pokazuje skalę, procesy i doświadczenie '
-              'firmy. Naszą mocną stroną są strony wielojęzyczne dla Polski, Ukrainy i UE: wersje PL, UA i EN z poprawnym hreflang, dzięki któremu każdy język trafia do wyników w swoim kraju.',
+              'firmy. Nasza specjalność to strony wielojęzyczne dla Polski, Ukrainy i UE: wersje PL, UA i EN z poprawnym hreflang, dzięki któremu każdy język trafia do wyników w swoim kraju.',
    'pills': [['Консалтинг і фінанси', 'Doradztwo i finanse'],
              ['Будівництво', 'Budownictwo'],
              ['Нерухомість', 'Nieruchomości'],
@@ -425,7 +425,7 @@ SERVICES = [
             ['Система блоків і шаблонів',
              'System sekcji i szablonów',
              'Проєктуємо набір блоків і шаблонів сторінок у стилі вашої айдентики. Нові сторінки згодом збираються з цих блоків — без нового дизайну й без розробника.',
-             'Projektujemy zestaw sekcji i szablonów podstron zgodny z Twoją identyfikacją. Nowe podstrony składa się potem z tych klocków — bez nowego projektu i bez programisty.'],
+             'Projektujemy zestaw sekcji i szablonów podstron zgodny z Twoją identyfikacją. Nowe podstrony składasz potem z tych klocków — bez nowego projektu i bez programisty.'],
             ['Багатомовність і hreflang',
              'Wielojęzyczność i hreflang',
              'Робимо версії польською, українською й англійською з окремими адресами та розміткою hreflang, щоб Google показував потрібну мову в кожній країні.',
@@ -433,7 +433,7 @@ SERVICES = [
             ['CMS для вашої команди',
              'CMS dla Twojego zespołu',
              'WordPress (Bricks) або Webflow CMS: співробітники самі додають новини, кейси, вакансії та сторінки послуг. За потреби робимо блог із категоріями.',
-             'WordPress (Bricks) albo Webflow CMS: pracownicy sami dodają aktualności, realizacje, oferty pracy i podstrony usług. W razie potrzeby dokładamy bloga z kategoriami.'],
+             'WordPress (Bricks) albo Webflow CMS: pracownicy sami dodają aktualności, realizacje, oferty pracy i podstrony usług. W razie potrzeby dodajemy bloga z kategoriami.'],
             ['Аналітика й передача',
              'Analityka i przekazanie',
              'Підключаємо GA4 та рекламні пікселі, за потреби налаштовуємо переадресації зі старого сайту й передаємо всі доступи: домен, хостинг, CMS, сервіси.',
@@ -447,19 +447,19 @@ SERVICES = [
              ['Карта сайту',
               'Mapa strony',
               "Будуємо структуру: які сторінки, під які запити, як вони пов'язані між собою. Погоджуємо її до дизайну, бо змінювати структуру пізніше значно дорожче.",
-              'Budujemy strukturę: jakie podstrony, pod jakie frazy i jak się ze sobą łączą. Akceptujemy ją przed projektem graficznym, bo późniejsza zmiana struktury kosztuje znacznie więcej.',
+              'Budujemy strukturę: jakie podstrony, pod jakie frazy i jak się ze sobą łączą. Zatwierdzasz ją przed projektem graficznym, bo późniejsza zmiana struktury kosztuje znacznie więcej.',
               ['Структура', 'Struktura'],
               ['SEO', 'SEO']],
              ['Дизайн шаблонів',
               'Projekt szablonów',
               'Спершу погоджуємо 1–2 блоки головної, потім малюємо ключові шаблони: головну, послугу, кейс, контакти. Решту сторінок збираємо з тих самих компонентів.',
-              'Najpierw akceptujemy 1–2 sekcje strony głównej, potem projektujemy kluczowe szablony: główną, usługę, realizację i kontakt. Resztę podstron składamy z tych samych komponentów.',
+              'Najpierw zatwierdzasz 1–2 sekcje strony głównej, potem projektujemy kluczowe szablony: główną, usługę, realizację i kontakt. Resztę podstron składamy z tych samych komponentów.',
               ['Дизайн', 'Projekt'],
               ['Шаблони', 'Szablony']],
              ['Розробка й CMS',
               'Wdrożenie i CMS',
               'Верстаємо на WordPress, Webflow або Next.js — залежно від задач і бюджету. Налаштовуємо CMS, форми, інтеграції та мовні версії з hreflang.',
-              'Kodujemy na WordPressie, Webflow lub w Next.js — zależnie od potrzeb i budżetu. Konfigurujemy CMS, formularze, integracje i wersje językowe z hreflang.',
+              'Budujemy stronę na WordPressie, w Webflow lub Next.js — zależnie od potrzeb i budżetu. Konfigurujemy CMS, formularze, integracje i wersje językowe z hreflang.',
               ['Розробка', 'Kodowanie'],
               ['CMS', 'CMS']],
              ['Наповнення й перевірка',
@@ -475,7 +475,7 @@ SERVICES = [
               ['Запуск', 'Start'],
               ['Навчання', 'Szkolenie']]],
    'plans_lead_uk': 'Базовий корпоративний сайт має фіксовану ціну; складніші проєкти рахуємо після брифу, оцінка за 24 години. Оплата поетапно, за договором і з фактурою.',
-   'plans_lead_pl': 'Podstawowa strona firmowa ma stałą cenę, bardziej złożone projekty wyceniamy po briefie w 24 godziny. Płatność etapami, na umowę i fakturę. Ceny bez VAT (zwolnienie z VAT).',
+   'plans_lead_pl': 'Podstawowa strona firmowa ma stałą cenę, bardziej złożone projekty wyceniamy po briefie w 24 godziny. Płatność etapami, na umowę i fakturę. Ceny są końcowe — nie doliczamy VAT (zwolnienie z VAT).',
    'plans': [{'price': '450',
               'unit_uk': '/ проєкт',
               'unit_pl': '/ projekt',
@@ -509,7 +509,7 @@ SERVICES = [
               'feats': [['Версії PL / UA / EN з hreflang', 'Wersje PL / UA / EN z hreflang'],
                         ['CMS для блогу, кейсів, вакансій', 'CMS dla bloga, realizacji, ofert pracy'],
                         ['Калькулятори й фільтри', 'Kalkulatory i filtry'],
-                        ['Інтеграції з CRM і сервісами', 'Integracje z CRM i usługami'],
+                        ['Інтеграції з CRM і сервісами', 'Integracje z CRM i innymi systemami'],
                         ['Перенесення старого сайту з редиректами', 'Migracja starej strony z przekierowaniami'],
                         ['Термін після оцінки функціоналу', 'Termin po wycenie funkcji']],
               'rec': False,
@@ -524,7 +524,7 @@ SERVICES = [
                'tag_uk': 'Після запуску',
                'tag_pl': 'Po starcie',
                'desc_uk': 'Після здачі можемо й далі супроводжувати сайт і вносити зміни. Обсяг робіт залежить від розміру сайту й погоджується окремо.',
-               'desc_pl': 'Po oddaniu możemy dalej opiekować się stroną i wprowadzać zmiany. Zakres zależy od wielkości witryny i ustalamy go osobno.',
+               'desc_pl': 'Po oddaniu projektu możemy dalej opiekować się stroną i wprowadzać zmiany. Zakres zależy od wielkości witryny i ustalamy go osobno.',
                'cta_uk': 'Обговорити підтримку',
                'cta_pl': 'Zapytaj o opiekę'},
               {'price': None,
@@ -536,7 +536,7 @@ SERVICES = [
                'tag_uk': 'Оцінка після брифу',
                'tag_pl': 'Wycena po briefie',
                'desc_uk': 'Коли структура готова, сайт можна розвивати в пошуку: нові сторінки під запити, контент, технічні правки. Вартість рахуємо після брифу, за 24 години.',
-               'desc_pl': 'Gdy struktura jest gotowa, stronę można rozwijać w Google: nowe podstrony pod frazy, treści, poprawki techniczne. Wycenę przygotowujemy po briefie, w 24 godziny.',
+               'desc_pl': 'Gdy struktura jest gotowa, możesz rozwijać widoczność strony w Google: nowe podstrony pod frazy, treści, poprawki techniczne. Wycenę przygotowujemy po briefie, w 24 godziny.',
                'cta_uk': 'Запитати про SEO',
                'cta_pl': 'Zapytaj o SEO'}],
    'cases': ['core-accounting', 'common-group', 'herstel-bouw', 'lokalizacja'],
@@ -545,7 +545,7 @@ SERVICES = [
             'Корпоративний сайт коштує від €450 за базовий багатосторінковий варіант з адмін-панеллю, SEO-структурою та аналітикою. Багатомовність, блог, калькулятори чи інтеграції з CRM збільшують '
             'обсяг, тому точну вартість рахуємо після брифу — оцінка за 24 години. Остаточна ціна фіксується в договорі до старту робіт.',
             'Strona firmowa kosztuje od 450 € w wersji podstawowej z panelem edycji, strukturą SEO i analityką. Wersje językowe, blog, kalkulatory czy integracje z CRM zwiększają zakres, dlatego '
-            'dokładną cenę liczymy po briefie — wycena w 24 godziny. Cena jest bez VAT (zwolnienie z VAT) i zapisujemy ją w umowie przed startem.'],
+            'dokładną cenę liczymy po briefie — wycena w 24 godziny. Cena jest końcowa — nie doliczamy VAT (zwolnienie z VAT) i zapisujemy ją w umowie przed startem.'],
            ['Скільки часу займає розробка багатосторінкового сайту?',
             'Ile trwa stworzenie strony internetowej dla firmy?',
             'Розробка багатосторінкового сайту займає 15–25 робочих днів. Складні проєкти з інтеграціями, великим каталогом або особистим кабінетом — 30–45 робочих днів і більше. Реальний термін '
@@ -562,8 +562,8 @@ SERVICES = [
             'Czy robicie strony wielojęzyczne?',
             'Так, багатомовні сайти — наша сильна сторона: версії польською, українською, англійською з окремими адресами та hreflang. Завдяки цьому Google показує польську версію в Польщі, українську '
             '— в Україні і не вважає їх дублікатами. Тексти для перекладу можете надати ви, або обговорюємо переклад окремо.',
-            'Tak, strony wielojęzyczne to nasza mocna strona: wersje polska, ukraińska i angielska z osobnymi adresami i znacznikami hreflang. Dzięki temu Google pokazuje polską wersję w Polsce, '
-            'ukraińską na Ukrainie i nie traktuje ich jak duplikatów. Tłumaczenia możesz dostarczyć sam albo ustalamy je osobno.'],
+            'Tak, strony wielojęzyczne to nasza specjalność: wersje polska, ukraińska i angielska z osobnymi adresami i znacznikami hreflang. Dzięki temu Google pokazuje polską wersję w Polsce, '
+            'ukraińską na Ukrainie i nie traktuje ich jak duplikatów. Tłumaczenia możesz dostarczyć sam albo wycenimy je osobno.'],
            ['Чи зможемо самі додавати новини й сторінки?',
             'Czy sami dodamy aktualności i podstrony?',
             'Так, сайт отримує CMS — WordPress (Bricks) або Webflow CMS, — де ваша команда сама додає новини, кейси, вакансії й нові сторінки послуг із готових блоків. Дизайн при цьому не ламається. '
@@ -612,8 +612,8 @@ SERVICES = [
    'lead_uk': 'Створення інтернет-магазину під ключ — це сайт, де клієнт сам обирає товар, оплачує його онлайн і вказує доставку, а ви отримуєте готове замовлення. Підходить брендам, які продають '
               'через Instagram і втомилися від переписок, офлайн-точкам, що виходять в онлайн, і тим, хто переїжджає з маркетплейсу на власний майданчик. Робимо на WooCommerce: без щомісячної плати за '
               'платформу, з адмінкою, де ви самі керуєте товарами, цінами й замовленнями. Магазин повністю ваш — з доменом, хостингом і всіма доступами.',
-   'lead_pl': 'Sklep internetowy to strona, na której klient sam wybiera produkt, płaci online i wskazuje sposób dostawy, a Ty dostajesz gotowe zamówienie. Sprawdzi się w markach, które sprzedają '
-              'przez Instagram i mają dość odpisywania na wiadomości, w sklepach stacjonarnych wchodzących do sieci oraz w firmach, które chcą uniezależnić się od marketplace’ów. Budujemy na '
+   'lead_pl': 'Sklep internetowy to strona, na której klient sam wybiera produkt, płaci online i wskazuje sposób dostawy, a Ty dostajesz gotowe zamówienie. Sprawdzi się dla marek, które sprzedają '
+              'przez Instagram i mają dość odpisywania na wiadomości, sklepów stacjonarnych wchodzących do sieci oraz firm, które chcą uniezależnić się od marketplace’ów. Budujemy na '
               'WooCommerce: bez miesięcznego abonamentu za platformę, z panelem, w którym samodzielnie zarządzasz produktami, cenami i zamówieniami. Sklep należy w całości do Ciebie — razem z domeną, '
               'hostingiem i wszystkimi dostępami.',
    'pills': [['Квіти й подарунки', 'Kwiaty i prezenty'],
@@ -644,7 +644,7 @@ SERVICES = [
             ['SEO-база й аналітика',
              'Podstawy SEO i analityka',
              'Зрозумілі адреси сторінок, мета-теги категорій і товарів, швидке завантаження та карта сайту. Підключаємо GA4 і Meta Pixel, щоб рекламу можна було запускати одразу після старту.',
-             'Czytelne adresy URL, meta tagi kategorii i produktów, szybkie ładowanie i mapa strony. Podpinamy GA4 oraz Meta Pixel, żeby kampanie reklamowe można było odpalić zaraz po starcie.']],
+             'Czytelne adresy URL, meta tagi kategorii i produktów, szybkie ładowanie i mapa strony. Podpinamy GA4 oraz Meta Pixel, żebyś mógł uruchomić kampanie reklamowe zaraz po starcie.']],
    'steps': [['Бриф і асортимент',
               'Brief i asortyment',
               'Обговорюємо товари, кількість позицій, способи оплати й доставки, ваші приклади магазинів. Після брифу називаємо точну вартість і термін — протягом 24 годин.',
@@ -660,7 +660,7 @@ SERVICES = [
              ['Дизайн',
               'Projekt graficzny',
               'Спершу погоджуємо 1–2 ключові блоки — головну й картку товару, потім малюємо решту сторінок. Мобільну версію опрацьовуємо окремо, бо більшість покупок робиться з телефона.',
-              'Najpierw akceptujesz 1–2 kluczowe bloki — stronę główną i kartę produktu, potem projektujemy resztę. Wersję mobilną dopracowujemy osobno, bo tam odbywa się większość zakupów.',
+              'Najpierw akceptujesz 1–2 kluczowe sekcje — stronę główną i kartę produktu — a potem projektujemy resztę. Wersję mobilną dopracowujemy osobno, bo tam odbywa się większość zakupów.',
               ['Дизайн', 'Design'],
               ['Мобайл', 'Mobile']],
              ['Розробка й інтеграції',
@@ -674,17 +674,17 @@ SERVICES = [
              ['Перевірка й правки',
               'Testy i poprawki',
               "Ви проходите весь шлях покупця й надсилаєте правки одним списком. Ми виправляємо, перевіряємо швидкість завантаження та вигляд магазину на телефонах, планшетах і комп'ютерах.",
-              'Przechodzisz całą ścieżkę klienta i przesyłasz poprawki jedną listą. Wprowadzamy je, a potem sprawdzamy szybkość ładowania i wygląd sklepu na telefonach, tabletach i komputerach.',
+              'Przechodzisz całą ścieżkę klienta i przesyłasz poprawki w jednej liście. Wprowadzamy je, a potem sprawdzamy szybkość ładowania i wygląd sklepu na telefonach, tabletach i komputerach.',
               ['Тест', 'Testy'],
               ['Правки', 'Poprawki']],
              ['Запуск і доступи',
               'Start i dostępy',
               'Переносимо магазин на ваш домен, налаштовуємо SSL і передаємо всі доступи: сайт, адмінку, хостинг, платіжні сервіси. Показуємо, як обробляти замовлення.',
-              'Przenosimy sklep na Twoją domenę, konfigurujemy SSL i przekazujemy wszystkie dostępy: strona, panel, hosting, bramka płatności. Pokazujemy, jak obsługiwać zamówienia.',
+              'Przenosimy sklep na Twoją domenę, konfigurujemy SSL i przekazujemy wszystkie dostępy: do strony, panelu, hostingu i bramki płatności. Pokazujemy, jak obsługiwać zamówienia.',
               ['Запуск', 'Start'],
               ['Доступи', 'Dostępy']]],
    'plans_lead_uk': 'Ціна залежить від кількості товарів, фільтрів та інтеграцій — точну суму рахуємо після брифу, оцінка за 24 години. Працюємо за договором, оплата поетапно в EUR, USD або PLN.',
-   'plans_lead_pl': 'Cena zależy od liczby produktów, filtrów i integracji — dokładną kwotę podajemy po briefie, w ciągu 24 godzin. Umowa, faktura, płatność etapami w EUR, USD lub PLN; ceny bez VAT '
+   'plans_lead_pl': 'Cena zależy od liczby produktów, filtrów i integracji — dokładną kwotę podajemy po briefie, w ciągu 24 godzin. Umowa, faktura, płatność etapami w EUR, USD lub PLN; ceny końcowe '
                     '(zwolnienie z VAT).',
    'plans': [{'price': '800',
               'unit_uk': '/ проєкт',
@@ -755,7 +755,7 @@ SERVICES = [
             'Інтернет-магазин на WooCommerce коштує від €800. У цю суму входять індивідуальний дизайн, каталог, кошик, онлайн-оплата, доставка й адмінка. Складні проєкти — маркетплейс, B2B, інтеграція '
             'з CRM чи складом — рахуємо окремо. Точну вартість називаємо після брифу, оцінка займає до 24 годин. Оплата поетапно за договором.',
             'Sklep internetowy na WooCommerce kosztuje od 800 €. W tej cenie jest indywidualny projekt, katalog, koszyk, płatności online, dostawa i panel administracyjny. Projekty rozbudowane — '
-            'marketplace, B2B, integracja z CRM lub magazynem — wyceniamy osobno. Dokładną kwotę podajemy po briefie, w ciągu 24 godzin. Ceny są bez VAT, bo korzystamy ze zwolnienia z VAT.'],
+            'marketplace, B2B, integracja z CRM lub magazynem — wyceniamy osobno. Dokładną kwotę podajemy po briefie, w ciągu 24 godzin. Ceny są końcowe — nie doliczamy VAT, bo korzystamy ze zwolnienia z VAT.'],
            ['Скільки часу займає розробка інтернет-магазину?',
             'Ile trwa tworzenie sklepu internetowego?',
             'Стандартний магазин запускаємо за 20–30 робочих днів. Складний магазин або маркетплейс з інтеграціями — за 30–45 робочих днів і більше. Термін залежить від кількості товарів, сторінок та '
@@ -773,7 +773,7 @@ SERVICES = [
             'Можемо підключити популярні в Україні сервіси: WayForPay або LiqPay для онлайн-оплати та Нову Пошту з вибором відділення. Для магазинів, що продають у Польщі, — Przelewy24, BLIK і InPost. '
             'Які саме сервіси потрібні вашому магазину, вирішуємо на брифі з урахуванням вашого ринку.',
             'Możemy podłączyć Przelewy24 z płatnościami BLIK, szybkimi przelewami i kartami, a także InPost z wyborem Paczkomatu lub kuriera. Jeśli sprzedajesz również na Ukrainę, dodamy Nową Pocztę i '
-            'ukraińskie bramki płatności. Konkretne rozwiązania dobieramy na briefie do Twojego rynku i modelu sprzedaży.'],
+            'ukraińskie bramki płatności. Konkretne rozwiązania dobieramy na etapie briefu do Twojego rynku i modelu sprzedaży.'],
            ['Чи зможу я сам додавати товари й міняти ціни?',
             'Czy sam dodam produkty i zmienię ceny?',
             'Так, усі товари, ціни, залишки, знижки й замовлення ви ведете самі в адмінці WooCommerce. Вона зрозуміла без технічних знань: додати товар — як заповнити форму. Після запуску показуємо, '
@@ -784,7 +784,7 @@ SERVICES = [
             'Kto dodaje produkty do sklepu?',
             'Зазвичай товари додає клієнт через адмінку — так швидше й дешевше, а ми заводимо кілька прикладів і налаштовуємо шаблон картки. Якщо товарів багато, можемо імпортувати їх з таблиці чи '
             'вивантаження. Обсяг наповнення обговорюємо на брифі й одразу закладаємо в кошторис, щоб не було сюрпризів.',
-            'Najczęściej produkty dodaje klient w panelu, a my przygotowujemy kilka przykładowych kart i szablon. Przy dużym asortymencie możemy zaimportować produkty z arkusza lub pliku eksportu. '
+            'Najczęściej produkty dodajesz sam w panelu, a my przygotowujemy kilka przykładowych kart i szablon. Przy dużym asortymencie możemy zaimportować produkty z arkusza lub pliku eksportu. '
             'Zakres uzupełniania treści ustalamy na briefie i od razu uwzględniamy w wycenie, bez niespodzianek na końcu.'],
            ['Що потрібно від мене для старту?',
             'Czego potrzebujecie ode mnie na start?',
@@ -852,7 +852,7 @@ SERVICES = [
             ['Оплата й адмінка',
              'Płatności i panel',
              'За потреби можемо підключити онлайн-оплату прямо в боті та адмін-панель, де ви самі міняєте тексти, послуги й робите розсилки по базі.',
-             'W razie potrzeby możemy podłączyć płatności online w bocie oraz panel, w którym sam zmienisz treści i usługi oraz wyślesz wiadomość do swojej bazy.']],
+             'W razie potrzeby możemy podłączyć płatności online w bocie oraz panel, w którym sam zmienisz treści i usługi, a także wyślesz wiadomość do swojej bazy.']],
    'steps': [['Бриф і задачі',
               'Brief i cele',
               "З'ясовуємо, що бот має робити, хто ним користуватиметься і з якими сервісами він працює. Протягом 24 годин після брифу надсилаємо оцінку вартості й терміну.",
@@ -874,7 +874,7 @@ SERVICES = [
              ['Тест і правки',
               'Testy i poprawki',
               'Проганяємо реальні сценарії: заявку, запис, оплату, помилки вводу. Ви тестуєте бота самі або з командою й надсилаєте всі правки одним списком.',
-              'Sprawdzamy realne scenariusze: zgłoszenie, rezerwację, płatność, błędnie wpisane dane. Testujesz bota sam lub z zespołem i przesyłasz wszystkie poprawki jedną listą.',
+              'Sprawdzamy realne scenariusze: zgłoszenie, rezerwację, płatność, błędnie wpisane dane. Testujesz bota sam lub z zespołem i przesyłasz wszystkie poprawki w jednej liście.',
               ['Тест', 'Testy'],
               ['Правки', 'Poprawki']],
              ['Запуск і передача',
@@ -884,7 +884,7 @@ SERVICES = [
               ['Запуск', 'Start'],
               ['Доступи', 'Dostępy']]],
    'plans_lead_uk': 'Вартість бота залежить від сценарію та інтеграцій, тому рахуємо її індивідуально — оцінка за 24 години після брифу. Працюємо за договором, оплата поетапно в EUR, USD або PLN.',
-   'plans_lead_pl': 'Cena bota zależy od scenariusza i integracji, dlatego wyceniamy go indywidualnie — w ciągu 24 godzin od briefu. Umowa, faktura, płatność etapami w EUR, USD lub PLN; ceny bez VAT '
+   'plans_lead_pl': 'Cena bota zależy od scenariusza i integracji, dlatego wyceniamy go indywidualnie — w ciągu 24 godzin od briefu. Umowa, faktura, płatność etapami w EUR, USD lub PLN; ceny końcowe '
                     '(zwolnienie z VAT).',
    'plans': [{'price': None,
               'unit_uk': '/ проєкт',
@@ -955,13 +955,13 @@ SERVICES = [
             'Вартість Telegram-бота рахуємо індивідуально, бо вона залежить від сценарію, кількості кнопок і розгалужень та інтеграцій з сайтом, CRM чи оплатою. Бот для заявок коштує помітно менше, '
             'ніж бот з каталогом, оплатою й адмінкою. Після короткого брифу надсилаємо оцінку вартості й терміну протягом 24 годин.',
             'Cenę bota Telegram ustalamy indywidualnie, bo zależy od scenariusza, liczby przycisków i rozgałęzień oraz integracji ze stroną, CRM czy płatnościami. Prosty bot do zgłoszeń kosztuje '
-            'wyraźnie mniej niż bot z katalogiem, płatnościami i panelem. Po krótkim briefie wysyłamy wycenę i termin w ciągu 24 godzin. Ceny są bez VAT (zwolnienie z VAT).'],
+            'wyraźnie mniej niż bot z katalogiem, płatnościami i panelem. Po krótkim briefie wysyłamy wycenę i termin w ciągu 24 godzin. Ceny są końcowe — nie doliczamy VAT (zwolnienie z VAT).'],
            ['Скільки часу займає розробка бота?',
             'Ile trwa stworzenie bota Telegram?',
             'Термін називаємо разом з оцінкою, одразу після брифу. Бот для заявок з кількома сценаріями робиться значно швидше, ніж бот з оплатою, CRM і адмін-панеллю. Найбільше часу забирають '
             'інтеграції зі сторонніми сервісами, тому їх список фіксуємо на старті, щоб термін не зсувався.',
             'Termin podajemy razem z wyceną, zaraz po briefie. Bot do zgłoszeń z kilkoma scenariuszami powstaje znacznie szybciej niż bot z płatnościami, CRM i panelem administracyjnym. Najwięcej '
-            'czasu zajmują integracje z zewnętrznymi usługami, dlatego ich listę ustalamy na starcie, żeby harmonogram się nie przesuwał.'],
+            'czasu zajmują integracje z zewnętrznymi serwisami, dlatego ich listę ustalamy na starcie, żeby harmonogram się nie przesuwał.'],
            ['Що може робити Telegram-бот для бізнесу?',
             'Co może robić bot Telegram w firmie?',
             'Telegram-бот може приймати заявки, консультувати за готовими відповідями, записувати на послуги, продавати товари з оплатою, підтримувати клієнтів після покупки та автоматизувати '
@@ -1022,9 +1022,9 @@ SERVICES = [
    'lead_uk': 'SEO-просування сайту — це робота, після якої Google краще розуміє ваші сторінки й частіше показує їх людям, що шукають саме вашу послугу. Воно потрібне бізнесу, який не хоче залежати '
               'лише від реклами: локальним сервісам, магазинам, B2B-компаніям, а також тим, хто виходить на польський чи український ринок. Ми починаємо з аудиту, виправляємо технічні помилки, будуємо '
               'структуру під реальні запити й підключаємо аналітику, щоб ви бачили, звідки приходять заявки.',
-   'lead_pl': 'Pozycjonowanie stron to praca, dzięki której Google lepiej rozumie Twoje podstrony i częściej pokazuje je osobom szukającym dokładnie tego, co oferujesz. Sprawdza się w firmach, które '
-              'nie chcą opierać się wyłącznie na reklamach: w lokalnych usługach, sklepach internetowych, firmach B2B i markach wchodzących na rynek polski lub ukraiński. Zaczynamy od audytu, '
-              'poprawiamy błędy techniczne, budujemy strukturę pod realne zapytania i podpinamy analitykę, żebyś widział, skąd przychodzą zapytania od klientów.',
+   'lead_pl': 'Pozycjonowanie stron to praca, dzięki której Google lepiej rozumie Twoje podstrony i częściej pokazuje je osobom szukającym dokładnie tego, co oferujesz. Przyda się firmom, które '
+              'nie chcą opierać się wyłącznie na reklamach: lokalnym usługodawcom, sklepom internetowym, firmom B2B i markom wchodzącym na rynek polski lub ukraiński. Zaczynamy od audytu, '
+              'poprawiamy błędy techniczne, budujemy strukturę pod realne frazy i podpinamy analitykę, żebyś widział, skąd przychodzą zapytania od klientów.',
    'pills': [['Локальний бізнес', 'Firmy lokalne'],
              ['Інтернет-магазини', 'Sklepy online'],
              ['B2B-компанії', 'Firmy B2B'],
@@ -1032,7 +1032,7 @@ SERVICES = [
              ['Нові сайти', 'Nowe strony'],
              ['Багатомовні сайти', 'Strony wielojęzyczne']],
    'incl_title_uk': 'Що входить',
-   'incl_title_pl': 'Co obejmuje',
+   'incl_title_pl': 'Co obejmuje pozycjonowanie',
    'incl': [['Технічний аудит і швидкість',
              'Audyt techniczny i szybkość',
              'Перевіряємо індексацію, помилки, дублі, мета-теги й Core Web Vitals. Виправляємо те, що заважає Google нормально сканувати сайт і що гальмує завантаження на телефоні.',
@@ -1040,11 +1040,11 @@ SERVICES = [
             ['Ключові слова і структура',
              'Słowa kluczowe i struktura',
              'Збираємо запити, за якими шукають ваші послуги, і розподіляємо їх по сторінках. Кожна важлива послуга отримує окрему сторінку з чітким заголовком і описом.',
-             'Zbieramy frazy, po których klienci szukają Twoich usług, i przypisujemy je do podstron. Każda ważna usługa dostaje osobną podstronę z jasnym nagłówkiem i opisem.'],
+             'Zbieramy frazy, które wpisują klienci szukający Twoich usług, i przypisujemy je do podstron. Każda ważna usługa dostaje osobną podstronę z jasnym nagłówkiem i opisem.'],
             ['Schema.org і hreflang',
              'Schema.org i hreflang',
              'Додаємо структуровані дані, щоб Google бачив компанію, послуги, ціни та FAQ. Для багатомовних сайтів налаштовуємо hreflang, щоб українська й польська версії не конкурували між собою.',
-             'Dodajemy dane strukturalne, żeby Google widział firmę, usługi, ceny i FAQ. W stronach wielojęzycznych ustawiamy hreflang, aby wersja polska i ukraińska nie konkurowały ze sobą.'],
+             'Dodajemy dane strukturalne, żeby Google widział firmę, usługi, ceny i FAQ. Na stronach wielojęzycznych ustawiamy hreflang, aby wersja polska i ukraińska nie konkurowały ze sobą.'],
             ['Локальне SEO і мапи',
              'SEO lokalne i mapy',
              "Налаштовуємо або впорядковуємо Google Business Profile, щоб компанія з'являлася на мапах і в локальній видачі. Звіряємо назву, адресу й контакти на сайті та в профілі.",
@@ -1090,7 +1090,7 @@ SERVICES = [
               ['Звіт', 'Raport'],
               ['План', 'Plan']]],
    'plans_lead_uk': 'Вартість SEO залежить від розміру сайту, ніші й конкуренції, тому точну ціну рахуємо після брифу, оцінка за 24 години. Працюємо офіційно, за договором, оплата в EUR, USD або PLN.',
-   'plans_lead_pl': 'Koszt pozycjonowania zależy od wielkości strony, branży i konkurencji, dlatego dokładną cenę podajemy po briefie, wycena w ciągu 24 h. Działamy na umowę i fakturę, ceny bez VAT '
+   'plans_lead_pl': 'Koszt pozycjonowania zależy od wielkości strony, branży i konkurencji, dlatego dokładną cenę podajemy po briefie — w ciągu 24 h. Działamy na umowę i fakturę, ceny końcowe '
                     '(zwolnienie z VAT).',
    'plans': [{'price': None,
               'unit_uk': '/ проєкт',
@@ -1101,7 +1101,7 @@ SERVICES = [
               'name_uk': 'SEO-аудит і технічна оптимізація',
               'name_pl': 'Audyt SEO i optymalizacja',
               'desc_uk': 'Для сайту, який вже працює, але погано видно в Google. Знаходимо помилки й виправляємо їх.',
-              'desc_pl': 'Dla działającej strony, której słabo widać w Google. Znajdujemy błędy i je poprawiamy.',
+              'desc_pl': 'Dla działającej strony, która jest słabo widoczna w Google. Znajdujemy błędy i je poprawiamy.',
               'feats': [['Технічний аудит сайту', 'Audyt techniczny strony'],
                         ['Швидкість і Core Web Vitals', 'Szybkość i Core Web Vitals'],
                         ['Мета-теги, заголовки, редиректи', 'Meta tagi, nagłówki, przekierowania'],
@@ -1140,7 +1140,7 @@ SERVICES = [
                'tag_uk': 'SEO вже всередині',
                'tag_pl': 'SEO w standardzie',
                'desc_uk': 'Базова SEO-оптимізація входить у кожен сайт, який ми робимо: структура, мета-теги, швидкість, мобільна версія.',
-               'desc_pl': 'Podstawowa optymalizacja SEO jest w każdej stronie, którą robimy: struktura, meta tagi, szybkość, wersja mobilna.',
+               'desc_pl': 'Każda strona, którą tworzymy, ma w standardzie podstawową optymalizację SEO: struktura, meta tagi, szybkość, wersja mobilna.',
                'cta_uk': 'Замовити сайт',
                'cta_pl': 'Zamów stronę'},
               {'price': '20',
@@ -1152,7 +1152,7 @@ SERVICES = [
                'tag_uk': 'Після запуску',
                'tag_pl': 'Po wdrożeniu',
                'desc_uk': 'Сайт залишається під наглядом після SEO-робіт. Обсяг підтримки погоджуємо заздалегідь.',
-               'desc_pl': 'Strona zostaje pod opieką po pracach SEO. Zakres wsparcia ustalamy z góry.',
+               'desc_pl': 'Po pracach SEO możemy dalej opiekować się stroną. Zakres wsparcia ustalamy z góry.',
                'cta_uk': 'Обговорити',
                'cta_pl': 'Porozmawiajmy'}],
    'cases': ['core-accounting', 'dictator-barbershop', 'herstel-bouw', 'rozmarin'],
@@ -1161,7 +1161,7 @@ SERVICES = [
             'Ціну SEO рахуємо після брифу, оцінку надсилаємо протягом 24 годин. Вартість залежить від кількості сторінок, технічного стану сайту, ніші й конкуренції в регіоні. Разовий аудит із '
             'виправленнями й щомісячне просування оцінюються окремо, тож ви можете почати з аудиту й вирішити далі. Працюємо за договором, оплата в EUR, USD або PLN.',
             'Cenę pozycjonowania podajemy po briefie, wycenę wysyłamy w ciągu 24 godzin. Koszt zależy od liczby podstron, stanu technicznego strony, branży i konkurencji w regionie. Jednorazowy audyt '
-            'z poprawkami i pozycjonowanie miesięczne wyceniamy osobno, więc możesz zacząć od audytu i zdecydować później. Działamy na umowę i fakturę, ceny bez VAT.'],
+            'z poprawkami i pozycjonowanie miesięczne wyceniamy osobno, więc możesz zacząć od audytu i zdecydować później. Działamy na umowę i fakturę, ceny końcowe (zw. z VAT).'],
            ['Коли будуть перші результати в Google?',
             'Kiedy będą pierwsze efekty w Google?',
             "Зазвичай помітні зміни з'являються через кілька місяців, а не тижнів. Технічні виправлення Google враховує після повторного сканування, а нові сторінки мають проіндексуватися й набрати "
@@ -1179,7 +1179,7 @@ SERVICES = [
             'Аудит — це разова перевірка й виправлення технічних проблем, після якої сайт готовий до росту. Просування — регулярна робота щомісяця: нові сторінки, контент, локальне SEO й контроль у '
             'Search Console. Аудит підходить, якщо ви готові далі працювати самі, просування — якщо хочете, щоб цим займалася команда.',
             'Audyt to jednorazowe sprawdzenie i naprawa problemów technicznych, po którym strona jest gotowa do wzrostu. Pozycjonowanie to regularna praca co miesiąc: nowe podstrony, treści, SEO '
-            'lokalne i kontrola w Search Console. Audyt wystarczy, jeśli dalej chcesz działać sam, pozycjonowanie, jeśli wolisz oddać to zespołowi.'],
+            'lokalne i kontrola w Search Console. Audyt wystarczy, jeśli dalej chcesz działać sam; pozycjonowanie — jeśli wolisz powierzyć to zespołowi.'],
            ['Чи можна просувати сайт, який робили не ви?',
             'Czy pozycjonujecie strony, których nie robiliście?',
             'Так, починаємо з аудиту, щоб зрозуміти, що можна виправити на поточній платформі. Найзручніше працюємо з WordPress, Webflow і сайтами на коді. Якщо платформа сильно обмежує SEO, чесно '
@@ -1233,7 +1233,7 @@ SERVICES = [
               'ekranie, więc później projekt strony powstaje szybciej i w tym samym stylu.',
    'pills': [['Нові бренди', 'Nowe marki'], ['Ребрендинг', 'Rebranding'], ["Салони і б'юті", 'Salony i beauty'], ['Кафе й доставка', 'Gastronomia'], ['Магазини', 'Sklepy'], ['Сфера послуг', 'Usługi']],
    'incl_title_uk': 'Що входить',
-   'incl_title_pl': 'Co obejmuje',
+   'incl_title_pl': 'Co obejmuje projekt',
    'incl': [['Логотип і його версії',
              'Logo i jego wersje',
              'Основний знак, горизонтальна й компактна версії, іконка для соцмереж і фавікон сайту. Перевіряємо, як логотип читається в малому розмірі та на темному фоні.',
@@ -1241,7 +1241,7 @@ SERVICES = [
             ['Кольори і шрифти',
              'Kolory i fonty',
              'Підбираємо палітру з кодами для екрана й друку та пару шрифтів із правами на використання. Кольори перевіряємо на контраст, щоб текст на сайті легко читався.',
-             'Dobieramy paletę z kodami do ekranu i druku oraz parę fontów z licencją do użytku. Kolory sprawdzamy pod kątem kontrastu, żeby tekst na stronie był czytelny.'],
+             'Dobieramy paletę z kodami do ekranu i druku oraz parę fontów z odpowiednią licencją. Kolory sprawdzamy pod kątem kontrastu, żeby tekst na stronie był czytelny.'],
             ['Гайдлайн бренду',
              'Księga znaku',
              'Короткий документ із правилами: відступи навколо логотипу, заборонені варіанти, поєднання кольорів і шрифтів. Його можна передати друкарні, SMM-менеджеру чи іншому дизайнеру.',
@@ -1263,7 +1263,7 @@ SERVICES = [
              ['Напрям і ескізи',
               'Kierunek i szkice',
               'Шукаємо ідею знака й загальний настрій: форма, шрифт, колір. Показуємо напрям на реальних прикладах, щоб ви оцінили не абстракцію, а вигляд у житті.',
-              'Szukamy pomysłu na znak i ogólnego klimatu: forma, krój pisma, kolor. Pokazujemy kierunek na realnych przykładach, żeby oceniać wygląd w praktyce, a nie abstrakcję.',
+              'Szukamy pomysłu na znak i ogólnego klimatu: forma, krój pisma, kolor. Pokazujemy kierunek na realnych przykładach, żebyś oceniał wygląd w praktyce, a nie w abstrakcji.',
               ['Ідея', 'Pomysł'],
               ['Ескізи', 'Szkice']],
              ['Логотип',
@@ -1291,8 +1291,8 @@ SERVICES = [
               ['Файли', 'Pliki'],
               ['Сайт', 'Strona']]],
    'plans_lead_uk': 'Вартість айдентики залежить від обсягу носіїв і складності знака, тому ціну рахуємо після брифу, оцінка за 24 години. Працюємо за договором, оплата поетапно в EUR, USD або PLN.',
-   'plans_lead_pl': 'Koszt identyfikacji zależy od liczby materiałów i złożoności znaku, dlatego cenę podajemy po briefie, wycena w ciągu 24 h. Działamy na umowę i fakturę, płatność etapami, ceny bez '
-                    'VAT (zwolnienie z VAT).',
+   'plans_lead_pl': 'Koszt identyfikacji zależy od liczby materiałów i złożoności znaku, dlatego cenę podajemy po briefie — w ciągu 24 h. Działamy na umowę i fakturę, płatność etapami, ceny końcowe '
+                    '(zwolnienie z VAT).',
    'plans': [{'price': None,
               'unit_uk': '/ проєкт',
               'unit_pl': '/ projekt',
@@ -1341,7 +1341,7 @@ SERVICES = [
                'tag_uk': 'Айдентика + сайт',
                'tag_pl': 'Identyfikacja + strona',
                'desc_uk': 'Лендінг від €300 або багатосторінковий сайт від €450 у кольорах і шрифтах нового бренду, без повторного брифу.',
-               'desc_pl': 'Landing page od 300 € lub strona wielostronicowa od 450 € w kolorach i fontach nowej marki, bez ponownego briefu.',
+               'desc_pl': 'Landing page od 300 € lub strona firmowa od 450 € w kolorach i fontach nowej marki, bez ponownego briefu.',
                'cta_uk': 'Замовити сайт',
                'cta_pl': 'Zamów stronę'}],
    'cases': ['kora-candle', 'the-beast-beauty', 'dictator-barbershop', 'rozmarin'],
@@ -1355,7 +1355,7 @@ SERVICES = [
             'Ile trwa projektowanie identyfikacji wizualnej?',
             'Термін називаємо разом з оцінкою після брифу, бо він залежить від обсягу носіїв і швидкості погоджень. Найбільше часу забирає пошук напряму й логотипу, носії та гайдлайн робляться швидше. '
             'Щоб не затягувати, правки збираємо одним списком на кожному етапі. Якщо у вас є дедлайн, наприклад відкриття, скажіть про нього на брифі.',
-            'Termin podajemy razem z wyceną po briefie, bo zależy od liczby materiałów i tempa akceptacji. Najwięcej czasu zajmuje szukanie kierunku i logo, materiały i księga znaku idą szybciej. Żeby '
+            'Termin podajemy razem z wyceną po briefie, bo zależy od liczby materiałów i tempa akceptacji. Najwięcej czasu zajmuje szukanie kierunku i logo; materiały i księga znaku powstają szybciej. Żeby '
             'nie przeciągać projektu, poprawki zbieramy w jednej liście na każdym etapie. Jeśli masz termin, np. otwarcie lokalu, powiedz o nim na briefie.'],
            ['Чим айдентика відрізняється від логотипу?',
             'Czym identyfikacja wizualna różni się od logo?',
@@ -1386,11 +1386,11 @@ SERVICES = [
             'Потрібен заповнений бриф: чим займається бізнес, хто ваші клієнти, хто конкуренти й яке враження має справляти бренд. Дуже допомагають приклади логотипів і стилів, які вам подобаються і '
             'які ні. Якщо є старий логотип чи матеріали, надішліть їх теж. Спілкуємося українською або польською, напряму з дизайнером.',
             'Potrzebujemy wypełnionego briefu: czym zajmuje się firma, kim są klienci, kto jest konkurencją i jakie wrażenie ma robić marka. Bardzo pomagają przykłady logo i stylów, które Ci się '
-            'podobają, i takich, które nie. Jeśli masz stare logo lub materiały, prześlij je również. Rozmawiamy po polsku lub ukraińsku, bezpośrednio z projektantem.'],
+            'podobają, i takich, które Ci się nie podobają. Jeśli masz stare logo lub materiały, prześlij je również. Rozmawiamy po polsku lub ukraińsku, bezpośrednio z projektantem.'],
            ['Чи можна замовити айдентику разом із сайтом?',
             'Czy mogę zamówić identyfikację razem ze stroną?',
             'Так, і це найзручніший варіант: айдентику й сайт робить одна команда, тому стиль переходить на сайт без втрат. Кольори й шрифти ми перевіряємо на екрані ще під час роботи над брендом. '
             'Лендінг коштує від €300, багатосторінковий сайт від €450. Базове SEO вже входить у кожен сайт.',
             'Tak, to najwygodniejsza opcja: identyfikację i stronę robi jeden zespół, więc styl przechodzi na stronę bez strat. Kolory i fonty sprawdzamy na ekranie już podczas pracy nad marką. '
-            'Landing page kosztuje od 300 €, strona wielostronicowa od 450 € (ceny bez VAT). Podstawowe SEO jest w każdej stronie.']]},
+            'Landing page kosztuje od 300 €, strona firmowa od 450 € (ceny końcowe, zw. z VAT). Każda strona ma w standardzie podstawowe SEO.']]},
 ]

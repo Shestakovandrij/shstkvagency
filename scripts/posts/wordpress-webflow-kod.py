@@ -11,14 +11,14 @@ POST = {'key': 'wordpress-webflow-kod',
  'h1_uk': 'WordPress, Webflow чи код: на чому робити сайт',
  'h1_pl': 'WordPress, Webflow czy strona pisana od zera',
  'sub_uk': 'Порівнюємо три підходи, якими працюємо щодня, і пояснюємо, як обрати свій.',
- 'sub_pl': 'Porównujemy trzy technologie, na których pracujemy na co dzień, i podpowiadamy wybór.',
+ 'sub_pl': 'Porównujemy trzy technologie, na których pracujemy na co dzień, i podpowiadamy, jak wybrać.',
  'topic_uk': 'Платформи',
  'topic_pl': 'Platformy',
  'minutes': 8,
  'answer_uk': 'Універсальної відповіді немає. WordPress підходить, коли потрібні гнучкість, магазин на WooCommerce і дешевий хостинг. Webflow — для маркетингових і корпоративних сайтів, які команда '
               'редагує сама без розробника. Код на React чи Next.js — коли важливі максимальна швидкість і нестандартна логіка. Tilda й Wix годяться для простих сторінок, але обмежують ріст.',
  'answer_pl': 'Nie ma jednej dobrej odpowiedzi. WordPress sprawdza się, gdy liczy się elastyczność, sklep na WooCommerce i tani hosting. Webflow — przy stronach firmowych i marketingowych, które '
-              'zespół edytuje sam, bez programisty. Kod w React lub Next.js — gdy kluczowa jest szybkość i nietypowa logika. Kreatory typu Wix wystarczą na prostą wizytówkę, ale ograniczają rozwój.',
+              'zespół edytuje sam, bez programisty. Kod w React lub Next.js — gdy kluczowe są szybkość i nietypowa logika. Kreatory typu Wix wystarczą na prostą wizytówkę, ale ograniczają rozwój.',
  'sections': [{'h2_uk': 'Чому питання «на чому робити сайт» таке важливе',
                'h2_pl': 'Dlaczego wybór technologii ma znaczenie',
                'blocks': [('p',
@@ -30,7 +30,7 @@ POST = {'key': 'wordpress-webflow-kod',
                            'За 12+ років ми бачили обидві крайнощі: простий сайт-візитку, «прикручений» до важкого WordPress із тридцятьма плагінами, і складний сервіс, який намагалися втиснути в '
                            'конструктор. Обидва варіанти закінчувалися переробкою. Тому ми не маємо «улюбленої» платформи — працюємо на WordPress (Bricks), WooCommerce, Webflow і чистому коді з '
                            'React та Next.js і обираємо під задачу.',
-                           'Przez 12+ lat widzieliśmy obie skrajności: prostą wizytówkę na ciężkim WordPressie z trzydziestoma wtyczkami i rozbudowany serwis upchnięty na siłę w kreatorze. W obu '
+                           'Przez ponad 12 lat widzieliśmy obie skrajności: prostą wizytówkę na ciężkim WordPressie z trzydziestoma wtyczkami i rozbudowany serwis upchnięty na siłę w kreatorze. W obu '
                            'przypadkach kończyło się przebudową. Dlatego nie mamy „ulubionej” platformy — pracujemy na WordPressie (Bricks), WooCommerce, Webflow oraz w czystym kodzie z React i '
                            'Next.js, a wybór zależy od projektu.')]},
               {'h2_uk': 'WordPress: гнучкість і плагіни, але потрібен догляд',
@@ -60,7 +60,7 @@ POST = {'key': 'wordpress-webflow-kod',
                            'zrozumiały nawet dla osoby bez technicznego zaplecza, więc marketingowiec sam doda wpis, case study czy ofertę pracy.'),
                           ('ul',
                            [('Плюси: стабільність, швидкий хостинг, анімації без «милиць», зручна CMS для блогу й кейсів.',
-                             'Plusy: stabilność, szybki hosting, animacje bez kombinowania, wygodny CMS na bloga i realizacje.'),
+                             'Plusy: stabilność, szybki hosting, animacje bez kombinowania, wygodny CMS do bloga i realizacji.'),
                             ('Мінуси: платний хостинг-план Webflow — щомісячна чи щорічна підписка, яку треба закласти в бюджет.',
                              'Minusy: płatny plan hostingowy Webflow — subskrypcja miesięczna lub roczna, którą trzeba wliczyć w budżet.'),
                             ("Мінуси: у CMS є ліміти на кількість записів і складність зв'язків, а e-commerce скромніший за WooCommerce.",
@@ -99,21 +99,21 @@ POST = {'key': 'wordpress-webflow-kod',
                           ('p',
                            'Ми зазвичай на них не працюємо, бо впираємося в стелю: обмежений контроль над кодом і технічним SEO, складніша багатомовність, залежність від тарифу платформи й фактична '
                            'неможливість перенести сайт деінде. Коли бізнес росте, такий сайт найчастіше переробляють повністю.',
-                           'My zwykle z nich nie korzystamy, bo szybko trafiamy na sufit: ograniczona kontrola nad kodem i technicznym SEO, trudniejsza wielojęzyczność, zależność od abonamentu i '
+                           'My zwykle z nich nie korzystamy, bo szybko napotykamy ich ograniczenia: ograniczona kontrola nad kodem i technicznym SEO, trudniejsza wielojęzyczność, zależność od abonamentu i '
                            'praktycznie brak możliwości przeniesienia strony gdzie indziej. Gdy firma rośnie, taką stronę zwykle stawia się od nowa.')]},
               {'h2_uk': 'Порівняння: WordPress, Webflow і код',
                'h2_pl': 'Porównanie: WordPress, Webflow i kod',
                'blocks': [('table',
                            [('Критерій', 'Kryterium'), ('WordPress', 'WordPress'), ('Webflow', 'Webflow'), ('Код (Next.js)', 'Kod (Next.js)')],
                            [[('Хто редагує', 'Kto edytuje'), ('Клієнт в адмінці', 'Klient w panelu'), ('Клієнт у редакторі', 'Klient w edytorze'), ('Розробник або CMS', 'Programista lub CMS')],
-                            [('Щомісячні витрати', 'Koszty co miesiąc'), ('Недорогий хостинг', 'Tani hosting'), ('Платний план Webflow', 'Płatny plan Webflow'), ('Від нуля до VPS', 'Od zera do VPS')],
-                            [('Оновлення й безпека', 'Aktualizacje'),
+                            [('Щомісячні витрати', 'Koszty co miesiąc'), ('Недорогий хостинг', 'Tani hosting'), ('Платний план Webflow', 'Płatny plan Webflow'), ('Від нуля до VPS', 'Od 0 € do kosztu VPS')],
+                            [('Оновлення й безпека', 'Aktualizacje i bezpieczeństwo'),
                              ('Регулярно, на вас', 'Regularnie, po Twojej stronie'),
                              ('Робить платформа', 'Po stronie platformy'),
                              ('Мінімальні', 'Minimalne')],
                             [('Магазин', 'Sklep'), ('WooCommerce — сильний', 'WooCommerce — mocny'), ('Базовий', 'Podstawowy'), ('Під задачу', 'Na miarę')],
                             [('Швидкість', 'Szybkość'), ('Добра при дисципліні', 'Dobra przy dyscyplinie'), ('Добра', 'Dobra'), ('Найвища', 'Najwyższa')],
-                            [('Перенесення', 'Przeniesienie'), ('Будь-куди', 'Dokądkolwiek'), ('Обмежене', 'Ograniczone'), ('Будь-куди', 'Dokądkolwiek')]]),
+                            [('Перенесення', 'Przeniesienie'), ('Будь-куди', 'Gdziekolwiek'), ('Обмежене', 'Ograniczone'), ('Будь-куди', 'Gdziekolwiek')]]),
                           ('card',
                            'Правило, яке рідко підводить: якщо контент змінюється щотижня — CMS (WordPress або Webflow); якщо потрібен магазин — WooCommerce; якщо сторінка статична, а важлива кожна '
                            'мілісекунда — код.',
@@ -124,7 +124,7 @@ POST = {'key': 'wordpress-webflow-kod',
                'blocks': [('p',
                            'На WordPress і коді ви володієте файлами повністю: сайт можна перенести на інший хостинг — Hostinger, VPS чи Cloudflare — будь-коли. У Webflow ви володієте контентом і '
                            'акаунтом, але сайт живе в екосистемі платформи. Це не мінус сам по собі, просто про нього варто знати заздалегідь.',
-                           'Na WordPressie i w kodzie masz pełną własność plików: stronę przeniesiesz na inny hosting — Hostinger, VPS czy Cloudflare — w dowolnej chwili. W Webflow jesteś '
+                           'Na WordPressie i w kodzie pliki w całości należą do Ciebie: stronę przeniesiesz na inny hosting — Hostinger, VPS czy Cloudflare — w dowolnej chwili. W Webflow jesteś '
                            'właścicielem treści i konta, ale strona działa w ekosystemie platformy. To nie wada sama w sobie, po prostu warto wiedzieć o tym wcześniej.'),
                           ('p',
                            'Незалежно від платформи, після здачі ви отримуєте всі доступи: домен, хостинг, CMS, аналітику. Домен і хостинг ми радимо оформлювати на вас, а не на підрядника. Щомісячно '
@@ -139,8 +139,8 @@ POST = {'key': 'wordpress-webflow-kod',
                            'wybór do jednej opcji.'),
                           ('ul',
                            [('Хто і як часто змінюватиме тексти, ціни, товари?', 'Kto i jak często będzie zmieniał teksty, ceny, produkty?'),
-                            ('Чи потрібен кошик і онлайн-оплата — зараз або в найближчих планах?', 'Czy potrzebny jest koszyk i płatności online — teraz lub w najbliższych planach?'),
-                            ('Чи є нестандартна логіка: калькулятор, кабінет, інтеграції?', 'Czy jest nietypowa logika: kalkulator, panel klienta, integracje?'),
+                            ('Чи потрібен кошик і онлайн-оплата — зараз або в найближчих планах?', 'Czy potrzebujesz koszyka i płatności online — teraz lub w najbliższych planach?'),
+                            ('Чи є нестандартна логіка: калькулятор, кабінет, інтеграції?', 'Czy potrzebna jest nietypowa logika: kalkulator, panel klienta, integracje?'),
                             ('Скільки мов і чи важливе SEO під кілька ринків?', 'Ile wersji językowych i czy liczy się SEO na kilku rynkach?'),
                             ('Який бюджет на старт і які щомісячні витрати комфортні?', 'Jaki budżet na start i jakie koszty miesięczne są akceptowalne?')]),
                           ('p',
@@ -169,7 +169,7 @@ POST = {'key': 'wordpress-webflow-kod',
           'Залежить від задачі. WordPress кращий для магазинів на WooCommerce, складних сайтів із великою кількістю плагінів і коли хочеться дешевий хостинг. Webflow кращий для маркетингових і '
           'корпоративних сайтів, які команда оновлює сама й не хоче думати про оновлення та безпеку. Для обох ми передаємо клієнту всі доступи.',
           'To zależy od zadania. WordPress lepiej sprawdza się przy sklepach na WooCommerce, rozbudowanych stronach z wieloma wtyczkami i gdy zależy Ci na tanim hostingu. Webflow wygrywa przy '
-          'stronach firmowych i marketingowych, które zespół aktualizuje sam i nie chce zajmować się aktualizacjami ani bezpieczeństwem. W obu przypadkach przekazujemy komplet dostępów.'],
+          'stronach firmowych i marketingowych, które zespół edytuje sam i nie chce zajmować się aktualizacjami ani bezpieczeństwem. W obu przypadkach przekazujemy komplet dostępów.'],
          ['Сайт на коді чи на CMS — що обрати?',
           'Strona pisana od zera czy CMS — co wybrać?',
           'Якщо контент змінюється часто, обирайте CMS: WordPress або Webflow. Код на React чи Next.js виправданий, коли потрібна максимальна швидкість, нестандартна логіка або сторінка майже не '
@@ -193,8 +193,8 @@ POST = {'key': 'wordpress-webflow-kod',
           'Так, якщо сайт на WordPress або Webflow: тексти, фото, товари й статті змінюєте в адмінці без розробника. Для деяких проєктів ми записуємо відеоінструкцію. На сайті, написаному з нуля без '
           'CMS, правки робить розробник, тому такий варіант радимо для сторінок, які змінюються рідко.',
           'Tak, jeśli strona powstała na WordPressie lub Webflow: teksty, zdjęcia, produkty i wpisy zmieniasz w panelu bez programisty. Przy części projektów nagrywamy instrukcję wideo. Na stronie '
-          'pisanej od zera bez CMS-a zmiany wprowadza programista, dlatego polecamy ją przy stronach, które zmieniają się rzadko.']],
+          'pisanej od zera bez CMS-a zmiany wprowadza programista, dlatego polecamy takie rozwiązanie przy stronach, które zmieniają się rzadko.']],
  'service': 'korporatyvnyi-sait',
  'cta_uk': 'Не впевнені, яка платформа підійде саме вам? Опишіть задачу — порадимо варіант і дамо оцінку за 24 години, або перегляньте, як ми робимо корпоративні сайти.',
- 'cta_pl': 'Nie wiesz, która platforma pasuje do Twojej firmy? Opisz projekt — doradzimy technologię i przygotujemy wycenę w 24 godziny. Zobacz też, jak tworzymy strony firmowe.',
+ 'cta_pl': 'Nie wiesz, która platforma pasuje do Twojej firmy? Opisz projekt — doradzimy technologię i przygotujemy wycenę w ciągu 24 godzin. Zobacz też, jak tworzymy strony firmowe.',
  'date': '2026-09-24'}

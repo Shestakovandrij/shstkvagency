@@ -25,12 +25,12 @@ POST = {'key': 'nemaie-v-google',
                'blocks': [('p',
                            'Власники часто кажуть «нас немає в Google», коли насправді сайт є, просто не на першій сторінці за потрібним запитом. Тому спершу введіть у пошук '
                            '<strong>site:вашдомен.com</strong> — без пробілу після двокрапки. Якщо видача порожня, Google сторінок не знає або свідомо їх не показує.',
-                           'Klienci często mówią „nie ma nas w Google”, a w praktyce strona jest w indeksie, tylko nie na pierwszej stronie wyników. Dlatego zacznij od wpisania w wyszukiwarkę '
+                           'Właściciele firm często mówią „nie ma nas w Google”, a w praktyce strona jest w indeksie, tylko nie na pierwszej stronie wyników dla ważnej frazy. Dlatego zacznij od wpisania w wyszukiwarkę '
                            '<strong>site:twojadomena.pl</strong> — bez spacji po dwukropku. Pusty wynik oznacza, że Google nie zna Twoich podstron albo świadomie ich nie pokazuje.'),
                           ('p',
                            'Оператор site: дає лише приблизну картину: кількість результатів неточна, а окремі сторінки можуть не відображатися. Надійне джерело — Google Search Console, до якої '
                            'переходимо далі.',
-                           'Pamiętaj, że site: daje tylko przybliżony obraz — liczba wyników jest szacunkowa, a pojedyncze adresy potrafią się nie wyświetlać. Wiarygodne dane ma dopiero Google '
+                           'Pamiętaj, że site: daje tylko przybliżony obraz — liczba wyników jest szacunkowa, a niektóre adresy mogą się w ogóle nie wyświetlać. Wiarygodne dane ma dopiero Google '
                            'Search Console, więc to kolejny krok.'),
                           ('table',
                            [('Що бачите', 'Co widzisz'), ('Що це означає', 'Co to znaczy'), ('Що робити', 'Co zrobić')],
@@ -40,7 +40,7 @@ POST = {'key': 'nemaie-v-google',
                             [('Є лише головна', 'Jest tylko strona główna'),
                              ('Решту сторінок Google не знайшов або відкинув', 'Reszty Google nie znalazł lub odrzucił'),
                              ('Sitemap, внутрішні посилання, звіт індексування', 'Sitemap, linkowanie wewnętrzne, raport indeksowania')],
-                            [('Сторінки є, але за запитом вас не видно', 'Podstrony są, ale na frazę Cię nie widać'),
+                            [('Сторінки є, але за запитом вас не видно', 'Podstrony są w indeksie, ale nie widać Cię na ważne frazy'),
                              ('Проблема позицій, а не індексації', 'Problem pozycji, nie indeksacji'),
                              ('Контент, структура, SEO-оптимізація', 'Treści, struktura, optymalizacja SEO')]])]},
               {'h2_uk': 'Крок 2. Додайте сайт у Google Search Console',
@@ -53,13 +53,13 @@ POST = {'key': 'nemaie-v-google',
                           ('ul',
                            [('Надішліть карту сайту (sitemap.xml) у розділі «Файли Sitemap».', 'Prześlij mapę witryny (sitemap.xml) w sekcji „Mapy witryn”.'),
                             ('Через «Перевірку URL» перевірте головну й кілька ключових сторінок.', 'Sprawdź stronę główną i kluczowe podstrony narzędziem „Sprawdzanie adresu URL”.'),
-                            ('Якщо сторінку можна індексувати, натисніть «Надіслати запит на індексування».', 'Jeśli adres może być zindeksowany, kliknij „Poproś o zindeksowanie”.'),
+                            ('Якщо сторінку можна індексувати, натисніть «Надіслати запит на індексування».', 'Jeśli adres można zindeksować, kliknij „Poproś o zindeksowanie”.'),
                             ('Відкрийте звіт «Індексування сторінок» — там причини, чому URL не в індексі.',
                              'Otwórz raport „Indeksowanie stron” — znajdziesz tam powody, dla których adresy są poza indeksem.')]),
                           ('p',
                            'Запит на індексування не пришвидшує все миттєво і не гарантує потрапляння в індекс. Він лише ставить сторінку в чергу на сканування, тому натискати його щодня немає '
                            'сенсу.',
-                           'Prośba o zindeksowanie nie działa natychmiast i niczego nie gwarantuje. Po prostu dodaje adres do kolejki skanowania, więc klikanie jej codziennie nic nie zmieni.')]},
+                           'Prośba o zindeksowanie nie działa natychmiast i niczego nie gwarantuje. Po prostu dodaje adres do kolejki skanowania, więc ponawianie jej codziennie nic nie da.')]},
               {'h2_uk': 'Крок 3. Шукайте технічну заборону',
                'h2_pl': 'Krok 3. Poszukaj blokady technicznej',
                'blocks': [('p',
@@ -70,8 +70,8 @@ POST = {'key': 'nemaie-v-google',
                           ('ul',
                            [('Тег <strong>noindex</strong> у коді сторінки або в HTTP-заголовку X-Robots-Tag.', 'Tag <strong>noindex</strong> w kodzie strony lub w nagłówku HTTP X-Robots-Tag.'),
                             ('У WordPress увімкнена опція «Попросити пошукові системи не індексувати сайт» (Налаштування → Читання).',
-                             'W WordPressie zaznaczona opcja „Proś wyszukiwarki o nieindeksowanie witryny” (Ustawienia → Czytanie).'),
-                            ('У robots.txt лишився рядок Disallow: / з етапу розробки.', 'W pliku robots.txt został wpis Disallow: / z etapu developmentu.'),
+                             'W WordPressie zaznaczona opcja „Proś wyszukiwarki o nieindeksowanie tej witryny” (Ustawienia → Czytanie).'),
+                            ('У robots.txt лишився рядок Disallow: / з етапу розробки.', 'W pliku robots.txt został wpis Disallow: / z czasu budowy strony.'),
                             ('У Webflow вимкнено індексацію в налаштуваннях SEO або сайт живе лише на піддомені webflow.io.',
                              'W Webflow wyłączona indeksacja w ustawieniach SEO albo strona działa tylko na subdomenie webflow.io.'),
                             ('Сторінки віддають помилку 4xx/5xx або редирект по колу.', 'Podstrony zwracają błąd 4xx/5xx albo zapętlone przekierowanie.')]),
@@ -91,7 +91,7 @@ POST = {'key': 'nemaie-v-google',
                           ('p',
                            'Google знає адресу, але ще не сканував її. Для нового сайту це нормально. Якщо стан триває тижнями, зазвичай бракує внутрішніх посилань на сторінку, сервер відповідає '
                            'повільно або сайт генерує тисячі схожих URL (фільтри, параметри), і Google не бачить сенсу їх обходити.',
-                           'Google zna adres, ale jeszcze go nie odwiedził. Przy nowej stronie to normalne. Jeśli stan trwa tygodniami, zwykle brakuje linków wewnętrznych do podstrony, serwer '
+                           'Google zna adres, ale jeszcze go nie odwiedził. Przy nowej stronie to normalne. Jeśli ten status utrzymuje się tygodniami, zwykle brakuje linków wewnętrznych do podstrony, serwer '
                            'odpowiada wolno albo witryna generuje tysiące podobnych adresów (filtry, parametry) i Google nie widzi sensu ich przeglądać.'),
                           ('h3', '«Проскановано, але не проіндексовано»', '„Strona zeskanowana, ale jeszcze nie zindeksowana”'),
                           ('p',
@@ -124,12 +124,12 @@ POST = {'key': 'nemaie-v-google',
                'blocks': [('p',
                            "Точного терміну Google не називає. На практиці головна нового сайту з Search Console і sitemap часто з'являється в індексі за кілька днів, а решта сторінок — протягом "
                            'кількох тижнів. Без Search Console і посилань ззовні це може тягнутися довше.',
-                           'Google nie podaje konkretnego terminu. W praktyce strona główna nowej witryny z Search Console i mapą witryny często trafia do indeksu w ciągu kilku dni, a pozostałe '
+                           'Google nie podaje konkretnego terminu. W praktyce, jeśli nowa witryna jest dodana do Search Console i ma sitemap, jej strona główna często trafia do indeksu w ciągu kilku dni, a pozostałe '
                            'podstrony — w ciągu kilku tygodni. Bez Search Console i linków z zewnątrz może to trwać dłużej.'),
                           ('p',
                            'Прискорити процес допомагають прості речі: профіль у Google Business Profile з посиланням на сайт, згадки в каталогах і соцмережах, логічна структура з меню, яке веде на '
                            'всі ключові сторінки. Саме тому структуру <a href="svc-korporatyvnyi-sait">багатосторінкового сайту</a> ми погоджуємо ще до дизайну.',
-                           'Przyspieszyć proces pomagają proste rzeczy: wizytówka w Google Business Profile z linkiem do strony, wpisy w katalogach branżowych i social media, logiczna struktura z '
+                           'Przyspieszyć proces pomagają proste rzeczy: Profil Firmy w Google z linkiem do strony, wpisy w katalogach branżowych i mediach społecznościowych, logiczna struktura z '
                            'menu prowadzącym do wszystkich ważnych podstron. Dlatego strukturę <a href="svc-korporatyvnyi-sait">strony firmowej</a> ustalamy z klientem jeszcze przed projektem '
                            'graficznym.')]},
               {'h2_uk': '«Не в індексі» і «низькі позиції» — різні проблеми',
@@ -142,11 +142,11 @@ POST = {'key': 'nemaie-v-google',
                           ('card',
                            'Індексація — це вхідний квиток, а не місце в топі. Жодна студія чесно не гарантує конкретних позицій: вони залежать від конкуренції в ніші, якості контенту й часу. Ми '
                            'відповідаємо за інше — щоб технічно сайт не заважав Google його знайти.',
-                           'Indeksacja to bilet wstępu, a nie miejsce w TOP 3. Żadne uczciwe studio nie gwarantuje konkretnych pozycji — zależą od konkurencji w branży, jakości treści i czasu. My '
-                           'odpowiadamy za coś innego: żeby od strony technicznej witryna nie przeszkadzała Google w jej znalezieniu.'),
+                           'Indeksacja to bilet wstępu, a nie miejsce na szczycie wyników. Żadne uczciwe studio nie gwarantuje konkretnych pozycji — zależą od konkurencji w branży, jakości treści i czasu. My '
+                           'odpowiadamy za coś innego: żeby od strony technicznej nic nie przeszkadzało Google w znalezieniu witryny.'),
                           ('p',
                            'Для локального бізнесу варто одразу подбати і про картки в Google Maps, бо частина клієнтів бачить вас саме там, ще до органічної видачі.',
-                           'W lokalnym biznesie warto od razu zadbać też o wizytówkę w Mapach Google — część klientów trafia na Ciebie właśnie tam, zanim zobaczy wyniki organiczne.')]},
+                           'Jeśli działasz lokalnie, warto od razu zadbać też o wizytówkę w Mapach Google — część klientów trafia na Ciebie właśnie tam, zanim zobaczy wyniki organiczne.')]},
               {'h2_uk': 'Що робимо ми: технічний аудит індексації',
                'h2_pl': 'Co robimy my: audyt techniczny indeksacji',
                'blocks': [('p',
@@ -164,8 +164,8 @@ POST = {'key': 'nemaie-v-google',
                            'Після аудиту ви отримуєте список проблем із пріоритетами: що виправляємо ми, а що можна зробити самостійно. Вартість <a href="svc-seo">SEO-оптимізації та аудиту</a> '
                            'рахуємо після брифу, оцінка — за 24 години. Базова SEO-оптимізація вже входить у наші тарифи на <a href="svc-lending">лендінг</a>, тож нові сайти запускаються відкритими '
                            'для індексації.',
-                           'Po audycie dostajesz listę problemów z priorytetami: co poprawiamy my, a co możesz zrobić sam. Koszt <a href="svc-seo">audytu i optymalizacji SEO</a> wyceniamy po '
-                           'briefie, wycena w ciągu 24 godzin. Podstawowa optymalizacja SEO jest już w pakietach na <a href="svc-lending">landing page</a>, więc nowe strony startują od razu otwarte '
+                           'Po audycie dostajesz listę problemów z priorytetami: co poprawiamy my, a co możesz zrobić sam. Koszt <a href="svc-seo">audytu i optymalizacji SEO</a> ustalamy po '
+                           'briefie, a wycenę dostajesz w ciągu 24 godzin. Podstawowa optymalizacja SEO wchodzi już w nasze pakiety <a href="svc-lending">landing page</a>, więc nowe strony startują od razu otwarte '
                            'na indeksację.')]}],
  'faq': [['Як додати сайт у Google?',
           'Jak dodać stronę do Google?',
@@ -178,25 +178,25 @@ POST = {'key': 'nemaie-v-google',
           "Зазвичай від кількох днів до кількох тижнів, і Google не дає точних термінів. Головна сторінка часто з'являється швидше, внутрішні — поступово. Процес пришвидшують Search Console, "
           'sitemap, зрозуміле меню з посиланнями на всі сторінки та зовнішні згадки, наприклад Google Business Profile.',
           'Zwykle od kilku dni do kilku tygodni — Google nie podaje dokładnych terminów. Strona główna często pojawia się szybciej, podstrony stopniowo. Proces przyspieszają Search Console, mapa '
-          'witryny, czytelne menu z linkami do wszystkich podstron i wzmianki z zewnątrz, na przykład wizytówka Google Business Profile.'],
+          'witryny, czytelne menu z linkami do wszystkich podstron i wzmianki z zewnątrz, na przykład Profil Firmy w Google.'],
          ['Чому Google пише «проскановано, але не проіндексовано»?',
           'Co znaczy status „Strona zeskanowana, ale jeszcze nie zindeksowana”?',
           'Це означає, що Google відвідав сторінку, але вирішив поки не додавати її в індекс. Найчастіше причина в тонкому або дубльованому контенті. Допомагає розширити текст унікальною корисною '
           'інформацією, прибрати дублі та додати на сторінку внутрішні посилання з важливих розділів сайту. Після змін попросіть повторне індексування через «Перевірку URL».',
-          'Oznacza, że Google odwiedził podstronę, ale na razie nie dodał jej do indeksu. Najczęściej chodzi o cienką lub zduplikowaną treść. Pomaga rozbudowanie tekstu o unikalne, przydatne '
-          'informacje, usunięcie duplikatów i dodanie linków wewnętrznych z ważnych sekcji serwisu. Po zmianach poproś o ponowne zindeksowanie w narzędziu „Sprawdzanie adresu URL”.'],
+          'Oznacza, że Google odwiedził podstronę, ale na razie nie dodał jej do indeksu. Najczęściej chodzi o cienką lub zduplikowaną treść. Warto rozbudować tekst o unikalne, przydatne '
+          'informacje, usunąć duplikaty i dodać linki wewnętrzne z ważnych sekcji serwisu. Po zmianach poproś o ponowne zindeksowanie w narzędziu „Sprawdzanie adresu URL”.'],
          ['Сайт є в Google, але його не знаходять за запитами. Чому?',
           'Strona jest w Google, ale nikt jej nie znajduje. Dlaczego?',
           'Це вже проблема позицій, а не індексації. Сторінка в індексі, але Google вважає інші результати кориснішими для запиту. Потрібно перевірити, чи є на сторінці ключові фрази, чи достатньо в '
           "ній змісту, як вона пов'язана з рештою сайту і наскільки сильні конкуренти в ніші.",
           'To problem pozycji, a nie indeksacji. Podstrona jest w indeksie, ale Google uznaje inne wyniki za trafniejsze. Trzeba sprawdzić, czy strona zawiera właściwe frazy, czy ma wystarczająco '
-          'treści, jak jest podlinkowana z resztą serwisu i jak silna jest konkurencja w branży.'],
+          'treści, jak jest powiązana linkami z resztą serwisu i jak silna jest konkurencja w branży.'],
          ['Чи можна гарантувати потрапляння в топ Google?',
           'Czy da się zagwarantować TOP 10 w Google?',
           'Ні, чесно гарантувати конкретні позиції не може ніхто, бо алгоритм і конкуренти від підрядника не залежать. Можна гарантувати технічно правильний сайт: відкритий для індексації, з '
           'коректними sitemap, canonical і hreflang. Це базова умова, без якої позиції неможливі в принципі, а далі все вирішують контент і час.',
           'Nie — nikt uczciwie nie zagwarantuje konkretnych pozycji, bo algorytm i konkurencja są poza kontrolą wykonawcy. Można zagwarantować poprawną technicznie stronę: otwartą na indeksację, z '
-          'prawidłową mapą witryny, canonical i hreflang. To warunek wstępny, bez którego pozycje w ogóle nie są możliwe.']],
+          'prawidłową mapą witryny, canonical i hreflang. To warunek wstępny, bez którego pozycje w ogóle nie są możliwe. Dalej decydują treść i czas.']],
  'service': 'seo',
  'cta_uk': 'Не знаєте, яка з причин ваша? <a href="contacts">Напишіть нам</a> — подивимося на Search Console і скажемо, що заважає індексації та скільки коштуватиме виправлення.',
  'cta_pl': 'Nie wiesz, która przyczyna dotyczy Twojej strony? <a href="contacts">Napisz do nas</a> — zajrzymy do Search Console i powiemy, co blokuje indeksację i ile będzie kosztować naprawa.',

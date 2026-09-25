@@ -34,7 +34,7 @@ NICHE = {
              "zobaczyć cennik zabiegów, efekty pracy i wolny termin. Jeśli musi o to pytać w wiadomości prywatnej, często umawia się tam, gdzie wszystko ma podane jak na tacy. Projektujemy "
              "strony dla salonów beauty, barber shopów, gabinetów kosmetologii, studiów paznokci i SPA: od prostego <a href=\"svc-lending\">landing page</a> dla kosmetologa działającego na "
              "własną rękę po <a href=\"svc-sait-vizytka\">stronę wizytówkę</a> albo rozbudowaną stronę dla salonu z kilkoma lokalizacjami. Podpinamy rezerwację online, porządkujemy cennik, "
-             "przedstawiamy zespół i portfolio, a przy okazji dbamy o to, żeby Twoja firma pojawiała się na frazy typu „kosmetyczka + miasto”.",
+             "przedstawiamy zespół i portfolio, a przy okazji dbamy o to, żeby Twój salon pojawiał się w wynikach na frazy typu „kosmetyczka + miasto”.",
   "pills": [
     ["Салони краси", "Salony beauty"],
     ["Барбершопи", "Barber shopy"],
@@ -54,14 +54,14 @@ NICHE = {
      "Cennik zabiegów",
      "Прайс розбиваємо на категорії: стрижки, фарбування, манікюр, догляд за обличчям, масаж. Біля кожної послуги ціна або «від», тривалість і короткий опис, чим процедура відрізняється "
      "від сусідньої. У тарифі «Про» ціни ви змінюєте самі в адмін-панелі, без звернень до нас і без очікування, поки хтось оновить сайт.",
-     "Cennik dzielimy na kategorie: fryzjer, koloryzacja, paznokcie, pielęgnacja twarzy, masaż. Przy każdym zabiegu podajemy cenę lub „od”, czas trwania i krótki opis, czym różni się od "
-     "sąsiedniego. W pakiecie Pro zmieniasz ceny samodzielnie w panelu, bez pisania do nas przy każdej podwyżce."],
+     "Cennik dzielimy na kategorie: strzyżenie, koloryzacja, paznokcie, pielęgnacja twarzy, masaż. Przy każdym zabiegu podajemy cenę lub „od”, czas trwania i krótki opis, czym różni się od "
+     "podobnego. W pakiecie Pro zmieniasz ceny samodzielnie w panelu, bez pisania do nas przy każdej podwyżce."],
     ["Майстри й портфоліо",
      "Zespół i portfolio",
      "Для кожного майстра окрема картка: фото, спеціалізація, досвід, сертифікати й приклади робіт. Галерею групуємо за послугами й додаємо фото «до і після» там, де це доречно. "
      "Клієнт обирає не просто салон, а конкретну людину, якій довірить волосся, нігті чи шкіру, тому ця частина сайту часто переконує сильніше за будь-який слоган.",
-     "Każda osoba z zespołu dostaje swoją kartę: zdjęcie, specjalizacja, doświadczenie, certyfikaty i przykładowe prace. Galerię układamy według zabiegów, a tam, gdzie ma to sens, "
-     "dodajemy zdjęcia przed i po. Klientka wybiera nie tylko salon, ale konkretną stylistkę, barbera czy kosmetologa."],
+     "Każda osoba z zespołu dostaje własny profil: zdjęcie, specjalizacja, doświadczenie, certyfikaty i przykładowe prace. Galerię układamy według zabiegów, a tam, gdzie ma to sens, "
+     "dodajemy zdjęcia „przed i po”. Klientka wybiera nie tylko salon, ale konkretną stylistkę, barbera czy kosmetologa."],
     ["Подарункові сертифікати",
      "Bony podarunkowe",
      "Додаємо блок подарункових сертифікатів на суму або на конкретну процедуру. Найпростіший варіант: форма замовлення з оплатою в салоні. Складніший: <a href=\"svc-internet-magazyn\">"
@@ -80,13 +80,13 @@ NICHE = {
   "local_title_pl": "Realizacja: DICTATOR",
   "local_lead_uk": "Для DICTATOR, преміальної мережі барбершопів у Дніпрі, ми зробили багатосторінковий сайт на WordPress у темному стилі бренду. Клієнт спочатку обирає філію, а потім записується "
                    "онлайн без дзвінка. На сайті є послуги, акції, майстри, галерея робіт, відгуки й контакти, а також окремі розділи Barber Academy для майбутніх барберів і франшизи для партнерів.",
-  "local_lead_pl": "Dla DICTATOR, sieci barber shopów premium w Dnieprze, zrobiliśmy wielostronicową stronę na WordPressie w ciemnej, eleganckiej stylistyce marki. Klient najpierw wybiera salon, "
+  "local_lead_pl": "Dla DICTATOR, sieci barber shopów premium w Dnieprze, zrobiliśmy rozbudowaną stronę na WordPressie w ciemnej, eleganckiej stylistyce marki. Klient najpierw wybiera salon, "
                    "a potem rezerwuje strzyżenie online, bez dzwonienia. Na stronie są usługi, promocje, barberzy, galeria, opinie i kontakt, a do tego osobne sekcje Barber Academy dla "
                    "przyszłych barberów i franczyzy dla partnerów.",
   "local_sub_uk": "Що з цього взяти вашому салону: якщо у вас кілька точок, вибір філії має стояти перед записом, інакше клієнт записується не туди. Майстри й галерея працюють як аргумент "
                   "на користь конкретної людини, а не абстрактного «салону». Навчання, франшизу чи продаж косметики краще винести в окремі розділи, щоб вони не заважали основному сценарію: "
                   "побачити послугу, ціну й записатися.",
-  "local_sub_pl": "Co z tego wynika dla Twojego salonu? Przy kilku lokalizacjach wybór salonu musi być przed rezerwacją, inaczej klient umówi się nie tam, gdzie trzeba. Sekcja zespołu z "
+  "local_sub_pl": "Co z tego wynika dla Twojego salonu? Przy kilku lokalizacjach wybór salonu musi poprzedzać rezerwację, inaczej klient umówi się nie tam, gdzie trzeba. Sekcja zespołu z "
                   "galerią przekonuje do konkretnej osoby, a nie do anonimowego „salonu”. Szkolenia, franczyzę czy sprzedaż kosmetyków warto wydzielić w osobne sekcje, żeby nie przeszkadzały "
                   "w głównej ścieżce: zobaczyć zabieg, sprawdzić cenę i się umówić.",
   "local_case": "dictator-barbershop",
@@ -105,13 +105,13 @@ NICHE = {
      "сторінками послуг і майстрів коштує від €450, магазин косметики чи сертифікатів від €800. Ціни без VAT, бо студія звільнена від VAT. Усі тарифи зібрані на сторінці "
      "<a href=\"prices\">«Ціни»</a>.",
      "Landing page dla salonu albo kosmetologa działającego samodzielnie kosztuje od 300 € w pakiecie Start, a pakiet Pro z panelem do edycji, animacjami i analityką 450 €. Strona z "
-     "osobnymi podstronami zabiegów i zespołu to koszt od 450 €, sklep z kosmetykami lub bonami od 800 €. Ceny są bez VAT (zw.), więc to kwota końcowa. Szczegóły znajdziesz w "
+     "osobnymi podstronami zabiegów i zespołu kosztuje od 450 €, sklep z kosmetykami lub bonami od 800 €. Nie doliczamy VAT — studio jest z niego zwolnione, więc to kwota końcowa. Szczegóły znajdziesz w "
      "<a href=\"prices\">cenniku</a>."],
     ["Скільки часу займає створення сайту салону?",
      "Ile trwa stworzenie strony dla salonu?",
      "Лендінг у тарифі «Старт» запускаємо за 3 дні, у тарифі «Про» за 4–5 днів. Багатосторінковий сайт салону з прайсом, майстрами й галереєю займає 15–25 робочих днів, "
      "інтернет-магазин 20–30. Найчастіше термін залежить від того, як швидко готові фото робіт і актуальний прайс, тому їх краще зібрати заздалегідь, ще до старту дизайну.",
-     "Landing w pakiecie Start uruchamiamy w 3 dni, w pakiecie Pro w 4–5 dni. Rozbudowana strona salonu z cennikiem, zespołem i galerią to 15–25 dni roboczych, sklep internetowy 20–30. "
+     "Landing page w pakiecie Start uruchamiamy w 3 dni, w pakiecie Pro w 4–5 dni. Rozbudowana strona salonu z cennikiem, zespołem i galerią to 15–25 dni roboczych, sklep internetowy 20–30. "
      "W praktyce najwięcej zależy od tego, jak szybko dostaniemy zdjęcia prac i aktualny cennik, więc warto przygotować je jeszcze przed startem projektu graficznego."],
     ["Що потрібно від салону, щоб почати?",
      "Co trzeba przygotować na start?",
@@ -140,8 +140,8 @@ NICHE = {
      "Czy strona może mieć kilka wersji językowych?",
      "Так, для салонів у Польщі часто робимо польську й українську версії, а за потреби й англійську для туристів чи експатів. Польською пишемо природно, а не дослівним перекладом, "
      "мови пов'язуємо через hreflang, щоб Google показував кожному свою версію. Спілкуватися з нами під час проєкту можна українською або польською, як вам зручніше.",
-     "Tak, salonom w Polsce często robimy wersję polską i ukraińską, a w razie potrzeby angielską dla turystów i ekspatów. Polską wersję piszemy naturalnie, nie jako tłumaczenie, a "
-     "języki łączymy przez hreflang, żeby Google pokazywał każdemu właściwą wersję. Z nami rozmawiasz po polsku lub po ukraińsku, jak Ci wygodniej."],
+     "Tak, salonom w Polsce często robimy wersję polską i ukraińską, a w razie potrzeby angielską dla turystów i ekspatów. Polską wersję piszemy naturalnie, a nie jako dosłowne tłumaczenie, "
+     "a języki łączymy znacznikami hreflang, żeby Google pokazywał każdemu właściwą wersję. Z nami możesz rozmawiać po polsku lub po ukraińsku, jak Ci wygodniej."],
     ["Чи робили ви сайти в б'юті-сфері?",
      "Czy macie doświadczenie w branży beauty?",
      "Так, головний приклад: сайт мережі барбершопів <a href=\"case-dictator-barbershop\">DICTATOR</a> з вибором філії й онлайн-записом. Є й суміжні проєкти: лендінг Axiom Technology, "
@@ -154,7 +154,7 @@ NICHE = {
      "Co dalej po uruchomieniu strony?",
      "Після запуску ви отримуєте всі доступи: сайт, домен, хостинг і адмін-панель, а для деяких проєктів записуємо відеоінструкцію. У тарифах «Старт» і «Про» є 30 днів підтримки. "
      "Далі за потреби можна замовити підтримку від €20 на місяць, якщо не хочете займатися технічною частиною самі. З питаннями пишіть через <a href=\"contacts\">контакти</a>: відповідаємо до 24 годин у робочі дні.",
-     "Po starcie dostajesz wszystkie dostępy: do strony, domeny, hostingu i panelu, a przy części projektów nagrywamy też instrukcję wideo. W pakietach Start i Pro masz 30 dni "
-     "wsparcia. Później, jeśli trzeba, jest opieka od 20 € miesięcznie. Pytania wyślij przez <a href=\"contacts\">kontakt</a>: odpowiadamy w ciągu 24 godzin w dni robocze."],
+     "Po uruchomieniu dostajesz wszystkie dostępy: do strony, domeny, hostingu i panelu, a przy części projektów nagrywamy też instrukcję wideo. W pakietach Start i Pro masz 30 dni "
+     "wsparcia. Później, jeśli trzeba, możesz wykupić opiekę od 20 € miesięcznie. Pytania wyślij przez zakładkę <a href=\"contacts\">Kontakt</a>: odpowiadamy w ciągu 24 godzin w dni robocze."],
   ],
 }

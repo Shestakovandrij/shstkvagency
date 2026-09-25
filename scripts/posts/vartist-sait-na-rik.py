@@ -13,14 +13,14 @@ POST = {"key": "vartist-sait-na-rik",
  "h1_uk": "Скільки коштує утримання сайту на рік: домен, хостинг, підтримка",
  "h1_pl": "Ile kosztuje strona internetowa na rok? Domena, hosting, opieka",
  "sub_uk": "Розкладаємо щорічні витрати по пунктах і показуємо, де переплачують найчастіше.",
- "sub_pl": "Rozkładamy roczne koszty na części i pokazujemy, gdzie najczęściej się przepłaca.",
+ "sub_pl": "Rozbijamy roczne koszty na pozycje i pokazujemy, gdzie najczęściej się przepłaca.",
  "topic_uk": "Ціни",
  "topic_pl": "Ceny",
  "minutes": 9,
  "answer_uk": "Після запуску сайт щороку коштує грошей: домен, хостинг, пошта, інколи платні плагіни чи план Webflow, плюс підтримка. Орієнтовно, станом на 2026 рік, лендінг або сайт-візитка "
-              "обходяться в €50–450 на рік без підтримки, інтернет-магазин — від €150 до €1000 і більше. Підтримка в нашій студії — від €20 на місяць. Домен і хостинг оформлюйте на себе.",
+              "обходяться в €50–430 на рік без підтримки, інтернет-магазин — від €150 до €1000 і більше. Підтримка в нашій студії — від €20 на місяць. Домен і хостинг оформлюйте на себе.",
  "answer_pl": "Po starcie strona co roku generuje koszty: domena, hosting, poczta, czasem płatne wtyczki albo plan Webflow, do tego opieka techniczna. Orientacyjnie, według stanu na 2026 rok, "
-              "landing page lub strona wizytówka to 50–450 € rocznie bez opieki, a sklep internetowy — od 150 € do 1000 € i więcej. Opieka nad stroną kosztuje u nas od 20 € miesięcznie. "
+              "landing page lub strona wizytówka to 50–430 € rocznie bez opieki, a sklep internetowy — od 150 € do 1 000 € i więcej. Opieka nad stroną kosztuje u nas od 20 € miesięcznie. "
               "Domenę i hosting rejestruj na siebie.",
  "sections": [{"h2_uk": "З чого складаються щорічні витрати на сайт",
                "h2_pl": "Z czego składają się roczne koszty strony",
@@ -33,7 +33,7 @@ POST = {"key": "vartist-sait-na-rik",
                            "Власники часто дивляться лише на ціну розробки, а про утримання дізнаються через рік, коли приходить рахунок за продовження. Скільки коштує сама розробка, ми "
                            "розібрали в статті <a href=\"post-skilky-koshtuie-sait\">скільки коштує сайт під ключ</a>. Тут — лише те, що ви платитимете щороку після запуску.",
                            "Właściciele często patrzą tylko na cenę wykonania, a o utrzymaniu dowiadują się po roku, gdy przychodzi faktura za odnowienie. Ile kosztuje samo wykonanie, "
-                           "opisaliśmy w artykule <a href=\"post-skilky-koshtuie-sait\">ile kosztuje strona www</a>. Tutaj zajmujemy się tylko tym, co płacisz co roku po starcie."),
+                           "opisaliśmy w artykule <a href=\"post-skilky-koshtuie-sait\">ile kosztuje strona www</a>. Tutaj zajmujemy się tylko tym, za co płacisz co roku po starcie."),
                           ("ul",
                            [("<b>домен</b> — адреса сайту, оплачується щороку в реєстратора;", "<b>domena</b> — adres strony, opłacana co roku u rejestratora;"),
                             ("<b>хостинг</b> — сервер, на якому живе сайт;", "<b>hosting</b> — serwer, na którym działa strona;"),
@@ -42,14 +42,14 @@ POST = {"key": "vartist-sait-na-rik",
                             ("<b>платні плагіни, теми або план Webflow</b> — залежать від платформи;", "<b>płatne wtyczki, motywy albo plan Webflow</b> — zależnie od platformy;"),
                             ("<b>підтримка</b> — оновлення, правки й допомога після запуску;", "<b>opieka techniczna</b> — aktualizacje, poprawki i pomoc po starcie;"),
                             ("<b>контент і SEO</b> — необов'язково, але саме це приводить людей із Google.",
-                             "<b>treści i SEO</b> — opcjonalnie, ale to właśnie one przyprowadzają ludzi z Google.")])]},
+                             "<b>treści i SEO</b> — opcjonalnie, ale to właśnie one sprowadzają ludzi z Google.")])]},
               {"h2_uk": "Скільки коштує домен: .pl, .com чи .com.ua",
                "h2_pl": "Ile kosztuje domena: .pl czy .com",
                "blocks": [("p",
                            "Домен коштує орієнтовно від €10 до €45 на рік, залежно від зони й реєстратора (станом на 2026, перевіряйте в реєстратора). Перший рік часто продають зі знижкою, "
                            "тому дивіться не на ціну реєстрації, а на ціну продовження: саме її ви платитимете всі наступні роки.",
                            "Domena kosztuje orientacyjnie od 10 do 45 € rocznie, zależnie od końcówki i rejestratora (stan na 2026, sprawdzaj u rejestratora). Pierwszy rok bywa sprzedawany "
-                           "w promocji za kilka złotych, dlatego patrz nie na cenę rejestracji, ale na cenę odnowienia — to ją zapłacisz w kolejnych latach."),
+                           "w promocji za kilka złotych, dlatego patrz nie na cenę rejestracji, tylko na cenę odnowienia — to ją zapłacisz w kolejnych latach."),
                           ("table",
                            [("Зона", "Końcówka"), ("Кому підходить", "Dla kogo"), ("Продовження, орієнтовно", "Odnowienie, orientacyjnie")],
                            [[(".pl", ".pl"), ("Бізнес, що працює з клієнтами в Польщі", "Firmy działające na polskim rynku"),
@@ -78,7 +78,7 @@ POST = {"key": "vartist-sait-na-rik",
                           ("p",
                            "Ми зазвичай ставимо сайти на Hostinger або VPS, а сайти на Webflow — на Webflow hosting. У поширених хостингів ціна першого періоду низька, але діє лише при оплаті "
                            "на 2–4 роки наперед, а продовження буває в кілька разів дорожчим. VPS потрібен, коли сайт важкий, магазин має багато товарів або треба більше контролю над сервером.",
-                           "Strony stawiamy zwykle na Hostingerze albo VPS, a strony na Webflow — na hostingu Webflow. U popularnych dostawców cena pierwszego okresu jest niska, ale obowiązuje "
+                           "Strony stawiamy zwykle na Hostingerze albo na VPS-ie, a strony na Webflow — na hostingu Webflow. U popularnych dostawców cena pierwszego okresu jest niska, ale obowiązuje "
                            "przy płatności z góry na 2–4 lata, a odnowienie bywa kilka razy droższe. VPS ma sens, gdy strona jest cięższa, sklep ma dużo produktów albo potrzebna jest większa "
                            "kontrola nad serwerem."),
                           ("h3", "SSL-сертифікат", "Certyfikat SSL"),
@@ -91,8 +91,8 @@ POST = {"key": "vartist-sait-na-rik",
                           ("p",
                            "Одна-дві скриньки зазвичай входять у тариф хостингу. Якщо потрібні спільний календар, диск і стабільна доставка листів для команди, беруть Google Workspace або "
                            "подібний сервіс — орієнтовно €6–8 на місяць за кожного користувача, станом на 2026.",
-                           "Jedna czy dwie skrzynki są zwykle w pakiecie hostingu. Jeśli zespół potrzebuje wspólnego kalendarza, dysku i pewnego dostarczania maili, wybiera się Google Workspace "
-                           "albo podobną usługę — orientacyjnie 6–8 € miesięcznie za użytkownika, według stanu na 2026.")]},
+                           "Jedna czy dwie skrzynki są zwykle w pakiecie hostingu. Jeśli zespół potrzebuje wspólnego kalendarza, dysku i niezawodnej dostawy maili, wybiera się Google Workspace "
+                           "albo podobną usługę — orientacyjnie 6–8 € miesięcznie za użytkownika, według stanu na 2026 rok.")]},
               {"h2_uk": "Платні плагіни, план Webflow і сторонні сервіси",
                "h2_pl": "Płatne wtyczki, plan Webflow i usługi zewnętrzne",
                "blocks": [("p",
@@ -119,8 +119,8 @@ POST = {"key": "vartist-sait-na-rik",
                "blocks": [("p",
                            "Нижче — широкі діапазони річних витрат без урахування розробки. Це орієнтир станом на 2026 рік, а не прайс: ціни провайдерів змінюються, тож перед оплатою "
                            "перевіряйте їх у реєстратора чи хостингу. Нижня межа — мінімальна конфігурація, верхня — з платною поштою й ліцензіями.",
-                           "Poniżej szerokie widełki rocznych kosztów bez wykonania strony. To orientacja według stanu na 2026 rok, a nie cennik: ceny dostawców się zmieniają, więc przed płatnością "
-                           "sprawdzaj je u rejestratora lub w hostingu. Dolna granica to minimalna konfiguracja, górna — z płatną pocztą i licencjami."),
+                           "Poniżej szerokie widełki rocznych kosztów bez wykonania strony. To wartości orientacyjne według stanu na 2026 rok, a nie cennik: ceny dostawców się zmieniają, więc przed płatnością "
+                           "sprawdzaj je u rejestratora lub dostawcy hostingu. Dolna granica to minimalna konfiguracja, górna — z płatną pocztą i licencjami."),
                           ("table",
                            [("Стаття витрат", "Pozycja"), ("Лендінг", "Landing page"), ("Сайт-візитка", "Strona wizytówka"), ("Інтернет-магазин", "Sklep internetowy")],
                            [[("Домен", "Domena"), ("€10–45", "10–45 €"), ("€10–45", "10–45 €"), ("€10–45", "10–45 €")],
@@ -128,22 +128,22 @@ POST = {"key": "vartist-sait-na-rik",
                             [("SSL", "SSL"), ("зазвичай €0", "zwykle 0 €"), ("зазвичай €0", "zwykle 0 €"), ("зазвичай €0", "zwykle 0 €")],
                             [("Пошта на домені", "Poczta firmowa"), ("€0–85", "0–85 €"), ("€0–85", "0–85 €"), ("€0–170", "0–170 €")],
                             [("Плагіни, ліцензії", "Wtyczki, licencje"), ("€0–50", "0–50 €"), ("€0–100", "0–100 €"), ("€50–400", "50–400 €")],
-                            [("Разом без підтримки", "Razem bez opieki"), ("≈ €50–380", "≈ 50–380 €"), ("≈ €50–430", "≈ 50–430 €"), ("≈ €160–1000+", "≈ 160–1000+ €")],
+                            [("Разом без підтримки", "Razem bez opieki"), ("≈ €50–380", "≈ 50–380 €"), ("≈ €50–430", "≈ 50–430 €"), ("≈ €160–1000+", "≈ 160–1 000+ €")],
                             [("Підтримка в нас", "Opieka u nas"), ("від €20/міс", "od 20 €/mies."), ("від €20/міс", "od 20 €/mies."), ("від €20/міс", "od 20 €/mies.")]]),
                           ("p",
                            "Контент і SEO в таблицю не входять: це не обов'язкова плата, а вкладення в те, щоб сайт знаходили. Якщо сайт уже працює, а заявок із пошуку немає, почніть із "
                            "статті <a href=\"post-nemaie-v-google\">чому сайту немає в Google</a> і сторінки <a href=\"svc-seo\">SEO-просування</a>.",
-                           "Treści i SEO nie ma w tabeli: to nie obowiązkowa opłata, ale inwestycja w to, żeby stronę było widać. Jeśli strona już działa, a zapytań z wyszukiwarki brak, "
-                           "zacznij od artykułu <a href=\"post-nemaie-v-google\">dlaczego strony nie ma w Google</a> i strony o <a href=\"svc-seo\">pozycjonowaniu SEO</a>."),
+                           "Treści i SEO nie ma w tabeli: to nie obowiązkowa opłata, ale inwestycja w to, żeby strona była widoczna w wyszukiwarce. Jeśli strona już działa, a zapytań z wyszukiwarki brak, "
+                           "zacznij od artykułu <a href=\"post-nemaie-v-google\">dlaczego strony nie ma w Google</a> i podstrony o <a href=\"svc-seo\">pozycjonowaniu SEO</a>."),
                           ("p",
                            "Магазин дорожчий в утриманні не лише через хостинг: більше плагінів, більше оновлень і вища ціна помилки. Наприклад, <a href=\"case-rozmarin\">магазин Rozmarin</a> "
                            "працює на WooCommerce трьома мовами — такому сайту регулярне обслуговування потрібне більше, ніж візитці. Що входить у розробку магазину, описали на сторінці "
                            "<a href=\"svc-internet-magazyn\">інтернет-магазин під ключ</a>.",
-                           "Sklep jest droższy w utrzymaniu nie tylko przez hosting: więcej wtyczek, więcej aktualizacji i wyższa cena błędu. Na przykład <a href=\"case-rozmarin\">sklep Rozmarin</a> "
-                           "działa na WooCommerce w trzech językach — taka strona potrzebuje regularnej opieki bardziej niż wizytówka. Co obejmuje wykonanie sklepu, opisaliśmy na stronie "
+                           "Sklep jest droższy w utrzymaniu nie tylko z powodu hostingu: więcej wtyczek, więcej aktualizacji i wyższa cena błędu. Na przykład <a href=\"case-rozmarin\">sklep Rozmarin</a> "
+                           "działa na WooCommerce w trzech językach — taka strona potrzebuje regularnej opieki bardziej niż wizytówka. Co obejmuje wykonanie sklepu, opisaliśmy na podstronie "
                            "<a href=\"svc-internet-magazyn\">sklep internetowy</a>.")]},
               {"h2_uk": "Пастки: на чому переплачують і втрачають сайт",
-               "h2_pl": "Pułapki: gdzie się przepłaca i traci stronę",
+               "h2_pl": "Pułapki: na czym się przepłaca i jak traci się stronę",
                "blocks": [("p",
                            "Найдорожчі помилки в утриманні сайту — не високі ціни, а сюрпризи: продовження, яке в кілька разів дорожче за перший рік, «безкоштовний» домен, прив'язаний до хостингу, "
                            "і домен, оформлений на студію чи фрилансера. Перші дві коштують грошей, третя може коштувати самого сайту.",
@@ -153,14 +153,14 @@ POST = {"key": "vartist-sait-na-rik",
                           ("p",
                            "Акційна ціна домену чи хостингу діє лише на перший період. Перед оплатою знайдіть у прайсі реєстратора рядок «продовження» і рахуйте бюджет за ним. У деяких "
                            "реєстраторів продовження після дати закінчення коштує ще дорожче, тож увімкніть автопродовження.",
-                           "Cena promocyjna domeny czy hostingu dotyczy tylko pierwszego okresu. Przed płatnością znajdź w cenniku rejestratora pozycję „odnowienie” i to ją bierz do budżetu. "
+                           "Cena promocyjna domeny czy hostingu dotyczy tylko pierwszego okresu. Przed płatnością znajdź w cenniku rejestratora pozycję „odnowienie” i to ją uwzględnij w budżecie. "
                            "Niektórzy rejestratorzy doliczają dodatkową opłatę za odnowienie po terminie, więc włącz automatyczne przedłużanie."),
                           ("h3", "«Безкоштовний» домен від хостингу", "„Darmowa” domena w pakiecie hostingu"),
                           ("p",
                            "Домен у подарунок до хостингу безкоштовний лише перший рік, далі його продовжують за звичайною ціною. До того ж він прив'язаний до акаунта хостингу, і при переїзді "
                            "доведеться окремо переносити домен. Це не погано, просто враховуйте це заздалегідь.",
                            "Domena gratis do hostingu jest darmowa tylko przez pierwszy rok, potem odnawia się ją w normalnej cenie. Do tego jest przypisana do konta hostingowego, więc przy "
-                           "przeprowadzce trzeba osobno przenieść domenę. To nie jest złe rozwiązanie — po prostu uwzględnij to z góry."),
+                           "zmianie hostingu trzeba osobno przenieść domenę. To nie jest złe rozwiązanie — po prostu uwzględnij to z góry."),
                           ("h3", "Домен оформлений на студію", "Domena zarejestrowana na agencję"),
                           ("p",
                            "Власник домену — той, хто вказаний у реєстратора, а не той, хто платив. Якщо домен зареєстровано на студію чи фрилансера, без їхньої участі ви не зможете перенести "
@@ -174,19 +174,19 @@ POST = {"key": "vartist-sait-na-rik",
                            "Sprawdź to teraz: zaloguj się do panelu rejestratora i zobacz, na kogo zarejestrowana jest domena, do kiedy jest opłacona i czy włączone jest automatyczne "
                            "odnawianie. Jeśli nie masz dostępu do panelu, to pierwsza rzecz do naprawienia.")]},
               {"h2_uk": "Підтримка сайту: що ви отримуєте за від €20 на місяць",
-               "h2_pl": "Opieka nad stroną: co dostajesz za od 20 € miesięcznie",
+               "h2_pl": "Opieka nad stroną: co dostajesz w cenie od 20 € miesięcznie",
                "blocks": [("p",
                            "Підтримка сайту в нашій студії коштує від €20 на місяць. Це оновлення, невеликі правки, консультації та допомога з обслуговуванням. Перші 30 днів після запуску "
                            "підтримка вже входить у тарифи «Старт» і «Про». Хостинг і сторонні сервіси оплачуються окремо, напряму провайдерам.",
-                           "Opieka nad stroną kosztuje u nas od 20 € miesięcznie. Obejmuje aktualizacje, drobne poprawki, konsultacje i pomoc w utrzymaniu strony. Pierwsze 30 dni po starcie "
-                           "wsparcie jest już w pakietach Start i Pro. Hosting i usługi zewnętrzne opłacasz osobno, bezpośrednio u dostawców. Ceny bez VAT (zwolnienie z VAT)."),
+                           "Opieka nad stroną kosztuje u nas od 20 € miesięcznie. Obejmuje aktualizacje, drobne poprawki, konsultacje i pomoc w utrzymaniu strony. Przez pierwsze 30 dni po starcie "
+                           "opieka jest już wliczona w pakiety Start i Pro. Hosting i usługi zewnętrzne opłacasz osobno, bezpośrednio u dostawców. Ceny są końcowe — nie doliczamy VAT (zwolnienie z VAT)."),
                           ("p",
                            "Чи потрібна підтримка саме вам, залежить від платформи й того, як часто змінюється сайт. Сайту на WordPress чи магазину на WooCommerce регулярні оновлення потрібні "
                            "більше: система й плагіни постійно виходять у нових версіях. Статичний лендінг, який не змінюється місяцями, часто обходиться без щомісячного обслуговування — тоді "
                            "простіше звертатися разово, коли щось треба змінити.",
                            "Czy opieka jest Ci potrzebna, zależy od platformy i od tego, jak często zmienia się strona. Strona na WordPressie czy sklep na WooCommerce częściej potrzebują "
                            "aktualizacji: system i wtyczki stale dostają nowe wersje. Statyczny landing, który nie zmienia się miesiącami, często obejdzie się bez miesięcznej opieki — wtedy "
-                           "prościej zgłaszać się jednorazowo, gdy coś trzeba zmienić."),
+                           "prościej zlecać zmiany jednorazowo, gdy są potrzebne."),
                           ("p",
                            "Актуальні ціни на розробку й підтримку зібрані на сторінці <a href=\"prices\">ціни на сайти</a>. Якщо у вас уже є сайт і ви не впевнені, що з доменом і хостингом усе "
                            "гаразд, <a href=\"contacts\">напишіть нам</a> — підкажемо, що перевірити.",
@@ -198,31 +198,31 @@ POST = {"key": "vartist-sait-na-rik",
                            "Зекономити можна на форматі оплати, зайвих сервісах і виборі платформи, але не на резервних копіях, продовженні домену й доступах. Нижче — кроки, які знижують "
                            "рахунок і не створюють проблем через рік.",
                            "Oszczędzać można na sposobie płatności, zbędnych usługach i wyborze platformy, ale nie na kopiach zapasowych, odnowieniu domeny i dostępach. Poniżej kroki, które "
-                           "obniżają rachunek i nie tworzą problemów za rok."),
+                           "obniżają rachunek i nie powodują problemów za rok."),
                           ("ul",
                            [("порівнюйте ціну продовження домену в кількох реєстраторів — домен можна перенести до дешевшого;",
                              "porównuj ceny odnowienia domeny u kilku rejestratorów — domenę można przenieść do tańszego (przy .pl potrzebny jest kod AuthInfo);"),
                             ("оплачуйте хостинг на довший термін, якщо впевнені в проєкті: так довше діє нижча ціна;",
-                             "płać za hosting na dłuższy okres, jeśli jesteś pewien projektu: dłużej działa wtedy niższa cena;"),
+                             "płać za hosting na dłuższy okres, jeśli jesteś pewien projektu: dłużej obowiązuje wtedy niższa cena;"),
                             ("для 1–2 скриньок користуйтеся поштою з хостингу, а не окремим сервісом;", "przy 1–2 skrzynkach korzystaj z poczty w hostingu zamiast osobnej usługi;"),
                             ("не купуйте платні плагіни «про запас» і раз на рік перевіряйте, які ліцензії справді потрібні;",
                              "nie kupuj płatnych wtyczek „na zapas” i raz w roku sprawdzaj, które licencje są naprawdę potrzebne;"),
                             ("обирайте платформу під задачу: простий лендінг не потребує важкої CMS;", "dobieraj platformę do zadania: prosty landing nie potrzebuje ciężkiego CMS-a;"),
                             ("увімкніть автопродовження домену й тримайте актуальну картку в реєстратора.",
-                             "włącz automatyczne odnawianie domeny i trzymaj aktualną kartę u rejestratora.")]),
+                             "włącz automatyczne odnawianie domeny i trzymaj aktualną kartę płatniczą w panelu rejestratora.")]),
                           ("p",
                            "Найпростіше закласти це ще до старту: запишіть у технічному завданні, на кого оформлюються домен і хостинг і які сервіси будуть платними після запуску. Як скласти "
                            "таке ТЗ, пояснили в статті <a href=\"post-tz-na-sait\">як написати ТЗ на сайт</a>. А якщо ви лише обираєте формат, почніть зі сторінок "
                            "<a href=\"svc-lending\">лендінг під ключ</a> і <a href=\"svc-sait-vizytka\">сайт-візитка</a> — там видно, що входить у ціну розробки.",
                            "Najprościej ustalić to przed startem: zapisz w briefie, na kogo rejestrowane są domena i hosting oraz które usługi będą płatne po starcie. Jak przygotować taki "
-                           "dokument, wyjaśniliśmy w artykule <a href=\"post-tz-na-sait\">jak napisać brief na stronę</a>. A jeśli dopiero wybierasz format, zacznij od stron "
+                           "dokument, wyjaśniliśmy w artykule <a href=\"post-tz-na-sait\">jak napisać brief strony internetowej</a>. A jeśli dopiero wybierasz format, zacznij od stron "
                            "<a href=\"svc-lending\">landing page</a> i <a href=\"svc-sait-vizytka\">strona wizytówka</a> — widać tam, co jest w cenie wykonania.")]}],
  "faq": [["Скільки коштує утримання сайту на рік?",
           "Ile kosztuje strona internetowa na rok?",
-          "Орієнтовно, станом на 2026 рік, лендінг або сайт-візитка коштують €50–450 на рік без підтримки: домен, хостинг, за потреби пошта й ліцензії. Інтернет-магазин — від €150 до €1000 "
+          "Орієнтовно, станом на 2026 рік, лендінг або сайт-візитка коштують €50–430 на рік без підтримки: домен, хостинг, за потреби пошта й ліцензії. Інтернет-магазин — від €150 до €1000 "
           "і більше. Підтримка в нашій студії — від €20 на місяць. Точні ціни провайдерів перевіряйте в реєстратора й хостингу.",
-          "Orientacyjnie, według stanu na 2026 rok, landing page lub strona wizytówka to 50–450 € rocznie bez opieki: domena, hosting, ewentualnie poczta i licencje. Sklep internetowy — "
-          "od 150 € do 1000 € i więcej. Opieka nad stroną kosztuje u nas od 20 € miesięcznie. Aktualne ceny dostawców sprawdzaj u rejestratora i w hostingu."],
+          "Orientacyjnie, według stanu na 2026 rok, landing page lub strona wizytówka to 50–430 € rocznie bez opieki: domena, hosting, ewentualnie poczta i licencje. Sklep internetowy — "
+          "od 150 € do 1 000 € i więcej. Opieka nad stroną kosztuje u nas od 20 € miesięcznie. Aktualne ceny dostawców sprawdzaj u rejestratora i dostawcy hostingu."],
          ["Скільки коштує домен для сайту?",
           "Ile kosztuje domena .pl?",
           "Орієнтовно €10–45 на рік залежно від зони й реєстратора: .com — близько €10–20, .pl — €15–45, .com.ua — приблизно 200–700 грн. Перший рік часто дешевший за акцією, тому "
@@ -245,14 +245,14 @@ POST = {"key": "vartist-sait-na-rik",
           "Dlaczego domena powinna być zarejestrowana na mnie?",
           "Бо власник домену — той, хто вказаний у реєстратора. Якщо домен оформлено на студію чи фрилансера, без них ви не перенесете сайт, не зміните пошту й не продовжите реєстрацію. "
           "Ми оформлюємо домен і хостинг на клієнта й передаємо всі доступи після запуску.",
-          "Bo właścicielem domeny jest abonent wpisany u rejestratora. Jeśli domena jest na agencję albo freelancera, bez nich nie przeniesiesz strony, nie zmienisz poczty ani nie "
+          "Bo właścicielem domeny jest abonent wpisany u rejestratora. Jeśli domena jest zarejestrowana na agencję albo freelancera, bez nich nie przeniesiesz strony, nie zmienisz poczty ani nie "
           "przedłużysz rejestracji. My rejestrujemy domenę i hosting na klienta i po starcie przekazujemy wszystkie dostępy."],
          ["Скільки коштує підтримка сайту?",
           "Ile kosztuje opieka nad stroną?",
           "У нашій студії — від €20 на місяць: оновлення, невеликі правки, консультації та допомога з обслуговуванням. Перші 30 днів після запуску підтримка входить у тарифи «Старт» і «Про». "
           "Хостинг і сторонні сервіси оплачуються окремо.",
-          "U nas od 20 € miesięcznie: aktualizacje, drobne poprawki, konsultacje i pomoc w utrzymaniu strony. Pierwsze 30 dni po starcie wsparcie jest w pakietach Start i Pro. Hosting "
-          "i usługi zewnętrzne opłacasz osobno. Ceny bez VAT (zwolnienie z VAT)."]],
+          "U nas od 20 € miesięcznie: aktualizacje, drobne poprawki, konsultacje i pomoc w utrzymaniu strony. Przez pierwsze 30 dni po starcie opieka jest wliczona w pakiety Start i Pro. Hosting "
+          "i usługi zewnętrzne opłacasz osobno. Ceny są końcowe — nie doliczamy VAT (zwolnienie z VAT)."]],
  "service": "prices",
  "cta_uk": "Хочете знати, скільки коштуватиме саме ваш сайт — у розробці й на рік після запуску? Подивіться ціни або опишіть задачу, і ми назвемо суму протягом 24 годин.",
  "cta_pl": "Chcesz wiedzieć, ile będzie kosztować Twoja strona — wykonanie i utrzymanie przez rok? Zobacz cennik albo opisz projekt, a podamy kwotę w ciągu 24 godzin.",

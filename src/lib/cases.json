@@ -21,7 +21,7 @@
   "title_uk": "Лендінг для монтажу сонячних панелей у Німеччині — кейс TD-SOLAR",
   "title_pl": "Landing page dla montażu fotowoltaiki w Niemczech — TD-SOLAR",
   "desc_uk": "Лендінг німецькою для бригади DC-монтажу фотоелектричних станцій: послуги, процес співпраці, обладнання, приклади робіт і форма запиту.",
-  "desc_pl": "Landing page po niemiecku dla ekipy montażu DC instalacji fotowoltaicznych: usługi, proces współpracy, sprzęt, realizacje i formularz zapytania."
+  "desc_pl": "Landing page po niemiecku dla ekipy montującej instalacje fotowoltaiczne po stronie DC: usługi, proces współpracy, sprzęt, realizacje i formularz zapytania."
  },
  {
   "slug": "tarik-invest",
@@ -45,7 +45,7 @@
   "title_uk": "Лендінг для клінінгової компанії в Познані — кейс Elart Cleaning",
   "title_pl": "Landing page dla firmy sprzątającej w Poznaniu — Elart Cleaning",
   "desc_uk": "Лендінг на Next.js для клінінгової компанії в Познані: прайс і пакети, 7 кроків співпраці, фото до/після, відгуки 4.9/5 і онлайн-бронювання.",
-  "desc_pl": "Landing page na Next.js dla firmy sprzątającej w Poznaniu: cennik i pakiety, 7 kroków współpracy, zdjęcia przed i po, opinie 4.9/5 i rezerwacja online."
+  "desc_pl": "Landing page na Next.js dla firmy sprzątającej w Poznaniu: cennik i pakiety, 7 kroków współpracy, zdjęcia przed i po, opinie 4,9/5 i rezerwacja online."
  },
  {
   "slug": "core-accounting",
@@ -53,7 +53,7 @@
   "title_uk": "Сайт для бухгалтерської компанії на Webflow — кейс Core Accounting",
   "title_pl": "Strona dla biura rachunkowego na Webflow — realizacja Core Accounting",
   "desc_uk": "Багатосторінковий сайт на Webflow для бухгалтерської компанії Core Accounting: позиціонування, цільова аудиторія, відгуки та форма заявки.",
-  "desc_pl": "Strona wielostronicowa na Webflow dla biura rachunkowego Core Accounting: pozycjonowanie, grupa docelowa, opinie i formularz kontaktowy."
+  "desc_pl": "Strona wielostronicowa na Webflow dla biura rachunkowego Core Accounting: pozycjonowanie marki, grupa docelowa, opinie i formularz kontaktowy."
  },
  {
   "slug": "nagachky-sushi",
@@ -61,7 +61,7 @@
   "title_uk": "Сайт доставки суші з онлайн-замовленням — кейс Nagachky Sushi",
   "title_pl": "Strona dostawy sushi z zamówieniami online — Nagachky Sushi",
   "desc_uk": "Як ми зробили сайт доставки суші Nagachky Sushi на WordPress + WooCommerce: меню з кошиком і онлайн-замовлення, авторські пропозиції, адреса закладу та FAQ.",
-  "desc_pl": "Jak zrobiliśmy stronę dostawy sushi Nagachky Sushi na WordPress + WooCommerce: menu z koszykiem i zamówieniem online, autorskie propozycje, lokalizacja i FAQ."
+  "desc_pl": "Jak zrobiliśmy stronę dostawy sushi Nagachky Sushi na WordPressie i WooCommerce: menu z koszykiem i zamówieniem online, autorskie propozycje, lokalizacja i FAQ."
  },
  {
   "slug": "herstel-bouw",
@@ -205,7 +205,7 @@
   "title_uk": "Інтернет-магазин FPV-дронів — кейс FPV Element | SHSTKV Digital",
   "title_pl": "Sklep z dronami FPV — realizacja FPV Element | SHSTKV Digital",
   "desc_uk": "Як ми зробили інтернет-магазин для виробника FPV-дронів: каталог комплектуючих за категоріями, кошик і список бажань, оптова форма заявки на WooCommerce.",
-  "desc_pl": "Jak zrobiliśmy sklep internetowy dla producenta dronów FPV: katalog podzespołów według kategorii, koszyk i lista życzeń, formularz hurtowy na WooCommerce."
+  "desc_pl": "Jak zrobiliśmy sklep internetowy na WooCommerce dla producenta dronów FPV: katalog podzespołów według kategorii, koszyk, lista życzeń i formularz hurtowy."
  },
  {
   "slug": "kickrave",
@@ -213,7 +213,7 @@
   "title_uk": "Інтернет-магазин кросівок в Україні — кейс KickRave | SHSTKV Digital",
   "title_pl": "Sklep ze sneakersami — realizacja KickRave | SHSTKV Digital",
   "desc_uk": "Як ми зробили інтернет-магазин кросівок на WooCommerce: чоловічий і жіночий каталоги, новинки, вибір розміру, швидкий перегляд, список бажань і кабінет.",
-  "desc_pl": "Jak zrobiliśmy sklep ze sneakersami na WooCommerce: katalog męski i damski, nowości, wybór rozmiaru, szybki podgląd, lista życzeń i konto klienta na Ukrainie."
+  "desc_pl": "Jak zrobiliśmy sklep ze sneakersami w Ukrainie na WooCommerce: katalog męski i damski, nowości, wybór rozmiaru, szybki podgląd, lista życzeń i konto klienta."
  },
  {
   "slug": "torii",
@@ -253,7 +253,7 @@
   "title_uk": "Лендінг консалтингової компанії в Україні — кейс Totem Consulting",
   "title_pl": "Landing page firmy doradczej z Ukrainy — realizacja Totem Consulting",
   "desc_uk": "Як ми зробили лендінг для бізнес-консалтингу в Україні: чотири напрями послуг, блок про CEO, кейси партнерства й форма заявки на консультацію.",
-  "desc_pl": "Jak zrobiliśmy landing page dla firmy doradczej z Ukrainy: cztery obszary usług, sekcja o CEO, przypadki partnerstw i formularz zgłoszenia na konsultację."
+  "desc_pl": "Jak zrobiliśmy landing page dla firmy doradczej z Ukrainy: cztery obszary usług, sekcja o CEO, historie współpracy i formularz zgłoszenia na konsultację."
  },
  {
   "slug": "primebud",
