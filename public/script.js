@@ -774,6 +774,7 @@
     box.querySelector(".lang-hint__text").textContent = copy.text;
     box.querySelector(".lang-hint__go").textContent = copy.go;
     box.querySelector(".lang-hint__stay").textContent = copy.stay;
+    box.setAttribute("aria-label", copy.text);
 
     function close() {
       try { localStorage.setItem(HINT_KEY, "1"); } catch (e) {}

@@ -1,6 +1,34 @@
 {
  "posts": [
   {
+   "key": "vartist-sait-na-rik",
+   "path_uk": "/blog/skilky-koshtuie-sait-na-rik/",
+   "path_pl": "/pl/blog/ile-kosztuje-strona-internetowa-na-rok/",
+   "h1_uk": "Скільки коштує утримання сайту на рік: домен, хостинг, підтримка",
+   "h1_pl": "Ile kosztuje strona internetowa na rok? Domena, hosting, opieka",
+   "title_uk": "Скільки коштує сайт на рік: домен, хостинг, підтримка",
+   "title_pl": "Ile kosztuje strona internetowa na rok? Domena i hosting",
+   "desc_uk": "Скільки коштує домен, хостинг, пошта й підтримка сайту на рік. Таблиця витрат для лендінгу, візитки й магазину, .pl чи .com, пастки з продовженням і як зекономити.",
+   "desc_pl": "Ile kosztuje domena, hosting, poczta i opieka nad stroną na rok. Tabela kosztów dla landingu, wizytówki i sklepu, domena .pl czy .com, pułapki przy odnowieniu.",
+   "img": "assets/why-5.webp",
+   "date": "2026-09-25",
+   "modified": "2026-09-25"
+  },
+  {
+   "key": "tz-na-sait",
+   "path_uk": "/blog/tz-na-sait/",
+   "path_pl": "/pl/blog/brief-strony-internetowej/",
+   "h1_uk": "ТЗ на сайт: шаблон і приклад технічного завдання",
+   "h1_pl": "Brief strony internetowej — przykład i szablon",
+   "title_uk": "ТЗ на сайт: шаблон і приклад технічного завдання | SHSTKV Digital",
+   "title_pl": "Brief strony internetowej — przykład i szablon | SHSTKV Digital",
+   "desc_uk": "Що писати в ТЗ на сайт і чим воно відрізняється від брифу. Готовий шаблон з 11 розділів, приклад заповненого брифу, типові помилки й наш процес роботи.",
+   "desc_pl": "Co wpisać w brief strony internetowej i czym różni się od specyfikacji. Gotowy szablon z 11 punktami, przykład wypełnionego briefu, typowe błędy i nasz proces.",
+   "img": "assets/why-4.webp",
+   "date": "2026-09-25",
+   "modified": "2026-09-25"
+  },
+  {
    "key": "wordpress-webflow-kod",
    "path_uk": "/blog/wordpress-webflow-chy-kod/",
    "path_pl": "/pl/blog/wordpress-webflow-czy-kod/",

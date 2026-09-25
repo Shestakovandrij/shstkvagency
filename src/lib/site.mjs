@@ -65,7 +65,7 @@ export const PAGES = [
     path: "/pl/realizacje/",
     crumb: "Portfolio",
     template: "portfolio-pl",
-    title: "Portfolio: strony i sklepy internetowe, które stworzyliśmy | Web Shestakov",
+    title: "Portfolio — strony i sklepy internetowe dla firm | Web Shestakov",
     description:
       "Realizacje Web Shestakov: landing page, strony firmowe i sklepy internetowe dla firm w Polsce, Ukrainie, Niemczech, Czechach i Holandii.",
     priority: 0.8
@@ -76,7 +76,7 @@ export const PAGES = [
     path: "/pro-nas/",
     crumb: "Про нас",
     template: "about",
-    title: "Про нас — SHSTKV Digital, веб-студія у Вроцлаві: 12+ років досвіду, 35+ проєктів",
+    title: "Про нас — SHSTKV Digital, веб-студія у Вроцлаві, 12+ років досвіду",
     description:
       "SHSTKV Digital — студія Андрія Шестакова у Вроцлаві: сайти від €300, магазини від €800, Telegram-боти. 12+ років досвіду, 35+ проєктів у 6 країнах, договір і faktura.",
     ogType: "website",
@@ -88,9 +88,9 @@ export const PAGES = [
     path: "/pl/o-nas/",
     crumb: "O nas",
     template: "about",
-    title: "O nas — SHSTKV Digital, studio stron internetowych we Wrocławiu: 12+ lat doświadczenia",
+    title: "O nas — SHSTKV Digital, studio stron www we Wrocławiu",
     description:
-      "SHSTKV Digital to studio Andrija Szestakowa we Wrocławiu: strony od 300 €, sklepy od 800 €, boty Telegram. 12+ lat doświadczenia, 35+ projektów w 6 krajach, umowa i faktura.",
+      "SHSTKV Digital to studio Andrija Szestakowa we Wrocławiu: strony od 300 €, sklepy od 800 €, boty Telegram. 12+ lat doświadczenia, 35+ projektów, umowa i faktura.",
     ogType: "website",
     priority: 0.7
   },
@@ -154,6 +154,16 @@ PAGES.push(
   { group: "contacts", lang: "uk", path: "/kontakty/", template: "contacts", crumb: "Контакти", title: SVC.contacts.title_uk, description: SVC.contacts.desc_uk, priority: 0.6 },
   { group: "contacts", lang: "pl", path: "/pl/kontakt/", template: "contacts", crumb: "Kontakt", title: SVC.contacts.title_pl, description: SVC.contacts.desc_pl, priority: 0.6 }
 );
+
+/* Нішеві сторінки: генерує scripts/build_niches.py (src/lib/niches.json). */
+let NICHES = { niches: [] };
+try { NICHES = JSON.parse(readFileSync(join(process.cwd(), "src", "lib", "niches.json"), "utf8")); } catch (e) {}
+for (const n of NICHES.niches) {
+  PAGES.push(
+    { group: "niche-" + n.key, lang: "uk", path: n.path_uk, template: "niche-" + n.key, crumb: n.h1_uk, service: n, title: n.title_uk, description: n.desc_uk, priority: 0.8 },
+    { group: "niche-" + n.key, lang: "pl", path: n.path_pl, template: "niche-" + n.key, crumb: n.h1_pl, service: n, title: n.title_pl, description: n.desc_pl, priority: 0.8 }
+  );
+}
 
 const CASES = JSON.parse(readFileSync(join(process.cwd(), "src", "lib", "cases.json"), "utf8"));
 for (const c of CASES) {

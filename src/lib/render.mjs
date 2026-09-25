@@ -50,7 +50,7 @@ function rewriteUrls(document, lang) {
     if (!value || isExternal(value)) return value;
     const [file, hash] = value.split("#");
     if (LEGACY_LINKS[file] != null) return href(LEGACY_LINKS[file], lang) + (hash ? "#" + hash : "");
-    if (/^(case-[a-z0-9-]+|svc-[a-z0-9-]+|city-[a-z0-9-]+|post-[a-z0-9-]+|about|prices|contacts|blog)$/.test(file)) return href(file, lang) + (hash ? "#" + hash : "");
+    if (/^(case-[a-z0-9-]+|svc-[a-z0-9-]+|city-[a-z0-9-]+|niche-[a-z0-9-]+|post-[a-z0-9-]+|about|prices|contacts|blog)$/.test(file)) return href(file, lang) + (hash ? "#" + hash : "");
     return "/" + value.replace(/^\.\//, "");
   };
 
@@ -179,7 +179,7 @@ function jsonLd(page, document) {
   }
 
   // FAQ на сторінках послуг, цін, контактів і «Про нас» — з розмітки сторінки.
-  if (/^(svc-|city-|post-|prices$|contacts$|about$)/.test(page.group)) {
+  if (/^(svc-|city-|niche-|post-|prices$|contacts$|about$)/.test(page.group)) {
     const qa = [...document.querySelectorAll("#faq .faq__item")].map((it) => ({
       "@type": "Question",
       name: it.querySelector(".faq__q").textContent.replace(/^\s*\(\d+\)/, "").trim(),
@@ -216,7 +216,9 @@ function selfHostFonts(document, lang) {
     const portfolio = /Alumni/.test(el.getAttribute("href"));
     const tpl = document.createElement("template");
     tpl.innerHTML = FONT_PRELOAD[lang].map((f) => `<link rel="preload" href="${f}" as="font" type="font/woff2" crossorigin />`).join("\n  ") +
-      `\n  <link rel="stylesheet" href="/fonts/${portfolio ? "fonts-portfolio" : "fonts"}.css" />`;
+      `\n  <link rel="stylesheet" href="/fonts/${portfolio ? "fonts-portfolio" : "fonts"}.css" />` +
+      // фон hero задано в CSS — без preload браузер знаходить LCP-картинку лише після styles.css
+      (document.querySelector(".hero__panel-bg") ? `\n  <link rel="preload" href="/assets/hero.webp" as="image" fetchpriority="high" />` : "");
     el.replaceWith(...tpl.content.childNodes);
   });
 }

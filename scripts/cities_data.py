@@ -219,7 +219,7 @@ CITIES = [
             'Czy robicie sklepy z BLIK i dostawą InPost?',
             'Так, у магазинах на WooCommerce підключаємо BLIK, Przelewy24 або PayU, а також доставку InPost і Paczkomaty. Договір з оператором оформлюєте ви, ми налаштовуємо інтеграцію й тестуємо '
             'оплату та доставку до запуску. Інтернет-магазин коштує від €800, термін — 20–30 робочих днів.',
-            'Tak, w sklepach na WooCommerce podpinamy BLIK, Przelewy24 lub PayU oraz dostawę InPost i Paczkomaty. Umowę z operatorem zawieracie Wy, a my konfigurujemy integrację i testujemy płatności '
+            'Tak, w sklepach na WooCommerce podpinamy BLIK, Przelewy24 lub PayU oraz dostawę InPost i Paczkomaty. Umowę z operatorem zawierasz Ty, a my konfigurujemy integrację i testujemy płatności '
             'oraz wysyłkę przed startem. Sklep internetowy kosztuje od 800 €, realizacja trwa 20–30 dni roboczych.'],
            ['Чи можна зробити сайт польською й українською?',
             'Czy strona może być po polsku i po ukraińsku?',

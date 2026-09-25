@@ -1,0 +1,74 @@
+{
+ "niches": [
+  {
+   "key": "budivelna-kompaniia",
+   "path_uk": "/sait-dlia-budivelnoi-kompanii/",
+   "path_pl": "/pl/strona-internetowa-dla-firmy-budowlanej/",
+   "name_uk": "Будівельні компанії",
+   "name_pl": "Firmy budowlane",
+   "h1_uk": "Сайт для будівельної компанії",
+   "h1_pl": "Strona internetowa dla firmy budowlanej",
+   "title_uk": "Сайт для будівельної компанії від €300 | SHSTKV Digital",
+   "title_pl": "Strona internetowa dla firmy budowlanej od 300 € | SHSTKV Digital",
+   "desc_uk": "Сайт для будівельної компанії та ремонту квартир від €300: портфоліо «до/після», калькулятор кошторису, етапи робіт, заявка на замір і SEO під ваше місто.",
+   "desc_pl": "Strona internetowa dla firmy budowlanej i remontowej od 300 €: realizacje „przed i po”, kalkulator wyceny, etapy prac, zapytanie o pomiar i SEO lokalne.",
+   "price": "300"
+  },
+  {
+   "key": "bukhhalteriia",
+   "path_uk": "/sait-dlia-bukhhaltera/",
+   "path_pl": "/pl/strona-internetowa-dla-biura-rachunkowego/",
+   "name_uk": "Бухгалтери й консалтинг",
+   "name_pl": "Biura rachunkowe",
+   "h1_uk": "Сайт для бухгалтера",
+   "h1_pl": "Strona internetowa dla biura rachunkowego",
+   "title_uk": "Сайт для бухгалтера від €300 — бюро й консалтинг | SHSTKV Digital",
+   "title_pl": "Strona dla biura rachunkowego od 300 € | SHSTKV Digital",
+   "desc_uk": "Сайт для бухгалтера, бухгалтерської компанії чи юриста від €300: прайс пакетів, калькулятор обслуговування, форма консультації, блог, PL/UA. Оцінка за 24 год.",
+   "desc_pl": "Strona internetowa dla biura rachunkowego od 300 €: cennik pakietów, kalkulator obsługi, formularz konsultacji, blog, RODO, wersja PL/UA/EN. Wycena w 24 h.",
+   "price": "300"
+  },
+  {
+   "key": "klininh",
+   "path_uk": "/sait-dlia-klininhovoi-kompanii/",
+   "path_pl": "/pl/strona-internetowa-dla-firmy-sprzatajacej/",
+   "name_uk": "Клінінгові компанії",
+   "name_pl": "Firmy sprzątające",
+   "h1_uk": "Сайт для клінінгової компанії",
+   "h1_pl": "Strona internetowa dla firmy sprzątającej",
+   "title_uk": "Сайт для клінінгової компанії від €300 | SHSTKV Digital",
+   "title_pl": "Strona dla firmy sprzątającej od 300 € | SHSTKV Digital",
+   "desc_uk": "Сайт для клінінгової компанії від €300: калькулятор вартості прибирання, замовлення з датою, чекліст послуг і SEO під запити з назвою міста. Оцінка за 24 год.",
+   "desc_pl": "Strona dla firmy sprzątającej od 300 €: kalkulator ceny sprzątania, rezerwacja terminu, lista czynności i SEO pod „sprzątanie + miasto”. Wycena w 24 h.",
+   "price": "300"
+  },
+  {
+   "key": "restoran",
+   "path_uk": "/sait-dlia-restoranu/",
+   "path_pl": "/pl/strona-internetowa-dla-restauracji/",
+   "name_uk": "Ресторани й кафе",
+   "name_pl": "Restauracje i kawiarnie",
+   "h1_uk": "Сайт для ресторану",
+   "h1_pl": "Strona internetowa dla restauracji",
+   "title_uk": "Сайт для ресторану від €300: меню й доставка | SHSTKV Digital",
+   "title_pl": "Strona internetowa dla restauracji od 300 € | SHSTKV Digital",
+   "desc_uk": "Сайт для ресторану, кафе чи доставки суші від €300: онлайн-меню з цінами, замовлення без комісії агрегаторів, бронювання столика, Google Maps і мобільна версія.",
+   "desc_pl": "Strona internetowa dla restauracji od 300 €: menu online zamiast PDF, zamówienia bez prowizji Pyszne.pl i Glovo, rezerwacja stolika, Profil Firmy w Google.",
+   "price": "300"
+  },
+  {
+   "key": "salon-krasy",
+   "path_uk": "/sait-dlia-salonu-krasy/",
+   "path_pl": "/pl/strona-internetowa-dla-salonu-kosmetycznego/",
+   "name_uk": "Салони краси",
+   "name_pl": "Salony kosmetyczne",
+   "h1_uk": "Сайт для салону краси",
+   "h1_pl": "Strona internetowa dla salonu kosmetycznego",
+   "title_uk": "Сайт для салону краси від €300 — онлайн-запис | SHSTKV Digital",
+   "title_pl": "Strona internetowa salonu kosmetycznego od 300 € | SHSTKV Digital",
+   "desc_uk": "Сайт для салону краси, барбершопу чи косметолога від €300: онлайн-запис через Booksy, Altegio або форму, прайс, майстри, портфоліо робіт і Google Maps.",
+   "desc_pl": "Strona internetowa dla salonu kosmetycznego od 300 €: rezerwacja przez Booksy lub formularz, cennik zabiegów, zespół, portfolio i Profil Firmy w Google.",
+   "price": "300"
+  }
+ ]
+}

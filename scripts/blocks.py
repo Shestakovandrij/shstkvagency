@@ -279,6 +279,53 @@ def services_block(items, title, tag, prefix='svc-', cta=None):
       </div>
     </section>'''
 
+# Блок «наш проєкт» з головним кейсом (гео- і нішеві сторінки): поля local_* у словнику сторінки.
+def local_block(c):
+    k = CASE[c['local_case']]
+    lp = ''.join(f'<span class="budget-pill" role="listitem">{L(u, p)}</span>' for u, p in c['local_pills'])
+    lp += ''.join(f'<span class="budget-pill" aria-hidden="true">{L(u, p)}</span>' for u, p in c['local_pills'])
+    return '''    <section class="section" id="local">
+      <div class="container">
+''' + head(L(c['local_title_uk'], c['local_title_pl']), L(c['name_uk'], c['name_pl'])) + '''
+        <div class="budget-grid">
+        <div class="budget-intro reveal">
+          <p class="budget-lead">''' + L(c['local_lead_uk'], c['local_lead_pl']) + '''</p>
+          <p class="budget-sub">''' + L(c['local_sub_uk'], c['local_sub_pl']) + '''</p>
+          <div class="budget-pills" role="list">
+            <div class="budget-pills__track">''' + lp + '''</div>
+          </div>
+          <a href="#contact" class="btn btn--dark btn--lg budget-intro__btn">
+            <span>''' + L('Обговорити проєкт', 'Porozmawiajmy o projekcie') + '''</span>
+            ''' + ARROW + '''
+          </a>
+        </div>
+        <div class="reveal">
+          <a class="bx-card" href="case-''' + k['slug'] + '''" aria-label="''' + k['name'] + '''">
+            <div class="bx-card__media"><img src="''' + k['img'] + '''" alt="''' + k['name'] + '''" loading="lazy" /></div>
+            <div class="bx-card__bar">
+              <span class="bx-card__cat">''' + k['name'] + ' · ' + L(k['facts'][1][2], k['facts'][1][3]) + '''</span>
+              <span class="bx-card__cta" aria-hidden="true">''' + ARROW_LG + '''</span>
+            </div>
+          </a>
+        </div>
+        </div>
+      </div>
+    </section>'''
+
+# Нішеві сторінки: по файлу scripts/niches/<key>.py зі змінною NICHE.
+def load_niches():
+    import glob
+    out = []
+    for f in sorted(glob.glob(os.path.join(HERE, 'niches', '*.py'))):
+        ns = {}
+        exec(open(f).read(), ns)
+        out.append(ns['NICHE'])
+    return out
+
+def niches_block(niches, title=None, tag=None):
+    items = [dict(key=n['key'], img=n['img'], name_uk=n['name_uk'], name_pl=n['name_pl'], sub_uk=n['card_sub_uk'], sub_pl=n['card_sub_pl']) for n in niches]
+    return services_block(items, title or L('Сайти для вашої галузі', 'Strony dla Twojej branży'), tag or L('Галузі', 'Branże'), 'niche-').replace('id="services"', 'id="niches"')
+
 def write(name, body):
     html = nav_to_home(BEFORE + '\n\n'.join(body) + AFTER)
     open(os.path.join(TPL, name + '.html'), 'w').write(html)

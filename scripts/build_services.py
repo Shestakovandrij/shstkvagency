@@ -10,6 +10,9 @@ from services_data import SERVICES
 from services_pages import PRICES, CONTACTS
 from cities_data import CITIES
 
+NICHES = load_niches()
+NICHE_SVC = ('lending', 'sait-vizytka', 'korporatyvnyi-sait')  # послуги, на яких показуємо «Сайти для вашої галузі»
+
 # ---------- сторінки послуг
 out = []
 for s in SERVICES:
@@ -21,6 +24,7 @@ for s in SERVICES:
         tariffs_block(L('Ціна', 'Cena'), L('Тарифи', 'Pakiety'), L(s['plans_lead_uk'], s['plans_lead_pl']), s['plans'], s['addons']),
         cases_block(s['cases']),
         faq_block(s['faq']),
+        *([niches_block(NICHES)] if s['key'] in NICHE_SVC and NICHES else []),
         services_block(others, L('Інші послуги', 'Inne usługi'), L('Послуги', 'Usługi')),
         CONTACT,
     ]
@@ -36,6 +40,7 @@ write('prices', [
     intro('about', L(P['intro_title_uk'], P['intro_title_pl']), L('Що впливає на ціну', 'Co wpływa na cenę'), L(P['lead_uk'], P['lead_pl']), P['pills'], P['factors'], L('Отримати оцінку', 'Otrzymaj wycenę')),
     faq_block(P['faq'], L('Питання про ціни', 'Pytania o ceny')),
     services_block(SERVICES, L('Усі послуги', 'Wszystkie usługi'), L('Послуги', 'Usługi')),
+    *([niches_block(NICHES)] if NICHES else []),
     CONTACT,
 ])
 
@@ -85,38 +90,6 @@ write('contacts', [
 ])
 
 # ---------- гео-сторінки: хаб /polshcha/ і міста
-def local_block(c):
-    k = CASE[c['local_case']]
-    lp = ''.join(f'<span class="budget-pill" role="listitem">{L(u, p)}</span>' for u, p in c['local_pills'])
-    lp += ''.join(f'<span class="budget-pill" aria-hidden="true">{L(u, p)}</span>' for u, p in c['local_pills'])
-    return '''    <section class="section" id="local">
-      <div class="container">
-''' + head(L(c['local_title_uk'], c['local_title_pl']), L(c['name_uk'], c['name_pl'])) + '''
-        <div class="budget-grid">
-        <div class="budget-intro reveal">
-          <p class="budget-lead">''' + L(c['local_lead_uk'], c['local_lead_pl']) + '''</p>
-          <p class="budget-sub">''' + L(c['local_sub_uk'], c['local_sub_pl']) + '''</p>
-          <div class="budget-pills" role="list">
-            <div class="budget-pills__track">''' + lp + '''</div>
-          </div>
-          <a href="#contact" class="btn btn--dark btn--lg budget-intro__btn">
-            <span>''' + L('Обговорити проєкт', 'Porozmawiajmy o projekcie') + '''</span>
-            ''' + ARROW + '''
-          </a>
-        </div>
-        <div class="reveal">
-          <a class="bx-card" href="case-''' + k['slug'] + '''" aria-label="''' + k['name'] + '''">
-            <div class="bx-card__media"><img src="''' + k['img'] + '''" alt="''' + k['name'] + '''" loading="lazy" /></div>
-            <div class="bx-card__bar">
-              <span class="bx-card__cat">''' + k['name'] + ' · ' + L(k['facts'][1][2], k['facts'][1][3]) + '''</span>
-              <span class="bx-card__cta" aria-hidden="true">''' + ARROW_LG + '''</span>
-            </div>
-          </a>
-        </div>
-        </div>
-      </div>
-    </section>'''
-
 CITY_TARIFFS = [a for a in PRICES['addons'] if a.get('href') in ('svc-korporatyvnyi-sait', 'svc-internet-magazyn') or a['name_uk'] == 'Підтримка сайту']
 city_out = []
 city_list = [c for c in CITIES if c['key'] != 'polshcha']

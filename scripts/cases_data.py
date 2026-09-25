@@ -4,7 +4,7 @@
 CASES = [
   dict(slug="rozmarin", name="Rozmarin", url="https://rozmarin.shop/", img="assets/cases/case29.webp",
     title_uk="Інтернет-магазин квітів у Вроцлаві — кейс Rozmarin | SHSTKV Digital",
-    title_pl="Sklep internetowy z kwiatami we Wrocławiu — realizacja Rozmarin | SHSTKV Digital",
+    title_pl="Sklep internetowy z kwiatami we Wrocławiu — realizacja Rozmarin",
     desc_uk="Як ми зробили інтернет-магазин квіткового бутика Rozmarin у Вроцлаві: WooCommerce, три мови, каталог композицій і преміум-колекція.",
     desc_pl="Jak stworzyliśmy sklep internetowy kwiaciarni Rozmarin we Wrocławiu: WooCommerce, trzy języki, katalog kompozycji i kolekcja premium.",
     h1_uk="Інтернет-магазин квітів у Вроцлаві", h1_pl="Sklep internetowy z kwiatami we Wrocławiu",
@@ -23,8 +23,8 @@ CASES = [
            ("Адмінпанель","Panel administracyjny","Власник сам додає нові букети, змінює ціни й фото.","Właściciel sam dodaje nowe bukiety, zmienia ceny i zdjęcia.")]),
 
   dict(slug="bellissimo-home", name="Bellissimo Home", url="https://homebellissimowroclaw.com/", img="assets/cases/case17.webp",
-    title_uk="Лендінг для салону італійських меблів у Вроцлаві — кейс Bellissimo Home",
-    title_pl="Landing page dla salonu włoskich mebli we Wrocławiu — realizacja Bellissimo Home",
+    title_uk="Лендінг салону італійських меблів у Вроцлаві — кейс Bellissimo Home",
+    title_pl="Landing page salonu włoskich mebli we Wrocławiu — Bellissimo Home",
     desc_uk="Лендінг для шоуруму італійських меблів і кухонь на замовлення у Вроцлаві: калькулятор вартості, запис на зустріч, розділ для архітекторів.",
     desc_pl="Landing page dla showroomu włoskich mebli i kuchni na wymiar we Wrocławiu: kalkulator kosztów, rezerwacja spotkania, sekcja dla architektów.",
     h1_uk="Лендінг для салону італійських меблів", h1_pl="Landing page dla salonu włoskich mebli",
@@ -44,7 +44,7 @@ CASES = [
 
   dict(slug="td-solar", name="TD-SOLAR", url="https://tdsolarenergy.com/", img="assets/cases/case10.webp",
     title_uk="Лендінг для монтажу сонячних панелей у Німеччині — кейс TD-SOLAR",
-    title_pl="Landing page dla montażu fotowoltaiki w Niemczech — realizacja TD-SOLAR",
+    title_pl="Landing page dla montażu fotowoltaiki w Niemczech — TD-SOLAR",
     desc_uk="Лендінг німецькою для бригади DC-монтажу фотоелектричних станцій: послуги, процес співпраці, обладнання, приклади робіт і форма запиту.",
     desc_pl="Landing page po niemiecku dla ekipy montażu DC instalacji fotowoltaicznych: usługi, proces współpracy, sprzęt, realizacje i formularz zapytania.",
     h1_uk="Лендінг для монтажу сонячних панелей", h1_pl="Landing page dla montażu fotowoltaiki",
@@ -64,7 +64,7 @@ CASES = [
 
   dict(slug="tarik-invest", name="TARIK Invest", url="https://tarikinvest.cz/", img="assets/cases/case18.webp",
     title_uk="Сайт для електромонтажної компанії в Чехії — кейс TARIK Invest",
-    title_pl="Strona dla firmy elektroinstalacyjnej w Czechach — realizacja TARIK Invest",
+    title_pl="Strona dla firmy elektroinstalacyjnej w Czechach — TARIK Invest",
     desc_uk="Сайт на Next.js для електромонтажної компанії в Чехії: чеська й українська версії, процес без хаосу, відгуки, вакансії та FAQ.",
     desc_pl="Strona na Next.js dla firmy elektroinstalacyjnej w Czechach: wersja czeska i ukraińska, uporządkowany proces, opinie, rekrutacja i FAQ.",
     h1_uk="Сайт для електромонтажної компанії", h1_pl="Strona dla firmy elektroinstalacyjnej",
@@ -104,7 +104,7 @@ CASES = [
 
   dict(slug="elart-cleaning", name="Elart Cleaning", url="https://cleaningelart.pl/", img="assets/cases/case16.webp",
     title_uk="Лендінг для клінінгової компанії в Познані — кейс Elart Cleaning",
-    title_pl="Landing page dla firmy sprzątającej w Poznaniu — realizacja Elart Cleaning",
+    title_pl="Landing page dla firmy sprzątającej w Poznaniu — Elart Cleaning",
     desc_uk="Лендінг на Next.js для клінінгової компанії в Познані: прайс і пакети, 7 кроків співпраці, фото до/після, відгуки 4.9/5 і онлайн-бронювання.",
     desc_pl="Landing page na Next.js dla firmy sprzątającej w Poznaniu: cennik i pakiety, 7 kroków współpracy, zdjęcia przed i po, opinie 4.9/5 i rezerwacja online.",
     h1_uk="Лендінг для клінінгової компанії", h1_pl="Landing page dla firmy sprzątającej",
@@ -144,9 +144,9 @@ CASES = [
 
   dict(slug="nagachky-sushi", name="Nagachky Sushi", url="https://nagachkysushi.com/", img="assets/cases/case6.webp",
     title_uk="Сайт доставки суші з онлайн-замовленням — кейс Nagachky Sushi",
-    title_pl="Strona z dostawą sushi i zamówieniami online — realizacja Nagachky Sushi",
-    desc_uk="Сайт доставки суші на WordPress + WooCommerce: меню з кошиком, авторські пропозиції, адреса закладу та FAQ.",
-    desc_pl="Strona z dostawą sushi na WordPress + WooCommerce: menu z koszykiem, autorskie propozycje, lokalizacja i FAQ.",
+    title_pl="Strona dostawy sushi z zamówieniami online — Nagachky Sushi",
+    desc_uk="Як ми зробили сайт доставки суші Nagachky Sushi на WordPress + WooCommerce: меню з кошиком і онлайн-замовлення, авторські пропозиції, адреса закладу та FAQ.",
+    desc_pl="Jak zrobiliśmy stronę dostawy sushi Nagachky Sushi na WordPress + WooCommerce: menu z koszykiem i zamówieniem online, autorskie propozycje, lokalizacja i FAQ.",
     h1_uk="Сайт доставки суші з онлайн-замовленням", h1_pl="Strona z dostawą sushi i zamówieniami online",
     sub_uk="Nagachky Sushi — «роли з душею, доставка з турботою».",
     sub_pl="Nagachky Sushi — „rolki z duszą, dostawa z troską”.",
@@ -163,8 +163,8 @@ CASES = [
            ("Керування меню","Zarządzanie menu","Нові позиції, ціни й фото — через адмінпанель.","Nowe pozycje, ceny i zdjęcia — w panelu administracyjnym.")]),
 
   dict(slug="herstel-bouw", name="Herstel & Bouw", url="https://herstelenbouw.nl/", img="assets/cases/case35.webp",
-    title_uk="Сайт для ремонтно-будівельної компанії в Нідерландах — кейс Herstel & Bouw",
-    title_pl="Strona dla firmy remontowo-budowlanej w Holandii — realizacja Herstel & Bouw",
+    title_uk="Сайт ремонтно-будівельної компанії в Нідерландах — Herstel & Bouw",
+    title_pl="Strona firmy remontowo-budowlanej w Holandii — Herstel & Bouw",
     desc_uk="Сайт для компанії з ремонту та будівництва в Амстердамі, Алмере й Утрехті: калькулятор вартості ремонту, портфоліо, відгуки, FAQ, нідерландська й англійська.",
     desc_pl="Strona dla firmy remontowo-budowlanej z Amsterdamu, Almere i Utrechtu: kalkulator kosztów remontu, realizacje, opinie, FAQ, wersja niderlandzka i angielska.",
     h1_uk="Сайт для ремонтно-будівельної компанії", h1_pl="Strona dla firmy remontowo-budowlanej",
@@ -183,8 +183,8 @@ CASES = [
            ("Заявки","Zapytania","Три форми в різних місцях сторінки — клієнт пише тоді, коли готовий.","Trzy formularze w różnych miejscach — klient pisze, gdy jest gotowy.")]),
 
   dict(slug="kora-candle", name="Kora Candle", url="https://koracandle.com/", img="assets/cases/case14.webp",
-    title_uk="Інтернет-магазин свічок ручної роботи — кейс Kora Candle | SHSTKV Digital",
-    title_pl="Sklep internetowy ze świecami ręcznie robionymi — realizacja Kora Candle",
+    title_uk="Інтернет-магазин свічок ручної роботи — кейс Kora Candle",
+    title_pl="Sklep ze świecami ręcznie robionymi — realizacja Kora Candle",
     desc_uk="Інтернет-магазин на WooCommerce для бренду свічок ручної роботи Kora Candle: каталог, подарункові набори, декор і запис на майстер-класи.",
     desc_pl="Sklep na WooCommerce dla marki ręcznie robionych świec Kora Candle: katalog, zestawy prezentowe, dekoracje i zapisy na warsztaty.",
     h1_uk="Інтернет-магазин свічок ручної роботи", h1_pl="Sklep internetowy ze świecami ręcznie robionymi",

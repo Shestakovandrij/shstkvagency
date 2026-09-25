@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title data-i18n="meta.title">Web Shestakov — сайти, Telegram-боти, інтернет-магазини, SEO та айдентика</title>
+  <meta name="description" data-i18n="meta.description" content="Створюємо сучасні сайти, Telegram-боти, інтернет-магазини, SEO-рішення та айдентику для бізнесу. Допомагаємо залучати клієнтів, продавати онлайн і автоматизувати процеси." />
+
+  <link rel="canonical" href="https://www.shstkv-digital.com/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Web Shestakov" />
+  <meta property="og:url" content="https://www.shstkv-digital.com/" />
+  <meta property="og:locale" content="uk_UA" />
+  <meta property="og:locale:alternate" content="pl_PL" />
+  <meta property="og:title" data-i18n="meta.title" content="Web Shestakov — сайти, Telegram-боти, інтернет-магазини, SEO та айдентика" />
+  <meta property="og:description" data-i18n="meta.description" content="Сайти, Telegram-боти, інтернет-магазини, SEO та айдентика." />
+  <meta property="og:image" content="https://www.shstkv-digital.com/assets/og-image.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Web Shestakov — сайти, Telegram-боти, інтернет-магазини, SEO та айдентика" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://www.shstkv-digital.com/assets/og-image.jpg" />
+  <meta name="theme-color" content="#EEEEEE" />
+
+  <link rel="icon" href="/favicon.ico" sizes="32x32" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <script>
+    (function () {
+      try {
+        var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (!reduce) { document.documentElement.className += " anim-on"; }
+        window.setTimeout(function () {
+          if (!window.__wsReady) { document.documentElement.classList.remove("anim-on"); }
+        }, 2600);
+      } catch (e) { document.documentElement.classList.remove("anim-on"); }
+    })();
+
+  </script>
+
+
+  <!-- Meta Pixel + GA4. Скрипти вантажаться всередині tracking.js і лише
+       після згоди на куки — окремо код пікселя в <head> вставляти не треба. -->
+  <script src="tracking.js" defer></script>
+</head>
+
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ============ PRELOADER — "Digital Signal Ignition" ============
+       Sequence: grid breathes in → coral scanline sweeps (dots blink on its path) →
+       fragments converge into the centre → monogram mask-reveals (bottom→top) →
+       STKV wordmark wipes (left→right) + micro-flicker → status roller
+       (DESIGN / CODE / MOTION / LAUNCH) → ignition pop + pulse rings →
+       exit: panel wipes up, the lockup flies onto the header logo.
+       Colors: :root --bg / --accent in styles.css. Timings: the T object in preloader.js. -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html#home" class="header__logo" aria-label="Web Shestakov">
+        <img src="assets/logo.svg" alt="Web Shestakov" />
+      </a>
+
+      <div class="header__right">
+        <div class="lang" role="group" aria-label="Language switcher">
+          <button type="button" class="lang__btn is-active" data-lang="uk" aria-pressed="true">UA</button>
+          <span class="lang__sep" aria-hidden="true">/</span>
+          <button type="button" class="lang__btn" data-lang="pl" aria-pressed="false">PL</button>
+        </div>
+        <button type="button" class="menu-btn" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="menu-btn__label" data-i18n="nav.menu">Меню</span>
+          <span class="menu-btn__icon" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ MENU (dropdown panel, as template) ============ -->
+  <div class="menu" id="mobile-menu" aria-hidden="true">
+    <div class="menu__overlay" data-close-menu></div>
+    <div class="container menu__container">
+      <div class="menu__panel">
+        <button type="button" class="menu__close" id="menu-close" aria-label="Close">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+
+        <div class="menu__grid">
+          <nav class="menu__nav" aria-label="Menu">
+            <a href="about" class="menu__link" data-close-menu><span data-i18n="nav.about">Про нас</span><span class="menu__num">(01)</span></a>
+            <a href="index.html#why" class="menu__link" data-close-menu><span data-i18n="nav.why">Переваги</span><span class="menu__num">(02)</span></a>
+            <a href="index.html#services" class="menu__link" data-close-menu><span data-i18n="nav.services">Послуги</span><span class="menu__num">(03)</span></a>
+            <a href="index.html#cases" class="menu__link" data-close-menu><span data-i18n="nav.cases">Кейси</span><span class="menu__num">(04)</span></a>
+            <a href="portfolio.html" class="menu__link" data-close-menu><span data-i18n="nav.portfolio">Портфоліо</span><span class="menu__num">(05)</span></a>
+            <a href="index.html#budget" class="menu__link" data-close-menu><span data-i18n="nav.budget">Швидкий старт</span><span class="menu__num">(06)</span></a>
+            <a href="index.html#tariffs" class="menu__link" data-close-menu><span data-i18n="nav.tariffs">Тарифи</span><span class="menu__num">(07)</span></a>
+            <a href="index.html#faq" class="menu__link" data-close-menu><span data-i18n="nav.faq">FAQ</span><span class="menu__num">(08)</span></a>
+            <a href="index.html#partners" class="menu__link" data-close-menu><span data-i18n="nav.partners">Партнерам</span><span class="menu__num">(09)</span></a>
+            <a href="#contact" class="menu__link" data-close-menu><span data-i18n="nav.contacts">Контакти</span><span class="menu__num">(10)</span></a>
+          </nav>
+
+          <aside class="menu__side">
+            <a href="https://t.me/Andrii_DEV9" target="_blank" rel="noopener" class="contact-card menu__person" data-close-menu>
+              <span class="contact-card__photo"><img src="assets/photo.webp" alt="Andrii Shestakov" /></span>
+              <span class="contact-card__body">
+                <span class="contact-card__name">Andrii Shestakov</span>
+                <span class="contact-card__role">Founder &amp; CEO</span>
+              </span>
+              <span class="contact-card__cta">
+                <span data-i18n="hero.aside.cta">Написати</span>
+                <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </span>
+            </a>
+
+            <div class="menu__block">
+              <span class="menu__label" data-i18n="menu.follow">Соцмережі</span>
+              <div class="menu__socials">
+                <a href="https://www.instagram.com/web.shestakov" class="menu__social" target="_blank" rel="noopener" aria-label="Instagram">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+                </a>
+                <a href="https://t.me/Andrii_DEV9" class="menu__social" target="_blank" rel="noopener" aria-label="Telegram">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M21.9 4.3l-3 14.1c-.2 1-.8 1.2-1.7.8l-4.6-3.4-2.2 2.1c-.2.2-.4.4-.9.4l.3-4.7 8.5-7.7c.4-.3-.1-.5-.6-.2L7.3 13 2.8 11.6c-1-.3-1-1 .2-1.4l17-6.6c.8-.3 1.5.2 1.9 1z"/></svg>
+                </a>
+                <a href="https://wa.me/48577503534" class="menu__social" target="_blank" rel="noopener" aria-label="WhatsApp">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <div class="menu__block">
+              <span class="menu__label" data-i18n="menu.contact">Контакти</span>
+              <a href="tel:+48577503534" class="menu__contact">+48 577 503 534</a>
+              <a href="https://t.me/Andrii_DEV9" class="menu__contact" target="_blank" rel="noopener">@Andrii_DEV9</a>
+            </div>
+
+            <button type="button" class="btn btn--accent btn--block" data-open-popup data-close-menu>
+              <span data-i18n="cta.header">Отримати консультацію</span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </button>
+
+            <a class="menu__legal" href="privacy.html" data-close-menu data-i18n="footer.privacy">політика конфіденційності</a>
+          </aside>
+        </div>
+
+        <div class="menu__meta">
+          <span class="menu__meta-item"><span class="menu__meta-dot"></span>SHSTKV Digital — <span data-i18n="hero.aside.role">digital-агенція</span></span>
+          <span class="menu__meta-item">© 2026</span>
+          <span class="menu__meta-item menu__meta-item--status" data-i18n="menu.status">Приймаємо проєкти</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+      <div class="container">
+        <!-- Top row: wordmark + founder card on the same level (as template) -->
+        <div class="hero__top reveal">
+          <div class="hero__wordmark"><span data-lang-block="uk">Блог</span><span data-lang-block="pl" hidden>Blog</span></div>
+          <a href="https://t.me/Andrii_DEV9" target="_blank" rel="noopener" class="contact-card">
+            <span class="contact-card__photo"><img src="assets/photo.webp" alt="Andrii Shestakov" /></span>
+            <span class="contact-card__body">
+              <span class="contact-card__name">Andrii Shestakov</span>
+              <span class="contact-card__role">Founder &amp; CEO</span>
+            </span>
+            <span class="contact-card__cta">
+              <span data-i18n="hero.aside.cta">Написати</span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </span>
+          </a>
+        </div>
+
+        <!-- Big media panel -->
+        <div class="hero__panel reveal">
+          <div class="hero__panel-bg" aria-hidden="true"></div>
+
+          <div class="hero__socials" aria-label="Social">
+            <a href="https://www.instagram.com/web.shestakov" class="hero__social" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="https://t.me/Andrii_DEV9" class="hero__social" target="_blank" rel="noopener" aria-label="Telegram">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M21.9 4.3l-3 14.1c-.2 1-.8 1.2-1.7.8l-4.6-3.4-2.2 2.1c-.2.2-.4.4-.9.4l.3-4.7 8.5-7.7c.4-.3-.1-.5-.6-.2L7.3 13 2.8 11.6c-1-.3-1-1 .2-1.4l17-6.6c.8-.3 1.5.2 1.9 1z"/></svg>
+            </a>
+            <a href="https://wa.me/48577503534" class="hero__social" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+            </a>
+            <a href="tel:+48577503534" class="hero__social" aria-label="Phone">
+              <svg viewBox="0 0 32 32" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.27" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19.9272 5C21.6224 5.45592 23.1681 6.34928 24.4094 7.59059C25.6507 8.8319 26.5441 10.3776 27 12.0728"/>
+                <path d="M18.8916 8.86426C19.9088 9.13781 20.8362 9.67382 21.581 10.4186C22.3258 11.1634 22.8618 12.0908 23.1353 13.108"/>
+                <path d="M11.5595 15.6015C12.5968 17.7222 14.3158 19.4334 16.4412 20.461C16.5967 20.5347 16.7687 20.5666 16.9403 20.5537C17.1119 20.5407 17.2771 20.4832 17.4198 20.387L20.5492 18.3002C20.6877 18.2079 20.8469 18.1516 21.0126 18.1364C21.1782 18.1212 21.3451 18.1475 21.498 18.213L27.3526 20.7222C27.5515 20.8067 27.7175 20.9535 27.8257 21.1405C27.9339 21.3276 27.9783 21.5447 27.9524 21.7593C27.7673 23.2073 27.0608 24.5382 25.9652 25.5028C24.8695 26.4674 23.4598 26.9996 22 26.9996C17.4913 26.9996 13.1673 25.2086 9.97919 22.0204C6.79107 18.8323 5 14.5083 5 9.99963C5.00008 8.53985 5.53224 7.13015 6.49685 6.03448C7.46146 4.93881 8.79237 4.23231 10.2404 4.04726C10.4549 4.0213 10.672 4.06576 10.8591 4.17394C11.0461 4.28212 11.193 4.44816 11.2775 4.64704L13.7888 10.5068C13.8537 10.6583 13.8802 10.8236 13.8658 10.9879C13.8514 11.1522 13.7967 11.3103 13.7064 11.4483L11.6268 14.6258C11.5322 14.7687 11.4762 14.9338 11.4644 15.1048C11.4526 15.2758 11.4854 15.447 11.5595 15.6015Z"/>
+              </svg>
+            </a>
+          </div>
+
+          <div class="hero__overlay">
+            <h1 class="hero__headline"><span data-lang-block="uk">Скільки коштує утримання сайту на рік: домен, хостинг, підтримка</span><span data-lang-block="pl" hidden>Ile kosztuje strona internetowa na rok? Domena, hosting, opieka</span></h1>
+            <p class="hero__headline-sub hero__headline-sub--wide"><span data-lang-block="uk">Розкладаємо щорічні витрати по пунктах і показуємо, де переплачують найчастіше.</span><span data-lang-block="pl" hidden>Rozkładamy roczne koszty na części i pokazujemy, gdzie najczęściej się przepłaca.</span></p>
+          </div>
+
+          <!-- Bottom service shelf (marquee track on mobile, grid on desktop) -->
+          <div class="shelf">
+            <div class="shelf__track">
+              <a href="#article" class="shelf__card">
+                <span class="shelf__thumb shelf__thumb--1" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num"><span data-lang-block="uk">Автор</span><span data-lang-block="pl" hidden>Autor</span></span><span class="shelf__name"><span data-lang-block="uk">Andrii Shestakov</span><span data-lang-block="pl" hidden>Andrii Shestakov</span></span></span>
+              </a>
+              <a href="#article" class="shelf__card">
+                <span class="shelf__thumb shelf__thumb--2" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num"><span data-lang-block="uk">Опубліковано</span><span data-lang-block="pl" hidden>Opublikowano</span></span><span class="shelf__name"><span data-lang-block="uk">25 вересня 2026</span><span data-lang-block="pl" hidden>25 września 2026</span></span></span>
+              </a>
+              <a href="#article" class="shelf__card">
+                <span class="shelf__thumb shelf__thumb--3" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num"><span data-lang-block="uk">Читання</span><span data-lang-block="pl" hidden>Czas czytania</span></span><span class="shelf__name"><span data-lang-block="uk">9 хв</span><span data-lang-block="pl" hidden>9 min</span></span></span>
+              </a>
+              <a href="#article" class="shelf__card">
+                <span class="shelf__thumb shelf__thumb--4" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num"><span data-lang-block="uk">Тема</span><span data-lang-block="pl" hidden>Temat</span></span><span class="shelf__name"><span data-lang-block="uk">Ціни</span><span data-lang-block="pl" hidden>Ceny</span></span></span>
+              </a>
+              <a href="#article" class="shelf__card">
+                <span class="shelf__thumb shelf__thumb--5" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num"><span data-lang-block="uk">Студія</span><span data-lang-block="pl" hidden>Studio</span></span><span class="shelf__name"><span data-lang-block="uk">SHSTKV Digital</span><span data-lang-block="pl" hidden>SHSTKV Digital</span></span></span>
+              </a>
+              <a href="#article" class="shelf__card shelf__card--dup" aria-hidden="true" tabindex="-1">
+                <span class="shelf__thumb shelf__thumb--1" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num"><span data-lang-block="uk">Автор</span><span data-lang-block="pl" hidden>Autor</span></span><span class="shelf__name"><span data-lang-block="uk">Andrii Shestakov</span><span data-lang-block="pl" hidden>Andrii Shestakov</span></span></span>
+              </a>
+              <a href="#article" class="shelf__card shelf__card--dup" aria-hidden="true" tabindex="-1">
+                <span class="shelf__thumb shelf__thumb--2" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num"><span data-lang-block="uk">Опубліковано</span><span data-lang-block="pl" hidden>Opublikowano</span></span><span class="shelf__name"><span data-lang-block="uk">25 вересня 2026</span><span data-lang-block="pl" hidden>25 września 2026</span></span></span>
+              </a>
+              <a href="#article" class="shelf__card shelf__card--dup" aria-hidden="true" tabindex="-1">
+                <span class="shelf__thumb shelf__thumb--3" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num"><span data-lang-block="uk">Читання</span><span data-lang-block="pl" hidden>Czas czytania</span></span><span class="shelf__name"><span data-lang-block="uk">9 хв</span><span data-lang-block="pl" hidden>9 min</span></span></span>
+              </a>
+              <a href="#article" class="shelf__card shelf__card--dup" aria-hidden="true" tabindex="-1">
+                <span class="shelf__thumb shelf__thumb--4" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num"><span data-lang-block="uk">Тема</span><span data-lang-block="pl" hidden>Temat</span></span><span class="shelf__name"><span data-lang-block="uk">Ціни</span><span data-lang-block="pl" hidden>Ceny</span></span></span>
+              </a>
+              <a href="#article" class="shelf__card shelf__card--dup" aria-hidden="true" tabindex="-1">
+                <span class="shelf__thumb shelf__thumb--5" aria-hidden="true"></span>
+                <span class="shelf__meta"><span class="shelf__num"><span data-lang-block="uk">Студія</span><span data-lang-block="pl" hidden>Studio</span></span><span class="shelf__name"><span data-lang-block="uk">SHSTKV Digital</span><span data-lang-block="pl" hidden>SHSTKV Digital</span></span></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile-only: desktop-style founder contact card below the banner -->
+        <div class="hero__below reveal">
+          <a href="https://t.me/Andrii_DEV9" target="_blank" rel="noopener" class="contact-card">
+            <span class="contact-card__photo"><img src="assets/photo.webp" alt="Andrii Shestakov" /></span>
+            <span class="contact-card__body">
+              <span class="contact-card__name">Andrii Shestakov</span>
+              <span class="contact-card__role">Founder &amp; CEO</span>
+            </span>
+            <span class="contact-card__cta">
+              <span data-i18n="hero.aside.cta">Написати</span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="article">
+      <div class="container">
+        <article class="doc__body">
+        <section class="doc__sec">
+          <h2><span class="doc__num">00</span><span data-lang-block="uk">Коротка відповідь</span><span data-lang-block="pl" hidden>W skrócie</span></h2>
+          <div class="doc__card doc__lead-card"><p><span data-lang-block="uk">Після запуску сайт щороку коштує грошей: домен, хостинг, пошта, інколи платні плагіни чи план Webflow, плюс підтримка. Орієнтовно, станом на 2026 рік, лендінг або сайт-візитка обходяться в €50–450 на рік без підтримки, інтернет-магазин — від €150 до €1000 і більше. Підтримка в нашій студії — від €20 на місяць. Домен і хостинг оформлюйте на себе.</span><span data-lang-block="pl" hidden>Po starcie strona co roku generuje koszty: domena, hosting, poczta, czasem płatne wtyczki albo plan Webflow, do tego opieka techniczna. Orientacyjnie, według stanu na 2026 rok, landing page lub strona wizytówka to 50–450 € rocznie bez opieki, a sklep internetowy — od 150 € do 1000 € i więcej. Opieka nad stroną kosztuje u nas od 20 € miesięcznie. Domenę i hosting rejestruj na siebie.</span></p></div>
+        </section>
+        <section class="doc__sec">
+          <h2><span class="doc__num">01</span><span data-lang-block="uk">З чого складаються щорічні витрати на сайт</span><span data-lang-block="pl" hidden>Z czego składają się roczne koszty strony</span></h2>
+          <p><span data-lang-block="uk">Щорічні витрати на сайт — це все, що треба оплачувати, щоб він просто працював: домен, хостинг, SSL-сертифікат, корпоративна пошта, платні плагіни або план конструктора, а також технічна підтримка. Окремо, за бажанням, ідуть контент і SEO. Розробку ви оплачуєте один раз, ці пункти — регулярно.</span><span data-lang-block="pl" hidden>Roczne koszty strony to wszystko, za co trzeba płacić, żeby po prostu działała: domena, hosting, certyfikat SSL, poczta firmowa, płatne wtyczki albo plan kreatora oraz opieka techniczna. Osobno, jeśli chcesz, dochodzą treści i SEO. Za wykonanie strony płacisz raz, za te pozycje — regularnie.</span></p>
+          <p><span data-lang-block="uk">Власники часто дивляться лише на ціну розробки, а про утримання дізнаються через рік, коли приходить рахунок за продовження. Скільки коштує сама розробка, ми розібрали в статті <a href="post-skilky-koshtuie-sait">скільки коштує сайт під ключ</a>. Тут — лише те, що ви платитимете щороку після запуску.</span><span data-lang-block="pl" hidden>Właściciele często patrzą tylko na cenę wykonania, a o utrzymaniu dowiadują się po roku, gdy przychodzi faktura za odnowienie. Ile kosztuje samo wykonanie, opisaliśmy w artykule <a href="post-skilky-koshtuie-sait">ile kosztuje strona www</a>. Tutaj zajmujemy się tylko tym, co płacisz co roku po starcie.</span></p>
+          <ul>
+            <li><span data-lang-block="uk"><b>домен</b> — адреса сайту, оплачується щороку в реєстратора;</span><span data-lang-block="pl" hidden><b>domena</b> — adres strony, opłacana co roku u rejestratora;</span></li>
+            <li><span data-lang-block="uk"><b>хостинг</b> — сервер, на якому живе сайт;</span><span data-lang-block="pl" hidden><b>hosting</b> — serwer, na którym działa strona;</span></li>
+            <li><span data-lang-block="uk"><b>SSL-сертифікат</b> — замочок і https у браузері;</span><span data-lang-block="pl" hidden><b>certyfikat SSL</b> — kłódka i https w przeglądarce;</span></li>
+            <li><span data-lang-block="uk"><b>пошта на домені</b> — адреси виду office@вашдомен;</span><span data-lang-block="pl" hidden><b>poczta firmowa</b> — adresy typu biuro@twojadomena.pl;</span></li>
+            <li><span data-lang-block="uk"><b>платні плагіни, теми або план Webflow</b> — залежать від платформи;</span><span data-lang-block="pl" hidden><b>płatne wtyczki, motywy albo plan Webflow</b> — zależnie od platformy;</span></li>
+            <li><span data-lang-block="uk"><b>підтримка</b> — оновлення, правки й допомога після запуску;</span><span data-lang-block="pl" hidden><b>opieka techniczna</b> — aktualizacje, poprawki i pomoc po starcie;</span></li>
+            <li><span data-lang-block="uk"><b>контент і SEO</b> — необов'язково, але саме це приводить людей із Google.</span><span data-lang-block="pl" hidden><b>treści i SEO</b> — opcjonalnie, ale to właśnie one przyprowadzają ludzi z Google.</span></li>
+          </ul>
+        </section>
+        <section class="doc__sec">
+          <h2><span class="doc__num">02</span><span data-lang-block="uk">Скільки коштує домен: .pl, .com чи .com.ua</span><span data-lang-block="pl" hidden>Ile kosztuje domena: .pl czy .com</span></h2>
+          <p><span data-lang-block="uk">Домен коштує орієнтовно від €10 до €45 на рік, залежно від зони й реєстратора (станом на 2026, перевіряйте в реєстратора). Перший рік часто продають зі знижкою, тому дивіться не на ціну реєстрації, а на ціну продовження: саме її ви платитимете всі наступні роки.</span><span data-lang-block="pl" hidden>Domena kosztuje orientacyjnie od 10 do 45 € rocznie, zależnie od końcówki i rejestratora (stan na 2026, sprawdzaj u rejestratora). Pierwszy rok bywa sprzedawany w promocji za kilka złotych, dlatego patrz nie na cenę rejestracji, ale na cenę odnowienia — to ją zapłacisz w kolejnych latach.</span></p>
+          <div class="doc__table-wrap"><table class="doc__table"><thead><tr><th><span data-lang-block="uk">Зона</span><span data-lang-block="pl" hidden>Końcówka</span></th><th><span data-lang-block="uk">Кому підходить</span><span data-lang-block="pl" hidden>Dla kogo</span></th><th><span data-lang-block="uk">Продовження, орієнтовно</span><span data-lang-block="pl" hidden>Odnowienie, orientacyjnie</span></th></tr></thead><tbody><tr><td><span data-lang-block="uk">.pl</span><span data-lang-block="pl" hidden>.pl</span></td><td><span data-lang-block="uk">Бізнес, що працює з клієнтами в Польщі</span><span data-lang-block="pl" hidden>Firmy działające na polskim rynku</span></td><td><span data-lang-block="uk">≈ €15–45 / рік, у різних реєстраторів ціна відрізняється в рази</span><span data-lang-block="pl" hidden>≈ 60–200 zł / rok, u różnych rejestratorów ceny różnią się kilkukrotnie</span></td></tr><tr><td><span data-lang-block="uk">.com</span><span data-lang-block="pl" hidden>.com</span></td><td><span data-lang-block="uk">Міжнародна аудиторія, кілька країн</span><span data-lang-block="pl" hidden>Klienci z wielu krajów, rynek międzynarodowy</span></td><td><span data-lang-block="uk">≈ €10–20 / рік; оптова ціна зони зростає з листопада 2026</span><span data-lang-block="pl" hidden>≈ 10–20 € / rok; cena hurtowa .com rośnie od listopada 2026</span></td></tr><tr><td><span data-lang-block="uk">.com.ua</span><span data-lang-block="pl" hidden>.com.ua</span></td><td><span data-lang-block="uk">Бізнес, орієнтований на Україну</span><span data-lang-block="pl" hidden>Firmy nastawione na rynek ukraiński</span></td><td><span data-lang-block="uk">≈ 200–700 грн / рік</span><span data-lang-block="pl" hidden>≈ 200–700 UAH / rok</span></td></tr></tbody></table></div>
+          <p><span data-lang-block="uk">Як обрати: якщо клієнти в Польщі, беріть .pl — поляки звикли до цієї зони, а Google краще розуміє, для якої країни сайт. Якщо працюєте на кілька країн, логічніше .com. Для українського ринку — .com.ua або .ua. Коли назва важлива для бренду, має сенс одразу зареєструвати обидві зони, .pl і .com, і налаштувати переадресацію на основну.</span><span data-lang-block="pl" hidden>Jak wybrać: jeśli klienci są w Polsce, bierz .pl — Polacy są do tej końcówki przyzwyczajeni, a Google łatwiej rozumie, do jakiego kraju kierowana jest strona. Jeśli działasz w kilku krajach, bardziej logiczna jest domena .com. Gdy nazwa jest ważna dla marki, warto od razu zarejestrować obie, .pl i .com, i ustawić przekierowanie na główną. Tak odpowiadamy na częste pytanie „domena pl czy com”: liczy się rynek, a nie końcówka sama w sobie.</span></p>
+          <p><span data-lang-block="uk">Наприклад, <a href="case-elart-cleaning">лендінг Elart Cleaning</a> працює для клієнтів у Познані, тому стоїть на домені .pl.</span><span data-lang-block="pl" hidden>Na przykład <a href="case-elart-cleaning">landing page Elart Cleaning</a> jest skierowany do klientów z Poznania, dlatego działa na domenie .pl. Popularni rejestratorzy w Polsce to m.in. OVH, home.pl i nazwa.pl — przed zakupem porównaj u nich cenę odnowienia, a nie tylko pierwszego roku.</span></p>
+        </section>
+        <section class="doc__sec">
+          <h2><span class="doc__num">03</span><span data-lang-block="uk">Хостинг, SSL і пошта: скільки платити за роботу сайту</span><span data-lang-block="pl" hidden>Hosting, SSL i poczta: ile płacisz za działanie strony</span></h2>
+          <p><span data-lang-block="uk">Хостинг для невеликого сайту коштує орієнтовно €40–200 на рік, для магазину — €100–400 і більше (станом на 2026, перевіряйте в провайдера). SSL-сертифікат для звичайного сайту зазвичай безкоштовний і входить у хостинг. Пошта на домені — від нуля, якщо скриньки є в хостингу, до кількох євро на місяць за користувача.</span><span data-lang-block="pl" hidden>Hosting dla małej strony kosztuje orientacyjnie 40–200 € rocznie, dla sklepu — 100–400 € i więcej (stan na 2026, sprawdzaj u dostawcy). Certyfikat SSL dla zwykłej strony jest zwykle darmowy i wliczony w hosting. Poczta firmowa kosztuje od zera, jeśli skrzynki są w pakiecie hostingu, do kilku euro miesięcznie za użytkownika.</span></p>
+          <h3><span data-lang-block="uk">Хостинг</span><span data-lang-block="pl" hidden>Hosting</span></h3>
+          <p><span data-lang-block="uk">Ми зазвичай ставимо сайти на Hostinger або VPS, а сайти на Webflow — на Webflow hosting. У поширених хостингів ціна першого періоду низька, але діє лише при оплаті на 2–4 роки наперед, а продовження буває в кілька разів дорожчим. VPS потрібен, коли сайт важкий, магазин має багато товарів або треба більше контролю над сервером.</span><span data-lang-block="pl" hidden>Strony stawiamy zwykle na Hostingerze albo VPS, a strony na Webflow — na hostingu Webflow. U popularnych dostawców cena pierwszego okresu jest niska, ale obowiązuje przy płatności z góry na 2–4 lata, a odnowienie bywa kilka razy droższe. VPS ma sens, gdy strona jest cięższa, sklep ma dużo produktów albo potrzebna jest większa kontrola nad serwerem.</span></p>
+          <h3><span data-lang-block="uk">SSL-сертифікат</span><span data-lang-block="pl" hidden>Certyfikat SSL</span></h3>
+          <p><span data-lang-block="uk">Для лендінгу, візитки й більшості магазинів вистачає безкоштовного сертифіката, який хостинг видає й продовжує автоматично. Платний сертифікат потрібен рідко — якщо провайдер наполегливо його пропонує малому бізнесу, спершу уточніть, чи є безкоштовний варіант.</span><span data-lang-block="pl" hidden>Dla landingu, wizytówki i większości sklepów wystarczy darmowy certyfikat, który hosting wystawia i odnawia automatycznie. Płatny certyfikat jest potrzebny rzadko — jeśli dostawca uparcie proponuje go małej firmie, najpierw zapytaj o darmową opcję.</span></p>
+          <h3><span data-lang-block="uk">Пошта на домені</span><span data-lang-block="pl" hidden>Poczta firmowa</span></h3>
+          <p><span data-lang-block="uk">Одна-дві скриньки зазвичай входять у тариф хостингу. Якщо потрібні спільний календар, диск і стабільна доставка листів для команди, беруть Google Workspace або подібний сервіс — орієнтовно €6–8 на місяць за кожного користувача, станом на 2026.</span><span data-lang-block="pl" hidden>Jedna czy dwie skrzynki są zwykle w pakiecie hostingu. Jeśli zespół potrzebuje wspólnego kalendarza, dysku i pewnego dostarczania maili, wybiera się Google Workspace albo podobną usługę — orientacyjnie 6–8 € miesięcznie za użytkownika, według stanu na 2026.</span></p>
+        </section>
+        <section class="doc__sec">
+          <h2><span class="doc__num">04</span><span data-lang-block="uk">Платні плагіни, план Webflow і сторонні сервіси</span><span data-lang-block="pl" hidden>Płatne wtyczki, plan Webflow i usługi zewnętrzne</span></h2>
+          <p><span data-lang-block="uk">Ця стаття витрат залежить від платформи. На WordPress це платні плагіни й теми з річною ліцензією, на Webflow — щомісячний план сайту, на чистому коді платних ліцензій часто немає зовсім. Для візитки це може бути нуль, для магазину — від кількох десятків до кількох сотень євро на рік.</span><span data-lang-block="pl" hidden>Ta pozycja zależy od platformy. Na WordPressie to płatne wtyczki i motywy z roczną licencją, na Webflow — miesięczny plan strony, a przy stronie napisanej w kodzie płatnych licencji często nie ma wcale. Dla wizytówki może to być zero, dla sklepu — od kilkudziesięciu do kilkuset euro rocznie.</span></p>
+          <ul>
+            <li><span data-lang-block="uk"><b>WordPress:</b> безкоштовна система, але окремі плагіни (форми, SEO, фільтри магазину, резервні копії) мають платні версії з річною ліцензією;</span><span data-lang-block="pl" hidden><b>WordPress:</b> sam system jest darmowy, ale część wtyczek (formularze, SEO, filtry w sklepie, kopie zapasowe) ma płatne wersje z roczną licencją;</span></li>
+            <li><span data-lang-block="uk"><b>Webflow:</b> хостинг входить у план сайту. У травні 2026 Webflow оновив лінійку: орієнтовно $15/міс за Basic і $25/міс за Premium з CMS при оплаті за рік;</span><span data-lang-block="pl" hidden><b>Webflow:</b> hosting jest w planie strony. W maju 2026 Webflow zmienił ofertę: orientacyjnie 15 $/mies. za Basic i 25 $/mies. za Premium z CMS przy płatności rocznej;</span></li>
+            <li><span data-lang-block="uk"><b>магазин:</b> додаються комісії платіжних систем і, за потреби, сервіси доставки чи інтеграції — їхні тарифи залежать від обсягу продажів;</span><span data-lang-block="pl" hidden><b>sklep:</b> dochodzą prowizje operatorów płatności i ewentualnie integracje z kurierami — ich stawki zależą od wielkości sprzedaży;</span></li>
+            <li><span data-lang-block="uk"><b>сторонні сервіси:</b> онлайн-запис, чат, розсилки — часто мають безкоштовний тариф для старту.</span><span data-lang-block="pl" hidden><b>usługi zewnętrzne:</b> rezerwacje online, czat, newsletter — często mają darmowy pakiet na start.</span></li>
+          </ul>
+          <p><span data-lang-block="uk">Приклад на Webflow — <a href="case-core-accounting">сайт Core Accounting</a>: власник сам змінює тексти через CMS, тому потрібен план з CMS. Як платформа впливає на витрати й зручність, ми порівняли в статті <a href="post-wordpress-webflow-kod">WordPress, Webflow чи код</a>.</span><span data-lang-block="pl" hidden>Przykład na Webflow to <a href="case-core-accounting">strona Core Accounting</a>: właściciel sam zmienia treści w CMS, więc potrzebny jest plan z CMS. Jak platforma wpływa na koszty i wygodę, porównaliśmy w artykule <a href="post-wordpress-webflow-kod">WordPress, Webflow czy kod</a>.</span></p>
+        </section>
+        <section class="doc__sec">
+          <h2><span class="doc__num">05</span><span data-lang-block="uk">Скільки коштує утримання сайту на рік: таблиця-орієнтир</span><span data-lang-block="pl" hidden>Ile kosztuje utrzymanie strony na rok: tabela orientacyjna</span></h2>
+          <p><span data-lang-block="uk">Нижче — широкі діапазони річних витрат без урахування розробки. Це орієнтир станом на 2026 рік, а не прайс: ціни провайдерів змінюються, тож перед оплатою перевіряйте їх у реєстратора чи хостингу. Нижня межа — мінімальна конфігурація, верхня — з платною поштою й ліцензіями.</span><span data-lang-block="pl" hidden>Poniżej szerokie widełki rocznych kosztów bez wykonania strony. To orientacja według stanu na 2026 rok, a nie cennik: ceny dostawców się zmieniają, więc przed płatnością sprawdzaj je u rejestratora lub w hostingu. Dolna granica to minimalna konfiguracja, górna — z płatną pocztą i licencjami.</span></p>
+          <div class="doc__table-wrap"><table class="doc__table"><thead><tr><th><span data-lang-block="uk">Стаття витрат</span><span data-lang-block="pl" hidden>Pozycja</span></th><th><span data-lang-block="uk">Лендінг</span><span data-lang-block="pl" hidden>Landing page</span></th><th><span data-lang-block="uk">Сайт-візитка</span><span data-lang-block="pl" hidden>Strona wizytówka</span></th><th><span data-lang-block="uk">Інтернет-магазин</span><span data-lang-block="pl" hidden>Sklep internetowy</span></th></tr></thead><tbody><tr><td><span data-lang-block="uk">Домен</span><span data-lang-block="pl" hidden>Domena</span></td><td><span data-lang-block="uk">€10–45</span><span data-lang-block="pl" hidden>10–45 €</span></td><td><span data-lang-block="uk">€10–45</span><span data-lang-block="pl" hidden>10–45 €</span></td><td><span data-lang-block="uk">€10–45</span><span data-lang-block="pl" hidden>10–45 €</span></td></tr><tr><td><span data-lang-block="uk">Хостинг або план Webflow</span><span data-lang-block="pl" hidden>Hosting lub plan Webflow</span></td><td><span data-lang-block="uk">€40–200</span><span data-lang-block="pl" hidden>40–200 €</span></td><td><span data-lang-block="uk">€40–200</span><span data-lang-block="pl" hidden>40–200 €</span></td><td><span data-lang-block="uk">€100–400+</span><span data-lang-block="pl" hidden>100–400+ €</span></td></tr><tr><td><span data-lang-block="uk">SSL</span><span data-lang-block="pl" hidden>SSL</span></td><td><span data-lang-block="uk">зазвичай €0</span><span data-lang-block="pl" hidden>zwykle 0 €</span></td><td><span data-lang-block="uk">зазвичай €0</span><span data-lang-block="pl" hidden>zwykle 0 €</span></td><td><span data-lang-block="uk">зазвичай €0</span><span data-lang-block="pl" hidden>zwykle 0 €</span></td></tr><tr><td><span data-lang-block="uk">Пошта на домені</span><span data-lang-block="pl" hidden>Poczta firmowa</span></td><td><span data-lang-block="uk">€0–85</span><span data-lang-block="pl" hidden>0–85 €</span></td><td><span data-lang-block="uk">€0–85</span><span data-lang-block="pl" hidden>0–85 €</span></td><td><span data-lang-block="uk">€0–170</span><span data-lang-block="pl" hidden>0–170 €</span></td></tr><tr><td><span data-lang-block="uk">Плагіни, ліцензії</span><span data-lang-block="pl" hidden>Wtyczki, licencje</span></td><td><span data-lang-block="uk">€0–50</span><span data-lang-block="pl" hidden>0–50 €</span></td><td><span data-lang-block="uk">€0–100</span><span data-lang-block="pl" hidden>0–100 €</span></td><td><span data-lang-block="uk">€50–400</span><span data-lang-block="pl" hidden>50–400 €</span></td></tr><tr><td><span data-lang-block="uk">Разом без підтримки</span><span data-lang-block="pl" hidden>Razem bez opieki</span></td><td><span data-lang-block="uk">≈ €50–380</span><span data-lang-block="pl" hidden>≈ 50–380 €</span></td><td><span data-lang-block="uk">≈ €50–430</span><span data-lang-block="pl" hidden>≈ 50–430 €</span></td><td><span data-lang-block="uk">≈ €160–1000+</span><span data-lang-block="pl" hidden>≈ 160–1000+ €</span></td></tr><tr><td><span data-lang-block="uk">Підтримка в нас</span><span data-lang-block="pl" hidden>Opieka u nas</span></td><td><span data-lang-block="uk">від €20/міс</span><span data-lang-block="pl" hidden>od 20 €/mies.</span></td><td><span data-lang-block="uk">від €20/міс</span><span data-lang-block="pl" hidden>od 20 €/mies.</span></td><td><span data-lang-block="uk">від €20/міс</span><span data-lang-block="pl" hidden>od 20 €/mies.</span></td></tr></tbody></table></div>
+          <p><span data-lang-block="uk">Контент і SEO в таблицю не входять: це не обов'язкова плата, а вкладення в те, щоб сайт знаходили. Якщо сайт уже працює, а заявок із пошуку немає, почніть із статті <a href="post-nemaie-v-google">чому сайту немає в Google</a> і сторінки <a href="svc-seo">SEO-просування</a>.</span><span data-lang-block="pl" hidden>Treści i SEO nie ma w tabeli: to nie obowiązkowa opłata, ale inwestycja w to, żeby stronę było widać. Jeśli strona już działa, a zapytań z wyszukiwarki brak, zacznij od artykułu <a href="post-nemaie-v-google">dlaczego strony nie ma w Google</a> i strony o <a href="svc-seo">pozycjonowaniu SEO</a>.</span></p>
+          <p><span data-lang-block="uk">Магазин дорожчий в утриманні не лише через хостинг: більше плагінів, більше оновлень і вища ціна помилки. Наприклад, <a href="case-rozmarin">магазин Rozmarin</a> працює на WooCommerce трьома мовами — такому сайту регулярне обслуговування потрібне більше, ніж візитці. Що входить у розробку магазину, описали на сторінці <a href="svc-internet-magazyn">інтернет-магазин під ключ</a>.</span><span data-lang-block="pl" hidden>Sklep jest droższy w utrzymaniu nie tylko przez hosting: więcej wtyczek, więcej aktualizacji i wyższa cena błędu. Na przykład <a href="case-rozmarin">sklep Rozmarin</a> działa na WooCommerce w trzech językach — taka strona potrzebuje regularnej opieki bardziej niż wizytówka. Co obejmuje wykonanie sklepu, opisaliśmy na stronie <a href="svc-internet-magazyn">sklep internetowy</a>.</span></p>
+        </section>
+        <section class="doc__sec">
+          <h2><span class="doc__num">06</span><span data-lang-block="uk">Пастки: на чому переплачують і втрачають сайт</span><span data-lang-block="pl" hidden>Pułapki: gdzie się przepłaca i traci stronę</span></h2>
+          <p><span data-lang-block="uk">Найдорожчі помилки в утриманні сайту — не високі ціни, а сюрпризи: продовження, яке в кілька разів дорожче за перший рік, «безкоштовний» домен, прив'язаний до хостингу, і домен, оформлений на студію чи фрилансера. Перші дві коштують грошей, третя може коштувати самого сайту.</span><span data-lang-block="pl" hidden>Najdroższe błędy w utrzymaniu strony to nie wysokie ceny, tylko niespodzianki: odnowienie kilka razy droższe niż pierwszy rok, „darmowa” domena powiązana z hostingiem i domena zarejestrowana na agencję albo freelancera. Dwie pierwsze kosztują pieniądze, trzecia może kosztować całą stronę.</span></p>
+          <h3><span data-lang-block="uk">Дешевий перший рік і дороге продовження</span><span data-lang-block="pl" hidden>Tani pierwszy rok i drogie odnowienie</span></h3>
+          <p><span data-lang-block="uk">Акційна ціна домену чи хостингу діє лише на перший період. Перед оплатою знайдіть у прайсі реєстратора рядок «продовження» і рахуйте бюджет за ним. У деяких реєстраторів продовження після дати закінчення коштує ще дорожче, тож увімкніть автопродовження.</span><span data-lang-block="pl" hidden>Cena promocyjna domeny czy hostingu dotyczy tylko pierwszego okresu. Przed płatnością znajdź w cenniku rejestratora pozycję „odnowienie” i to ją bierz do budżetu. Niektórzy rejestratorzy doliczają dodatkową opłatę za odnowienie po terminie, więc włącz automatyczne przedłużanie.</span></p>
+          <h3><span data-lang-block="uk">«Безкоштовний» домен від хостингу</span><span data-lang-block="pl" hidden>„Darmowa” domena w pakiecie hostingu</span></h3>
+          <p><span data-lang-block="uk">Домен у подарунок до хостингу безкоштовний лише перший рік, далі його продовжують за звичайною ціною. До того ж він прив'язаний до акаунта хостингу, і при переїзді доведеться окремо переносити домен. Це не погано, просто враховуйте це заздалегідь.</span><span data-lang-block="pl" hidden>Domena gratis do hostingu jest darmowa tylko przez pierwszy rok, potem odnawia się ją w normalnej cenie. Do tego jest przypisana do konta hostingowego, więc przy przeprowadzce trzeba osobno przenieść domenę. To nie jest złe rozwiązanie — po prostu uwzględnij to z góry.</span></p>
+          <h3><span data-lang-block="uk">Домен оформлений на студію</span><span data-lang-block="pl" hidden>Domena zarejestrowana na agencję</span></h3>
+          <p><span data-lang-block="uk">Власник домену — той, хто вказаний у реєстратора, а не той, хто платив. Якщо домен зареєстровано на студію чи фрилансера, без їхньої участі ви не зможете перенести сайт, змінити пошту чи продовжити реєстрацію. Тому ми оформлюємо домен і хостинг на клієнта й після запуску передаємо всі доступи: сайт, домен, хостинг, CMS і сервіси.</span><span data-lang-block="pl" hidden>Właścicielem domeny jest ten, kto figuruje jako abonent u rejestratora, a nie ten, kto zapłacił. Jeśli domena jest zarejestrowana na agencję lub freelancera, bez ich udziału nie przeniesiesz strony, nie zmienisz poczty ani nie przedłużysz rejestracji. Dlatego domenę i hosting rejestrujemy na klienta, a po starcie przekazujemy wszystkie dostępy: stronę, domenę, hosting, CMS i usługi.</span></p>
+          <div class="doc__card"><p><span data-lang-block="uk">Перевірте прямо зараз: зайдіть у панель реєстратора й подивіться, на кого оформлено домен, до якої дати він оплачений і чи ввімкнене автопродовження. Якщо доступу до панелі у вас немає, це перше, що варто виправити.</span><span data-lang-block="pl" hidden>Sprawdź to teraz: zaloguj się do panelu rejestratora i zobacz, na kogo zarejestrowana jest domena, do kiedy jest opłacona i czy włączone jest automatyczne odnawianie. Jeśli nie masz dostępu do panelu, to pierwsza rzecz do naprawienia.</span></p></div>
+        </section>
+        <section class="doc__sec">
+          <h2><span class="doc__num">07</span><span data-lang-block="uk">Підтримка сайту: що ви отримуєте за від €20 на місяць</span><span data-lang-block="pl" hidden>Opieka nad stroną: co dostajesz za od 20 € miesięcznie</span></h2>
+          <p><span data-lang-block="uk">Підтримка сайту в нашій студії коштує від €20 на місяць. Це оновлення, невеликі правки, консультації та допомога з обслуговуванням. Перші 30 днів після запуску підтримка вже входить у тарифи «Старт» і «Про». Хостинг і сторонні сервіси оплачуються окремо, напряму провайдерам.</span><span data-lang-block="pl" hidden>Opieka nad stroną kosztuje u nas od 20 € miesięcznie. Obejmuje aktualizacje, drobne poprawki, konsultacje i pomoc w utrzymaniu strony. Pierwsze 30 dni po starcie wsparcie jest już w pakietach Start i Pro. Hosting i usługi zewnętrzne opłacasz osobno, bezpośrednio u dostawców. Ceny bez VAT (zwolnienie z VAT).</span></p>
+          <p><span data-lang-block="uk">Чи потрібна підтримка саме вам, залежить від платформи й того, як часто змінюється сайт. Сайту на WordPress чи магазину на WooCommerce регулярні оновлення потрібні більше: система й плагіни постійно виходять у нових версіях. Статичний лендінг, який не змінюється місяцями, часто обходиться без щомісячного обслуговування — тоді простіше звертатися разово, коли щось треба змінити.</span><span data-lang-block="pl" hidden>Czy opieka jest Ci potrzebna, zależy od platformy i od tego, jak często zmienia się strona. Strona na WordPressie czy sklep na WooCommerce częściej potrzebują aktualizacji: system i wtyczki stale dostają nowe wersje. Statyczny landing, który nie zmienia się miesiącami, często obejdzie się bez miesięcznej opieki — wtedy prościej zgłaszać się jednorazowo, gdy coś trzeba zmienić.</span></p>
+          <p><span data-lang-block="uk">Актуальні ціни на розробку й підтримку зібрані на сторінці <a href="prices">ціни на сайти</a>. Якщо у вас уже є сайт і ви не впевнені, що з доменом і хостингом усе гаразд, <a href="contacts">напишіть нам</a> — підкажемо, що перевірити.</span><span data-lang-block="pl" hidden>Aktualne ceny wykonania i opieki znajdziesz na stronie <a href="prices">cennik stron</a>. Jeśli masz już stronę i nie masz pewności, czy z domeną i hostingiem wszystko w porządku, <a href="contacts">napisz do nas</a> — podpowiemy, co sprawdzić.</span></p>
+        </section>
+        <section class="doc__sec">
+          <h2><span class="doc__num">08</span><span data-lang-block="uk">Як зекономити на утриманні сайту без ризику</span><span data-lang-block="pl" hidden>Jak zaoszczędzić na utrzymaniu strony bez ryzyka</span></h2>
+          <p><span data-lang-block="uk">Зекономити можна на форматі оплати, зайвих сервісах і виборі платформи, але не на резервних копіях, продовженні домену й доступах. Нижче — кроки, які знижують рахунок і не створюють проблем через рік.</span><span data-lang-block="pl" hidden>Oszczędzać można na sposobie płatności, zbędnych usługach i wyborze platformy, ale nie na kopiach zapasowych, odnowieniu domeny i dostępach. Poniżej kroki, które obniżają rachunek i nie tworzą problemów za rok.</span></p>
+          <ul>
+            <li><span data-lang-block="uk">порівнюйте ціну продовження домену в кількох реєстраторів — домен можна перенести до дешевшого;</span><span data-lang-block="pl" hidden>porównuj ceny odnowienia domeny u kilku rejestratorów — domenę można przenieść do tańszego (przy .pl potrzebny jest kod AuthInfo);</span></li>
+            <li><span data-lang-block="uk">оплачуйте хостинг на довший термін, якщо впевнені в проєкті: так довше діє нижча ціна;</span><span data-lang-block="pl" hidden>płać za hosting na dłuższy okres, jeśli jesteś pewien projektu: dłużej działa wtedy niższa cena;</span></li>
+            <li><span data-lang-block="uk">для 1–2 скриньок користуйтеся поштою з хостингу, а не окремим сервісом;</span><span data-lang-block="pl" hidden>przy 1–2 skrzynkach korzystaj z poczty w hostingu zamiast osobnej usługi;</span></li>
+            <li><span data-lang-block="uk">не купуйте платні плагіни «про запас» і раз на рік перевіряйте, які ліцензії справді потрібні;</span><span data-lang-block="pl" hidden>nie kupuj płatnych wtyczek „na zapas” i raz w roku sprawdzaj, które licencje są naprawdę potrzebne;</span></li>
+            <li><span data-lang-block="uk">обирайте платформу під задачу: простий лендінг не потребує важкої CMS;</span><span data-lang-block="pl" hidden>dobieraj platformę do zadania: prosty landing nie potrzebuje ciężkiego CMS-a;</span></li>
+            <li><span data-lang-block="uk">увімкніть автопродовження домену й тримайте актуальну картку в реєстратора.</span><span data-lang-block="pl" hidden>włącz automatyczne odnawianie domeny i trzymaj aktualną kartę u rejestratora.</span></li>
+          </ul>
+          <p><span data-lang-block="uk">Найпростіше закласти це ще до старту: запишіть у технічному завданні, на кого оформлюються домен і хостинг і які сервіси будуть платними після запуску. Як скласти таке ТЗ, пояснили в статті <a href="post-tz-na-sait">як написати ТЗ на сайт</a>. А якщо ви лише обираєте формат, почніть зі сторінок <a href="svc-lending">лендінг під ключ</a> і <a href="svc-sait-vizytka">сайт-візитка</a> — там видно, що входить у ціну розробки.</span><span data-lang-block="pl" hidden>Najprościej ustalić to przed startem: zapisz w briefie, na kogo rejestrowane są domena i hosting oraz które usługi będą płatne po starcie. Jak przygotować taki dokument, wyjaśniliśmy w artykule <a href="post-tz-na-sait">jak napisać brief na stronę</a>. A jeśli dopiero wybierasz format, zacznij od stron <a href="svc-lending">landing page</a> i <a href="svc-sait-vizytka">strona wizytówka</a> — widać tam, co jest w cenie wykonania.</span></p>
+        </section>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="next">
+      <div class="container">
+        <div class="section__head section__head--split reveal">
+          <h2 class="section__title"><span data-lang-block="uk">Що далі</span><span data-lang-block="pl" hidden>Co dalej</span></h2>
+          <span class="section__rule" aria-hidden="true"></span>
+          <span class="eyebrow"><span class="eyebrow__dot eyebrow__dot--square"></span><span><span data-lang-block="uk">Послуга</span><span data-lang-block="pl" hidden>Usługa</span></span></span>
+        </div>
+        <article class="tariff-addon reveal">
+          <div class="tariff-addon__price">
+            <span class="tariff__unit"><span data-lang-block="uk">від</span><span data-lang-block="pl" hidden>od</span></span>
+            <span class="tariff__price tariff__price--sm"><span class="plan-card__cur">€</span>300</span>
+            <span class="tariff__unit"><span data-lang-block="uk">/ проєкт</span><span data-lang-block="pl" hidden>/ projekt</span></span>
+          </div>
+          <div class="tariff-addon__body">
+            <h3 class="tariff-addon__name">
+              <span class="tariff-addon__dot" aria-hidden="true"></span>
+              <span><span data-lang-block="uk">Ціни на сайти</span><span data-lang-block="pl" hidden>Cennik stron</span></span>
+              <span class="tariff__tag tariff__tag--sm"><span data-lang-block="uk">2026</span><span data-lang-block="pl" hidden>2026</span></span>
+            </h3>
+            <p class="tariff-addon__desc"><span data-lang-block="uk">Хочете знати, скільки коштуватиме саме ваш сайт — у розробці й на рік після запуску? Подивіться ціни або опишіть задачу, і ми назвемо суму протягом 24 годин.</span><span data-lang-block="pl" hidden>Chcesz wiedzieć, ile będzie kosztować Twoja strona — wykonanie i utrzymanie przez rok? Zobacz cennik albo opisz projekt, a podamy kwotę w ciągu 24 godzin.</span></p>
+          </div>
+          <a href="prices" class="btn btn--dark">
+            <span><span data-lang-block="uk">Детальніше</span><span data-lang-block="pl" hidden>Szczegóły</span></span>
+            <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="section section--soft" id="faq">
+      <div class="container faq-layout">
+        <div class="faq-layout__head reveal">
+          <div class="head-kicker">
+            <span class="eyebrow"><span class="eyebrow__dot eyebrow__dot--square"></span><span data-i18n="faq.tag">FAQ</span></span>
+          </div>
+          <h2 class="section__title"><span data-lang-block="uk">Питання й відповіді</span><span data-lang-block="pl" hidden>Pytania i odpowiedzi</span></h2>
+          <p class="section__lead" data-i18n="faq.desc">Не знайшли відповідь?<br>Напишіть нам у Telegram — відповімо швидко.</p>
+          <a href="https://t.me/Andrii_DEV9" target="_blank" rel="noopener" class="contact-card">
+            <span class="contact-card__photo"><img src="assets/photo.webp" alt="Andrii Shestakov" /></span>
+            <span class="contact-card__body">
+              <span class="contact-card__name">Andrii Shestakov</span>
+              <span class="contact-card__role">Founder &amp; CEO</span>
+            </span>
+            <span class="contact-card__cta">
+              <span data-i18n="hero.aside.cta">Написати</span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </span>
+          </a>
+        </div>
+
+        <div class="faq reveal-group">
+          <div class="faq__item">
+            <button type="button" class="faq__q" aria-expanded="false"><span class="faq__qn">(01)</span><span><span data-lang-block="uk">Скільки коштує утримання сайту на рік?</span><span data-lang-block="pl" hidden>Ile kosztuje strona internetowa na rok?</span></span><span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><p><span data-lang-block="uk">Орієнтовно, станом на 2026 рік, лендінг або сайт-візитка коштують €50–450 на рік без підтримки: домен, хостинг, за потреби пошта й ліцензії. Інтернет-магазин — від €150 до €1000 і більше. Підтримка в нашій студії — від €20 на місяць. Точні ціни провайдерів перевіряйте в реєстратора й хостингу.</span><span data-lang-block="pl" hidden>Orientacyjnie, według stanu na 2026 rok, landing page lub strona wizytówka to 50–450 € rocznie bez opieki: domena, hosting, ewentualnie poczta i licencje. Sklep internetowy — od 150 € do 1000 € i więcej. Opieka nad stroną kosztuje u nas od 20 € miesięcznie. Aktualne ceny dostawców sprawdzaj u rejestratora i w hostingu.</span></p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q" aria-expanded="false"><span class="faq__qn">(02)</span><span><span data-lang-block="uk">Скільки коштує домен для сайту?</span><span data-lang-block="pl" hidden>Ile kosztuje domena .pl?</span></span><span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><p><span data-lang-block="uk">Орієнтовно €10–45 на рік залежно від зони й реєстратора: .com — близько €10–20, .pl — €15–45, .com.ua — приблизно 200–700 грн. Перший рік часто дешевший за акцією, тому дивіться на ціну продовження. Дані станом на 2026, перевіряйте в реєстратора.</span><span data-lang-block="pl" hidden>Odnowienie domeny .pl kosztuje orientacyjnie 60–200 zł rocznie, zależnie od rejestratora; pierwszy rok bywa w promocji za kilka złotych. Domena .com to około 10–20 € rocznie. Dane według stanu na 2026 — przed zakupem sprawdź cenę odnowienia u rejestratora.</span></p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q" aria-expanded="false"><span class="faq__qn">(03)</span><span><span data-lang-block="uk">Домен .pl чи .com — що обрати?</span><span data-lang-block="pl" hidden>Domena .pl czy .com — co wybrać?</span></span><span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><p><span data-lang-block="uk">Якщо клієнти в Польщі — .pl: до неї звикли, і Google краще розуміє країну сайту. Якщо працюєте на кілька країн — .com. Коли назва важлива для бренду, зареєструйте обидві зони й налаштуйте переадресацію на основну.</span><span data-lang-block="pl" hidden>Jeśli klienci są w Polsce — .pl: Polacy są do niej przyzwyczajeni, a Google łatwiej rozpoznaje kraj strony. Jeśli działasz w kilku krajach — .com. Gdy nazwa jest ważna dla marki, zarejestruj obie końcówki i ustaw przekierowanie na główną.</span></p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q" aria-expanded="false"><span class="faq__qn">(04)</span><span><span data-lang-block="uk">Чи входять домен і хостинг у ціну розробки?</span><span data-lang-block="pl" hidden>Czy domena i hosting są w cenie wykonania strony?</span></span><span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><p><span data-lang-block="uk">Ні. Домен і хостинг оплачуються окремо, напряму провайдеру, і оформлюються на вас. Ми допомагаємо їх обрати й підключити — зазвичай це Hostinger або VPS, для сайтів на Webflow — Webflow hosting.</span><span data-lang-block="pl" hidden>Nie. Domenę i hosting opłacasz osobno, bezpośrednio u dostawcy, i są zarejestrowane na Ciebie. Pomagamy je wybrać i podłączyć — zwykle to Hostinger albo VPS, a dla stron na Webflow — hosting Webflow.</span></p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q" aria-expanded="false"><span class="faq__qn">(05)</span><span><span data-lang-block="uk">Чому домен треба оформлювати на себе?</span><span data-lang-block="pl" hidden>Dlaczego domena powinna być zarejestrowana na mnie?</span></span><span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><p><span data-lang-block="uk">Бо власник домену — той, хто вказаний у реєстратора. Якщо домен оформлено на студію чи фрилансера, без них ви не перенесете сайт, не зміните пошту й не продовжите реєстрацію. Ми оформлюємо домен і хостинг на клієнта й передаємо всі доступи після запуску.</span><span data-lang-block="pl" hidden>Bo właścicielem domeny jest abonent wpisany u rejestratora. Jeśli domena jest na agencję albo freelancera, bez nich nie przeniesiesz strony, nie zmienisz poczty ani nie przedłużysz rejestracji. My rejestrujemy domenę i hosting na klienta i po starcie przekazujemy wszystkie dostępy.</span></p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q" aria-expanded="false"><span class="faq__qn">(06)</span><span><span data-lang-block="uk">Скільки коштує підтримка сайту?</span><span data-lang-block="pl" hidden>Ile kosztuje opieka nad stroną?</span></span><span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><p><span data-lang-block="uk">У нашій студії — від €20 на місяць: оновлення, невеликі правки, консультації та допомога з обслуговуванням. Перші 30 днів після запуску підтримка входить у тарифи «Старт» і «Про». Хостинг і сторонні сервіси оплачуються окремо.</span><span data-lang-block="pl" hidden>U nas od 20 € miesięcznie: aktualizacje, drobne poprawki, konsultacje i pomoc w utrzymaniu strony. Pierwsze 30 dni po starcie wsparcie jest w pakietach Start i Pro. Hosting i usługi zewnętrzne opłacasz osobno. Ceny bez VAT (zwolnienie z VAT).</span></p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--services" id="services">
+      <div class="container">
+        <div class="section__head section__head--split reveal">
+          <h2 class="section__title"><span data-lang-block="uk">Читайте також</span><span data-lang-block="pl" hidden>Przeczytaj też</span></h2>
+          <span class="section__rule" aria-hidden="true"></span>
+          <span class="eyebrow"><span class="eyebrow__dot eyebrow__dot--square"></span><span><span data-lang-block="uk">Блог</span><span data-lang-block="pl" hidden>Blog</span></span></span>
+        </div>
+
+        <div class="services reveal-group">
+          <span class="service-preview" aria-hidden="true"></span>
+          <article class="service" data-img="assets/why-4.webp">
+            <span class="service__num">(01)</span>
+            <img class="service__img" src="assets/why-4.webp" alt="" loading="lazy" />
+            <div class="service__body">
+              <h3 class="service__title"><a href="post-tz-na-sait"><span data-lang-block="uk">ТЗ на сайт: шаблон і приклад технічного завдання</span><span data-lang-block="pl" hidden>Brief strony internetowej — przykład i szablon</span></a></h3>
+              <p class="service__text"><span data-lang-block="uk">Що написати студії, щоб отримати точну оцінку й сайт, який закриває вашу задачу.</span><span data-lang-block="pl" hidden>Co przekazać wykonawcy, żeby dostać trafną wycenę i stronę, która realizuje Twój cel.</span></p>
+            </div>
+            <a href="post-tz-na-sait" class="service__cta">
+              <span><span data-lang-block="uk">Читати</span><span data-lang-block="pl" hidden>Czytaj</span></span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </a>
+          </article>
+
+          <article class="service" data-img="assets/why-4.webp">
+            <span class="service__num">(02)</span>
+            <img class="service__img" src="assets/why-4.webp" alt="" loading="lazy" />
+            <div class="service__body">
+              <h3 class="service__title"><a href="post-wordpress-webflow-kod"><span data-lang-block="uk">WordPress, Webflow чи код: на чому робити сайт</span><span data-lang-block="pl" hidden>WordPress, Webflow czy strona pisana od zera</span></a></h3>
+              <p class="service__text"><span data-lang-block="uk">Порівнюємо три підходи, якими працюємо щодня, і пояснюємо, як обрати свій.</span><span data-lang-block="pl" hidden>Porównujemy trzy technologie, na których pracujemy na co dzień, i podpowiadamy wybór.</span></p>
+            </div>
+            <a href="post-wordpress-webflow-kod" class="service__cta">
+              <span><span data-lang-block="uk">Читати</span><span data-lang-block="pl" hidden>Czytaj</span></span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </a>
+          </article>
+
+          <article class="service" data-img="assets/why-2.webp">
+            <span class="service__num">(03)</span>
+            <img class="service__img" src="assets/why-2.webp" alt="" loading="lazy" />
+            <div class="service__body">
+              <h3 class="service__title"><a href="post-skilky-koshtuie-sait"><span data-lang-block="uk">Скільки коштує сайт у 2026 році</span><span data-lang-block="pl" hidden>Ile kosztuje strona internetowa w 2026 roku</span></a></h3>
+              <p class="service__text"><span data-lang-block="uk">Від чого залежить ціна сайту, де ховаються додаткові витрати і скільки беремо ми.</span><span data-lang-block="pl" hidden>Od czego zależy cena strony, gdzie kryją się dodatkowe koszty i ile bierzemy my.</span></p>
+            </div>
+            <a href="post-skilky-koshtuie-sait" class="service__cta">
+              <span><span data-lang-block="uk">Читати</span><span data-lang-block="pl" hidden>Czytaj</span></span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </a>
+          </article>
+
+          <article class="service" data-img="assets/why-5.webp">
+            <span class="service__num">(04)</span>
+            <img class="service__img" src="assets/why-5.webp" alt="" loading="lazy" />
+            <div class="service__body">
+              <h3 class="service__title"><a href="post-nemaie-v-google"><span data-lang-block="uk">Чому сайту немає в Google і що з цим робити</span><span data-lang-block="pl" hidden>Dlaczego mojej strony nie ma w Google i jak to naprawić</span></a></h3>
+              <p class="service__text"><span data-lang-block="uk">Покроковий чекліст: від перевірки site: до Search Console та технічних помилок.</span><span data-lang-block="pl" hidden>Krok po kroku: od komendy site: po Search Console i błędy techniczne.</span></p>
+            </div>
+            <a href="post-nemaie-v-google" class="service__cta">
+              <span><span data-lang-block="uk">Читати</span><span data-lang-block="pl" hidden>Czytaj</span></span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="cta-form reveal">
+          <div class="cta-form__head">
+            <div class="head-kicker">
+              <span class="eyebrow"><span class="eyebrow__dot eyebrow__dot--square"></span><span data-i18n="contact.tag">Контакти</span></span>
+            </div>
+            <h2 class="section__title" data-i18n="form.title">Готові запустити сайт, магазин або Telegram-бот?</h2>
+            <p class="section__lead" data-i18n="form.desc">Залиште заявку, і ми зв’яжемося з вами, щоб обговорити задачу, формат проєкту, терміни та можливе рішення</p>
+            <ul class="cta-form__contacts">
+              <li><a href="https://t.me/Andrii_DEV9" target="_blank" rel="noopener">
+                <span class="cta-form__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3l-3 14.1c-.2 1-.8 1.2-1.7.8l-4.6-3.4-2.2 2.1c-.2.2-.4.4-.9.4l.3-4.7 8.5-7.7c.4-.3-.1-.5-.6-.2L7.3 13 2.8 11.6c-1-.3-1-1 .2-1.4l17-6.6c.8-.3 1.5.2 1.9 1z"/></svg></span>
+                <span>@Andrii_DEV9</span>
+              </a></li>
+              <li><a href="https://wa.me/48577503534" target="_blank" rel="noopener">
+                <span class="cta-form__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg></span>
+                <span>WhatsApp</span>
+              </a></li>
+              <li><a href="https://www.instagram.com/web.shestakov" target="_blank" rel="noopener">
+                <span class="cta-form__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span>
+                <span>@web.shestakov</span>
+              </a></li>
+              <li><a href="tel:+48577503534">
+                <span class="cta-form__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3h3l1.5 5-2 1.5a12 12 0 0 0 5 5l1.5-2 5 1.5v3a2 2 0 0 1-2 2A16 16 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg></span>
+                <span>+48 577 503 534</span>
+              </a></li>
+            </ul>
+          </div>
+
+          <form class="form" id="main-form" novalidate>
+            <div class="form__row">
+              <div class="field">
+                <label class="field__label" for="name" data-i18n="form.name">Ім’я</label>
+                <input class="field__input" type="text" id="name" name="name" required data-i18n-attr="placeholder:form.ph.name" placeholder="Ваше ім’я" />
+                <span class="field__error" data-i18n="form.err.required">Це поле обов’язкове</span>
+              </div>
+              <div class="field">
+                <label class="field__label" for="contact-value" data-i18n="form.contact">Телефон або Telegram</label>
+                <input class="field__input" type="text" id="contact-value" name="contact" required data-i18n-attr="placeholder:form.ph.contact" placeholder="+48 ... або @username" />
+                <span class="field__error" data-i18n="form.err.required">Це поле обов’язкове</span>
+              </div>
+            </div>
+            <div class="field">
+              <label class="field__label" for="need" data-i18n="form.need">Що потрібно розробити?</label>
+              <div class="field__select">
+                <select class="field__input" id="need" name="need" required>
+                  <option value="" data-i18n="form.opt.choose">Оберіть варіант</option>
+                  <option value="site" data-i18n="form.opt.site">Сайт</option>
+                  <option value="shop" data-i18n="form.opt.shop">Інтернет-магазин</option>
+                  <option value="bot" data-i18n="form.opt.bot">Telegram-бот</option>
+                  <option value="seo" data-i18n="form.opt.seo">SEO</option>
+                  <option value="identity" data-i18n="form.opt.identity">Айдентика</option>
+                  <option value="other" data-i18n="form.opt.other">Інше</option>
+                </select>
+                <span class="field__chevron" aria-hidden="true"></span>
+              </div>
+              <span class="field__error" data-i18n="form.err.required">Це поле обов’язкове</span>
+            </div>
+            <div class="field">
+              <label class="field__label" for="comment" data-i18n="form.comment">Коментар до проєкту</label>
+              <textarea class="field__input field__textarea" id="comment" name="comment" rows="4" data-i18n-attr="placeholder:form.ph.comment" placeholder="Коротко опишіть задачу"></textarea>
+            </div>
+            <input class="form__hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <label class="checkbox">
+              <input type="checkbox" id="agree" name="agree" required />
+              <span class="checkbox__box" aria-hidden="true"></span>
+              <span class="checkbox__label" data-i18n="form.agree">Я ознайомився/-лася з Політикою конфіденційності та погоджуюся на обробку моїх даних для опрацювання заявки</span>
+            </label>
+            <span class="field__error field__error--checkbox" data-i18n="form.err.agree">Потрібно підтвердити згоду</span>
+            <button type="submit" class="btn btn--accent btn--lg btn--block btn--between">
+              <span data-i18n="form.submit">Надіслати заявку</span>
+              <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </button>
+            <p class="form__status form__status--success" role="status" data-i18n="form.success">Дякуємо! Ваша заявка надіслана. Ми скоро зв’яжемося з вами.</p>
+            <p class="form__status form__status--error" role="alert" data-i18n="form.error">Будь ласка, заповніть обов’язкові поля.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__cta reveal">
+        <h2 class="footer__big" data-i18n="footer.big">Обговоримо ваш проєкт?</h2>
+        <button type="button" class="btn btn--accent btn--lg" data-open-popup>
+          <span data-i18n="cta.header">Отримати консультацію</span>
+          <span class="btn__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M7 17L17 7M17 7H8M17 7v9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </button>
+      </div>
+
+      <div class="footer__top">
+        <nav class="footer__nav" aria-label="Footer">
+          <div class="footer__navcol">
+            <a href="about" data-i18n="nav.about">Про нас</a>
+            <a href="index.html#why" data-i18n="nav.why">Переваги</a>
+          </div>
+          <div class="footer__navcol">
+            <a href="index.html#services" data-i18n="nav.services">Послуги</a>
+            <a href="index.html#cases" data-i18n="nav.cases">Кейси</a>
+          </div>
+          <div class="footer__navcol">
+            <a href="index.html#faq" data-i18n="nav.faq">FAQ</a>
+            <a href="index.html#partners" data-i18n="nav.partners">Партнерам</a>
+          </div>
+          <div class="footer__navcol">
+            <a href="#contact" data-i18n="nav.contacts">Контакти</a>
+            <a href="prices" data-i18n="nav.prices">Ціни</a>
+            <a href="blog" data-i18n="nav.blog">Блог</a>
+          </div>
+        </nav>
+
+        <div class="footer__contacts">
+          <a href="tel:+48577503534" class="footer__mail">+48 577 503 534</a>
+          <a href="https://t.me/Andrii_DEV9" target="_blank" rel="noopener">Telegram</a>
+          <a href="https://wa.me/48577503534" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://www.instagram.com/web.shestakov" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+
+      <div class="footer__wordmark">
+        <img src="assets/footer-logo.svg" alt="Web Shestakov agency" />
+      </div>
+
+      <div class="footer__legal">
+        <a href="privacy.html" data-i18n="footer.privacy">політика конфіденційності</a>
+        <a href="#" data-cookie-settings data-i18n="footer.cookies">налаштування cookies</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ COOKIE BANNER ============ -->
+  <aside class="cookie" id="cookie-banner" role="region" aria-label="Cookie" hidden>
+    <p class="cookie__text">
+      <span data-i18n="cookie.text">Ми використовуємо cookie, щоб сайт працював коректно та був зручнішим.</span>
+      <a class="cookie__link" href="privacy.html" data-i18n="cookie.link">Політика конфіденційності</a>
+    </p>
+    <div class="cookie__actions">
+      <button type="button" class="cookie__btn cookie__btn--accept" data-cookie="accepted" data-i18n="cookie.accept">Прийняти</button>
+      <button type="button" class="cookie__btn cookie__btn--ghost" data-cookie="essential" data-i18n="cookie.decline">Лише необхідні</button>
+    </div>
+  </aside>
+
+  <!-- ============ FLOATING WIDGET ============ -->
+  <button type="button" class="floating-widget" data-open-popup aria-label="Web Shestakov">
+    <span class="floating-widget__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M21 4L3 11l6 2 2 6 3-5 5 3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+    <span class="floating-widget__text" data-i18n="widget.text">Заявка</span>
+  </button>
+
+  <!-- ============ MOBILE STICKY CTA ============ -->
+  <div class="sticky-cta">
+    <button type="button" class="btn btn--accent btn--block" data-open-popup>
+      <span data-i18n="cta.header">Отримати консультацію</span>
+    </button>
+  </div>
+
+  <!-- ============ POPUP FORM ============ -->
+  <div class="popup" id="popup" aria-hidden="true">
+    <div class="popup__overlay" data-close-popup></div>
+    <div class="popup__dialog" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+      <button type="button" class="popup__close" data-close-popup aria-label="Close">
+        <svg viewBox="0 0 24 24" width="22" height="22"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+      <span class="eyebrow"><span class="eyebrow__dot"></span><span data-i18n="contact.tag">Контакти</span></span>
+      <h3 class="popup__title" id="popup-title" data-i18n="form.title">Готові запустити сайт, магазин або Telegram-бот?</h3>
+
+      <form class="form" id="popup-form" novalidate>
+        <div class="field">
+          <label class="field__label" for="p-name" data-i18n="form.name">Ім’я</label>
+          <input class="field__input" type="text" id="p-name" name="name" required data-i18n-attr="placeholder:form.ph.name" placeholder="Ваше ім’я" />
+          <span class="field__error" data-i18n="form.err.required">Це поле обов’язкове</span>
+        </div>
+        <div class="field">
+          <label class="field__label" for="p-contact" data-i18n="form.contact">Телефон або Telegram</label>
+          <input class="field__input" type="text" id="p-contact" name="contact" required data-i18n-attr="placeholder:form.ph.contact" placeholder="+48 ... або @username" />
+          <span class="field__error" data-i18n="form.err.required">Це поле обов’язкове</span>
+        </div>
+        <div class="field">
+          <label class="field__label" for="p-need" data-i18n="form.need">Що потрібно розробити?</label>
+          <div class="field__select">
+            <select class="field__input" id="p-need" name="need" required>
+              <option value="" data-i18n="form.opt.choose">Оберіть варіант</option>
+              <option value="site" data-i18n="form.opt.site">Сайт</option>
+              <option value="shop" data-i18n="form.opt.shop">Інтернет-магазин</option>
+              <option value="bot" data-i18n="form.opt.bot">Telegram-бот</option>
+              <option value="seo" data-i18n="form.opt.seo">SEO</option>
+              <option value="identity" data-i18n="form.opt.identity">Айдентика</option>
+              <option value="other" data-i18n="form.opt.other">Інше</option>
+            </select>
+            <span class="field__chevron" aria-hidden="true"></span>
+          </div>
+          <span class="field__error" data-i18n="form.err.required">Це поле обов’язкове</span>
+        </div>
+        <div class="field">
+          <label class="field__label" for="p-comment" data-i18n="form.comment">Коментар</label>
+          <textarea class="field__input field__textarea" id="p-comment" name="comment" rows="3" data-i18n-attr="placeholder:form.ph.comment" placeholder="Коротко опишіть задачу"></textarea>
+        </div>
+        <input class="form__hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        <label class="checkbox">
+          <input type="checkbox" id="p-agree" name="agree" required />
+          <span class="checkbox__box" aria-hidden="true"></span>
+          <span class="checkbox__label" data-i18n="form.agree">Я ознайомився/-лася з Політикою конфіденційності та погоджуюся на обробку моїх даних для опрацювання заявки</span>
+        </label>
+        <span class="field__error field__error--checkbox" data-i18n="form.err.agree">Потрібно підтвердити згоду</span>
+        <button type="submit" class="btn btn--accent btn--lg btn--block">
+          <span data-i18n="form.submit">Надіслати заявку</span>
+        </button>
+        <p class="form__status form__status--success" role="status" data-i18n="form.success">Дякуємо! Ваша заявка надіслана. Ми скоро зв’яжемося з вами.</p>
+        <p class="form__status form__status--error" role="alert" data-i18n="form.error">Будь ласка, заповніть обов’язкові поля.</p>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
